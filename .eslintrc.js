@@ -19,9 +19,6 @@ module.exports = {
     JSX: 'readonly',
   },
   extends: ['@linker/eslint-config/react'],
-  parserOptions: {
-    project: '../../tsconfig.json',
-  },
   settings: {
     next: {
       rootDir: ['services/*/'],
