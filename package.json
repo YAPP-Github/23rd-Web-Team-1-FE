@@ -19,9 +19,12 @@
   "scripts": {
     "dev": "yarn workspace web dev",
     "build": "yarn workspace web build && yarn workspace web export",
-    "lint": "yarn workspace web lint"
+    "lint": "yarn workspace web lint",
+    "postinstall": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@linker/eslint-config": "workspace:^",
     "@types/prettier": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^6.12.0",
@@ -34,6 +37,8 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
     "prettier": "^3.1.0",
     "typescript": "^5.3.2"
   }

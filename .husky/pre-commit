@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+yarn commitlint --from HEAD~1 --to HEAD --verbose
+yarn lint-staged
+yarn workspaces foreach --since run precommit
