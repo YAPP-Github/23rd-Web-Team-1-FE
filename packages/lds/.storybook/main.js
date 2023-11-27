@@ -1,5 +1,7 @@
 import { join, dirname } from 'path';
 
+import { VanillaExtractPlugin } from '@vanilla-extract/webpack-plugin';
+
 /**
  * This function is used to resolve the absolute path of a package.
  * It is needed in projects that use Yarn PnP or are set up within a monorepo.
@@ -44,8 +46,7 @@ const config = {
   webpackFinal: (config) => {
     return {
       ...config,
-      // TODO(@useonglee): vanilla-extract 패키지 추가 후 주석 해제
-      // plugins: [...config.plugins, new VanillaExtractPlugin()],
+      plugins: [...config.plugins, new VanillaExtractPlugin()],
     };
   },
 };
