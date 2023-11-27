@@ -20,7 +20,8 @@
     "dev": "yarn workspace web dev",
     "build": "yarn workspace web build && yarn workspace web export",
     "lint": "yarn workspace web lint",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "storybook": "yarn workspace @linker/lds storybook"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
