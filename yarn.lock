@@ -10278,6 +10278,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jotai@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "jotai@npm:2.6.0"
+  peerDependencies:
+    "@types/react": ">=17.0.0"
+    react: ">=17.0.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    react:
+      optional: true
+  checksum: 7e635f4f5052582095ed3949aa46f26213b10237bc4876db242c936f0f4d4272129727d7419e4fd5b1b83fa55b7ad737575453116a955dcc6b3a26cba14591f2
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^3.0.0 || ^4.0.0, js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -14861,6 +14876,7 @@ __metadata:
     "@vanilla-extract/recipes": "npm:^0.5.1"
     eslint: "npm:^8"
     eslint-config-next: "npm:14.0.3"
+    jotai: "npm:^2.6.0"
     next: "npm:14.0.3"
     react: "npm:^18"
     react-dom: "npm:^18"
