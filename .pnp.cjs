@@ -18,6 +18,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:packages/eslint-config"\
     },\
     {\
+      "name": "@linker/ky",\
+      "reference": "workspace:packages/ky"\
+    },\
+    {\
       "name": "@linker/lds",\
       "reference": "workspace:packages/lds"\
     },\
@@ -30,6 +34,7 @@ const RAW_RUNTIME_STATE =
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
     ["@linker/eslint-config", ["workspace:packages/eslint-config"]],\
+    ["@linker/ky", ["workspace:packages/ky"]],\
     ["@linker/lds", ["workspace:packages/lds"]],\
     ["linker", ["workspace:."]],\
     ["web", ["workspace:services/web"]]\
@@ -5234,6 +5239,18 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-jsx-a11y", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:6.8.0"],\
           ["eslint-plugin-react", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:7.33.2"],\
           ["eslint-plugin-react-hooks", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:4.6.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@linker/ky", [\
+      ["workspace:packages/ky", {\
+        "packageLocation": "./packages/ky/",\
+        "packageDependencies": [\
+          ["@linker/ky", "workspace:packages/ky"],\
+          ["@types/node", "npm:20.10.0"],\
+          ["ky", "npm:1.1.3"],\
+          ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -15333,6 +15350,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/klona-npm-2.0.6-bc83268fb1-ed7e2c9af5.zip/node_modules/klona/",\
         "packageDependencies": [\
           ["klona", "npm:2.0.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["ky", [\
+      ["npm:1.1.3", {\
+        "packageLocation": "./.yarn/cache/ky-npm-1.1.3-938128ed42-0545fd228d.zip/node_modules/ky/",\
+        "packageDependencies": [\
+          ["ky", "npm:1.1.3"]\
         ],\
         "linkType": "HARD"\
       }]\
