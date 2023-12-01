@@ -47,5 +47,8 @@
     "next-router-mock": "^0.9.10",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
