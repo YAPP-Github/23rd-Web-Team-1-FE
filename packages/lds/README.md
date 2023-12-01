@@ -1,1 +1,1 @@
-# lts (linker-design-system)
+# lds (linker-design-system)
