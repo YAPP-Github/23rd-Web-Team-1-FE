@@ -15,7 +15,6 @@
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
-    "@types/testing-library__jest-dom": "^6.0.0",
     "typescript": "^5.2.2"
   },
   "publishConfig": {
