@@ -1,0 +1,56 @@
+name: Deploy to Amazon EC2
+
+on:
+  push:
+    branches:
+      - develop
+
+env:
+  AWS_REGION: ap-northeast-2
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build, tag, and push image to Amazon ECR
+        id: build-image
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: linker
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+
+      - name: Deploy to EC2
+        env:
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          echo "${{ secrets.EC2_SSH_PRIVATE_KEY }}" > private_key.pem
+          chmod 600 private_key.pem
+          ssh -i private_key.pem -o StrictHostKeyChecking=no ubuntu@3.35.8.185 "
+          aws ecr get-login-password --region ap-northeast-2 |
+          sudo docker login --username AWS --password-stdin 903755389667.dkr.ecr.ap-northeast-2.amazonaws.com/linker &&
+          if [ \$(sudo docker ps -q -f name=linker) ]; then
+              sudo docker stop linker &&
+              sudo docker rm linker
+          fi &&
+          sudo docker image pull 903755389667.dkr.ecr.ap-northeast-2.amazonaws.com/linker:$IMAGE_TAG &&
+          sudo docker container run --name linker -d -p 80:3000 903755389667.dkr.ecr.ap-northeast-2.amazonaws.com/linker:$IMAGE_TAG"
