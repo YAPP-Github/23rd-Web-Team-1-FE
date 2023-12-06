@@ -53,4 +53,4 @@ jobs:
               sudo docker rm linker
           fi &&
           sudo docker image pull 903755389667.dkr.ecr.ap-northeast-2.amazonaws.com/linker:$IMAGE_TAG &&
-          sudo docker container run --name linker -d -p 80:3000 903755389667.dkr.ecr.ap-northeast-2.amazonaws.com/linker:$IMAGE_TAG"
+          sudo docker container run --name linker -d -p 3000:3000 903755389667.dkr.ecr.ap-northeast-2.amazonaws.com/linker:$IMAGE_TAG"
