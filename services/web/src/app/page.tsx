@@ -1,3 +1,8 @@
 export default function Home() {
-  return <main>Linker🚀</main>;
+  return (
+    <div>
+      <main>Linker🚀</main>
+      <button>Linker</button>
+    </div>
+  );
 }
