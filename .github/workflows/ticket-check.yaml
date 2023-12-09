@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: '18.17.0'
       - run: corepack enable
-      - run: yarn install --immutable --immutable-cache
+      - run: yarn install
       - run: yarn ts-node-script -T ./scripts/issue-ticket.ts ${{ toJSON(github.event.pull_request.title) }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
