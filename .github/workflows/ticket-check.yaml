@@ -1,0 +1,28 @@
+name: Ticket Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, edited, reopened]
+
+concurrency:
+  group: ticket-check-${{ github.ref }}-${{ github.actor }}
+  cancel-in-progress: true
+
+jobs:
+  ticketcheck:
+    if: ${{ github.head_ref != 'develop' }}
+    name: Ticket Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - name: Set up Node V2
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.17.0'
+      - run: corepack enable
+      - run: yarn install --immutable --immutable-cache
+      - run: yarn ts-node-script -T ./scripts/issue-ticket.ts ${{ toJSON(github.event.pull_request.title) }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
