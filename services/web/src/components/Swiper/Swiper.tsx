@@ -1,19 +1,59 @@
-import React from 'react'
+'use client'
+
+import React, { useState, useEffect, useRef, useImperativeHandle, forwardRef } from 'react'
+import type { Ref } from 'react'
 import SwiperItem from './SwiperItem'
-import { screenWrapper, itemWrapper } from './Swiper.css'
+import { screenWrapper, scrollSnap, itemWrapper } from './Swiper.css'
+import { smoothScroll } from './utils/smoothScroll'
 
 interface SwiperProps {
   children: React.ReactElement<typeof SwiperItem>[]
 }
 
-function Swiper({ children }: SwiperProps) {
+export interface SwiperRefProps {
+  moveTo: (index: number) => void
+}
+
+function Swiper({ children }: SwiperProps, forwardedRef: Ref<SwiperRefProps>) {
+  const [wrapperWidth, setWrapperWidth] = useState<number>(0)
+  const [isProgmmaticScrolling, setProgmmaticScrolling] = useState(false)
+  const wrapperRef = useRef<HTMLElement>(null)
+
+  const moveTo = (index: number) => {
+    if (!wrapperRef.current) { return }
+
+    setProgmmaticScrolling(true)
+
+    smoothScroll({
+      start: wrapperRef.current.scrollLeft,
+      end: wrapperWidth * index,
+      onScrolling: (scrollLeft) => {
+        if (!wrapperRef.current) { return }
+
+        wrapperRef.current.scrollLeft = scrollLeft
+      },
+      onScrollEnd: () => {
+        setProgmmaticScrolling(false)
+      }
+    })
+  }
+
+  useEffect(() => {
+    if (!wrapperRef.current) { return }
+    setWrapperWidth(wrapperRef.current.clientWidth)
+  }, [])
+
+  useImperativeHandle(forwardedRef, () => ({
+    moveTo,
+  }))
+
   return (
-    <article className={screenWrapper}>
+    <section className={`${screenWrapper} ${!isProgmmaticScrolling ? scrollSnap : ''}`} ref={wrapperRef}>
       <div className={itemWrapper}>
         {children}
       </div>
-    </article>
+    </section>
   )
 }
 
-export default Swiper
+export default forwardRef(Swiper)
