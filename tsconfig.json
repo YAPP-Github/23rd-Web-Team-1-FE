@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es6",
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "jsx": "preserve",
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "useUnknownInCatchVariables": false
+  },
+  "exclude": [
+    "**/__mocks__/*",
+    "**/__tests__/*",
+    "**/public/*",
+    "**/.next/*",
+    "**/coverage/*",
+    "**/out/*"
+  ]
+}
