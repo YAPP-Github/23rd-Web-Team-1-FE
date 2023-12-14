@@ -1,0 +1,55 @@
+name: PR
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+concurrency:
+  group: pr-${{ github.ref }}-${{ github.actor }}
+  cancel-in-progress: true
+
+env:
+  COMMITS: ${{ github.event.pull_request.commits }}
+  NODE_OPTIONS: '--max-old-space-size=8192'
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
+
+      - name: Set up Node V2
+        uses: actions/setup-node@v2
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+
+      - run: corepack enable
+      - run: yarn install
+
+      - name: Type Check
+        run: yarn workspace web tsc
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
+
+      - name: Set up Node V2
+        uses: actions/setup-node@v2
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+
+      - run: corepack enable
+      - run: yarn install
+
+      - name: Test
+        run: yarn workspace web test
