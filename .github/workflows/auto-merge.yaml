@@ -21,7 +21,7 @@ jobs:
         if: steps.check_approval.outputs.approved == 'true'
         run: |
           git fetch origin ${{ github.head_ref }}
-          git checkout -b ${{ github.head_ref }}
+          git checkout -b "${{ github.head_ref }}"
           git merge --squash ${{ github.event.before }}
 
           git commit -m "${{ github.event.pull_request.title}}"
