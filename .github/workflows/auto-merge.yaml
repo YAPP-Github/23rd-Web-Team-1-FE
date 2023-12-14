@@ -1,12 +1,6 @@
 name: Auto Merge on Approval
 
 on:
-  pull_request:
-    types:
-      - review_requested
-      - review_request_removed
-    branches:
-      - develop
   pull_request_review:
     types:
       - submitted
@@ -26,17 +20,19 @@ jobs:
       - name: Squash merge if approved
         if: steps.check_approval.outputs.approved == 'true'
         run: |
-          git fetch origin ${{ github.head_ref }}
-          git checkout ${{ github.head_ref }}
+          echo "Head ref: ${{ github.event.pull_request.head.ref  }}"
+          git fetch origin ${{ github.event.pull_request.head.ref  }}
+          git checkout ${{ github.event.pull_request.head.ref  }}
 
-          git merge --squash ${{ github.event.before }}
+          git merge --squash ${{ github.event.pull_request.base.ref }}
 
           git commit -m "${{ github.event.pull_request.title}}"
 
-          git push origin ${{ github.head_ref }}
+          git push origin ${{ github.event.pull_request.head.ref  }}
 
       - name: Auto merge
         if: steps.check_approval.outputs.approved == 'true'
-        run: gh pr merge ${{ github.event.number }} --squash --auto
+        run: |
+          gh pr merge ${{ github.event.number }} --squash --auto
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
