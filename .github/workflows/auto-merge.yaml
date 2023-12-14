@@ -15,24 +15,22 @@ jobs:
 
       - name: Check if approved
         id: check_approval
-        run: echo "approved=${{ github.event.review.state == 'approved' }}" >> $GITHUB_OUTPUT
+        run: |
+          if [[ "${{ github.event.review.state }}" == "approved" ]]; then
+            echo "::set-output name=approved::true"
+          else
+            echo "::set-output name=approved::false"
+          fi
+        shell: bash
+
+      - name: Setup GitHub CLI
+        if: steps.check_approval.outputs.approved == 'true'
+        run: |
+          gh auth login --with-token <<< "${{ secrets.GH_TOKEN }}"
+        shell: bash
 
       - name: Squash merge if approved
         if: steps.check_approval.outputs.approved == 'true'
         run: |
-          echo "Head ref: ${{ github.event.pull_request.head.ref  }}"
-          git fetch origin ${{ github.event.pull_request.head.ref  }}
-          git checkout ${{ github.event.pull_request.head.ref  }}
-
-          git merge --squash ${{ github.event.pull_request.base.ref }}
-
-          git commit -m "${{ github.event.pull_request.title}}"
-
-          git push origin ${{ github.event.pull_request.head.ref  }}
-
-      - name: Auto merge
-        if: steps.check_approval.outputs.approved == 'true'
-        run: |
-          gh pr merge ${{ github.event.number }} --squash --auto
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          gh pr merge ${{ github.event.pull_request.number }} --squash --auto
+        shell: bash
