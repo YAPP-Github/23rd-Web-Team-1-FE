@@ -23590,6 +23590,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["web", "workspace:services/web"],\
           ["@jest/types", "npm:29.6.3"],\
+          ["@linker/eslint-config", "workspace:packages/eslint-config"],\
           ["@linker/eslint-plugin", "workspace:packages/eslint-plugin"],\
           ["@linker/lds", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#workspace:packages/lds"],\
           ["@next/bundle-analyzer", "npm:14.0.3"],\

@@ -16772,6 +16772,7 @@ __metadata:
   resolution: "web@workspace:services/web"
   dependencies:
     "@jest/types": "npm:^29.6.3"
+    "@linker/eslint-config": "workspace:^"
     "@linker/eslint-plugin": "workspace:^"
     "@linker/lds": "workspace:^"
     "@next/bundle-analyzer": "npm:^14.0.3"
