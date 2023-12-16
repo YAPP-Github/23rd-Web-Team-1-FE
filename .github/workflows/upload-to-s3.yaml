@@ -7,6 +7,9 @@ on:
     paths:
       - 'packages/assets/**'
 
+env:
+  AWS_REGION: ap-northeast-2
+
 jobs:
   upload:
     runs-on: ubuntu-latest
