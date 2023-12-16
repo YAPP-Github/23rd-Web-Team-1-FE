@@ -55,6 +55,7 @@ const RAW_RUNTIME_STATE =
           ["@commitlint/config-conventional", "npm:18.4.3"],\
           ["@linker/eslint-config", "workspace:packages/eslint-config"],\
           ["@linker/eslint-plugin", "workspace:packages/eslint-plugin"],\
+          ["@tanstack/eslint-plugin-query", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:5.12.0"],\
           ["@types/node", "npm:20.10.4"],\
           ["@types/prettier", "npm:3.0.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:5150ddf72639c78026dd42fb70c98db909b5b4705d92e6f4c006404aac57f9ed11b6f4301fb318563ae47c142354f07129b31abbd0e3a58319a40761e044e693#npm:6.13.1"],\
@@ -17645,6 +17646,7 @@ const RAW_RUNTIME_STATE =
           ["@commitlint/config-conventional", "npm:18.4.3"],\
           ["@linker/eslint-config", "workspace:packages/eslint-config"],\
           ["@linker/eslint-plugin", "workspace:packages/eslint-plugin"],\
+          ["@tanstack/eslint-plugin-query", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:5.12.0"],\
           ["@types/node", "npm:20.10.4"],\
           ["@types/prettier", "npm:3.0.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:5150ddf72639c78026dd42fb70c98db909b5b4705d92e6f4c006404aac57f9ed11b6f4301fb318563ae47c142354f07129b31abbd0e3a58319a40761e044e693#npm:6.13.1"],\
@@ -23588,6 +23590,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["web", "workspace:services/web"],\
           ["@jest/types", "npm:29.6.3"],\
+          ["@linker/eslint-config", "workspace:packages/eslint-config"],\
           ["@linker/eslint-plugin", "workspace:packages/eslint-plugin"],\
           ["@linker/lds", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#workspace:packages/lds"],\
           ["@next/bundle-analyzer", "npm:14.0.3"],\
