@@ -36,4 +36,6 @@ export const GlobalStyle = [
 
   globalStyle('img, picture, video, canvas, svg ', { display: 'block', maxWidth: '100%' }),
   globalStyle('ul', { padding: 0, margin: 0, listStyle: 'none' }),
+  globalStyle('figure', { padding: 0, margin: 0 }),
+  globalStyle('h1, h2, h3, h4, h5, h6', { margin: 0, padding: 0 }),
 ];

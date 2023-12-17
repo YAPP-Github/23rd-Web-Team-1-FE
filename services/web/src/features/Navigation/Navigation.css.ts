@@ -1,6 +1,8 @@
 import { style } from '@vanilla-extract/css';
 
 export const navigation = style({
+  position: 'sticky',
+  top: 0,
   width: '100%',
 });
 
