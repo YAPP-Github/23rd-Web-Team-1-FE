@@ -35,4 +35,5 @@ export const GlobalStyle = [
   globalStyle('table', { borderCollapse: 'collapse', borderSpacing: 0 }),
 
   globalStyle('img, picture, video, canvas, svg ', { display: 'block', maxWidth: '100%' }),
+  globalStyle('ul', { padding: 0, margin: 0, listStyle: 'none' }),
 ];

@@ -1,5 +1,8 @@
+import { Navigation } from '@/features/Navigation';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+
+import { header } from './layout.css'
 
 import '../styles/global.css';
 import '../styles/normalize.css';
@@ -14,7 +17,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header className={header}>
+          <Navigation />
+        </header>
+        {children}
+      </body>
     </html>
   );
 }

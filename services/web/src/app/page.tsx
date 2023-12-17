@@ -1,8 +1,7 @@
 export default function Home() {
   return (
     <div>
-      <main>Linker🚀</main>
-      <button>Linker</button>
+      <h1>메인</h1>
     </div>
   );
 }
