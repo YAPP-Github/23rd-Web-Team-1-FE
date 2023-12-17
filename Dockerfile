@@ -13,7 +13,7 @@ RUN yarn set version 4.0.2
 
 RUN yarn install
 
-RUN yarn workspace web build
+RUN /bin/sh -c yarn workspace web build
 
 FROM node:18.17.0-alpine
 EXPOSE 3000
