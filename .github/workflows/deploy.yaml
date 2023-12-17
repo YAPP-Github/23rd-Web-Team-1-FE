@@ -29,7 +29,7 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
 
       - name: Cleanup Unused ECR Images
-        id: build-image
+        id: cleanup-images
         env:
           ECR_REPOSITORY: linker
           IMAGE_TAG: ${{ github.sha }}
