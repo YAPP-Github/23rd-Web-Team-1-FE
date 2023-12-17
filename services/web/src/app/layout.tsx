@@ -1,3 +1,4 @@
+import { Logo } from '@/features/Logo'
 import { Navigation } from '@/features/Navigation';
 import { Profile } from '@/features/Profile'
 import type { Metadata } from 'next';
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <header className={header}>
+          <Logo />
           <Profile />
           <Navigation />
         </header>
