@@ -17,6 +17,7 @@
     "@linker/lds": "workspace:^",
     "@vanilla-extract/css": "^1.14.0",
     "@vanilla-extract/recipes": "^0.5.1",
+    "clsx": "^2.0.0",
     "jotai": "^2.6.0",
     "next": "14.0.3",
     "react": "^18",
