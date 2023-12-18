@@ -1,5 +1,6 @@
 'use client'
 
+import { clsx } from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState, useRef } from 'react'
@@ -53,7 +54,7 @@ function Navigation() {
           <li className={tapItem} key={tapInfo.href}>
             <Link
               href={tapInfo.href}
-              className={`${link} ${pathname === tapInfo.href ? activeLink : ''}`}
+              className={clsx({ [link]: true, [activeLink]: pathname === tapInfo.href })}
             >
               <span ref={ref => tapInfo.textSpan = ref}>{tapInfo.text}</span>
             </Link>
