@@ -15,7 +15,7 @@ import {
   activeLine,
 } from './Navigation.css'
 
-interface TTapInfo {
+interface TapInfo {
   href: string
   text: string
   textSpan: HTMLSpanElement | null
@@ -23,7 +23,7 @@ interface TTapInfo {
 
 function Navigation() {
   const pathname = usePathname()
-  const tapInfos = useRef<TTapInfo[]>([
+  const tapInfos = useRef<TapInfo[]>([
     { href: '/', text: '메인', textSpan: null },
     { href: '/contact', text: '연락처', textSpan: null },
     { href: '/timeline', text: '타임라인', textSpan: null },
