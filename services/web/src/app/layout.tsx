@@ -1,10 +1,7 @@
+import { HeaderContent } from '@/features/HeaderContent';
 import { Logo } from '@/features/Logo'
-import { Navigation } from '@/features/Navigation';
-import { Profile } from '@/features/Profile'
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-
-import { header } from './layout.css'
 
 import '../styles/global.css';
 import '../styles/normalize.css';
@@ -20,11 +17,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className={header}>
+        <header>
           <Logo />
-          <Profile />
-          <Navigation />
         </header>
+        <HeaderContent />
         {children}
       </body>
     </html>

@@ -3,6 +3,7 @@ import { style } from '@vanilla-extract/css';
 export const wrapper = style({
   width: '100%',
   padding: '16px 20px',
+  backgroundColor: 'black',
   boxSizing: 'border-box',
 });
 

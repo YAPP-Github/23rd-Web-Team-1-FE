@@ -5,13 +5,11 @@ export const GlobalStyle = [
     fontSize: '62.5%',
     margin: 0,
     padding: 0,
-    overflowX: 'hidden',
     height: '100%',
   }),
   globalStyle('body', {
     margin: 0,
     padding: 0,
-    overflowX: 'hidden',
     fontSize: '1.6rem',
   }),
   globalStyle('*, *:before, *:after', {
