@@ -1,4 +1,4 @@
-import { HeaderContent } from '@/features/HeaderContent';
+import { MeHeaderContent } from '@/features/HeaderContent';
 import { Logo } from '@/features/Logo'
 
 function MeLayout({ children }: { children: React.ReactNode }) {
@@ -7,7 +7,7 @@ function MeLayout({ children }: { children: React.ReactNode }) {
       <header>
         <Logo />
       </header>
-      <HeaderContent />
+      <MeHeaderContent />
       {children}
     </>
   )

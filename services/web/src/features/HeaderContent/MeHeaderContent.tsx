@@ -3,14 +3,14 @@
 import { clsx } from 'clsx'
 import { useState, useEffect, useRef } from 'react'
 
-import { contentWrapper, fixedHeader } from './HeaderContent.css'
-import { Profile } from './components/Profile'
+import { contentWrapper, fixedHeader } from './MeHeaderContent.css'
+import { MeProfile } from './components/MeProfile'
 import { Tabs, TabInfo } from './components/Tabs'
 
 const MINIMIZE_THRESHOLD = 150
 const MAXIMIZE_THRESHOLD = 30
 
-function HeaderContent() {
+function MeHeaderContent() {
   const [minimize, setMinimize] = useState(false)
   const tabInfos = useRef<TabInfo[]>([
     { href: '/me/feed', text: '피드', textSpan: null },
@@ -36,10 +36,10 @@ function HeaderContent() {
 
   return (
     <div className={clsx(contentWrapper, minimize && fixedHeader)}>
-      <Profile minimize={minimize} />
+      <MeProfile minimize={minimize} />
       <Tabs tabInfos={tabInfos} />
     </div>
   )
 }
 
-export default HeaderContent
+export default MeHeaderContent

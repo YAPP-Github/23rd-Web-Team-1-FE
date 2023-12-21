@@ -11,13 +11,13 @@ import {
   name,
   job,
   tag,
-} from './Profile.css'
+} from './MeProfile.css'
 
 interface ProfileProps {
   minimize: boolean
 }
 
-function Profile({ minimize }: ProfileProps) {
+function MeProfile({ minimize }: ProfileProps) {
   return (
     <section className={clsx(profileWrapper, minimize && minimizeStyle)}>
       <article className={clsx(profileImageWrapper, minimize && minimizeStyle)}>
@@ -36,4 +36,4 @@ function Profile({ minimize }: ProfileProps) {
   );
 }
 
-export default Profile;
+export default MeProfile;
