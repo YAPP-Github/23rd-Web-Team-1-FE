@@ -24,9 +24,9 @@ interface TapInfo {
 function Navigation() {
   const pathname = usePathname()
   const tapInfos = useRef<TapInfo[]>([
-    { href: '/', text: '메인', textSpan: null },
-    { href: '/contact', text: '연락처', textSpan: null },
-    { href: '/timeline', text: '타임라인', textSpan: null },
+    { href: '/me/feed', text: '메인', textSpan: null },
+    { href: '/me/contact', text: '연락처', textSpan: null },
+    { href: '/me/timeline', text: '타임라인', textSpan: null },
   ])
   const [activeTabStyle, setActiveTabStyle] = useState<React.CSSProperties>({})
 

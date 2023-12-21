@@ -1,5 +1,3 @@
-import { HeaderContent } from '@/features/HeaderContent';
-import { Logo } from '@/features/Logo'
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
@@ -17,10 +15,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>
-          <Logo />
-        </header>
-        <HeaderContent />
         {children}
       </body>
     </html>
