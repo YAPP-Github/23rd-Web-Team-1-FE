@@ -3,7 +3,7 @@
 import { clsx } from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import {
   tabs,
@@ -15,23 +15,22 @@ import {
   activeLine,
 } from './Tabs.css'
 
-interface TapInfo {
+export interface TabInfo {
   href: string
   text: string
   textSpan: HTMLSpanElement | null
 }
 
-function Tabs() {
+interface TabsProps {
+  tabInfos: React.MutableRefObject<TabInfo[]>
+}
+
+function Tabs({ tabInfos }: TabsProps) {
   const pathname = usePathname()
-  const tapInfos = useRef<TapInfo[]>([
-    { href: '/me/feed', text: '메인', textSpan: null },
-    { href: '/me/contact', text: '연락처', textSpan: null },
-    { href: '/me/timeline', text: '타임라인', textSpan: null },
-  ])
   const [activeTabStyle, setActiveTabStyle] = useState<React.CSSProperties>({})
 
   useEffect(() => {
-    const matchedRoute = tapInfos.current.find(tapInfo => tapInfo.href === pathname)
+    const matchedRoute = tabInfos.current.find(tabInfo => tabInfo.href === pathname)
 
     if (matchedRoute) {
       const { textSpan } = matchedRoute
@@ -45,18 +44,18 @@ function Tabs() {
         })
       }
     }
-  }, [pathname])
+  }, [pathname, tabInfos])
 
   return (
     <nav className={tabs}>
       <ul className={tapList}>
-        {tapInfos.current.map(tapInfo => (
-          <li className={tapItem} key={tapInfo.href}>
+        {tabInfos.current.map(tabInfo => (
+          <li className={tapItem} key={tabInfo.href}>
             <Link
-              href={tapInfo.href}
-              className={clsx({ [link]: true, [activeLink]: pathname === tapInfo.href })}
+              href={tabInfo.href}
+              className={clsx({ [link]: true, [activeLink]: pathname === tabInfo.href })}
             >
-              <span ref={ref => tapInfo.textSpan = ref}>{tapInfo.text}</span>
+              <span ref={ref => tabInfo.textSpan = ref}>{tabInfo.text}</span>
             </Link>
           </li>
         ))}
