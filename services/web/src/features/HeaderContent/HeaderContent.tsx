@@ -4,8 +4,8 @@ import { clsx } from 'clsx'
 import { useState, useEffect } from 'react'
 
 import { contentWrapper, fixedHeader } from './HeaderContent.css'
-import { Navigation } from './components/Navigation'
 import { Profile } from './components/Profile'
+import { Tabs } from './components/Tabs'
 
 const MINIMIZE_THRESHOLD = 150
 const MAXIMIZE_THRESHOLD = 30
@@ -32,7 +32,7 @@ function HeaderContent() {
   return (
     <div className={clsx(contentWrapper, minimize && fixedHeader)}>
       <Profile minimize={minimize} />
-      <Navigation />
+      <Tabs />
     </div>
   )
 }

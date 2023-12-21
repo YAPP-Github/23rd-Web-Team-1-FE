@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-export const navigation = style({
+export const tabs = style({
   position: 'sticky',
   top: 0,
   width: '100%',

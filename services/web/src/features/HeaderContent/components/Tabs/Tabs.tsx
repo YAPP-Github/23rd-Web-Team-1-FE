@@ -6,14 +6,14 @@ import { usePathname } from 'next/navigation'
 import React, { useEffect, useState, useRef } from 'react'
 
 import {
-  navigation,
+  tabs,
   tapList,
   tapItem,
   link,
   activeLink,
   bottomLine,
   activeLine,
-} from './Navigation.css'
+} from './Tabs.css'
 
 interface TapInfo {
   href: string
@@ -21,7 +21,7 @@ interface TapInfo {
   textSpan: HTMLSpanElement | null
 }
 
-function Navigation() {
+function Tabs() {
   const pathname = usePathname()
   const tapInfos = useRef<TapInfo[]>([
     { href: '/me/feed', text: '메인', textSpan: null },
@@ -48,7 +48,7 @@ function Navigation() {
   }, [pathname])
 
   return (
-    <nav className={navigation}>
+    <nav className={tabs}>
       <ul className={tapList}>
         {tapInfos.current.map(tapInfo => (
           <li className={tapItem} key={tapInfo.href}>
@@ -68,4 +68,4 @@ function Navigation() {
   )
 }
 
-export default Navigation
+export default Tabs
