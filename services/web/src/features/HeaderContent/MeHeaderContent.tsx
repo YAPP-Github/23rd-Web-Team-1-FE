@@ -18,11 +18,11 @@ function MeHeaderContent() {
     { href: '/me/timeline', text: '타임라인', textSpan: null },
   ])
 
-  const minimize = useMinimize({ MINIMIZE_THRESHOLD, MAXIMIZE_THRESHOLD })
+  const isMinimize = useMinimize({ MINIMIZE_THRESHOLD, MAXIMIZE_THRESHOLD })
 
   return (
-    <div className={clsx(contentWrapper, minimize && fixedHeader)}>
-      <MeProfile minimize={minimize} />
+    <div className={clsx(contentWrapper, isMinimize && fixedHeader)}>
+      <MeProfile isMinimize={isMinimize} />
       <Tabs tabInfos={tabInfos} />
     </div>
   )

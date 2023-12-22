@@ -1,8 +1,8 @@
 interface OtherProfileProps {
-  minimize: boolean
+  isMinimize: boolean
 }
 
-function OtherProfile({ minimize }: OtherProfileProps) {
+function OtherProfile({ isMinimize }: OtherProfileProps) {
   return (
     <div style={{ color: 'white' }}>지인페이지 프로필</div>
   )

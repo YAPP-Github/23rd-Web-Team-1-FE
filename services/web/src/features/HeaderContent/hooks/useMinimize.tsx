@@ -6,11 +6,11 @@ interface UseMinimizeProps {
 }
 
 function useMinimize({ MINIMIZE_THRESHOLD, MAXIMIZE_THRESHOLD }: UseMinimizeProps) {
-  const [minimize, setMinimize] = useState(false)
+  const [isMinimize, setMinimize] = useState(false)
 
   useEffect(() => {
     function handleScroll() {
-      if (window.scrollY > (minimize ? MAXIMIZE_THRESHOLD : MINIMIZE_THRESHOLD)) {
+      if (window.scrollY > (isMinimize ? MAXIMIZE_THRESHOLD : MINIMIZE_THRESHOLD)) {
         setMinimize(true)
       } else {
         setMinimize(false)
@@ -22,9 +22,9 @@ function useMinimize({ MINIMIZE_THRESHOLD, MAXIMIZE_THRESHOLD }: UseMinimizeProp
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [MAXIMIZE_THRESHOLD, MINIMIZE_THRESHOLD, minimize])
+  }, [MAXIMIZE_THRESHOLD, MINIMIZE_THRESHOLD, isMinimize])
 
-  return minimize
+  return isMinimize
 }
 
 export default useMinimize

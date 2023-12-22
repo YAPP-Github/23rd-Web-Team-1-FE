@@ -14,23 +14,23 @@ import {
 } from './MeProfile.css'
 
 interface ProfileProps {
-  minimize: boolean
+  isMinimize: boolean
 }
 
-function MeProfile({ minimize }: ProfileProps) {
+function MeProfile({ isMinimize }: ProfileProps) {
   return (
-    <section className={clsx(profileWrapper, minimize && minimizeStyle)}>
-      <article className={clsx(profileImageWrapper, minimize && minimizeStyle)}>
+    <section className={clsx(profileWrapper, isMinimize && minimizeStyle)}>
+      <article className={clsx(profileImageWrapper, isMinimize && minimizeStyle)}>
         <img
-          className={clsx(profileImage, minimize && minimizeStyle)}
+          className={clsx(profileImage, isMinimize && minimizeStyle)}
           src="https://thumb.mtstarnews.com/06/2022/02/2022022517263696411_3.jpg"
           alt="main profile"
         />
       </article>
       <article className={profileInfo}>
-        <h2 className={clsx(name, minimize && minimizeStyle)}>김하나</h2>
-        <h3 className={clsx(job, minimize && minimizeStyle)}>UXUI 디자인 ∙ 삼성전자</h3>
-        <h4 className={clsx(tag, minimize && minimizeStyle)}>#골프 #재테크 #금융 #테니스</h4>
+        <h2 className={clsx(name, isMinimize && minimizeStyle)}>김하나</h2>
+        <h3 className={clsx(job, isMinimize && minimizeStyle)}>UXUI 디자인 ∙ 삼성전자</h3>
+        <h4 className={clsx(tag, isMinimize && minimizeStyle)}>#골프 #재테크 #금융 #테니스</h4>
       </article>
     </section>
   );
