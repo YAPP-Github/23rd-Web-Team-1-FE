@@ -11,15 +11,13 @@ COPY . .
 
 RUN yarn set version 4.0.2
 
+# 이미지 정리 
+RUN yarn workspaces focus && \
+    yarn cache clean
+
 RUN yarn install
 
 RUN /bin/sh -c yarn workspace web build
-
-# 이미지 정리 
-RUN rm -rf node_modules && \
-    rm -rf /usr/local/share/.cache && \
-    yarn workspaces focus && \
-    yarn cache clean
 
 FROM node:18.17.0-alpine
 EXPOSE 3000
