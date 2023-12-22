@@ -18,7 +18,10 @@ function MeHeaderContent() {
     { href: '/me/timeline', text: '타임라인', textSpan: null },
   ])
 
-  const isMinimize = useMinimize({ MINIMIZE_THRESHOLD, MAXIMIZE_THRESHOLD })
+  const isMinimize = useMinimize({
+    minimizeThreshold: MINIMIZE_THRESHOLD,
+    maximizeThreshold: MAXIMIZE_THRESHOLD,
+  })
 
   return (
     <div className={clsx(contentWrapper, isMinimize && fixedHeader)}>

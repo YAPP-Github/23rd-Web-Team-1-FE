@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react'
 
 interface UseMinimizeProps {
-  MINIMIZE_THRESHOLD: number
-  MAXIMIZE_THRESHOLD: number
+  minimizeThreshold: number
+  maximizeThreshold: number
 }
 
-function useMinimize({ MINIMIZE_THRESHOLD, MAXIMIZE_THRESHOLD }: UseMinimizeProps) {
+function useMinimize({ minimizeThreshold, maximizeThreshold }: UseMinimizeProps) {
   const [isMinimize, setMinimize] = useState(false)
 
   useEffect(() => {
     function handleScroll() {
-      if (window.scrollY > (isMinimize ? MAXIMIZE_THRESHOLD : MINIMIZE_THRESHOLD)) {
+      if (window.scrollY > (isMinimize ? maximizeThreshold : minimizeThreshold)) {
         setMinimize(true)
       } else {
         setMinimize(false)
@@ -22,7 +22,7 @@ function useMinimize({ MINIMIZE_THRESHOLD, MAXIMIZE_THRESHOLD }: UseMinimizeProp
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [MAXIMIZE_THRESHOLD, MINIMIZE_THRESHOLD, isMinimize])
+  }, [minimizeThreshold, maximizeThreshold, isMinimize])
 
   return isMinimize
 }
