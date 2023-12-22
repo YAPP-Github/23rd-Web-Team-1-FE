@@ -5,19 +5,19 @@ import { clsx } from 'clsx'
 import { useParams } from 'next/navigation'
 import { useRef } from 'react'
 
-import { contentWrapper, fixedHeader } from './OtherHeaderContent.css'
-import { OtherProfile } from './components/OtherProfile'
+import { contentWrapper, fixedHeader } from './FriendHeaderContent.css'
+import { FriendProfile } from './components/FriendProfile'
 import useMinimize from './hooks/useMinimize'
 
 const MINIMIZE_THRESHOLD = 150
 const MAXIMIZE_THRESHOLD = 30
 
-function OtherHeaderContent() {
+function FriendHeaderContent() {
   const { id } = useParams()
 
   const tabInfos = useRef<TabInfo[]>([
-    { href: `/other/${id}/subject`, text: '관심주제', textSpan: null },
-    { href: `/other/${id}/timeline`, text: '타임라인', textSpan: null },
+    { href: `/friend/${id}/subject`, text: '관심주제', textSpan: null },
+    { href: `/friend/${id}/timeline`, text: '타임라인', textSpan: null },
   ])
 
   const isMinimize = useMinimize({
@@ -27,10 +27,10 @@ function OtherHeaderContent() {
 
   return (
     <div className={clsx(contentWrapper, isMinimize && fixedHeader)}>
-      <OtherProfile isMinimize={isMinimize} />
+      <FriendProfile isMinimize={isMinimize} />
       <Tabs tabInfos={tabInfos} />
     </div>
   )
 }
 
-export default OtherHeaderContent
+export default FriendHeaderContent
