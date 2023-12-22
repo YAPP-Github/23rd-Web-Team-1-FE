@@ -11,6 +11,10 @@ COPY . .
 
 RUN yarn set version 4.0.2
 
+# 이미지 정리 
+RUN yarn workspaces focus && \
+    yarn cache clean
+
 RUN yarn install
 
 RUN /bin/sh -c yarn workspace web build
