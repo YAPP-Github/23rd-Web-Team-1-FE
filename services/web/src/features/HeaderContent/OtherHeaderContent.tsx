@@ -1,12 +1,12 @@
 'use client'
 
+import { Tabs, TabInfo } from '@linker/lds/src/Tabs'
 import { clsx } from 'clsx'
 import { useParams } from 'next/navigation'
 import { useRef } from 'react'
 
 import { contentWrapper, fixedHeader } from './OtherHeaderContent.css'
 import { OtherProfile } from './components/OtherProfile'
-import { Tabs, TabInfo } from './components/Tabs'
 import useMinimize from './hooks/useMinimize'
 
 const MINIMIZE_THRESHOLD = 150

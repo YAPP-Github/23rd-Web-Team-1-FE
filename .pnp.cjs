@@ -5555,6 +5555,7 @@ const RAW_RUNTIME_STATE =
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
           ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.1"],\
+          ["clsx", "npm:2.0.0"],\
           ["next", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:14.0.3"],\
           ["prop-types", "npm:15.8.1"],\
           ["react", "npm:18.2.0"],\
@@ -5602,6 +5603,7 @@ const RAW_RUNTIME_STATE =
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
           ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.1"],\
+          ["clsx", "npm:2.0.0"],\
           ["next", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:14.0.3"],\
           ["prop-types", "npm:15.8.1"],\
           ["react", "npm:18.2.0"],\

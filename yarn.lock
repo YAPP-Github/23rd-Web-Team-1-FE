@@ -2645,6 +2645,7 @@ __metadata:
     "@vanilla-extract/dynamic": "npm:^2.1.0"
     "@vanilla-extract/recipes": "npm:^0.5.1"
     "@vanilla-extract/webpack-plugin": "npm:^2.3.1"
+    clsx: "npm:2.0.0"
     next: "npm:^14.0.3"
     prop-types: "npm:^15.8.1"
     react: "npm:^18.2.0"
@@ -7089,7 +7090,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^2.0.0":
+"clsx@npm:2.0.0, clsx@npm:^2.0.0":
   version: 2.0.0
   resolution: "clsx@npm:2.0.0"
   checksum: 943766d1b02fee3538c871e56638d87f973fbc2d6291ce221215ea436fdecb9be97ad323f411839c2d52c45640c449b1a53fbfe7e8b3d529b4e263308b630c9a

@@ -1,11 +1,11 @@
 'use client'
 
+import { Tabs, TabInfo } from '@linker/lds/src/Tabs'
 import { clsx } from 'clsx'
 import { useRef } from 'react'
 
 import { contentWrapper, fixedHeader } from './MeHeaderContent.css'
 import { MeProfile } from './components/MeProfile'
-import { Tabs, TabInfo } from './components/Tabs'
 import useMinimize from './hooks/useMinimize'
 
 const MINIMIZE_THRESHOLD = 150
