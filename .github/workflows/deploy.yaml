@@ -73,6 +73,7 @@ jobs:
         run: |
           echo "${{ secrets.EC2_SSH_PRIVATE_KEY }}" > private_key.pem
           chmod 600 private_key.pem
+          NEW_CONTAINER_NAME="linker_${IMAGE_TAG}"
           ssh -i private_key.pem -o StrictHostKeyChecking=no ubuntu@$EC2_IP "
           aws ecr get-login-password --region ap-northeast-2 |
           sudo docker login --username AWS --password-stdin 903755389667.dkr.ecr.ap-northeast-2.amazonaws.com/linker &&
