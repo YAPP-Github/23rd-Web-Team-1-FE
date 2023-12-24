@@ -1,5 +1,5 @@
 # node.js 압축 이미지를 설치합니다
-FROM node:18.17.0-alpine as BUILD
+FROM node:18.17.0-slim as BUILD
 
 # yarn 설치
 RUN npm install -g yarn --force
@@ -17,7 +17,7 @@ RUN yarn workspaces focus && \
 
 RUN yarn install
 
-RUN /bin/sh -c yarn workspace web build
+RUN yarn workspace web build
 
 FROM node:18.17.0-alpine
 EXPOSE 3000
