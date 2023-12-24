@@ -37,6 +37,7 @@
     "webpack": "^5.89.0"
   },
   "dependencies": {
+    "clsx": "2.0.0",
     "next": "^14.0.3"
   },
   "peerDependencies": {

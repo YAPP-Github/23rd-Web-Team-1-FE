@@ -5,7 +5,6 @@ export const GlobalStyle = [
     fontSize: '62.5%',
     margin: 0,
     padding: 0,
-    overflowX: 'hidden',
     height: '100%',
     // 폰트 크기 팽창 제한
     MozTextSizeAdjust: 'none',
@@ -15,7 +14,6 @@ export const GlobalStyle = [
   globalStyle('body', {
     margin: 0,
     padding: 0,
-    overflowX: 'hidden',
     fontSize: '1.6rem',
     marginBlockEnd: 'none',
     minHeight: '100vh',
@@ -65,4 +63,7 @@ export const GlobalStyle = [
     scrollMarginBlock: '5ex',
   }),
   globalStyle('img, picture, video, canvas, svg ', { display: 'block', maxWidth: '100%' }),
+  globalStyle('ul', { padding: 0, margin: 0, listStyle: 'none' }),
+  globalStyle('figure', { padding: 0, margin: 0 }),
+  globalStyle('h1, h2, h3, h4, h5, h6', { margin: 0, padding: 0 }),
 ];

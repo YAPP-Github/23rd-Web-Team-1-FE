@@ -1,4 +1,7 @@
 {
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
   "search.exclude": {
     "**/.yarn": true,
     "**/.pnp.*": true
