@@ -1,5 +1,8 @@
+# Txt
+
 ```tsx
 import { Txt } from '@linker/lds';
+import { colors } from '@linker/styles';
 
 const Page = () => {
   return (
