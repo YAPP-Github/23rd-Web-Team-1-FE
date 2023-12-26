@@ -15,11 +15,14 @@
   },
   "dependencies": {
     "@linker/lds": "workspace:^",
+    "@linker/styles": "workspace:^",
     "@vanilla-extract/css": "^1.14.0",
     "@vanilla-extract/recipes": "^0.5.1",
+    "@vanilla-extract/sprinkles": "^1.6.1",
     "clsx": "^2.0.0",
     "jotai": "^2.6.0",
     "next": "14.0.3",
+    "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
     "ts-pattern": "^5.0.5"

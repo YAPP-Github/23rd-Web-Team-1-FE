@@ -2628,6 +2628,7 @@ __metadata:
     "@babel/preset-env": "npm:^7.23.3"
     "@babel/preset-react": "npm:^7.23.3"
     "@babel/preset-typescript": "npm:^7.23.3"
+    "@linker/styles": "workspace:^"
     "@storybook/addon-essentials": "npm:^7.5.3"
     "@storybook/addon-interactions": "npm:^7.5.3"
     "@storybook/addon-links": "npm:^7.5.3"
@@ -2657,6 +2658,33 @@ __metadata:
     "@vanilla-extract/css": "*"
     "@vanilla-extract/dynamic": "*"
     next: ^14
+    react: ^18
+    react-dom: ^18
+  languageName: unknown
+  linkType: soft
+
+"@linker/styles@workspace:^, @linker/styles@workspace:packages/styles":
+  version: 0.0.0-use.local
+  resolution: "@linker/styles@workspace:packages/styles"
+  dependencies:
+    "@babel/core": "npm:^7.23.3"
+    "@babel/preset-env": "npm:^7.23.3"
+    "@babel/preset-react": "npm:^7.23.3"
+    "@babel/preset-typescript": "npm:^7.23.3"
+    "@types/babel__core": "npm:^7.20.5"
+    "@types/babel__preset-env": "npm:^7.9.6"
+    "@types/react": "npm:^18.2.38"
+    "@types/react-dom": "npm:^18.2.17"
+    "@vanilla-extract/css": "npm:^1.14.0"
+    "@vanilla-extract/dynamic": "npm:^2.1.0"
+    "@vanilla-extract/recipes": "npm:^0.5.1"
+    "@vanilla-extract/sprinkles": "npm:^1.6.1"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5506,6 +5534,15 @@ __metadata:
   peerDependencies:
     "@vanilla-extract/css": ^1.0.0
   checksum: 20936fd318fe005b1a637bd1459d5ce596c14e3e73402fe6f130007619bf3d2765cd1f3e260a45d141f9c62f2c274f85378d004d03a9f68c328f5f98df7b9ec8
+  languageName: node
+  linkType: hard
+
+"@vanilla-extract/sprinkles@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "@vanilla-extract/sprinkles@npm:1.6.1"
+  peerDependencies:
+    "@vanilla-extract/css": ^1.0.0
+  checksum: a469f5a925da3cb0d23a83c77ce88779697143758c72000f3c4f9e4f4396035ae2a3a13d7d200e625c98952a1f375d83709817ff86fee039aa480840bd5a8888
   languageName: node
   linkType: hard
 
@@ -12741,6 +12778,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-themes@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "next-themes@npm:0.2.1"
+  peerDependencies:
+    next: "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 6c955c114b7aa920fc14edd3832d0ea95be245ad33f79f397f613696a7c16c7f4112d6e61893d4977255b270f920811741eafdf8be49bd99cecafabf09e8a499
+  languageName: node
+  linkType: hard
+
 "next@npm:14.0.3, next@npm:^14.0.3":
   version: 14.0.3
   resolution: "next@npm:14.0.3"
@@ -16783,6 +16831,7 @@ __metadata:
     "@linker/eslint-config": "workspace:^"
     "@linker/eslint-plugin": "workspace:^"
     "@linker/lds": "workspace:^"
+    "@linker/styles": "workspace:^"
     "@next/bundle-analyzer": "npm:^14.0.3"
     "@testing-library/dom": "npm:^9.3.3"
     "@testing-library/jest-dom": "npm:^6.1.4"
@@ -16797,6 +16846,7 @@ __metadata:
     "@vanilla-extract/jest-transform": "npm:^1.1.1"
     "@vanilla-extract/next-plugin": "npm:^2.3.2"
     "@vanilla-extract/recipes": "npm:^0.5.1"
+    "@vanilla-extract/sprinkles": "npm:^1.6.1"
     clsx: "npm:^2.0.0"
     eslint: "npm:^8"
     eslint-config-next: "npm:14.0.3"
@@ -16807,6 +16857,7 @@ __metadata:
     msw: "npm:^2.0.9"
     next: "npm:14.0.3"
     next-router-mock: "npm:^0.9.10"
+    next-themes: "npm:^0.2.1"
     react: "npm:^18"
     react-dom: "npm:^18"
     ts-node: "npm:^10.9.1"

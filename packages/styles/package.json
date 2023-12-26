@@ -1,0 +1,31 @@
+{
+  "name": "@linker/styles",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "types": "./src/index.ts",
+  "dependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@types/babel__core": "^7.20.5",
+    "@types/babel__preset-env": "^7.9.6",
+    "@types/react": "^18.2.38",
+    "@types/react-dom": "^18.2.17",
+    "@vanilla-extract/css": "^1.14.0",
+    "@vanilla-extract/dynamic": "^2.1.0",
+    "@vanilla-extract/recipes": "^0.5.1",
+    "@vanilla-extract/sprinkles": "^1.6.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "@vanilla-extract/css": "*",
+    "@vanilla-extract/dynamic": "*",
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}
