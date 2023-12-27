@@ -1,7 +1,12 @@
+import { Txt } from '@linker/lds';
+import { colors } from '@linker/styles';
+
 function ContactPage() {
   return (
     <div>
-      <h1>연락처</h1>
+      <Txt typography="h2" color={colors.grey050}>
+        연락처
+      </Txt>
     </div>
   );
 }
