@@ -5,7 +5,7 @@ import { clsx } from 'clsx';
 import { useParams } from 'next/navigation';
 import { useRef } from 'react';
 
-import { contentWrapper, fixedHeader } from './FriendHeaderContent.css';
+import { minimizeStyle, header, headerContent } from './FriendHeader.css';
 import { FriendProfile } from './components/FriendProfile';
 import useMinimize from './hooks/useMinimize';
 
@@ -26,10 +26,12 @@ function FriendHeaderContent() {
   });
 
   return (
-    <div className={clsx(contentWrapper, isMinimize && fixedHeader)}>
-      <FriendProfile isMinimize={isMinimize} />
-      <Tabs tabInfos={tabInfos} />
-    </div>
+    <header className={clsx(header, isMinimize && minimizeStyle)}>
+      <div className={headerContent}>
+        <FriendProfile isMinimize={isMinimize} />
+        <Tabs tabInfos={tabInfos} />
+      </div>
+    </header>
   );
 }
 
