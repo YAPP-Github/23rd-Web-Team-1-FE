@@ -5,11 +5,11 @@ export const minimizeStyle = style({});
 export const profileWrapper = style({
   display: 'flex',
   alignItems: 'center',
-  padding: '1.4rem 2.3rem 2.4rem',
+  padding: '2rem',
 
   selectors: {
     [`&.${minimizeStyle}`]: {
-      padding: '1.2rem 2.3rem 1.4rem',
+      padding: '1.2rem 2rem',
     },
   },
 });
@@ -18,33 +18,26 @@ export const profileImageWrapper = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  overflow: 'hidden',
   width: '7.2rem',
   height: '7.2rem',
   boxSizing: 'content-box',
-  border: '3px solid #49a15f',
-  borderRadius: '50%',
+  border: '2px solid #FFFFFF',
+  borderRadius: '42%',
 
   selectors: {
     [`&.${minimizeStyle}`]: {
-      width: '3.4rem',
-      height: '3.4rem',
+      width: '4rem',
+      height: '4rem',
     },
   },
 });
 
 export const profileImage = style({
-  width: '6.7rem',
-  height: '6.7rem',
+  width: '100%',
+  height: '100%',
   objectFit: 'cover',
   objectPosition: 'top',
-  borderRadius: '50%',
-
-  selectors: {
-    [`&.${minimizeStyle}`]: {
-      width: '3rem',
-      height: '3rem',
-    },
-  },
 });
 
 export const profileInfo = style({

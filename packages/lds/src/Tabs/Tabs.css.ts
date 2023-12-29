@@ -7,6 +7,7 @@ export const tabs = style({
 });
 
 export const tapList = style({
+  position: 'relative',
   display: 'flex',
   justifyContent: 'space-between',
 });

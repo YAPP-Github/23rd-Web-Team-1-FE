@@ -36,11 +36,9 @@ function Tabs({ tabInfos }: TabsProps) {
       const { textSpan } = matchedRoute
 
       if (textSpan) {
-        const { width, left } = textSpan.getBoundingClientRect()
-
         setActiveTabStyle({
-          width: `${width}px`,
-          left: `${left}px`,
+          width: `${textSpan.offsetWidth}px`,
+          left: `${textSpan.offsetLeft}px`,
         })
       }
     }

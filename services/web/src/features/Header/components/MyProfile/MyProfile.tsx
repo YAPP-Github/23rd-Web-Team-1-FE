@@ -11,18 +11,18 @@ import {
   name,
   job,
   tag,
-} from './MeProfile.css'
+} from './MyProfile.css'
 
 interface ProfileProps {
   isMinimize: boolean
 }
 
-function MeProfile({ isMinimize }: ProfileProps) {
+function MyProfile({ isMinimize }: ProfileProps) {
   return (
     <section className={clsx(profileWrapper, isMinimize && minimizeStyle)}>
       <article className={clsx(profileImageWrapper, isMinimize && minimizeStyle)}>
         <img
-          className={clsx(profileImage, isMinimize && minimizeStyle)}
+          className={clsx(profileImage)}
           src="https://thumb.mtstarnews.com/06/2022/02/2022022517263696411_3.jpg"
           alt="main profile"
         />
@@ -36,4 +36,4 @@ function MeProfile({ isMinimize }: ProfileProps) {
   );
 }
 
-export default MeProfile;
+export default MyProfile;

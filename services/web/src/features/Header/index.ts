@@ -1,2 +1,2 @@
-export { default as MeHeaderContent } from './MeHeaderContent';
+export { default as MyHeader } from './MyHeader';
 export { default as FriendHeaderContent } from './FriendHeaderContent';

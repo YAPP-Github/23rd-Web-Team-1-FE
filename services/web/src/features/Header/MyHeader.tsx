@@ -4,8 +4,9 @@ import { Tabs, TabInfo } from '@linker/lds';
 import { clsx } from 'clsx';
 import { useRef } from 'react';
 
-import { contentWrapper, fixedHeader } from './MeHeaderContent.css';
-import { MeProfile } from './components/MeProfile';
+import { minimizeStyle, header, headerContent } from './MyHeader.css';
+import { Logo } from './components/Logo'
+import { MyProfile } from './components/MyProfile';
 import useMinimize from './hooks/useMinimize';
 
 const MINIMIZE_THRESHOLD = 150;
@@ -24,10 +25,13 @@ function MeHeaderContent() {
   });
 
   return (
-    <div className={clsx(contentWrapper, isMinimize && fixedHeader)}>
-      <MeProfile isMinimize={isMinimize} />
-      <Tabs tabInfos={tabInfos} />
-    </div>
+    <header className={clsx(header, isMinimize && minimizeStyle)}>
+      <div className={headerContent}>
+        {!isMinimize && <Logo />}
+        <MyProfile isMinimize={isMinimize} />
+        <Tabs tabInfos={tabInfos} />
+      </div>
+    </header>
   );
 }
 

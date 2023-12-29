@@ -1,4 +1,4 @@
-import { FriendHeaderContent } from '@/features/HeaderContent';
+import { FriendHeaderContent } from '@features/Header';
 
 function FriendLayout({ children }: { children: React.ReactNode }) {
   return (
