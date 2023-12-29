@@ -1,10 +1,14 @@
 import { MyHeader } from '@features/Header';
 
+import { section } from './layout.css'
+
 function MeLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <MyHeader />
-      {children}
+      <section className={section}>
+        {children}
+      </section>
     </>
   );
 }
