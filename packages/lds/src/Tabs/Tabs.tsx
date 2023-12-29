@@ -51,7 +51,7 @@ function Tabs({ tabInfos }: TabsProps) {
           <li className={tapItem} key={tabInfo.href}>
             <Link
               href={tabInfo.href}
-              className={clsx({ [link]: true, [activeLink]: pathname === tabInfo.href })}
+              className={clsx(link, pathname === tabInfo.href && activeLink)}
             >
               <span ref={ref => tabInfo.textSpan = ref}>{tabInfo.text}</span>
             </Link>
