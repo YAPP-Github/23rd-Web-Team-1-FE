@@ -1,5 +1,7 @@
 import { redirect } from 'next/navigation'
 
-export default function MainPage() {
+function MyPage() {
   return redirect('/my/feed')
 }
+
+export default MyPage

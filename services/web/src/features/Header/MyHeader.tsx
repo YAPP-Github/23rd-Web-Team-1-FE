@@ -14,9 +14,9 @@ const MAXIMIZE_THRESHOLD = 30;
 
 function MeHeaderContent() {
   const tabInfos = useRef<TabInfo[]>([
-    { href: '/me/feed', text: '피드', textSpan: null },
-    { href: '/me/contact', text: '연락처', textSpan: null },
-    { href: '/me/timeline', text: '타임라인', textSpan: null },
+    { href: '/my/feed', text: '피드', textSpan: null },
+    { href: '/my/contact', text: '연락처', textSpan: null },
+    { href: '/my/timeline', text: '타임라인', textSpan: null },
   ]);
 
   const isMinimize = useMinimize({
