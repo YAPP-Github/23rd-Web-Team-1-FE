@@ -1,10 +1,14 @@
-import { FriendHeaderContent } from '@/features/HeaderContent';
+import { FriendHeader } from '@features/Header';
+
+import { section } from './layout.css'
 
 function FriendLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <FriendHeaderContent />
-      {children}
+      <FriendHeader />
+      <section className={section}>
+        {children}
+      </section>
     </>
   )
 }

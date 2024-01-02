@@ -36,11 +36,9 @@ function Tabs({ tabInfos }: TabsProps) {
       const { textSpan } = matchedRoute
 
       if (textSpan) {
-        const { width, left } = textSpan.getBoundingClientRect()
-
         setActiveTabStyle({
-          width: `${width}px`,
-          left: `${left}px`,
+          width: `${textSpan.offsetWidth}px`,
+          left: `${textSpan.offsetLeft}px`,
         })
       }
     }
@@ -53,7 +51,7 @@ function Tabs({ tabInfos }: TabsProps) {
           <li className={tapItem} key={tabInfo.href}>
             <Link
               href={tabInfo.href}
-              className={clsx({ [link]: true, [activeLink]: pathname === tabInfo.href })}
+              className={clsx(link, pathname === tabInfo.href && activeLink)}
             >
               <span ref={ref => tabInfo.textSpan = ref}>{tabInfo.text}</span>
             </Link>

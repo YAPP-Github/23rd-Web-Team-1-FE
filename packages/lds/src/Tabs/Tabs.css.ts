@@ -7,21 +7,23 @@ export const tabs = style({
 });
 
 export const tapList = style({
+  position: 'relative',
   display: 'flex',
-  justifyContent: 'space-between',
 });
 
 export const tapItem = style({
-  width: '94px',
-  height: '48px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flex: 1,
 });
 
 export const link = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  width: '100%',
-  height: '100%',
+  width: '94px',
+  height: '48px',
   fontSize: '1.6rem',
   color: 'rgba(255, 255, 255, 0.3)',
   fontWeight: 'bold',

@@ -1,16 +1,16 @@
-import { MeHeaderContent } from '@/features/HeaderContent';
-import { Logo } from '@/features/Logo'
+import { MyHeader } from '@features/Header';
+
+import { section } from './layout.css'
 
 function MeLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <header>
-        <Logo />
-      </header>
-      <MeHeaderContent />
-      {children}
+      <MyHeader />
+      <section className={section}>
+        {children}
+      </section>
     </>
-  )
+  );
 }
 
-export default MeLayout
+export default MeLayout;
