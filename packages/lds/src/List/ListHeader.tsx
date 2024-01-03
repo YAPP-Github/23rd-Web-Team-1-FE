@@ -1,5 +1,3 @@
-'use client';
-
 import { colors } from '@linker/styles';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
