@@ -1,8 +1,13 @@
 /* eslint-disable arrow-parens */
 import { createTheme, createThemeContract } from '@vanilla-extract/css';
 
+export const baseColors = {
+  background: '#f1f3f5',
+};
+
 export const colorVariants = createThemeContract({
   colors: {
+    ...baseColors,
     grey005: null,
     grey010: null,
     grey020: null,
@@ -19,6 +24,7 @@ export const { colors } = colorVariants;
 
 export const lightThemeVars = createTheme(colorVariants, {
   colors: {
+    ...baseColors,
     grey005: '#fefefe',
     grey010: '#fdfdfd',
     grey020: '#f7f8f9',
@@ -33,6 +39,7 @@ export const lightThemeVars = createTheme(colorVariants, {
 
 export const darkThemeVars = createTheme(colorVariants, {
   colors: {
+    ...baseColors,
     grey005: '#171b1c',
     grey010: '#1e2427',
     grey020: '#2e363a',

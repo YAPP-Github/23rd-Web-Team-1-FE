@@ -1,5 +1,7 @@
 import { globalStyle } from '@vanilla-extract/css';
 
+import { colors } from './colors.css';
+
 export const GlobalStyle = [
   globalStyle('html', {
     fontSize: '62.5%',
@@ -19,6 +21,7 @@ export const GlobalStyle = [
     minHeight: '100vh',
     lineHeight: 1.5,
     overscrollBehavior: 'none',
+    backgroundColor: colors.background,
   }),
 
   globalStyle('h1, h2, h3, h4, button,input,label', {

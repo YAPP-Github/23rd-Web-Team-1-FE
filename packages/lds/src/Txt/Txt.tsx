@@ -4,7 +4,7 @@
 import { typography as typographyRecipe } from '@linker/styles';
 import { FontWeight, Typography } from '@linker/styles/types';
 import clsx from 'clsx';
-import { CSSProperties, forwardRef } from 'react';
+import { CSSProperties, ReactElement, forwardRef } from 'react';
 
 interface BaseProps {
   typography?: Typography;
@@ -36,6 +36,6 @@ const Txt = forwardRef<HTMLElement, TxtProps>(
       </Component>
     );
   },
-);
+) as <T extends keyof JSX.IntrinsicElements = 'span'>(props: Props<T>) => ReactElement | null;
 
 export default Txt;

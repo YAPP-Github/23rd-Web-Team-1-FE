@@ -10,7 +10,7 @@ function getAbsolutePath(value) {
   return dirname(require.resolve(join(value, 'package.json')));
 }
 
-/** @type { import('@storybook/react-webpack5').StorybookConfig } */
+/** @type { import('@storybook/nextjs').StorybookConfig } */
 const config = {
   stories: ['../**/*.mdx', '../**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
@@ -20,7 +20,7 @@ const config = {
     getAbsolutePath('@storybook/addon-interactions'),
   ],
   framework: {
-    name: getAbsolutePath('@storybook/react-webpack5'),
+    name: getAbsolutePath('@storybook/nextjs'),
     options: {
       fastRefresh: true,
     },
