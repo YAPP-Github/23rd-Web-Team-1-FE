@@ -1,5 +1,4 @@
 import { style } from '@vanilla-extract/css';
-import {} from '@linker/styles';
 
 export const swiperContainer = style({
   width: '100%',
@@ -7,8 +6,20 @@ export const swiperContainer = style({
   overflowX: 'auto',
   scrollSnapType: 'x mandatory',
   backgroundColor: 'rgb(230, 230, 230)',
+
+  msOverflowStyle: 'none' /* IE and Edge */,
+  scrollbarWidth: 'none' /* Firefox */,
+  selectors: {
+    '&::-webkit-scrollbar': {
+      display: 'none' /* Chrome, Safari, Opera */,
+    },
+  },
 });
 
 export const itemWrapper = style({
   display: 'flex',
+  width: '100%',
+  height: '100%',
+  padding: 0,
+  margin: 0,
 });

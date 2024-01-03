@@ -1,14 +1,17 @@
-import React from 'react';
+import clsx from 'clsx';
+import React, { forwardRef } from 'react';
+import type { Ref } from 'react';
 
 import { swiperContainer, itemWrapper } from './Swiper.css';
 
 interface SwiperProps {
   children: React.ReactNode;
+  className?: string
 }
 
-function Swiper({ children }: SwiperProps) {
+function Swiper({ children, className }: SwiperProps, ref: Ref<HTMLDivElement>) {
   return (
-    <div className={swiperContainer}>
+    <div ref={ref} className={clsx(swiperContainer, className)}>
       <ul className={itemWrapper}>
         {children}
       </ul>
@@ -16,4 +19,4 @@ function Swiper({ children }: SwiperProps) {
   );
 }
 
-export default Swiper;
+export default forwardRef(Swiper);
