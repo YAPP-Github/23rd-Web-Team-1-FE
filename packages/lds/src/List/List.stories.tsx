@@ -40,6 +40,29 @@ export const Template: Story = {
           <Spacing size={12} />
           <List.Row content={<Txt typography="p1">컨텐츠 3</Txt>} withArrow />
         </List>
+
+        <Spacing size={24} />
+
+        <List>
+          <List.Header
+            title="커피챗 진행"
+            rightAddon={
+              <button type="button">
+                <img
+                  src="https://static.im-linker.com/dots-vertical.svg"
+                  alt=""
+                  width={28}
+                  height={28}
+                />
+              </button>
+            }
+          />
+          Content
+        </List>
+
+        <Spacing size={24} />
+
+        <List>Content</List>
       </div>
     );
   },
