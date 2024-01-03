@@ -1,4 +1,4 @@
-import Contact from '@features/Header/components/Contact/Contact';
+import Contact from '@app/my/contact/Contact';
 
 function ContactPage() {
   return <Contact />;
