@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import { clsx } from 'clsx'
+import { clsx } from 'clsx';
 
 import {
   minimizeStyle,
@@ -11,10 +11,10 @@ import {
   name,
   job,
   tag,
-} from './MyProfile.css'
+} from './MyProfile.css';
 
 interface ProfileProps {
-  isMinimize: boolean
+  isMinimize: boolean;
 }
 
 function MyProfile({ isMinimize }: ProfileProps) {
