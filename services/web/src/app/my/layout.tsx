@@ -2,7 +2,7 @@ import { MyHeader } from '@features/Header';
 
 import { section } from './layout.css'
 
-function MeLayout({ children }: { children: React.ReactNode }) {
+function MyLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <MyHeader />
@@ -13,4 +13,4 @@ function MeLayout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default MeLayout;
+export default MyLayout;
