@@ -1,6 +1,7 @@
 'use client';
 
 import { colors } from '@linker/styles';
+import clsx from 'clsx';
 import { ReactNode } from 'react';
 
 import { headerContainer, headerTitle, iconWrapper } from './ListHeader.css';
@@ -11,11 +12,12 @@ interface Props {
   description?: string;
   icon?: ReactNode;
   rightAddon?: ReactNode;
+  className?: string;
 }
 
-const ListHeader = ({ title, description, icon, rightAddon }: Props) => {
+const ListHeader = ({ title, description, icon, rightAddon, className }: Props) => {
   return (
-    <div className={headerContainer}>
+    <div className={clsx(headerContainer, className)}>
       <div className={headerTitle}>
         <Txt as="h1" typography="h7">
           {icon != null && <span className={iconWrapper}>{icon}</span>}
