@@ -2,6 +2,7 @@
 
 import clsx from 'clsx';
 import React, { useState, useRef } from 'react';
+import { useThrottledCallback } from 'use-debounce';
 
 import { swiperContainer, itemWrapper } from './Swiper.css';
 
@@ -15,7 +16,7 @@ const Swiper = ({ children, className, onSwipe }: SwiperProps) => {
   const [currentItemIndex, setCurrentItemIndex] = useState(0)
   const scrollWrapperRef = useRef<HTMLDivElement | null>(null)
 
-  const handleScroll = () => {
+  const handleScroll = useThrottledCallback(() => {
     if (!scrollWrapperRef.current) {
       return
     }
@@ -29,7 +30,7 @@ const Swiper = ({ children, className, onSwipe }: SwiperProps) => {
       setCurrentItemIndex(newItemIndex)
       onSwipe?.(newItemIndex)
     }
-  }
+  }, 100)
 
   return (
     <div
