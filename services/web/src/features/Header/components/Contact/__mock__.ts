@@ -42,3 +42,5 @@ export const contactMockData: ContackMockDataProps[] = [
     profileImgUrl: 'https://newsimg.sedaily.com/2023/09/12/29UNLQFQT6_1.jpg',
   },
 ];
+
+export default contactMockData;

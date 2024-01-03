@@ -4,18 +4,21 @@ export const wrapper = style({
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
-  gap: '16px',
   paddingLeft: '24px',
   paddingRight: '24px',
+  overflow: 'auto',
 });
 
 export const totalCountWrapper = style({
   paddingTop: '38px',
   display: 'flex',
   flexDirection: 'row',
+  gap: '1px',
 });
 
 export const profileWrapper = style({
   display: 'flex',
-  flexDirection: 'row',
+  flexDirection: 'column',
+  paddingTop: '26px',
+  gap: '16px',
 });

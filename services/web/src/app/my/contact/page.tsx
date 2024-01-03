@@ -1,14 +1,7 @@
-import { Txt } from '@linker/lds';
-import { colors } from '@linker/styles';
+import Contact from '@features/Header/components/Contact/Contact';
 
 function ContactPage() {
-  return (
-    <div>
-      <Txt typography="h2" color={colors.grey050}>
-        연락처
-      </Txt>
-    </div>
-  );
+  return <Contact />;
 }
 
 export default ContactPage;
