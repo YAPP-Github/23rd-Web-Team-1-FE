@@ -9,7 +9,7 @@ const withVanillaExtract = createVanillaExtractPlugin({ identifiers: 'short' });
 
 const nextConfig = {
   images: {
-    domains: ['newsimg.sedaily.com'],
+    domains: ['static.im-linker.com', 'newsimg.sedaily.com'],
   },
 };
 
