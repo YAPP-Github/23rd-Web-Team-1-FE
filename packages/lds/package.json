@@ -39,7 +39,10 @@
   "dependencies": {
     "@linker/styles": "workspace:^",
     "clsx": "2.0.0",
-    "next": "^14.0.3"
+    "date-fns": "^3.0.6",
+    "date-fns-tz": "^2.0.0",
+    "next": "^14.0.3",
+    "react-calendar": "^4.7.0"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",
