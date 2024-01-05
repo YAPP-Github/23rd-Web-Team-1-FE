@@ -5,6 +5,12 @@ export const container = style({
   position: 'relative',
 });
 
+export const buttonWrapper = style({
+  position: 'absolute',
+  right: 20,
+  height: '3.6rem',
+});
+
 export const calendar = style({
   width: '100%',
   fontFamily: 'Pretendard',

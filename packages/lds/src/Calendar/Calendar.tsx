@@ -9,8 +9,7 @@ import { Calendar as ReactCalendar, CalendarProps } from 'react-calendar';
 import { LooseValue, Value } from 'react-calendar/dist/cjs/shared/types';
 import 'react-calendar/dist/Calendar.css';
 
-import { calendar, dot, container } from './Calendar.css';
-import { Txt } from '../Txt';
+import { calendar, dot, container, buttonWrapper } from './Calendar.css';
 
 interface Props extends Omit<CalendarProps, 'value' | 'onChange'> {
   value?: LooseValue;
@@ -28,13 +27,13 @@ const Calendar = forwardRef<HTMLDivElement, Props>((props, ref) => {
   return (
     <motion.div
       className={container}
-      style={{ height: isWeekMode ? '14rem' : '100%' }}
-      animate={{ height: isWeekMode ? '14rem' : '100%' }}
+      style={{ height: isWeekMode ? '11.5rem' : '100%' }}
+      animate={{ height: isWeekMode ? '11.5rem' : '100%' }}
       transition={{ duration: 0.3 }}
     >
       {withModeChange && (
-        <button onClick={() => setIsWeekMode((prev) => !prev)}>
-          <Txt>접기</Txt>
+        <button className={buttonWrapper} onClick={() => setIsWeekMode((prev) => !prev)}>
+          <Image src="https://static.im-linker.com/calendar.png" alt="" width={24} height={24} />
         </button>
       )}
       <ReactCalendar
