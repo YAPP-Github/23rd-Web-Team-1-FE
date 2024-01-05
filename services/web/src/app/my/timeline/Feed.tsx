@@ -14,6 +14,7 @@ const Feed = () => {
         onChange={(value) => {
           setDate(value as Date);
         }}
+        withModeChange
       />
 
       <Spacing size={20} />
