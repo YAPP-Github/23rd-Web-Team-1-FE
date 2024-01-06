@@ -1,30 +1,35 @@
-# node.js 압축 이미지를 설치합니다
-FROM node:18.17.0-slim as BUILD
+# install deps stage
 
-# yarn 설치
-RUN npm install -g yarn --force
+FROM node:18.17.0-slim AS deps
 
-# 이미지 내부 작업 경로를 설정합니다
 WORKDIR /app
 
-COPY . .
+RUN npm install -g yarn --force
 
 RUN yarn set version 4.0.2
 
-# 이미지 정리 
-RUN yarn workspaces focus && \
-    yarn cache clean
+COPY package.json yarn.lock .yarnrc.yml .
+
+COPY packages/ ./packages/
+
+COPY services/web/package.json ./services/web/package.json
 
 RUN yarn install
 
-RUN yarn workspace web build
+# build stage
 
-FROM node:18.17.0-alpine
-EXPOSE 3000
+FROM node:18.17.0-slim AS builder
 
 WORKDIR /app
 
-COPY --from=BUILD /app/ .
+EXPOSE 3000
 
-# 앱 시작 명령어"를 시작합니다.
+RUN npm install -g yarn --force
+
+COPY --from=deps /app/ .
+
+COPY services/ ./services/
+
+RUN yarn workspace web build
+
 ENTRYPOINT ["yarn", "workspace", "web", "start"]

@@ -1,2 +1,14 @@
+## docker ignore
+
 node_modules
 .next
+.yarn
+.storybook
+**/*.stories.*
+**/*.spec.*
+.git
+.gitignore
+.github
+.dockerignore
+scripts
+Dockerfile
