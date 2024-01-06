@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-export const swiperContainer = style({
+export const carouselContainer = style({
   width: '100%',
   height: '100%',
   overflowX: 'auto',

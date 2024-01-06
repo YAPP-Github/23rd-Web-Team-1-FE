@@ -1,18 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import Swiper from './Swiper';
-import { wrapper, item } from './Swiper.stories.css'
-import SwiperItem from './SwiperItem';
+import Carousel from './Carousel';
+import { wrapper, item } from './Carousel.stories.css'
+import SwiperItem from './CarouselItem';
 
-const meta: Meta<typeof Swiper> = {
+const meta: Meta<typeof Carousel> = {
   title: 'Swiper',
-  component: Swiper,
+  component: Carousel,
   tags: ['autodocs'],
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Swiper>;
+type Story = StoryObj<typeof Carousel>;
 
 export const Template: Story = {
   render: () => {
@@ -23,11 +23,11 @@ export const Template: Story = {
 
     return (
       <div className={wrapper}>
-        <Swiper onSwipe={handleSwipe}>
+        <Carousel onSwipe={handleSwipe}>
           <SwiperItem className={item}>1</SwiperItem>
           <SwiperItem className={item}>2</SwiperItem>
           <SwiperItem className={item}>3</SwiperItem>
-        </Swiper>
+        </Carousel>
       </div >
     )
   }

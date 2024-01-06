@@ -4,15 +4,15 @@ import clsx from 'clsx';
 import React, { useState, useRef } from 'react';
 import { useThrottledCallback } from 'use-debounce';
 
-import { swiperContainer, itemWrapper } from './Swiper.css';
+import { carouselContainer, itemWrapper } from './Carousel.css';
 
-interface SwiperProps {
+interface CarouselProps {
   children: React.ReactNode;
   className?: string
   onSwipe?: (index: number) => void
 }
 
-const Swiper = ({ children, className, onSwipe }: SwiperProps) => {
+const Carousel = ({ children, className, onSwipe }: CarouselProps) => {
   const [currentItemIndex, setCurrentItemIndex] = useState(0)
   const scrollWrapperRef = useRef<HTMLDivElement | null>(null)
 
@@ -35,7 +35,7 @@ const Swiper = ({ children, className, onSwipe }: SwiperProps) => {
   return (
     <div
       ref={scrollWrapperRef}
-      className={clsx(swiperContainer, className)}
+      className={clsx(carouselContainer, className)}
       onScroll={handleScroll}
     >
       <ul className={itemWrapper}>
@@ -45,4 +45,4 @@ const Swiper = ({ children, className, onSwipe }: SwiperProps) => {
   );
 }
 
-export default Swiper;
+export default Carousel;

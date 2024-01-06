@@ -1,17 +1,17 @@
 import clsx from 'clsx';
 import React from 'react';
 
-import { item } from './SwiperItem.css';
+import { item } from './CarouselItem.css';
 
-interface SwiperItemProps {
+interface CarouselItemProps {
   children: React.ReactNode;
   className?: string
 }
 
-function SwiperItem({ children, className }: SwiperItemProps) {
+function CarouselItem({ children, className }: CarouselItemProps) {
   return (
     <li className={clsx(item, className)}>{children}</li>
   );
 }
 
-export default SwiperItem;
+export default CarouselItem;
