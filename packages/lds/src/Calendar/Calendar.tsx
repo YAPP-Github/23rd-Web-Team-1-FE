@@ -1,5 +1,3 @@
-'use client';
-
 import clsx from 'clsx';
 import { format } from 'date-fns';
 import { motion } from 'framer-motion';
