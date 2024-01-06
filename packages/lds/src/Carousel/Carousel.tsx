@@ -1,5 +1,3 @@
-'use client';
-
 import clsx from 'clsx';
 import React, { useState, useRef } from 'react';
 import { useThrottledCallback } from 'use-debounce';
