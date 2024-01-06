@@ -1,4 +1,3 @@
-/* eslint-disable arrow-parens */
 import { createTheme, createThemeContract } from '@vanilla-extract/css';
 
 export const baseColors = {
