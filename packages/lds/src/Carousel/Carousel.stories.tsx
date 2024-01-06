@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 
 import Carousel from './Carousel';
-import { wrapper, item } from './Carousel.stories.css'
+import { wrapper, box } from './Carousel.stories.css'
 import SwiperItem from './CarouselItem';
 
 const meta: Meta<typeof Carousel> = {
@@ -24,9 +24,15 @@ export const Template: Story = {
     return (
       <div className={wrapper}>
         <Carousel onSwipe={handleSwipe}>
-          <SwiperItem className={item}>1</SwiperItem>
-          <SwiperItem className={item}>2</SwiperItem>
-          <SwiperItem className={item}>3</SwiperItem>
+          <SwiperItem>
+            <div className={box}>1</div>
+          </SwiperItem>
+          <SwiperItem>
+            <div className={box}>2</div>
+          </SwiperItem>
+          <SwiperItem>
+            <div className={box}>3</div>
+          </SwiperItem>
         </Carousel>
       </div >
     )

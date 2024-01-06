@@ -1,11 +1,19 @@
 import clsx from 'clsx';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, Children } from 'react';
 import { useThrottledCallback } from 'use-debounce';
 
-import { carouselContainer, itemWrapper } from './Carousel.css';
+import {
+  carouselContainer,
+  carouselWrapper,
+  itemWrapper,
+  dotsWrapper,
+  activeStyle,
+  dot,
+} from './Carousel.css';
+import CarouselItem from './CarouselItem';
 
 interface CarouselProps {
-  children: React.ReactNode;
+  children: Array<React.ReactElement<typeof CarouselItem>>;
   className?: string
   onSwipe?: (index: number) => void
 }
@@ -31,14 +39,21 @@ const Carousel = ({ children, className, onSwipe }: CarouselProps) => {
   }, 100)
 
   return (
-    <div
-      ref={scrollWrapperRef}
-      className={clsx(carouselContainer, className)}
-      onScroll={handleScroll}
-    >
-      <ul className={itemWrapper}>
-        {children}
-      </ul>
+    <div className={clsx(carouselContainer, className)}>
+      <div
+        ref={scrollWrapperRef}
+        className={carouselWrapper}
+        onScroll={handleScroll}
+      >
+        <ul className={itemWrapper}>
+          {children}
+        </ul>
+      </div>
+      <div className={dotsWrapper}>
+        {Children.map(children, (_, index) => (
+          <div className={clsx(dot, index === currentItemIndex && activeStyle)} />
+        ))}
+      </div>
     </div>
   );
 }
