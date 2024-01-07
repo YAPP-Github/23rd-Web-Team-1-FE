@@ -2648,6 +2648,7 @@ __metadata:
     "@vanilla-extract/webpack-plugin": "npm:^2.3.1"
     clsx: "npm:2.0.0"
     next: "npm:^14.0.3"
+    next-themes: "npm:^0.2.1"
     prop-types: "npm:^15.8.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
