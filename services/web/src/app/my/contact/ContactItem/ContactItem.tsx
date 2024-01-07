@@ -20,17 +20,17 @@ function ContactItem({ name, career, company, profileImgUrl }: ContactItemProps)
   return (
     <div className={clsx(contactItemWrapper)}>
       <div className={clsx(textWrapper)}>
-        <Txt typography="p1" color={colors.grey080}>
+        <Txt typography="p1" color={colors.gray700}>
           {name}
         </Txt>
         <div className={clsx(careerTextWrapper)}>
-          <Txt typography="p4" color={colors.grey050}>
+          <Txt typography="p4" color={colors.gray700}>
             {career}
           </Txt>
-          <Txt typography="p4" color={colors.grey050}>
+          <Txt typography="p4" color={colors.gray700}>
             .
           </Txt>
-          <Txt typography="p4" color={colors.grey050}>
+          <Txt typography="p4" color={colors.gray700}>
             {company}
           </Txt>
         </div>

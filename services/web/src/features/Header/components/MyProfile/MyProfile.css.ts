@@ -1,3 +1,4 @@
+import { colors } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
 
 export const minimizeStyle = style({});
@@ -22,7 +23,7 @@ export const profileImageWrapper = style({
   width: '7.2rem',
   height: '7.2rem',
   boxSizing: 'content-box',
-  border: '2px solid #FFFFFF',
+  border: `2px solid ${colors.gray000}`,
   borderRadius: '42%',
 
   selectors: {
@@ -42,7 +43,7 @@ export const profileImage = style({
 
 export const profileInfo = style({
   marginLeft: '2.2rem',
-  color: '#ffffff',
+  color: `${colors.gray000}`,
 });
 
 export const name = style({

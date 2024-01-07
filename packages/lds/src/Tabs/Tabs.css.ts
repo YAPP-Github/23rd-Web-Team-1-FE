@@ -1,3 +1,4 @@
+import { colors } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
 
 export const tabs = style({
@@ -30,7 +31,7 @@ export const link = style({
 });
 
 export const activeLink = style({
-  color: '#ffffff',
+  color: `${colors.gray000}`,
 });
 
 export const bottomLine = style({
@@ -43,6 +44,6 @@ export const bottomLine = style({
 export const activeLine = style({
   position: 'absolute',
   height: '100%',
-  backgroundColor: '#ffffff',
+  backgroundColor: `${colors.gray000}`,
   transition: 'left 0.1s ease-out',
 });

@@ -1,16 +1,13 @@
 import { FriendHeader } from '@features/Header';
-
-import { section } from './layout.css'
+import { Layout } from '@linker/lds';
 
 function FriendLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <FriendHeader />
-      <section className={section}>
-        {children}
-      </section>
+      <Layout>{children}</Layout>
     </>
-  )
+  );
 }
 
-export default FriendLayout
+export default FriendLayout;

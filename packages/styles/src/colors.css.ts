@@ -3,20 +3,23 @@ import { createTheme, createThemeContract } from '@vanilla-extract/css';
 
 export const baseColors = {
   background: '#f1f3f5',
+  primary: '#287cff',
 };
 
 export const colorVariants = createThemeContract({
   colors: {
     ...baseColors,
-    grey005: null,
-    grey010: null,
-    grey020: null,
-    grey030: null,
-    grey040: null,
-    grey050: null,
-    grey060: null,
-    grey070: null,
-    grey080: null,
+    gray000: null,
+    gray100: null,
+    gray200: null,
+    gray300: null,
+    gray400: null,
+    gray500: null,
+    gray600: null,
+    gray700: null,
+    gray800: null,
+    gray900: null,
+    gray950: null,
   },
 });
 
@@ -25,29 +28,33 @@ export const { colors } = colorVariants;
 export const lightThemeVars = createTheme(colorVariants, {
   colors: {
     ...baseColors,
-    grey005: '#fefefe',
-    grey010: '#fdfdfd',
-    grey020: '#f7f8f9',
-    grey030: '#e9ebee',
-    grey040: '#c5c8ce',
-    grey050: '#646f7c',
-    grey060: '#374553',
-    grey070: '#28323c',
-    grey080: '#161d24',
+    gray000: '#ffffff',
+    gray100: '#f4f8f9',
+    gray200: '#eff1f4',
+    gray300: '#e2e5e8',
+    gray400: '#c1c3c6',
+    gray500: '#a1a5a7',
+    gray600: '#797b7e',
+    gray700: '#656769',
+    gray800: '#46484a',
+    gray900: '#242628',
+    gray950: '#242424',
   },
 });
 
 export const darkThemeVars = createTheme(colorVariants, {
   colors: {
     ...baseColors,
-    grey005: '#171b1c',
-    grey010: '#1e2427',
-    grey020: '#2e363a',
-    grey030: '#41474c',
-    grey040: '#5a6166',
-    grey050: '#999fa4',
-    grey060: '#c5c8c3',
-    grey070: '#f7f8f9',
-    grey080: '#fdfdfd',
+    gray000: '#000000',
+    gray100: '#f4f8f9',
+    gray200: '#eff1f4',
+    gray300: '#e2e5e8',
+    gray400: '#c1c3c6',
+    gray500: '#a1a5a7',
+    gray600: '#797b7e',
+    gray700: '#656769',
+    gray800: '#46484a',
+    gray900: '#242628',
+    gray950: '#242424',
   },
 });

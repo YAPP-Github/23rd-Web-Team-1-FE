@@ -25,7 +25,7 @@ export const Template: Story = {
             rightAddon={
               <button type="button">
                 <img
-                  src="https://static.im-linker.com/right-arrow.png"
+                  src="https://static.im-linker.com/right-arrow-mono.png"
                   alt=""
                   width={28}
                   height={28}

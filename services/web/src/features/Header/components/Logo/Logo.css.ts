@@ -1,3 +1,4 @@
+import { colors } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
 
 export const wrapper = style({
@@ -12,5 +13,5 @@ export const logo = style({
   fontWeight: 'bold',
   lineHeight: '2.4rem',
   fontStyle: 'italic',
-  color: '#ffffff',
+  color: `${colors.gray000}`,
 });

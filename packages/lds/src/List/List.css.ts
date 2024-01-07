@@ -1,3 +1,4 @@
+import { colors } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
 
 export const listContainer = style({
@@ -10,5 +11,5 @@ export const listContent = style({
   height: '100%',
   padding: '1.6rem 2rem',
   borderRadius: '0.8rem',
-  backgroundColor: '#fff',
+  backgroundColor: `${colors.gray000}`,
 });

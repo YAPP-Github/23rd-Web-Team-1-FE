@@ -6,7 +6,7 @@ import { colors } from '@linker/styles';
 
 const Page = () => {
   return (
-    <Txt typography="h2" color={colors.grey050}>
+    <Txt typography="h2" color={colors.gray800}>
       안녕하세요
     </Txt>
   );
