@@ -1,14 +1,11 @@
 import { MyHeader } from '@features/Header';
-
-import { section } from './layout.css'
+import { Layout } from '@linker/lds';
 
 function MyLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <MyHeader />
-      <section className={section}>
-        {children}
-      </section>
+      <Layout>{children}</Layout>
     </>
   );
 }
