@@ -1,3 +1,4 @@
+import { colors } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
 
 export const carouselContainer = style({
@@ -42,11 +43,11 @@ export const dot = style({
   width: '6px',
   height: '6px',
   borderRadius: '50%',
-  backgroundColor: '#b9babc',
+  backgroundColor: `${colors.gray400}`,
 
   selectors: {
     [`&.${activeStyle}`]: {
-      backgroundColor: '#050a11',
+      backgroundColor: `${colors.gray950}`,
     },
   },
 });

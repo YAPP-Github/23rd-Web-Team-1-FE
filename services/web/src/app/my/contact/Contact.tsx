@@ -1,3 +1,4 @@
+/* eslint-disable arrow-parens */
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { clsx } from 'clsx';
@@ -10,10 +11,10 @@ function Contact() {
   return (
     <section className={clsx(wrapper)}>
       <article className={clsx(totalCountWrapper)}>
-        <Txt typography="p4" color={colors.grey050}>
+        <Txt typography="p4" color={colors.gray800}>
           전체
         </Txt>
-        <Txt typography="p4" color={colors.grey050}>
+        <Txt typography="p4" color={colors.gray800}>
           {contentMockdata.length}
         </Txt>
       </article>
