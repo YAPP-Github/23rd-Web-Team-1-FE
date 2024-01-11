@@ -37,6 +37,7 @@
     "webpack": "^5.89.0"
   },
   "dependencies": {
+    "@linker/react": "workspace:^",
     "@linker/styles": "workspace:^",
     "clsx": "2.0.0",
     "date-fns": "^3.0.6",
