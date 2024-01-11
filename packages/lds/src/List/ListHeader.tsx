@@ -25,7 +25,7 @@ const ListHeader = ({ title, description, icon, rightAddon, className }: Props) 
         {rightAddon}
       </div>
 
-      <Txt as="p" typography="p3" color={colors.grey050}>
+      <Txt as="p" typography="p3" color={colors.gray950}>
         {description}
       </Txt>
     </div>
