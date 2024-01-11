@@ -16,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={pretendard.className}>
         <Providers>{children}</Providers>
+        <div id="dialog" />
       </body>
     </html>
   );
