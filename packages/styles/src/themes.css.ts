@@ -1,4 +1,3 @@
-/* eslint-disable arrow-parens */
 import { createGlobalTheme, createGlobalThemeContract } from '@vanilla-extract/css';
 
 export const font = createGlobalThemeContract(
