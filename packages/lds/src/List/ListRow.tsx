@@ -19,7 +19,12 @@ const ListRow = ({ content, withArrow, disabled, className, onClick }: Props) =>
       <div>{content}</div>
       {withArrow && (
         <button type="button" disabled={disabled}>
-          <Image src="https://static.im-linker.com/right-arrow.png" alt="" width={28} height={28} />
+          <Image
+            src="https://static.im-linker.com/right-arrow-mono.png"
+            alt=""
+            width={28}
+            height={28}
+          />
         </button>
       )}
     </li>

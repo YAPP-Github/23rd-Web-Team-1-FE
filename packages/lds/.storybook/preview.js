@@ -1,4 +1,23 @@
 /** @type { import('@storybook/react').Preview } */
+import { lightThemeVars, darkThemeVars } from '@linker/styles';
+import { ThemeProvider } from 'next-themes';
+
+export const decorators = [
+  (Story) => (
+    <>
+      <ThemeProvider
+        attribute="class"
+        value={{
+          light: lightThemeVars,
+          dark: darkThemeVars,
+        }}
+      >
+        <Story />
+      </ThemeProvider>
+    </>
+  ),
+];
+
 const preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
