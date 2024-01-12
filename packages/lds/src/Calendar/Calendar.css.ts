@@ -1,4 +1,70 @@
-import { globalStyle, style } from '@vanilla-extract/css';
+/* eslint-disable max-lines */
+import { globalStyle, keyframes, style } from '@vanilla-extract/css';
+
+const fadeOut = keyframes({
+  '0%': {
+    opacity: '1',
+    transform: 'translateY(0rem)',
+    display: 'block',
+  },
+  '50%': {
+    opacity: '0.2',
+    transform: 'translateY(-2rem)',
+    display: 'block',
+  },
+  '100%': {
+    opacity: '0',
+    transform: 'translateY(-2rem)',
+    display: 'none',
+  },
+});
+
+const twoWeekFadeIn = keyframes({
+  '0%': {
+    transform: 'translateY(0rem)',
+  },
+  '100%': {
+    transform: 'translateY(-4rem)',
+  },
+});
+
+const threeWeekFadeIn = keyframes({
+  '0%': {
+    transform: 'translateY(0rem)',
+  },
+  '100%': {
+    transform: 'translateY(-8rem)',
+  },
+});
+
+const fourWeekFadeIn = keyframes({
+  '0%': {
+    transform: 'translateY(0rem)',
+  },
+  '100%': {
+    transform: 'translateY(-12.5rem)',
+  },
+});
+
+const fiveWeekFadeIn = keyframes({
+  '0%': {
+    transform: 'translateY(0rem)',
+  },
+  '100%': {
+    transform: 'translateY(-15.5rem)',
+  },
+});
+
+const fadeIn = keyframes({
+  '0%': {
+    opacity: '0',
+    transform: 'translateY(-2rem)',
+  },
+  '100%': {
+    opacity: '1',
+    transform: 'translateY(0rem)',
+  },
+});
 
 export const container = style({
   overflow: 'hidden',
@@ -97,6 +163,42 @@ globalStyle(`${calendar} .react-calendar__month-view__days__day`, {
   height: '4.2rem',
   fontSize: '1.4rem',
   fontWeight: 700,
+});
+
+globalStyle(`${calendar} .react-calendar__tile:disabled`, {
+  display: 'none',
+  animation: `${fadeOut} ease-in-out`,
+  animationDuration: '0.2s',
+});
+
+globalStyle(`${calendar} .weekmode__2`, {
+  animation: `${twoWeekFadeIn} ease-in-out`,
+  animationDuration: '0.2s',
+  MozAnimationDelay: '0.4s',
+});
+
+globalStyle(`${calendar} .weekmode__3`, {
+  animation: `${threeWeekFadeIn} ease-in-out`,
+  animationDuration: '0.2s',
+  MozAnimationDelay: '0.4s',
+});
+
+globalStyle(`${calendar} .weekmode__4`, {
+  animation: `${fourWeekFadeIn} ease-in-out`,
+  animationDuration: '0.2s',
+  MozAnimationDelay: '0.4s',
+});
+
+globalStyle(`${calendar} .weekmode__5`, {
+  animation: `${fiveWeekFadeIn} ease-in-out`,
+  animationDuration: '0.2s',
+  MozAnimationDelay: '0.4s',
+});
+
+globalStyle(`${calendar} .monthmode`, {
+  animation: `${fadeIn} ease-in-out`,
+  animationDuration: '0.2s',
+  MozAnimationDelay: '0.4s',
 });
 
 globalStyle(`${calendar} .react-calendar__month-view__days__day--weekend`, {

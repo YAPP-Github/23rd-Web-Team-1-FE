@@ -1,5 +1,7 @@
+'use client';
+
 import clsx from 'clsx';
-import { format } from 'date-fns';
+import { differenceInDays, differenceInWeeks, format, startOfMonth } from 'date-fns';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { forwardRef, useState } from 'react';
@@ -25,8 +27,8 @@ const Calendar = forwardRef<HTMLDivElement, Props>((props, ref) => {
   return (
     <motion.div
       className={container}
-      style={{ height: isWeekMode ? '11.5rem' : '100%' }}
-      animate={{ height: isWeekMode ? '11.5rem' : '100%' }}
+      style={{ height: isWeekMode ? '11.6rem' : '100%' }}
+      animate={{ height: isWeekMode ? '11.6rem' : '100%' }}
       transition={{ duration: 0.3 }}
     >
       {withModeChange && (
@@ -53,6 +55,20 @@ const Calendar = forwardRef<HTMLDivElement, Props>((props, ref) => {
         }
         calendarType="gregory"
         className={clsx(calendar, className)}
+        maxDate={isWeekMode ? endOfWeek(value as Date) : undefined}
+        minDate={isWeekMode ? startOfWeek(value as Date) : undefined}
+        tileClassName={({ date }) => {
+          if (!isWeekMode) {
+            return 'monthmode';
+          }
+
+          const weekNumber = getWeekNumber(value as Date);
+          const dday = differenceInDays(date, startOfWeek(value as Date));
+
+          if (dday >= 0 && dday <= 6) {
+            return isWeekMode ? `weekmode__${weekNumber}` : '';
+          }
+        }}
       />
     </motion.div>
   );
@@ -71,4 +87,27 @@ const TileContent = ({ date, mark }: { date: Date; mark?: Array<Date | string> }
   }
 
   return <div>{html}</div>;
+};
+
+const startOfWeek = (date: Date) => {
+  const start = new Date(date);
+
+  start.setDate(date.getDate() - date.getDay());
+
+  return start;
+};
+
+const endOfWeek = (date: Date) => {
+  const end = new Date(date);
+
+  end.setDate(date.getDate() - date.getDay() + 6);
+
+  return end;
+};
+
+const getWeekNumber = (date: Date) => {
+  const firstDayOfMonth = startOfMonth(date);
+  const startOfFirstWeek = startOfWeek(firstDayOfMonth);
+
+  return differenceInWeeks(date, startOfFirstWeek) + 1;
 };
