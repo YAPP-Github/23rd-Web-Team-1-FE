@@ -1,4 +1,5 @@
 import type { Schedule } from '@/app/my/feed/(api)/feedAPI'
+import { getDisplayDate } from '@/app/my/feed/(utils)/dateUtils'
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import Image from 'next/image';
@@ -33,7 +34,7 @@ function ScheduleItem({ schedule }: ScheduleItemProps) {
             typography='p3'
             color={colors.grey050}
           >
-            {schedule.startDatetime}
+            {getDisplayDate(schedule.startDatetime)}
           </Txt>
         </div>
       </div>
