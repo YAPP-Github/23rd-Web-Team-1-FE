@@ -5712,6 +5712,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:18.2.0"],\
           ["storybook", "npm:7.6.3"],\
           ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"],\
+          ["use-debounce", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.0.0"],\
           ["webpack", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:5.89.0"]\
         ],\
         "packagePeers": [\
@@ -5767,6 +5768,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:18.2.0"],\
           ["storybook", "npm:7.6.3"],\
           ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"],\
+          ["use-debounce", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.0.0"],\
           ["webpack", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:5.89.0"]\
         ],\
         "linkType": "SOFT"\
@@ -24189,6 +24191,28 @@ const RAW_RUNTIME_STATE =
           ["@types/react", null],\
           ["react", null],\
           ["tslib", "npm:2.6.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["use-debounce", [\
+      ["npm:10.0.0", {\
+        "packageLocation": "./.yarn/cache/use-debounce-npm-10.0.0-04f7df41a1-b0fd28112a.zip/node_modules/use-debounce/",\
+        "packageDependencies": [\
+          ["use-debounce", "npm:10.0.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.0.0", {\
+        "packageLocation": "./.yarn/__virtual__/use-debounce-virtual-53bf5ed226/0/cache/use-debounce-npm-10.0.0-04f7df41a1-b0fd28112a.zip/node_modules/use-debounce/",\
+        "packageDependencies": [\
+          ["use-debounce", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.0.0"],\
+          ["@types/react", "npm:18.2.39"],\
+          ["react", "npm:18.2.0"]\
         ],\
         "packagePeers": [\
           "@types/react",\

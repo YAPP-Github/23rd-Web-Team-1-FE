@@ -2684,6 +2684,7 @@ __metadata:
     react-dom: "npm:^18.2.0"
     storybook: "npm:^7.5.3"
     typescript: "npm:^5.2.2"
+    use-debounce: "npm:^10.0.0"
     webpack: "npm:^5.89.0"
   peerDependencies:
     "@vanilla-extract/css": "*"
@@ -16983,6 +16984,15 @@ __metadata:
     "@types/react":
       optional: true
   checksum: f9f1b217db60419b033228ba17cee5c521123e7c7f35577258a1abdce6d9623e5880f0bed3a0504eff35fdf6c761a2b2e020337a34218fb86229b8641772654a
+  languageName: node
+  linkType: hard
+
+"use-debounce@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "use-debounce@npm:10.0.0"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: b0fd28112aa3d7b5333f64e845aa1a4b5223bae7f0800fcb496d4796816bc9490bc3bb050c8c104d32262f7cffa06c6145455cc6054add4fdd8dccf2be52f0c9
   languageName: node
   linkType: hard
 
