@@ -1,25 +1,50 @@
-import type { Schedule } from '@/app/my/feed/(api)/feedAPI'
-import { getDisplayDate } from '@/app/my/feed/(utils)/dateUtils'
+import type { Schedule } from '@/app/my/feed/(api)/feedAPI';
+import { getDisplayDate } from '@/app/my/feed/(utils)/dateUtils';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import Image from 'next/image';
 
-import { scheduleWrapper, profileImage, scheduleInfo, dateWrapper, date } from './ScheduleItem.css'
+import {
+  scheduleWrapper,
+  profileImageWrapper,
+  profileImageStyle,
+  calendarImageStyle,
+  scheduleInfo,
+  dateWrapper,
+  date,
+} from './ScheduleItem.css';
 
 interface ScheduleItemProps {
   schedule: Schedule;
+  isGroupSchedule: boolean;
 }
 
-function ScheduleItem({ schedule }: ScheduleItemProps) {
-  return (
-    <div className={scheduleWrapper}>
+function ScheduleItem({ schedule, isGroupSchedule }: ScheduleItemProps) {
+  const profileImage = isGroupSchedule ?
+    (
       <Image
-        className={profileImage}
+        className={calendarImageStyle}
+        src={'https://static.im-linker.com/calendar.png'}
+        width={20}
+        height={20}
+        alt="profile-image"
+      />
+    ) :
+    (
+      <Image
+        className={profileImageStyle}
         src={schedule.profileUrl}
         width={48}
         height={48}
-        alt="profile"
+        alt="profile-image"
       />
+    )
+
+  return (
+    <div className={scheduleWrapper}>
+      <div className={profileImageWrapper}>
+        {profileImage}
+      </div>
       <div className={scheduleInfo}>
         <Txt typography='p1'>{schedule.title}</Txt>
         <div className={dateWrapper}>

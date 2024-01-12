@@ -22,7 +22,13 @@ async function UpcomingSchedule() {
           className={listItem}
         >
           <ListRow
-            content={<ScheduleItem schedule={schedule} />}
+            content={
+              <ScheduleItem
+                schedule={schedule}
+                /** @todo 참여자가 여러명인지 여부에 대한 플래그 설정 필요 */
+                isGroupSchedule={false}
+              />
+            }
             withArrow
           />
         </Link>
