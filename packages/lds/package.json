@@ -37,6 +37,7 @@
     "webpack": "^5.89.0"
   },
   "dependencies": {
+    "@linker/react": "workspace:^",
     "@linker/styles": "workspace:^",
     "clsx": "2.0.0",
     "date-fns": "^3.0.6",
@@ -44,7 +45,8 @@
     "framer-motion": "^10.17.9",
     "next": "^14.0.3",
     "next-themes": "^0.2.1",
-    "react-calendar": "^4.7.0"
+    "react-calendar": "^4.7.0",
+    "use-debounce": "^10.0.0"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "*",
