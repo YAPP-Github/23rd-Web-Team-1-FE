@@ -17,7 +17,7 @@ const kyInstance = ky.create({
   },
 });
 
-const prefix = process.env.NEXT_PUBLIC_MSW_MOCK === 'enabled' ? MSW_MOCK_URL : API_URL;
+export const prefix = process.env.NEXT_PUBLIC_MSW_MOCK === 'enabled' ? MSW_MOCK_URL : API_URL;
 
 export const createKyApis = (instance: KyInstance) => ({
   get: async <T = unknown>(url: string, options?: Options) => {
