@@ -18,6 +18,7 @@
   ],
   "scripts": {
     "dev": "yarn workspace web dev",
+    "dev:mock": "yarn workspace web dev:mock",
     "build": "yarn workspace web build && yarn workspace web export",
     "lint": "yarn workspace web lint",
     "test": "yarn workspace web test",
