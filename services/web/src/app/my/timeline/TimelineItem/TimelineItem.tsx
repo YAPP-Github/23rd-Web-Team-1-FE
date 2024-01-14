@@ -1,7 +1,6 @@
 import { List } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
-import clsx from 'clsx';
 import Image from 'next/image';
 
 import {
@@ -37,14 +36,8 @@ function TimelineItem({ title, time, member, hashtag, memo }: TimelineItemProps)
           </button>
         }
       />
-      <section className={clsx(timelineItmeInfoWrapper)}>
-        <div
-          className={clsx(
-            timelineRowWrapper({
-              gap: 'info',
-            }),
-          )}
-        >
+      <section className={timelineItmeInfoWrapper}>
+        <div className={timelineRowWrapper}>
           <Image
             width={20}
             height={20}
@@ -55,13 +48,7 @@ function TimelineItem({ title, time, member, hashtag, memo }: TimelineItemProps)
             {time}
           </Txt>
         </div>
-        <div
-          className={clsx(
-            timelineRowWrapper({
-              gap: 'info',
-            }),
-          )}
-        >
+        <div className={timelineRowWrapper}>
           <Image
             width={20}
             height={20}
@@ -74,9 +61,9 @@ function TimelineItem({ title, time, member, hashtag, memo }: TimelineItemProps)
         </div>
       </section>
       {hashtag && (
-        <section className={clsx(timelineItemHashtagWrapper)}>
+        <section className={timelineItemHashtagWrapper}>
           {hashtag.map((item) => (
-            <div className={clsx(timelineItemHashtagBoxWrapper)} key={item}>
+            <div className={timelineItemHashtagBoxWrapper} key={item}>
               <Txt typography="p4" color={colors.gray700} fontWeight="regular">
                 {item}
               </Txt>
@@ -86,33 +73,14 @@ function TimelineItem({ title, time, member, hashtag, memo }: TimelineItemProps)
       )}
       {memo && (
         <div>
-          <div className={clsx(timelineItemDivider)}></div>
-          <section className={clsx(timelineItemMemoWrapper)}>
+          <div className={timelineItemDivider}></div>
+          <section className={timelineItemMemoWrapper}>
             <Txt typography="p2" color={colors.gray900} fontWeight="regular">
               {memo}
             </Txt>
           </section>
         </div>
       )}
-      {/* <div className={clsx(timelineItemSubjectWrapper)}>
-        <div
-          className={clsx(
-            timelineRowWrapper({
-              gap: 'subject',
-            }),
-          )}
-        >
-          <Image
-            width={20}
-            height={20}
-            alt="아이콘"
-            src="https://static.im-linker.com/dots-vertical.svg"
-          />
-          <Txt typography="b3" color={colors.gray900} fontWeight="regular">
-            관심주제를 입력해보세요
-          </Txt>
-        </div>
-      </div> */}
     </List>
   );
 }

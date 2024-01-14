@@ -1,27 +1,15 @@
 import { colors } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
-import { recipe } from '@vanilla-extract/recipes';
 
 export const timelineItmeInfoWrapper = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '0.5rem',
 });
-export const timelineRowWrapper = recipe({
-  base: {
-    display: 'flex',
-    flexDirection: 'row',
-  },
-  variants: {
-    gap: {
-      info: {
-        gap: '0.4rem',
-      },
-      subject: {
-        gap: '0.2rem',
-      },
-    },
-  },
+export const timelineRowWrapper = style({
+  display: 'flex',
+  flexDirection: 'row',
+  gap: '0.4rem',
 });
 
 export const timelineItemHashtagWrapper = style({
@@ -36,7 +24,7 @@ export const timelineItemHashtagBoxWrapper = style({
   display: 'inline-block',
   justifyContent: 'center',
   alignItems: 'center',
-  height: '2.s6rem',
+  height: '2.6rem',
   paddingTop: '0.3rem',
   paddingRight: '1.3rem',
   paddingLeft: '1.1rem',
