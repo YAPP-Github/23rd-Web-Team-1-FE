@@ -1,13 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { typography as typographyRecipe } from '@linker/styles';
+import { colors, typography as typographyRecipe } from '@linker/styles';
 import { FontWeight, Typography } from '@linker/styles/types';
+import { assignInlineVars } from '@vanilla-extract/dynamic';
 import clsx from 'clsx';
 import { CSSProperties, ReactElement, forwardRef } from 'react';
 
+import { colorVar, colorVariant } from './Txt.css';
+
 interface BaseProps {
-  typography?: Typography;
+  typography: Typography;
   color?: CSSProperties['color'];
   fontWeight?: FontWeight;
 }
@@ -28,8 +31,8 @@ const Txt = forwardRef<HTMLElement, TxtProps>(
     return (
       <Component
         ref={ref}
-        className={clsx(typographyRecipe({ type: typography }), className)}
-        style={{ color, ...props.style }}
+        className={clsx(typographyRecipe({ type: typography }), colorVariant, className)}
+        style={assignInlineVars(colorVar, { color: color ?? colors.gray950, ...props.style })}
         {...(props as any)}
       >
         {children}
