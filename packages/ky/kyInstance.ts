@@ -1,9 +1,6 @@
 /* eslint-disable require-await */
 import ky, { KyInstance, Options } from 'ky';
 
-const MSW_MOCK_URL = 'http://localhost:8000';
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
-
 const kyInstance = ky.create({
   retry: 0,
   credentials: 'include',
@@ -17,7 +14,10 @@ const kyInstance = ky.create({
   },
 });
 
-export const prefix = process.env.NEXT_PUBLIC_MSW_MOCK === 'enabled' ? MSW_MOCK_URL : API_URL;
+export const prefix =
+  process.env.NEXT_PUBLIC_MSW_MOCK === 'enabled'
+    ? 'http://localhost:8000'
+    : `${process.env.NEXT_PUBLIC_API_URL}/api`;
 
 export const createKyApis = (instance: KyInstance) => ({
   get: async <T = unknown>(url: string, options?: Options) => {

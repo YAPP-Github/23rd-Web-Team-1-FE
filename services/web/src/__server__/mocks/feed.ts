@@ -1,15 +1,14 @@
 /* eslint-disable max-len */
+import { API_URL } from '@linker/ky';
 import { http, HttpResponse } from 'msw';
 
-import { PREFIX_URL } from './constants';
-
 export const feedHandlers = [
-  http.get(`${PREFIX_URL}/v1/my`, () => {
-    return HttpResponse.json({ result: my }, { status: 200 });
+  http.get(`${API_URL}/v1/my`, () => {
+    return HttpResponse.json({ data: my }, { status: 200 });
   }),
 
-  http.get(`${PREFIX_URL}/v1/schedules/upcoming/recommendation`, () => {
-    return HttpResponse.json({ result: upcomingSchedules }, { status: 200 });
+  http.get(`${API_URL}/v1/schedules/upcoming/recommendation`, () => {
+    return HttpResponse.json({ data: upcomingSchedules }, { status: 200 });
   }),
 ];
 
