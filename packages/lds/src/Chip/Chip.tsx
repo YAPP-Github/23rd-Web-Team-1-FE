@@ -8,14 +8,18 @@ import { Txt } from '../Txt';
 
 interface Props extends HTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
-  variant?: 'default' | 'outlined';
+  selected?: boolean;
   className?: string;
 }
 
-const Chip = ({ children, variant = 'default', className, ...props }: Props) => {
+const Chip = ({ children, selected = false, className, ...props }: Props) => {
   return (
-    <button type="button" className={clsx(chipContainer({ variant }), className)} {...props}>
-      <Txt typography="b2" color={variant === 'outlined' ? colors.gray950 : colors.gray200}>
+    <button
+      type="button"
+      className={clsx(chipContainer({ variant: selected ? 'default' : 'outlined' }), className)}
+      {...props}
+    >
+      <Txt typography="b2" color={selected ? colors.gray200 : colors.gray950}>
         {children}
       </Txt>
     </button>

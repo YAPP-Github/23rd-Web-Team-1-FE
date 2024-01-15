@@ -19,7 +19,7 @@ export const Template: Story = {
       <div style={{ maxWidth: '400px', padding: '20px', backgroundColor: `${colors.background}` }}>
         <h3>Chip</h3>
         <Chip>Linker</Chip>
-        <Chip variant="outlined">Linker</Chip>
+        <Chip selected>Linker</Chip>
 
         <br />
         <br />
@@ -29,7 +29,11 @@ export const Template: Story = {
         <h3>Chip Group</h3>
         <Chip.Group>
           {[1, 2, 3, 4, 5, 6, 7].map((item) => {
-            return <Chip key={item}>Linker</Chip>;
+            return (
+              <Chip key={item} selected={item === 1}>
+                Linker
+              </Chip>
+            );
           })}
         </Chip.Group>
       </div>

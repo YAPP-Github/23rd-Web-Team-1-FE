@@ -22,6 +22,7 @@ export const chipContainer = recipe({
   variants: {
     variant: {
       default: {
+        border: `1px solid ${colors.gray950}`,
         backgroundColor: `${colors.gray950}`,
       },
       outlined: {
@@ -32,7 +33,7 @@ export const chipContainer = recipe({
   },
 
   defaultVariants: {
-    variant: 'default',
+    variant: 'outlined',
   },
 });
 
