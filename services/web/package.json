@@ -6,7 +6,6 @@
     "dev": "next dev",
     "mock": "ts-node ./src/__server__/http.ts",
     "dev:mock": "concurrently --kill-others \"yarn dev\" \"yarn mock\"",
-
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
