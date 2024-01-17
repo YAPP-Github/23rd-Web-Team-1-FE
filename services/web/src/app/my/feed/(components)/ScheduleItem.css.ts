@@ -1,3 +1,4 @@
+import { colors } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
 
 export const scheduleWrapper = style({
@@ -13,7 +14,7 @@ export const profileImageWrapper = style({
   width: '4.8rem',
   height: '4.8rem',
   borderRadius: '40%',
-  backgroundColor: '#f1f3f5',
+  backgroundColor: colors.background,
 });
 
 export const profileImageStyle = style({

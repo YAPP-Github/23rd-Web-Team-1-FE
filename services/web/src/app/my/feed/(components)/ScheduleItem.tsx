@@ -66,7 +66,7 @@ function ScheduleItem({ schedule }: ScheduleItemProps) {
           <Txt
             className={date}
             typography='p3'
-            color={colors.grey050}
+            color={colors.gray700}
           >
             {getDisplayDate(schedule.startDateTime)}
           </Txt>
