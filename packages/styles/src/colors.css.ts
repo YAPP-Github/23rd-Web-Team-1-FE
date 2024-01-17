@@ -1,6 +1,8 @@
 import { createTheme, createThemeContract } from '@vanilla-extract/css';
 
 export const baseColors = {
+  white: '#ffffff',
+  black: '#000000',
   background: '#f1f3f5',
   primary: '#287cff',
 };

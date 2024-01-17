@@ -50,16 +50,21 @@ export const typography = recipe({
         lineHeight: font.lineHeight24,
       },
       p2: {
+        fontSize: font.size15,
+        fontWeight: font.medium,
+        lineHeight: font.lineHeight22,
+      },
+      p3: {
         fontSize: font.size14,
         fontWeight: font.medium,
         lineHeight: font.lineHeight20,
       },
-      p3: {
+      p4: {
         fontSize: font.size13,
         fontWeight: font.medium,
         lineHeight: font.lineHeight18,
       },
-      p4: {
+      p5: {
         fontSize: font.size12,
         fontWeight: font.medium,
         lineHeight: font.lineHeight16,
@@ -72,17 +77,17 @@ export const typography = recipe({
       b2: {
         fontSize: font.size14,
         fontWeight: font.bold,
-        lineHeight: font.lineHeight24,
+        lineHeight: font.lineHeight20,
       },
       b3: {
         fontSize: font.size13,
-        fontWeight: font.bold,
-        lineHeight: font.lineHeight24,
+        fontWeight: font.medium,
+        lineHeight: font.lineHeight18,
       },
       b4: {
         fontSize: font.size12,
-        fontWeight: font.bold,
-        lineHeight: font.lineHeight24,
+        fontWeight: font.medium,
+        lineHeight: font.lineHeight16,
       },
     },
   },
