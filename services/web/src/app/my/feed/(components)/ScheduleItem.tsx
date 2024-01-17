@@ -1,4 +1,3 @@
-import type { Schedule } from '@/app/my/feed/(api)/feedAPI';
 import { getDisplayDate } from '@/app/my/feed/(utils)/dateUtils';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
@@ -14,28 +13,38 @@ import {
   date,
 } from './ScheduleItem.css';
 
-interface ScheduleItemProps {
-  schedule: Schedule;
-  isGroupSchedule: boolean;
+/**
+ * @todo global context로 이동 필요
+ */
+interface Schedule {
+  scheduleId: number;
+  title: string;
+  startDateTime: string;
+  endDateTime: string;
+  profileImgUrl: string | null;
 }
 
-function ScheduleItem({ schedule, isGroupSchedule }: ScheduleItemProps) {
-  const profileImage = isGroupSchedule ?
+interface ScheduleItemProps {
+  schedule: Schedule;
+}
+
+function ScheduleItem({ schedule }: ScheduleItemProps) {
+  const profileImage = schedule.profileImgUrl ?
+    (
+      <Image
+        className={profileImageStyle}
+        src={schedule.profileImgUrl}
+        width={48}
+        height={48}
+        alt="profile-image"
+      />
+    ) :
     (
       <Image
         className={calendarImageStyle}
         src={'https://static.im-linker.com/calendar.png'}
         width={20}
         height={20}
-        alt="profile-image"
-      />
-    ) :
-    (
-      <Image
-        className={profileImageStyle}
-        src={schedule.profileUrl}
-        width={48}
-        height={48}
         alt="profile-image"
       />
     )
@@ -59,7 +68,7 @@ function ScheduleItem({ schedule, isGroupSchedule }: ScheduleItemProps) {
             typography='p3'
             color={colors.grey050}
           >
-            {getDisplayDate(schedule.startDatetime)}
+            {getDisplayDate(schedule.startDateTime)}
           </Txt>
         </div>
       </div>

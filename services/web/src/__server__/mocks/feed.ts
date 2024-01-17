@@ -7,8 +7,12 @@ export const feedHandlers = [
     return HttpResponse.json({ data: my }, { status: 200 });
   }),
 
-  http.get(`${API_URL}/v1/schedules/upcoming/recommendation`, () => {
+  http.get(`${API_URL}/v1/schedules/near-term`, () => {
     return HttpResponse.json({ data: upcomingSchedules }, { status: 200 });
+  }),
+
+  http.get(`${API_URL}/v1/schedules/upcoming/recommendation`, () => {
+    return HttpResponse.json({ data: conversationRecommendation }, { status: 200 });
   }),
 ];
 
@@ -34,6 +38,32 @@ const my = {
 };
 
 const upcomingSchedules = {
+  schedules: [
+    {
+      scheduleId: 1,
+      title: 'Yapp Design Study',
+      profileImgUrl: 'https://static.im-linker.com/profile1.png',
+      startDateTime: '2024-01-17T13:12:42.936Z',
+      endDateTime: '2024-01-17T13:12:42.936Z',
+    },
+    {
+      scheduleId: 2,
+      title: '박지훈과 저녁식사',
+      profileImgUrl: 'https://static.im-linker.com/profile2.png',
+      startDateTime: '2024-01-17T13:12:42.936Z',
+      endDateTime: '2024-01-17T13:12:42.936Z',
+    },
+    {
+      scheduleId: 3,
+      title: '기획전략팀 저녁 회식',
+      profileImgUrl: null,
+      startDateTime: '2024-01-17T13:12:42.936Z',
+      endDateTime: '2024-01-17T13:12:42.936Z',
+    },
+  ],
+};
+
+const conversationRecommendation = {
   scheduleId: '49b258bc-7a6e-4ce5-9ce0-901abcb38485',
   title: '일정 1',
   profileImgUrl:
