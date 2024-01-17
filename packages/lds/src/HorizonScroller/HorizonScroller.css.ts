@@ -3,7 +3,8 @@ import { style } from '@vanilla-extract/css';
 export const horizonScroller = style({
   overflowX: 'scroll',
   overflowY: 'hidden',
-  maxWidth: '72rem',
+  scrollbarWidth: 'none',
+  msOverflowStyle: 'none',
 
   selectors: {
     ['&::-webkit-scrollbar']: {
