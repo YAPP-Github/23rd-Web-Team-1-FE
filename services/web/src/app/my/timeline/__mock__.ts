@@ -1,4 +1,5 @@
 interface TimelineItemProps {
+  id: number;
   title: string;
   time: string;
   member: string;
@@ -7,6 +8,7 @@ interface TimelineItemProps {
 }
 export const timelineMockData: TimelineItemProps[] = [
   {
+    id: 0,
     title: '이지우 커피챗',
     time: '오후 4:00- 6:00',
     member: '이지우 외 + 3명',
@@ -14,16 +16,13 @@ export const timelineMockData: TimelineItemProps[] = [
     memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체험즐...',
   },
   {
+    id: 1,
     title: '이지우 커피챗',
     time: '오후 4:00- 6:00',
     member: '이지우 외 + 3명',
     memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체험즐...',
   },
-  {
-    title: '이지우 커피챗',
-    time: '오후 4:00- 6:00',
-    member: '이지우 외 + 3명',
-  },
+  { id: 2, title: '이지우 커피챗', time: '오후 4:00- 6:00', member: '이지우 외 + 3명' },
 ];
 
 export default timelineMockData;
