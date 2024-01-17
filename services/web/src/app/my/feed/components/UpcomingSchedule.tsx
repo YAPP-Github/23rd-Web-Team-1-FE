@@ -1,4 +1,4 @@
-import { getUpcomingSchedule } from '@/app/my/feed/(api)/feedAPI'
+import { getUpcomingSchedule } from '@app/my/feed/api/feedAPI'
 import { List } from '@linker/lds';
 import Link from 'next/link';
 

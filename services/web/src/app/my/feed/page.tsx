@@ -1,4 +1,4 @@
-import { UpcomingSchedule } from './(components)';
+import { UpcomingSchedule } from './components';
 
 export default function FeedPage() {
   return (
