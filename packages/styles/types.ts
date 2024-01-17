@@ -16,6 +16,9 @@ export type Typography =
   | 'p2'
   | 'p3'
   | 'p4'
-  | 'b1';
+  | 'b1'
+  | 'b2'
+  | 'b3'
+  | 'b4';
 
 export type FontWeight = 'regular' | 'medium' | 'bold' | 'extrabold';
