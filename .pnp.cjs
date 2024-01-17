@@ -66,7 +66,7 @@ const RAW_RUNTIME_STATE =
           ["@linker/eslint-config", "workspace:packages/eslint-config"],\
           ["@linker/eslint-plugin", "workspace:packages/eslint-plugin"],\
           ["@tanstack/eslint-plugin-query", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:5.12.0"],\
-          ["@types/node", "npm:20.10.4"],\
+          ["@types/node", "npm:20.11.5"],\
           ["@types/prettier", "npm:3.0.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:5150ddf72639c78026dd42fb70c98db909b5b4705d92e6f4c006404aac57f9ed11b6f4301fb318563ae47c142354f07129b31abbd0e3a58319a40761e044e693#npm:6.13.1"],\
           ["@typescript-eslint/parser", "virtual:5150ddf72639c78026dd42fb70c98db909b5b4705d92e6f4c006404aac57f9ed11b6f4301fb318563ae47c142354f07129b31abbd0e3a58319a40761e044e693#npm:6.13.1"],\
@@ -79,6 +79,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:7.33.2"],\
           ["eslint-plugin-react-hooks", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:4.6.0"],\
           ["husky", "npm:8.0.3"],\
+          ["ky", "npm:1.2.0"],\
           ["lint-staged", "npm:15.1.0"],\
           ["prettier", "npm:3.1.0"],\
           ["ts-node", "virtual:9b065e8ca37bd0e5a0a8a2ed22178692963b21151d0e4e38c7d8b28fac01bcbbc5a92baa0112a3b9de119fabdadf676a7742372157e9086cbd53e9c49a85b32e#npm:10.9.2"],\
@@ -9982,10 +9983,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:20.10.4", {\
-        "packageLocation": "./.yarn/cache/@types-node-npm-20.10.4-45b062d723-c10c1dd13f.zip/node_modules/@types/node/",\
+      ["npm:20.11.5", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-20.11.5-b807d46a1a-9f31c47104.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:20.10.4"],\
+          ["@types/node", "npm:20.11.5"],\
           ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
@@ -18627,6 +18628,13 @@ const RAW_RUNTIME_STATE =
           ["ky", "npm:1.1.3"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:1.2.0", {\
+        "packageLocation": "./.yarn/cache/ky-npm-1.2.0-78222f1f8f-b3b7c30e2c.zip/node_modules/ky/",\
+        "packageDependencies": [\
+          ["ky", "npm:1.2.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["language-subtag-registry", [\
@@ -18708,7 +18716,7 @@ const RAW_RUNTIME_STATE =
           ["@linker/eslint-config", "workspace:packages/eslint-config"],\
           ["@linker/eslint-plugin", "workspace:packages/eslint-plugin"],\
           ["@tanstack/eslint-plugin-query", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:5.12.0"],\
-          ["@types/node", "npm:20.10.4"],\
+          ["@types/node", "npm:20.11.5"],\
           ["@types/prettier", "npm:3.0.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:5150ddf72639c78026dd42fb70c98db909b5b4705d92e6f4c006404aac57f9ed11b6f4301fb318563ae47c142354f07129b31abbd0e3a58319a40761e044e693#npm:6.13.1"],\
           ["@typescript-eslint/parser", "virtual:5150ddf72639c78026dd42fb70c98db909b5b4705d92e6f4c006404aac57f9ed11b6f4301fb318563ae47c142354f07129b31abbd0e3a58319a40761e044e693#npm:6.13.1"],\
@@ -18721,6 +18729,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:7.33.2"],\
           ["eslint-plugin-react-hooks", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:4.6.0"],\
           ["husky", "npm:8.0.3"],\
+          ["ky", "npm:1.2.0"],\
           ["lint-staged", "npm:15.1.0"],\
           ["prettier", "npm:3.1.0"],\
           ["ts-node", "virtual:9b065e8ca37bd0e5a0a8a2ed22178692963b21151d0e4e38c7d8b28fac01bcbbc5a92baa0112a3b9de119fabdadf676a7742372157e9086cbd53e9c49a85b32e#npm:10.9.2"],\
@@ -23915,7 +23924,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:20.10.4"],\
+          ["@types/node", "npm:20.11.5"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
