@@ -8,11 +8,24 @@ const customJestConfig: Config.InitialOptions = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
     '^@app/(.*)$': '<rootDir>/src/app/$1',
+    '^@__server__/(.*)$': '<rootDir>/src/__server__/$1',
   },
-  testPathIgnorePatterns: ['<rootDir>/.next/'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', 'node_modules/'],
   testEnvironment: 'jest-environment-jsdom',
   transform: {
     '\\.css\\.ts$': '@vanilla-extract/jest-transform',
+    '^.+\\.(t|j)sx?$': [
+      '@swc/jest',
+      {
+        jsc: {
+          transform: {
+            react: {
+              runtime: 'automatic',
+            },
+          },
+        },
+      },
+    ],
   },
 };
 
