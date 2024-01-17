@@ -9,7 +9,7 @@ interface Props {
 }
 
 const ChipGroup = ({ children }: Props) => {
-  const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     const element = ref.current;
