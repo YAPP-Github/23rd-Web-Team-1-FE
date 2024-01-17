@@ -5,8 +5,8 @@ import { colors } from '@linker/styles';
 import { useState } from 'react';
 
 import { timelineItemWrapper, timelineCountWrapper } from './Feed.css';
-import TimelineItem from './TimelineItem/TimelineItem';
 import timelineMockdata from './__mock__';
+import TimelineItem from './component/TimelineItem/TimelineItem';
 
 const Feed = () => {
   const [date, setDate] = useState(new Date());

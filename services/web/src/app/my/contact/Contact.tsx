@@ -4,8 +4,8 @@ import { colors } from '@linker/styles';
 import { clsx } from 'clsx';
 
 import { wrapper, profileWrapper, totalCountWrapper } from './Contact.css';
-import ContactItem from './ContactItem/ContactItem';
 import contentMockdata from './__mock__';
+import ContactItem from './component/ContactItem/ContactItem';
 
 function Contact() {
   return (
