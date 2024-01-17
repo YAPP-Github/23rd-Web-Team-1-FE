@@ -77,17 +77,17 @@ export const typography = recipe({
       b2: {
         fontSize: font.size14,
         fontWeight: font.bold,
-        lineHeight: font.lineHeight24,
+        lineHeight: font.lineHeight20,
       },
       b3: {
         fontSize: font.size13,
-        fontWeight: font.bold,
-        lineHeight: font.lineHeight24,
+        fontWeight: font.medium,
+        lineHeight: font.lineHeight18,
       },
       b4: {
         fontSize: font.size12,
-        fontWeight: font.bold,
-        lineHeight: font.lineHeight24,
+        fontWeight: font.medium,
+        lineHeight: font.lineHeight16,
       },
     },
   },
