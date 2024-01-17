@@ -1,7 +1,4 @@
-import { http, HttpResponse } from 'msw';
+import { cdnHandler } from './mocks/cdn';
+import { feedHandlers } from './mocks/feed';
 
-export const handlers = [
-  http.get('/api/test', () => {
-    return HttpResponse.json({ result: true }, { status: 200 });
-  }),
-];
+export const handlers = [...cdnHandler, ...feedHandlers];

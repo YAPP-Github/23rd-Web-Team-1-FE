@@ -8,14 +8,12 @@
     "noEmit": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
-    "module": "CommonJS",
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "outDir": "dist",
+    "jsx": "react-jsx",
     "incremental": true,
-    "preserveValueImports": false,
     "plugins": [
       {
         "name": "next"
@@ -23,15 +21,14 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@*": ["./src/*"],
-      "@fonts": ["fonts/*"]
+      "@*": ["./src/*"]
     }
   },
   "include": [
     "next-env.d.ts",
     "./src/**/*.tsx",
     "./src/**/*.ts",
-    "src/jest.config.ts",
+    "./jest.config.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
