@@ -1,6 +1,7 @@
-import { getDisplayDate } from '@/app/my/feed/(utils)/dateUtils';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
+import { format } from 'date-fns';
+import { ko } from 'date-fns/locale';
 import Image from 'next/image';
 
 import {
@@ -68,7 +69,7 @@ function ScheduleItem({ schedule }: ScheduleItemProps) {
             typography='p3'
             color={colors.gray700}
           >
-            {getDisplayDate(schedule.startDateTime)}
+            {format(schedule.startDateTime, 'yyyy. MM. dd. EEE', { locale: ko })}
           </Txt>
         </div>
       </div>
