@@ -1,6 +1,7 @@
-import { API_URL } from '@linker/ky';
 import { DefaultBodyType, http, HttpResponse, PathParams, ResponseResolver } from 'msw';
 import { HttpRequestResolverExtras } from 'msw/lib/core/handlers/HttpHandler';
+
+import { MOCK_API_URL } from './constants';
 
 type Resolver = ResponseResolver<HttpRequestResolverExtras<PathParams>> | DefaultBodyType;
 
@@ -15,7 +16,7 @@ export const mockApi: MockApi = new Proxy({} as MockApi, {
     }
 
     return (endpoint: string, resolver: Resolver) => {
-      const url = `${API_URL}${endpoint}`;
+      const url = `${MOCK_API_URL}${endpoint}`;
 
       return http[key as keyof typeof http](url, (info) => {
         if (typeof resolver !== 'function') {

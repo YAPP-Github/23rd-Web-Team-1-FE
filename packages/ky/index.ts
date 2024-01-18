@@ -1,4 +1,3 @@
-import kyInstance, { createKyApis, prefix } from './kyInstance';
+import kyInstance, { createKyApis } from './kyInstance';
 
 export const ky = createKyApis(kyInstance);
-export const API_URL = prefix;
