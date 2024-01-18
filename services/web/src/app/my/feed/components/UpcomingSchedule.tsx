@@ -3,17 +3,12 @@ import { List } from '@linker/lds';
 import Link from 'next/link';
 
 import ScheduleItem from './ScheduleItem';
+import type { Schedule } from './ScheduleItem'
 import { listWrapper, listItem } from './UpcomingSchedule.css'
 
 const getUpcomingSchedule = ({ limit }: { limit: number }) => {
   return ky.get<{
-    schedules: Array<{
-      scheduleId: number;
-      title: string;
-      startDateTime: string;
-      endDateTime: string;
-      profileImgUrl: string | null;
-    }>;
+    schedules: Schedule[];
   }>(`/v1/schedules/near-term?type=UPCOMING&limit=${limit}`);
 };
 

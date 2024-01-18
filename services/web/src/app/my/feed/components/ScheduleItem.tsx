@@ -14,10 +14,7 @@ import {
   date,
 } from './ScheduleItem.css';
 
-/**
- * @todo global context로 이동 필요
- */
-interface Schedule {
+export interface Schedule {
   scheduleId: number;
   title: string;
   startDateTime: string;
