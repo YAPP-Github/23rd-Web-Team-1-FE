@@ -1,4 +1,4 @@
-import { ContactBanner } from './add-contact';
+import { ContactBanner } from './contact-banner';
 import { wrapper } from './page.css'
 import { PreviousSchedule } from './previous-schedule';
 import { Recommendation } from './recommendation';
