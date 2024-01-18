@@ -1,9 +1,21 @@
-import { getUpcomingSchedule } from '@app/my/feed/api/feedAPI'
+import { ky } from '@linker/ky';
 import { List } from '@linker/lds';
 import Link from 'next/link';
 
 import ScheduleItem from './ScheduleItem';
 import { listWrapper, listItem } from './UpcomingSchedule.css'
+
+const getUpcomingSchedule = ({ limit }: { limit: number }) => {
+  return ky.get<{
+    schedules: Array<{
+      scheduleId: number;
+      title: string;
+      startDateTime: string;
+      endDateTime: string;
+      profileImgUrl: string | null;
+    }>;
+  }>(`/v1/schedules/near-term?type=UPCOMING&limit=${limit}`);
+};
 
 async function UpcomingSchedule() {
   const { schedules } = await getUpcomingSchedule({ limit: 3 });
