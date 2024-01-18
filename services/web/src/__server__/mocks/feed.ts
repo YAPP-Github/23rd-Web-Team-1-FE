@@ -1,13 +1,14 @@
 /* eslint-disable max-len */
-import { API_URL } from '@linker/ky';
 import { http, HttpResponse } from 'msw';
 
+import { MOCK_API_URL } from '../constants';
+
 export const feedHandlers = [
-  http.get(`${API_URL}/v1/my`, () => {
+  http.get(`${MOCK_API_URL}/v1/my`, () => {
     return HttpResponse.json({ data: my }, { status: 200 });
   }),
 
-  http.get(`${API_URL}/v1/schedules/upcoming/recommendation`, () => {
+  http.get(`${MOCK_API_URL}/v1/schedules/upcoming/recommendation`, () => {
     return HttpResponse.json({ data: upcomingSchedules }, { status: 200 });
   }),
 ];
