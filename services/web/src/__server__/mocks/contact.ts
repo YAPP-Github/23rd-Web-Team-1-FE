@@ -8,7 +8,7 @@ export const contactHandlers = [
     return HttpResponse.json({ data: contact }, { status: 200 });
   }),
 ];
-export interface Contact {
+export interface ContactData {
   id: number;
   name: string;
   profileImgUrl: string;

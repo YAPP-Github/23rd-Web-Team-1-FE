@@ -11,9 +11,7 @@ export const searchInputContainer = style({
   alignItems: 'center',
   border: 'none',
   flexDirection: 'row',
-  paddingTop: '1.4rem',
-  paddingBottom: '1.4rem',
-  paddingLeft: '1.9rem',
+  padding: '1.4rem 0 1.4rem 1.9rem',
   gap: '6px',
 });
 

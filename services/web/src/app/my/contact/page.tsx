@@ -1,7 +1,14 @@
+import { ContactData } from '@__server__/mocks/contact';
 import Contact from '@app/my/contact/Contact';
+import { ky } from '@linker/ky';
 
-function ContactPage() {
-  return <Contact />;
+export default async function ContactPage() {
+  const contactData = await getContact();
+
+  return <Contact contactData={contactData} />;
 }
+const getContact = () => {
+  const response = ky.get<ContactData[]>('/v1/contacts');
 
-export default ContactPage;
+  return response;
+};

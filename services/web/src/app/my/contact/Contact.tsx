@@ -1,13 +1,15 @@
-/* eslint-disable arrow-parens */
 'use client';
-import { Contact } from '@__server__/mocks/contact';
-// import { ky } from '@linker/ky';
+/* eslint-disable arrow-parens */
+import { ContactData } from '@__server__/mocks/contact';
 import { Txt } from '@linker/lds';
 import { SearchInput } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { clsx } from 'clsx';
 import { useState } from 'react';
 
+interface ContactProps {
+  contactData: ContactData[];
+}
 import {
   wrapper,
   profileWrapper,
@@ -18,14 +20,12 @@ import {
   favoriteDropDown,
 } from './Contact.css';
 import ContactItem from './component/ContactItem/ContactItem';
-import contactMock from './component/__mock__';
 
-export default function Contact() {
-  //const contactData = await getContact();
-  const [clickFavorites, setClickFavorites] = useState<boolean>(true);
+export default function Contact({ contactData }: ContactProps) {
+  const [isClickFavorites, setIsClickFavorites] = useState(true);
   const onSubmit = () => {};
   const onFavoriteClick = () => {
-    setClickFavorites((prev) => !prev);
+    setIsClickFavorites((prev) => !prev);
   };
 
   return (
@@ -45,12 +45,12 @@ export default function Contact() {
           </Txt>
         </div>
         <button className={favoriteDropDown} onClick={onFavoriteClick}>
-          {clickFavorites ? '⌄' : '＾'}
+          {isClickFavorites ? '⌄' : '＾'}
         </button>
       </article>
       <article className={profileWrapper}>
-        {clickFavorites &&
-          contactMock.map((item) => (
+        {isClickFavorites &&
+          contactData.map((item) => (
             <ContactItem
               key={item.id}
               name={item.name}
@@ -65,11 +65,11 @@ export default function Contact() {
           전체
         </Txt>
         <Txt typography="p4" color={colors.gray800}>
-          {contactMock.length}
+          {contactData.length}
         </Txt>
       </article>
       <article className={profileWrapper}>
-        {contactMock.map((item) => (
+        {contactData.map((item) => (
           <ContactItem
             key={item.id}
             name={item.name}
@@ -82,8 +82,3 @@ export default function Contact() {
     </section>
   );
 }
-// const getContact = () => {
-//   const response = ky.get<Contact[]>('/v1/contacts');
-
-//   return response;
-// };
