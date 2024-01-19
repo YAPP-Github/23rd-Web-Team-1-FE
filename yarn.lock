@@ -5363,7 +5363,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.11.5":
+"@types/node@npm:^20.10.4":
   version: 20.11.5
   resolution: "@types/node@npm:20.11.5"
   dependencies:
@@ -12216,13 +12216,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ky@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "ky@npm:1.2.0"
-  checksum: b3b7c30e2ca3a536887cbbe686cc92534803e1c3c79937d33b9df80e1e9b7c42edb67343b228fa7ffc1f03d1eaf84cac306b2842b0c1c13daf7a7932885d87ef
-  languageName: node
-  linkType: hard
-
 "language-subtag-registry@npm:^0.3.20":
   version: 0.3.22
   resolution: "language-subtag-registry@npm:0.3.22"
@@ -12290,7 +12283,7 @@ __metadata:
     "@linker/eslint-config": "workspace:^"
     "@linker/eslint-plugin": "workspace:^"
     "@tanstack/eslint-plugin-query": "npm:^5.8.4"
-    "@types/node": "npm:^20.11.5"
+    "@types/node": "npm:^20.10.4"
     "@types/prettier": "npm:^3.0.0"
     "@typescript-eslint/eslint-plugin": "npm:^6.12.0"
     "@typescript-eslint/parser": "npm:^6.12.0"
@@ -12303,10 +12296,8 @@ __metadata:
     eslint-plugin-react: "npm:^7.33.2"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     husky: "npm:^8.0.3"
-    ky: "npm:^1.2.0"
     lint-staged: "npm:^15.1.0"
     prettier: "npm:^3.1.0"
-    react-hook-form: "npm:^7.49.3"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.2.2"
   languageName: unknown

@@ -79,10 +79,8 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:7.33.2"],\
           ["eslint-plugin-react-hooks", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:4.6.0"],\
           ["husky", "npm:8.0.3"],\
-          ["ky", "npm:1.2.0"],\
           ["lint-staged", "npm:15.1.0"],\
           ["prettier", "npm:3.1.0"],\
-          ["react-hook-form", "virtual:9b065e8ca37bd0e5a0a8a2ed22178692963b21151d0e4e38c7d8b28fac01bcbbc5a92baa0112a3b9de119fabdadf676a7742372157e9086cbd53e9c49a85b32e#npm:7.49.3"],\
           ["ts-node", "virtual:9b065e8ca37bd0e5a0a8a2ed22178692963b21151d0e4e38c7d8b28fac01bcbbc5a92baa0112a3b9de119fabdadf676a7742372157e9086cbd53e9c49a85b32e#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"]\
         ],\
@@ -18632,13 +18630,6 @@ const RAW_RUNTIME_STATE =
           ["ky", "npm:1.1.3"]\
         ],\
         "linkType": "HARD"\
-      }],\
-      ["npm:1.2.0", {\
-        "packageLocation": "./.yarn/cache/ky-npm-1.2.0-78222f1f8f-b3b7c30e2c.zip/node_modules/ky/",\
-        "packageDependencies": [\
-          ["ky", "npm:1.2.0"]\
-        ],\
-        "linkType": "HARD"\
       }]\
     ]],\
     ["language-subtag-registry", [\
@@ -18733,10 +18724,8 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:7.33.2"],\
           ["eslint-plugin-react-hooks", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:4.6.0"],\
           ["husky", "npm:8.0.3"],\
-          ["ky", "npm:1.2.0"],\
           ["lint-staged", "npm:15.1.0"],\
           ["prettier", "npm:3.1.0"],\
-          ["react-hook-form", "virtual:9b065e8ca37bd0e5a0a8a2ed22178692963b21151d0e4e38c7d8b28fac01bcbbc5a92baa0112a3b9de119fabdadf676a7742372157e9086cbd53e9c49a85b32e#npm:7.49.3"],\
           ["ts-node", "virtual:9b065e8ca37bd0e5a0a8a2ed22178692963b21151d0e4e38c7d8b28fac01bcbbc5a92baa0112a3b9de119fabdadf676a7742372157e9086cbd53e9c49a85b32e#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"]\
         ],\
@@ -21603,19 +21592,6 @@ const RAW_RUNTIME_STATE =
           ["react-hook-form", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.49.3"],\
           ["@types/react", "npm:18.2.39"],\
           ["react", "npm:18.2.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/react",\
-          "react"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:9b065e8ca37bd0e5a0a8a2ed22178692963b21151d0e4e38c7d8b28fac01bcbbc5a92baa0112a3b9de119fabdadf676a7742372157e9086cbd53e9c49a85b32e#npm:7.49.3", {\
-        "packageLocation": "./.yarn/__virtual__/react-hook-form-virtual-b1adc3f52f/0/cache/react-hook-form-npm-7.49.3-8e426579b7-ccd35d73f2.zip/node_modules/react-hook-form/",\
-        "packageDependencies": [\
-          ["react-hook-form", "virtual:9b065e8ca37bd0e5a0a8a2ed22178692963b21151d0e4e38c7d8b28fac01bcbbc5a92baa0112a3b9de119fabdadf676a7742372157e9086cbd53e9c49a85b32e#npm:7.49.3"],\
-          ["@types/react", null],\
-          ["react", null]\
         ],\
         "packagePeers": [\
           "@types/react",\
