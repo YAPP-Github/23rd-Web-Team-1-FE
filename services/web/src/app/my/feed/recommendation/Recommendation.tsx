@@ -1,11 +1,13 @@
 import { ky } from '@linker/ky';
-import { List } from '@linker/lds';
+import { List, Carousel, CarouselItem } from '@linker/lds';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import News from './News';
+import { wrapper, header, schedule, newsItem } from './Recommendation.css';
 import Schedule from './Schedule';
 
-interface News {
+export interface NewsDTO {
   tag: {
     id: number;
     name: string;
@@ -24,7 +26,7 @@ interface RecommendationDTO {
   profileImgUrl: string;
   startDateTime: string;
   endDateTime: string;
-  recommendations: News[];
+  recommendations: NewsDTO[];
 }
 
 const getRecommendation = () => {
@@ -32,32 +34,44 @@ const getRecommendation = () => {
 };
 
 async function Recommendation() {
-  const { title, profileImgUrl, startDateTime, endDateTime } = await getRecommendation();
+  const { title, profileImgUrl, startDateTime, endDateTime, recommendations } =
+    await getRecommendation();
 
   return (
-    <List>
-      {/* @todo 일정상세페이지 href 추가필요 */}
-      <Link href="">
-        <List.Header
-          title="대화 주제 추천 받기"
-          rightAddon={
-            <button type="button">
-              <Image
-                src="https://static.im-linker.com/right-arrow-mono.png"
-                alt=""
-                width={28}
-                height={28}
-              />
-            </button>
-          }
+    <List className={wrapper}>
+      <div className={header}>
+        {/* @todo 일정상세페이지 href 추가필요 */}
+        <Link href="">
+          <List.Header
+            title="대화 주제 추천 받기"
+            rightAddon={
+              <button type="button">
+                <Image
+                  src="https://static.im-linker.com/right-arrow-mono.png"
+                  alt=""
+                  width={28}
+                  height={28}
+                />
+              </button>
+            }
+          />
+        </Link>
+      </div>
+      <div className={schedule}>
+        <Schedule
+          title={title}
+          profileImgUrl={profileImgUrl}
+          startDateTime={startDateTime}
+          endDateTime={endDateTime}
         />
-      </Link>
-      <Schedule
-        title={title}
-        profileImgUrl={profileImgUrl}
-        startDateTime={startDateTime}
-        endDateTime={endDateTime}
-      />
+      </div>
+      <Carousel>
+        {recommendations.map(({ tag, contents }, index) => (
+          <CarouselItem key={index} className={newsItem}>
+            <News tag={tag} contents={contents} />
+          </CarouselItem>
+        ))}
+      </Carousel>
     </List>
   );
 }

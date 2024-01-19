@@ -1,8 +1,11 @@
+import { colors } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
 
 export const wrapper = style({
   display: 'flex',
   gap: '1.4rem',
+  paddingBottom: '1.6rem',
+  borderBottom: `1px solid ${colors.gray200}`,
 });
 
 export const profileImage = style({
