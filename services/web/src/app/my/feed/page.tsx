@@ -1,34 +1,18 @@
+import { ContactBanner } from './contact-banner';
+import { wrapper } from './page.css'
+import { PreviousSchedule } from './previous-schedule';
+import { Recommendation } from './recommendation';
+import { Trend } from './trend'
+import { UpcomingSchedule } from './upcoming-schedule';
+
 export default function FeedPage() {
   return (
-    <div>
-      {/* 스크롤 만들기 위한 mock 데이터 */}
-      <h1>메인1</h1>
-      <h1>메인2</h1>
-      <h1>메인3</h1>
-      <h1>메인4</h1>
-      <h1>메인5</h1>
-      <h1>메인6</h1>
-      <h1>메인7</h1>
-      <h1>메인8</h1>
-      <h1>메인9</h1>
-      <h1>메인10</h1>
-      <h1>메인11</h1>
-      <h1>메인12</h1>
-      <h1>메인13</h1>
-      <h1>메인14</h1>
-      <h1>메인15</h1>
-      <h1>메인16</h1>
-      <h1>메인17</h1>
-      <h1>메인18</h1>
-      <h1>메인19</h1>
-      <h1>메인20</h1>
-      <h1>메인21</h1>
-      <h1>메인22</h1>
-      <h1>메인23</h1>
-      <h1>메인24</h1>
-      <h1>메인25</h1>
-      <h1>메인26</h1>
-      <h1>메인27</h1>
-    </div>
+    <article className={wrapper}>
+      <ContactBanner />
+      <UpcomingSchedule />
+      <Recommendation />
+      <PreviousSchedule />
+      <Trend />
+    </article>
   );
 }
