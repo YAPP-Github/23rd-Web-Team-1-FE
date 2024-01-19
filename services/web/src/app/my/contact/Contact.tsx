@@ -1,5 +1,7 @@
 /* eslint-disable arrow-parens */
 'use client';
+import { Contact } from '@__server__/mocks/contact';
+// import { ky } from '@linker/ky';
 import { Txt } from '@linker/lds';
 import { SearchInput } from '@linker/lds';
 import { colors } from '@linker/styles';
@@ -15,10 +17,11 @@ import {
   favoritesWrapper,
   favoriteDropDown,
 } from './Contact.css';
-import contentMockdata from './__mock__';
 import ContactItem from './component/ContactItem/ContactItem';
+import contactMock from './component/__mock__';
 
-function Contact() {
+export default function Contact() {
+  //const contactData = await getContact();
   const [clickFavorites, setClickFavorites] = useState<boolean>(true);
   const onSubmit = () => {};
   const onFavoriteClick = () => {
@@ -47,12 +50,12 @@ function Contact() {
       </article>
       <article className={profileWrapper}>
         {clickFavorites &&
-          contentMockdata.map((item) => (
+          contactMock.map((item) => (
             <ContactItem
-              key={contentMockdata.indexOf(item)}
+              key={item.id}
               name={item.name}
-              career={item.career}
-              company={item.company}
+              job={item.job}
+              association={item.association}
               profileImgUrl={item.profileImgUrl}
             />
           ))}
@@ -62,16 +65,16 @@ function Contact() {
           전체
         </Txt>
         <Txt typography="p4" color={colors.gray800}>
-          {contentMockdata.length}
+          {contactMock.length}
         </Txt>
       </article>
       <article className={profileWrapper}>
-        {contentMockdata.map((item) => (
+        {contactMock.map((item) => (
           <ContactItem
-            key={contentMockdata.indexOf(item)}
+            key={item.id}
             name={item.name}
-            career={item.career}
-            company={item.company}
+            job={item.job}
+            association={item.association}
             profileImgUrl={item.profileImgUrl}
           />
         ))}
@@ -79,4 +82,8 @@ function Contact() {
     </section>
   );
 }
-export default Contact;
+// const getContact = () => {
+//   const response = ky.get<Contact[]>('/v1/contacts');
+
+//   return response;
+// };
