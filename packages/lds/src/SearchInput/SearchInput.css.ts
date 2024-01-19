@@ -19,9 +19,10 @@ export const searchInputContainer = style({
 
 export const searchInput = style({
   zIndex: 1,
-  width: '80%',
+  width: '100%',
   border: 'none',
   background: 'none',
+  outline: 'none',
   '::placeholder': {
     fontFamily: 'Pretendard',
     fontWeight: '500',
