@@ -1,9 +1,7 @@
 import { List } from '@linker/lds';
 
 function Recommendation() {
-  return (
-    <List>recommendation</List>
-  )
+  return <List>recommendation</List>;
 }
 
-export default Recommendation
+export default Recommendation;

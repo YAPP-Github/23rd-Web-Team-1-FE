@@ -27,33 +27,29 @@ interface ScheduleItemProps {
 }
 
 function ScheduleItem({ schedule }: ScheduleItemProps) {
-  const profileImage = schedule.profileImgUrl ?
-    (
-      <Image
-        className={profileImageStyle}
-        src={schedule.profileImgUrl}
-        width={48}
-        height={48}
-        alt="profile-image"
-      />
-    ) :
-    (
-      <Image
-        className={calendarImageStyle}
-        src={'https://static.im-linker.com/calendar.png'}
-        width={20}
-        height={20}
-        alt="profile-image"
-      />
-    )
+  const profileImage = schedule.profileImgUrl ? (
+    <Image
+      className={profileImageStyle}
+      src={schedule.profileImgUrl}
+      width={48}
+      height={48}
+      alt="profile-image"
+    />
+  ) : (
+    <Image
+      className={calendarImageStyle}
+      src={'https://static.im-linker.com/calendar.png'}
+      width={20}
+      height={20}
+      alt="profile-image"
+    />
+  );
 
   return (
     <div className={scheduleWrapper}>
-      <div className={profileImageWrapper}>
-        {profileImage}
-      </div>
+      <div className={profileImageWrapper}>{profileImage}</div>
       <div className={scheduleInfo}>
-        <Txt typography='p1'>{schedule.title}</Txt>
+        <Txt typography="p1">{schedule.title}</Txt>
         <div className={dateWrapper}>
           <Image
             src="https://static.im-linker.com/time.png"
@@ -61,11 +57,7 @@ function ScheduleItem({ schedule }: ScheduleItemProps) {
             height={12}
             alt="time-icon"
           />
-          <Txt
-            className={date}
-            typography='p3'
-            color={colors.gray700}
-          >
+          <Txt className={date} typography="p3" color={colors.gray700}>
             {format(schedule.startDateTime, 'yyyy. MM. dd. EEE', { locale: ko })}
           </Txt>
         </div>
