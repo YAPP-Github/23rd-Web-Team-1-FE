@@ -40,7 +40,7 @@ function News({ tag, contents }: NewsProps) {
             </div>
             <Image
               className={newsImage}
-              src="https://postfiles.pstatic.net/MjAyMjA5MTdfMTE1/MDAxNjYzMzc3MDc1MTA2.bToArUww9E15OT_Mmt5mz7xAkuK98KGBbeI_dsJeaDAg.WJAhfo5kHehNQKWLEWKURBlZ7m_GZVZ9hoCBM2b_lL0g.JPEG.drusty97/IMG_0339.jpg?type=w966"
+              src={content.thumbnailUrl}
               width={74}
               height={74}
               alt="news-thumbnail"
