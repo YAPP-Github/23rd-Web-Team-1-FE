@@ -82,6 +82,7 @@ const RAW_RUNTIME_STATE =
           ["ky", "npm:1.2.0"],\
           ["lint-staged", "npm:15.1.0"],\
           ["prettier", "npm:3.1.0"],\
+          ["react-hook-form", "virtual:9b065e8ca37bd0e5a0a8a2ed22178692963b21151d0e4e38c7d8b28fac01bcbbc5a92baa0112a3b9de119fabdadf676a7742372157e9086cbd53e9c49a85b32e#npm:7.49.3"],\
           ["ts-node", "virtual:9b065e8ca37bd0e5a0a8a2ed22178692963b21151d0e4e38c7d8b28fac01bcbbc5a92baa0112a3b9de119fabdadf676a7742372157e9086cbd53e9c49a85b32e#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"]\
         ],\
@@ -5705,6 +5706,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-calendar", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:4.7.0"],\
           ["react-dom", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:18.2.0"],\
+          ["react-hook-form", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.49.3"],\
           ["storybook", "npm:7.6.3"],\
           ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"],\
           ["use-debounce", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.0.0"],\
@@ -5764,6 +5766,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-calendar", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:4.7.0"],\
           ["react-dom", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:18.2.0"],\
+          ["react-hook-form", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.49.3"],\
           ["storybook", "npm:7.6.3"],\
           ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"],\
           ["use-debounce", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.0.0"],\
@@ -5820,6 +5823,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-calendar", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:4.7.0"],\
           ["react-dom", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:18.2.0"],\
+          ["react-hook-form", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.49.3"],\
           ["storybook", "npm:7.6.3"],\
           ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"],\
           ["use-debounce", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.0.0"],\
@@ -18732,6 +18736,7 @@ const RAW_RUNTIME_STATE =
           ["ky", "npm:1.2.0"],\
           ["lint-staged", "npm:15.1.0"],\
           ["prettier", "npm:3.1.0"],\
+          ["react-hook-form", "virtual:9b065e8ca37bd0e5a0a8a2ed22178692963b21151d0e4e38c7d8b28fac01bcbbc5a92baa0112a3b9de119fabdadf676a7742372157e9086cbd53e9c49a85b32e#npm:7.49.3"],\
           ["ts-node", "virtual:9b065e8ca37bd0e5a0a8a2ed22178692963b21151d0e4e38c7d8b28fac01bcbbc5a92baa0112a3b9de119fabdadf676a7742372157e9086cbd53e9c49a85b32e#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"]\
         ],\
@@ -21576,6 +21581,41 @@ const RAW_RUNTIME_STATE =
           ["@babel/runtime", "npm:7.23.5"],\
           ["@types/react", "npm:18.2.39"],\
           ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-hook-form", [\
+      ["npm:7.49.3", {\
+        "packageLocation": "./.yarn/cache/react-hook-form-npm-7.49.3-8e426579b7-ccd35d73f2.zip/node_modules/react-hook-form/",\
+        "packageDependencies": [\
+          ["react-hook-form", "npm:7.49.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.49.3", {\
+        "packageLocation": "./.yarn/__virtual__/react-hook-form-virtual-b909092894/0/cache/react-hook-form-npm-7.49.3-8e426579b7-ccd35d73f2.zip/node_modules/react-hook-form/",\
+        "packageDependencies": [\
+          ["react-hook-form", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.49.3"],\
+          ["@types/react", "npm:18.2.39"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:9b065e8ca37bd0e5a0a8a2ed22178692963b21151d0e4e38c7d8b28fac01bcbbc5a92baa0112a3b9de119fabdadf676a7742372157e9086cbd53e9c49a85b32e#npm:7.49.3", {\
+        "packageLocation": "./.yarn/__virtual__/react-hook-form-virtual-b1adc3f52f/0/cache/react-hook-form-npm-7.49.3-8e426579b7-ccd35d73f2.zip/node_modules/react-hook-form/",\
+        "packageDependencies": [\
+          ["react-hook-form", "virtual:9b065e8ca37bd0e5a0a8a2ed22178692963b21151d0e4e38c7d8b28fac01bcbbc5a92baa0112a3b9de119fabdadf676a7742372157e9086cbd53e9c49a85b32e#npm:7.49.3"],\
+          ["@types/react", null],\
+          ["react", null]\
         ],\
         "packagePeers": [\
           "@types/react",\

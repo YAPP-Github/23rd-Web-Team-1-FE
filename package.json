@@ -50,6 +50,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "ky": "^1.2.0"
+    "ky": "^1.2.0",
+    "react-hook-form": "^7.49.3"
   }
 }

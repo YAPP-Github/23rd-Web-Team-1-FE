@@ -2691,6 +2691,7 @@ __metadata:
     react: "npm:^18.2.0"
     react-calendar: "npm:^4.7.0"
     react-dom: "npm:^18.2.0"
+    react-hook-form: "npm:^7.49.3"
     storybook: "npm:^7.5.3"
     typescript: "npm:^5.2.2"
     use-debounce: "npm:^10.0.0"
@@ -12305,6 +12306,7 @@ __metadata:
     ky: "npm:^1.2.0"
     lint-staged: "npm:^15.1.0"
     prettier: "npm:^3.1.0"
+    react-hook-form: "npm:^7.49.3"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.2.2"
   languageName: unknown
@@ -14665,6 +14667,15 @@ __metadata:
   peerDependencies:
     react: ">=16.13.1"
   checksum: 7418637bf352b88f35ff3798e6faa094ee046df9d422fc08f54c017892c3c0738dac661ba3d64d97209464e7a60e7fbbeffdbeaee5edc38f3aaf5f1f4a8bf610
+  languageName: node
+  linkType: hard
+
+"react-hook-form@npm:^7.49.3":
+  version: 7.49.3
+  resolution: "react-hook-form@npm:7.49.3"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: ccd35d73f26b56c2933312c5d445552aab8c20a02ab07360808f039c9daf37a046a0afa2c2c56fac0a16b1963ae3e4ebce37136d14388002d00d6c5483e3fdb7
   languageName: node
   linkType: hard
 
