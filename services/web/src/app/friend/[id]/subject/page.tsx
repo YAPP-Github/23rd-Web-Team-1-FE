@@ -1,5 +1,5 @@
 function SubjectPage() {
-  return <div>관심주제</div>
+  return <div>관심주제</div>;
 }
 
-export default SubjectPage
+export default SubjectPage;

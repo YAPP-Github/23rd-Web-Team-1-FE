@@ -1,7 +1,7 @@
-import { redirect } from 'next/navigation'
+import { redirect } from 'next/navigation';
 
 function MyPage() {
-  return redirect('/my/feed')
+  return redirect('/my/feed');
 }
 
-export default MyPage
+export default MyPage;

@@ -5,7 +5,7 @@ import { clsx } from 'clsx';
 import { useRef } from 'react';
 
 import { minimizeStyle, header, headerContent } from './MyHeader.css';
-import { Logo } from './components/Logo'
+import { Logo } from './components/Logo';
 import { MyProfile } from './components/MyProfile';
 import useMinimize from './hooks/useMinimize';
 

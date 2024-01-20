@@ -1,30 +1,30 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
 interface UseMinimizeProps {
-  minimizeThreshold: number
-  maximizeThreshold: number
+  minimizeThreshold: number;
+  maximizeThreshold: number;
 }
 
 function useMinimize({ minimizeThreshold, maximizeThreshold }: UseMinimizeProps) {
-  const [isMinimize, setMinimize] = useState(false)
+  const [isMinimize, setMinimize] = useState(false);
 
   useEffect(() => {
     function handleScroll() {
       if (window.scrollY > (isMinimize ? maximizeThreshold : minimizeThreshold)) {
-        setMinimize(true)
+        setMinimize(true);
       } else {
-        setMinimize(false)
+        setMinimize(false);
       }
     }
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [minimizeThreshold, maximizeThreshold, isMinimize])
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [minimizeThreshold, maximizeThreshold, isMinimize]);
 
-  return isMinimize
+  return isMinimize;
 }
 
-export default useMinimize
+export default useMinimize;
