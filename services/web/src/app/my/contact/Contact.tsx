@@ -1,10 +1,10 @@
 'use client';
-/* eslint-disable arrow-parens */
 import { ContactData } from '@__server__/mocks/contact';
 import { Txt } from '@linker/lds';
 import { SearchInput } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { clsx } from 'clsx';
+import Image from 'next/image';
 import { useState } from 'react';
 
 interface ContactProps {
@@ -45,7 +45,17 @@ export default function Contact({ contactData }: ContactProps) {
           </Txt>
         </div>
         <button className={favoriteDropDown} onClick={onFavoriteClick}>
-          {isClickFavorites ? '⌄' : '＾'}
+          {isClickFavorites ? (
+            <Image
+              src="https://static.im-linker.com/downward-arrow.svg"
+              width={24}
+              height={24}
+              alt={'검색아이콘'}
+            />
+          ) : (
+            /* @todo 이후 아이콘 나오면 수정 예정 */
+            '＾'
+          )}
         </button>
       </article>
       <article className={profileWrapper}>

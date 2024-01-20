@@ -20,11 +20,9 @@ export const searchInput = style({
   width: '100%',
   border: 'none',
   background: 'none',
+  backgroundColor: 'transparent',
   outline: 'none',
   '::placeholder': {
-    fontFamily: 'Pretendard',
-    fontWeight: '500',
-    fontStyle: 'normal',
-    color: `${colors.black}`,
+    color: `${colors.gray500}`,
   },
 });

@@ -1,5 +1,7 @@
 'use client';
 
+import { typography } from '@linker/styles';
+import clsx from 'clsx';
 import Image from 'next/image';
 import { HTMLAttributes, useRef } from 'react';
 import { Controller, useForm, useWatch } from 'react-hook-form';
@@ -14,7 +16,7 @@ interface Props extends HTMLAttributes<HTMLInputElement> {
 
 const SearchInput = ({ children, className, placeholder }: Props) => {
   const { register, control, handleSubmit } = useForm();
-  const inputRef = useRef<HTMLInputElement>(null); // useRef with null as initial value
+  const inputRef = useRef<HTMLInputElement>(null);
   const watchQuery = useWatch({
     name: 'search',
     control,
@@ -28,7 +30,7 @@ const SearchInput = ({ children, className, placeholder }: Props) => {
   return (
     <form className={searchInputContainer} onSubmit={handleSubmit(onSubmit)}>
       <Image
-        src="https://static.im-linker.com/dots-vertical.svg"
+        src="https://static.im-linker.com/search.svg"
         width={24}
         height={24}
         alt={'검색아이콘'}
@@ -41,7 +43,7 @@ const SearchInput = ({ children, className, placeholder }: Props) => {
           <input
             {...register('search')}
             type="text"
-            className={searchInput}
+            className={clsx(searchInput, typography({ type: 'p2' }))}
             placeholder={placeholder}
             ref={inputRef}
             onChange={(e) => field.onChange(e.target.value)}
