@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { HTMLAttributes, ReactNode } from 'react';
+import { HTMLAttributes } from 'react';
 import { useEffect, useState } from 'react';
 
 import { button, container, buttonText, innerContariner } from './FAB.css';
@@ -11,14 +11,25 @@ import { Txt } from '../../Txt';
 
 type ButtonType = 'extand' | 'default';
 
-interface Props extends Omit<HTMLAttributes<HTMLButtonElement>, 'type'> {
+interface BaseProps extends Omit<HTMLAttributes<HTMLButtonElement>, 'type'> {
   iconUrl: string;
   className?: string;
-  type?: ButtonType;
-  text?: ReactNode;
 }
 
-const FAB = ({ className, iconUrl = '', text, type = 'extand', ...props }: Props) => {
+interface DefaultProps extends BaseProps {
+  type: 'default';
+}
+
+interface ExtandProps extends BaseProps {
+  type: 'extand';
+  text: string;
+}
+
+type Props = DefaultProps | ExtandProps;
+
+const FAB = ({ className, iconUrl = '', type = 'extand', ...props }: Props) => {
+  const { text } = props as ExtandProps;
+
   const [fabType, setFabType] = useState<ButtonType>(type);
 
   useEffect(() => {
