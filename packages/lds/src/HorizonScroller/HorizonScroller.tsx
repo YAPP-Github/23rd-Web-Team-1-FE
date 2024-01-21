@@ -1,14 +1,16 @@
 'use client';
 
+import clsx from 'clsx';
 import { useLayoutEffect, useRef } from 'react';
 
 import { horizonScroller } from './HorizonScroller.css';
 
 interface Props {
   children: React.ReactNode;
+  className?: string;
 }
 
-const ChipGroup = ({ children }: Props) => {
+const HorizonScroller = ({ children, className }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
@@ -31,10 +33,10 @@ const ChipGroup = ({ children }: Props) => {
   }, []);
 
   return (
-    <div ref={ref} className={horizonScroller}>
+    <div ref={ref} className={clsx(horizonScroller, className)}>
       {children}
     </div>
   );
 };
 
-export default ChipGroup;
+export default HorizonScroller;
