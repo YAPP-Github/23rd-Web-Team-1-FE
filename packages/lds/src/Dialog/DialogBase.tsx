@@ -76,7 +76,7 @@ const DialogBase = ({
 export default DialogBase;
 
 const DialogPortal = ({ children }: { children: React.ReactNode }) => {
-  const element = document.getElementById('dialog');
+  const element = document.getElementById('portal');
 
   if (element == null) {
     return <></>;
