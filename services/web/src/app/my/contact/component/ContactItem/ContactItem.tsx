@@ -12,11 +12,11 @@ import {
 
 interface ContactItemProps {
   name: string;
-  career: string;
-  company: string;
+  job: string;
+  association: string;
   profileImgUrl: string;
 }
-function ContactItem({ name, career, company, profileImgUrl }: ContactItemProps) {
+function ContactItem({ name, job, association, profileImgUrl }: ContactItemProps) {
   return (
     <div className={clsx(contactItemWrapper)}>
       <div className={clsx(textWrapper)}>
@@ -25,13 +25,13 @@ function ContactItem({ name, career, company, profileImgUrl }: ContactItemProps)
         </Txt>
         <div className={clsx(careerTextWrapper)}>
           <Txt typography="p4" color={colors.gray700}>
-            {career}
+            {job}
           </Txt>
           <Txt typography="p4" color={colors.gray700}>
             .
           </Txt>
           <Txt typography="p4" color={colors.gray700}>
-            {company}
+            {association}
           </Txt>
         </div>
       </div>

@@ -20,7 +20,6 @@ const Feed = () => {
         }}
         withModeChange
       />
-
       <Spacing size={20} />
       <section className={timelineCountWrapper}>
         <Txt typography="p3" fontWeight="medium" color={colors.gray950}>
