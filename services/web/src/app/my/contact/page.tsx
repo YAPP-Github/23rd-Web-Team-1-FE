@@ -3,10 +3,10 @@ import Contact from '@app/my/contact/Contact';
 import { ky } from '@linker/ky';
 
 export default async function ContactPage() {
-  // const contactData = await getContact();
-  // const { contacts } = contactData;
+  const contactData = await getContact();
+  const { contacts } = contactData;
 
-  return <></>;
+  return <Contact contactData={contacts} />;
 }
 const getContact = () => {
   const response = ky.get<ContactDataRes>('/v1/contacts');
