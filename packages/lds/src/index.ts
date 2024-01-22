@@ -4,6 +4,7 @@ export * from './Carousel';
 export * from './Chip';
 export * from './Dialog';
 export * from './HorizonScroller';
+export * from './Icon';
 export * from './Layout';
 export * from './List';
 export * from './Modal';
