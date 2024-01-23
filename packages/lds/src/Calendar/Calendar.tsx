@@ -3,13 +3,13 @@
 import clsx from 'clsx';
 import { differenceInDays, differenceInWeeks, format, startOfMonth } from 'date-fns';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { forwardRef, useState } from 'react';
 import { Calendar as ReactCalendar, CalendarProps } from 'react-calendar';
 import { LooseValue, Value } from 'react-calendar/dist/cjs/shared/types';
 import 'react-calendar/dist/Calendar.css';
 
 import { calendar, dot, container, buttonWrapper } from './Calendar.css';
+import { Icon } from '../Icon';
 
 interface Props extends Omit<CalendarProps, 'value' | 'onChange'> {
   value?: LooseValue;
@@ -33,7 +33,7 @@ const Calendar = forwardRef<HTMLDivElement, Props>((props, ref) => {
     >
       {withModeChange && (
         <button className={buttonWrapper} onClick={() => setIsWeekMode((prev) => !prev)}>
-          <Image src="https://static.im-linker.com/calendar.png" alt="" width={24} height={24} />
+          <Icon name="calendar" size={24} />
         </button>
       )}
       <ReactCalendar
@@ -47,12 +47,8 @@ const Calendar = forwardRef<HTMLDivElement, Props>((props, ref) => {
         showNeighboringMonth={false}
         next2Label={null}
         prev2Label={null}
-        nextLabel={
-          <Image src="https://static.im-linker.com/right-arrow.png" alt="" width={18} height={18} />
-        }
-        prevLabel={
-          <Image src="https://static.im-linker.com/left-arrow.png" alt="" width={18} height={18} />
-        }
+        nextLabel={<Icon name="next" size={24} />}
+        prevLabel={<Icon name="back" size={24} />}
         calendarType="gregory"
         className={clsx(calendar, className)}
         maxDate={isWeekMode ? endOfWeek(value as Date) : undefined}

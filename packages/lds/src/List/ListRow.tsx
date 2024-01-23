@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import clsx from 'clsx';
-import Image from 'next/image';
 
 import { listRowContainer } from './ListRow.css';
+import { Icon } from '../Icon';
 
 interface Props {
   content: React.ReactNode;
@@ -19,12 +19,7 @@ const ListRow = ({ content, withArrow, disabled, className, onClick }: Props) =>
       <div>{content}</div>
       {withArrow && (
         <button type="button" disabled={disabled}>
-          <Image
-            src="https://static.im-linker.com/right-arrow-mono.png"
-            alt=""
-            width={28}
-            height={28}
-          />
+          <Icon name="arrow" />
         </button>
       )}
     </li>

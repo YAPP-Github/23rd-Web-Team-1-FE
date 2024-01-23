@@ -1,7 +1,6 @@
-import { List } from '@linker/lds';
+import { Icon, List } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
-import Image from 'next/image';
 
 import {
   timelineRowWrapper,
@@ -27,34 +26,19 @@ function TimelineItem({ title, time, member, hashtag, memo }: TimelineItemProps)
         title={title}
         rightAddon={
           <button type="button">
-            <img
-              src="https://static.im-linker.com/dots-vertical.svg"
-              alt=""
-              width={28}
-              height={28}
-            />
+            <Icon name="more-gray" size={28} />
           </button>
         }
       />
       <section className={timelineItmeInfoWrapper}>
         <div className={timelineRowWrapper}>
-          <Image
-            width={20}
-            height={20}
-            alt="아이콘"
-            src="https://static.im-linker.com/dots-vertical.svg"
-          />
+          <Icon name="more-gray" size={28} />
           <Txt typography="p3" color={colors.gray700} fontWeight="regular">
             {time}
           </Txt>
         </div>
         <div className={timelineRowWrapper}>
-          <Image
-            width={20}
-            height={20}
-            alt="아이콘"
-            src="https://static.im-linker.com/dots-vertical.svg"
-          />
+          <Icon name="more-gray" size={28} />
           <Txt typography="p3" color={colors.gray700} fontWeight="regular">
             {member}
           </Txt>

@@ -30,7 +30,8 @@ export const font = createGlobalThemeContract(
     medium: 'font-weight-medium',
     bold: 'font-weight-bold',
     extrabold: 'font-weight-extrabold',
-    letterSpacing2: 'letter-spacing',
+    letterSpacing1: 'letter-spacing-1',
+    letterSpacing2: 'letter-spacing-2',
   },
   (value) => `linker-${value}`,
 );
@@ -64,5 +65,6 @@ export const themes = createGlobalTheme(':root', font, {
   medium: '500',
   bold: '600',
   extrabold: '700',
-  letterSpacing2: '-0.02rem',
+  letterSpacing1: '-0.1px',
+  letterSpacing2: '-0.2px',
 });
