@@ -24,6 +24,8 @@ const Carousel = ({ children, className, onSwipe }: CarouselProps) => {
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const scrollWrapperRef = useRef<HTMLDivElement | null>(null);
 
+  const hasMultipleItems = children.length > 1;
+
   const handleScroll = useThrottledCallback(() => {
     if (!scrollWrapperRef.current) {
       return;
@@ -45,11 +47,13 @@ const Carousel = ({ children, className, onSwipe }: CarouselProps) => {
       <div ref={scrollWrapperRef} className={carouselWrapper} onScroll={handleScroll}>
         <ul className={itemWrapper}>{children}</ul>
       </div>
-      <div className={dotsWrapper}>
-        {Children.map(children, (_, index) => (
-          <div className={clsx(dot, index === currentItemIndex && activeStyle)} />
-        ))}
-      </div>
+      {hasMultipleItems && (
+        <div className={dotsWrapper}>
+          {Children.map(children, (_, index) => (
+            <div className={clsx(dot, index === currentItemIndex && activeStyle)} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
