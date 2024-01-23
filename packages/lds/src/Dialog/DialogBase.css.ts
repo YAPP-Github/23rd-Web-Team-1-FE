@@ -1,3 +1,4 @@
+import { colors } from '@linker/styles';
 import { recipe } from '@vanilla-extract/recipes';
 
 export const dialogOverlay = recipe({
@@ -13,7 +14,7 @@ export const dialogOverlay = recipe({
   variants: {
     overlayTheme: {
       dark: {
-        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+        backgroundColor: `${colors.overay}`,
       },
       transparent: {
         backgroundColor: 'transparent',
