@@ -47,7 +47,7 @@ export const Template: Story = {
 
           <div className={iconWrapper}>
             <Icon name="list" />
-            <Txt typography="p1">down</Txt>
+            <Txt typography="p1">list</Txt>
           </div>
 
           <div className={iconWrapper}>
