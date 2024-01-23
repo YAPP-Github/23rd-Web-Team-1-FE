@@ -2,8 +2,7 @@
 
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { HTMLAttributes } from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 import { useEffect, useState } from 'react';
 
 import { button, container, buttonText, innerContariner } from './FAB.css';
@@ -12,7 +11,7 @@ import { Txt } from '../../Txt';
 type ButtonType = 'extand' | 'default';
 
 interface BaseProps extends Omit<HTMLAttributes<HTMLButtonElement>, 'type'> {
-  iconUrl: string;
+  children: ReactNode;
   className?: string;
 }
 
@@ -27,7 +26,7 @@ interface ExtandProps extends BaseProps {
 
 type Props = DefaultProps | ExtandProps;
 
-const FAB = ({ className, iconUrl = '', type = 'extand', ...props }: Props) => {
+const FAB = ({ children, className, type = 'extand', ...props }: Props) => {
   const { text } = props as ExtandProps;
 
   const [fabType, setFabType] = useState<ButtonType>(type);
@@ -61,7 +60,7 @@ const FAB = ({ className, iconUrl = '', type = 'extand', ...props }: Props) => {
     >
       <div className={innerContariner}>
         <button type="button" className={clsx(button, className)} {...props}>
-          <Image src={iconUrl} width={32} height={32} alt="" />
+          {children}
           {fabType === 'extand' && (
             <Txt typography="p3" className={buttonText}>
               {text}

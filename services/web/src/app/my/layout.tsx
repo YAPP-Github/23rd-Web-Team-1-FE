@@ -1,7 +1,7 @@
 'use client';
 
 import { MyHeader } from '@features/Header';
-import { Button, Layout } from '@linker/lds';
+import { Button, Layout, Icon } from '@linker/lds';
 
 function MyLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,11 +10,9 @@ function MyLayout({ children }: { children: React.ReactNode }) {
       <Layout>
         {children}
 
-        <Button.FAB
-          iconUrl="https://static.im-linker.com/plus-white.svg"
-          text="일정을 등록해보세요"
-          type="extand"
-        />
+        <Button.FAB text="일정을 등록해보세요" type="extand">
+          <Icon name="plus-white" />
+        </Button.FAB>
       </Layout>
     </>
   );
