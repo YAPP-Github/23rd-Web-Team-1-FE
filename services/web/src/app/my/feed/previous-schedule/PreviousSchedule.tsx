@@ -1,5 +1,6 @@
 import { ky } from '@linker/ky';
 import { List } from '@linker/lds';
+import { HorizonScroller } from '@linker/lds';
 
 import { wrapper, header, scheduleList } from './PreviousSchedule.css';
 import ScheduleCard from './ScheduleCard';
@@ -24,11 +25,11 @@ async function PreviousSchedule() {
   return (
     <List className={wrapper}>
       <List.Header className={header} title="지난 일정을 노트로 기록해보세요!" />
-      <ul className={scheduleList}>
+      <HorizonScroller className={scheduleList}>
         {previousSchedules.schedules.map(({ scheduleId, title, endDateTime }) => (
           <ScheduleCard key={scheduleId} title={title} endDateTime={endDateTime} />
         ))}
-      </ul>
+      </HorizonScroller>
     </List>
   );
 }
