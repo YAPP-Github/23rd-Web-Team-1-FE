@@ -1,16 +1,18 @@
+import { colors } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
+
+import { MODAL_Z_INDEX } from '../constants';
 
 export const modalContent = style({
   position: 'absolute',
-  top: 0,
+  top: '12rem',
   left: 0,
   right: 0,
-  bottom: 0,
-  margin: 'auto',
-  width: '100%',
   maxWidth: '72rem',
-  height: '100%',
   maxHeight: '72rem',
-  backgroundColor: '#fff',
-  zIndex: 1000,
+  width: '100%',
+  height: '100%',
+  margin: '0 auto',
+  backgroundColor: `${colors.gray000}`,
+  zIndex: `${MODAL_Z_INDEX}`,
 });
