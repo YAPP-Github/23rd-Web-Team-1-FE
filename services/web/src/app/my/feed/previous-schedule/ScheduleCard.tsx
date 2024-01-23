@@ -25,7 +25,7 @@ function ScheduleCard({ title, endDateTime }: ScheduleCardProps) {
         <Txt typography="b2" className={titleInfo}>
           {title}
         </Txt>
-        <Txt typography="p5" color="#96999d">
+        <Txt typography="p5" color={colors.gray500}>
           {formatPreviousDay(endDateTime)}
         </Txt>
       </div>
