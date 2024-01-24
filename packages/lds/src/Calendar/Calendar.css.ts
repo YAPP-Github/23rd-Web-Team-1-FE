@@ -1,4 +1,5 @@
 /* eslint-disable max-lines */
+import { colors } from '@linker/styles';
 import { globalStyle, keyframes, style } from '@vanilla-extract/css';
 
 const fadeOut = keyframes({
@@ -81,13 +82,13 @@ export const calendar = style({
   width: '100%',
   fontFamily: 'Pretendard',
   border: 'none ',
-  backgroundColor: '#fff',
+  backgroundColor: `${colors.white}`,
 });
 
 export const dot = style({
   position: 'absolute',
-  top: '0.9rem',
   left: '50%',
+  bottom: '0.5rem',
   transform: 'translate(-50%, -50%)',
   display: 'flex',
   justifyContent: 'center',
@@ -95,7 +96,7 @@ export const dot = style({
   height: '0.4rem',
   width: '0.4rem',
   borderRadius: '50%',
-  backgroundColor: '#287CFF',
+  backgroundColor: `${colors.blue500}`,
 });
 
 globalStyle(`${calendar} *`, {
@@ -124,7 +125,7 @@ globalStyle(`${calendar} .react-calendar__navigation__arrow`, {
 });
 
 globalStyle(`${calendar} .react-calendar__navigation button:focus`, {
-  backgroundColor: '#fff',
+  backgroundColor: `${colors.white}`,
 });
 
 globalStyle(`${calendar} .react-calendar__navigation button:hover`, {
@@ -137,7 +138,7 @@ globalStyle(`${calendar} .react-calendar__navigation button:disabled`, {
   fontSize: '1.6rem',
   fontWeight: 700,
   lineHeight: '2.4rem',
-  backgroundColor: '#fff',
+  backgroundColor: `${colors.white}`,
 });
 
 globalStyle(`${calendar} .react-calendar__navigation button:disabled`, {
@@ -146,7 +147,7 @@ globalStyle(`${calendar} .react-calendar__navigation button:disabled`, {
   fontSize: '1.6rem',
   fontWeight: 700,
   lineHeight: '2.4rem',
-  backgroundColor: '#fff',
+  backgroundColor: `${colors.white}`,
 });
 
 globalStyle(`${calendar} .react-calendar__month-view`, {
@@ -207,7 +208,8 @@ globalStyle(`${calendar} .react-calendar__month-view__days__day--weekend`, {
 
 globalStyle(`${calendar} .react-calendar__tile`, {
   position: 'relative',
-  backgroundColor: '#fff',
+  padding: '1.25rem 0.6rem',
+  backgroundColor: `${colors.white}`,
 });
 
 globalStyle(`${calendar} .react-calendar__tile--active`, {
@@ -224,34 +226,37 @@ globalStyle(`${calendar} .react-calendar__tile::before`, {
   width: '3.6rem',
   height: '3.6rem',
   borderRadius: '50%',
-  color: '#fff',
+  color: `${colors.white}`,
 });
 
 globalStyle(`${calendar} .react-calendar__tile--now`, {
   position: 'relative',
-  color: '#287CFF !important',
-  backgroundColor: '#fff',
+  color: `${colors.white} !important`,
+});
+
+globalStyle(`${calendar} .react-calendar__tile--now::before`, {
+  backgroundColor: `${colors.gray900}`,
 });
 
 globalStyle(`${calendar} .react-calendar__tile:enabled:hover`, {
-  color: '#fff',
+  color: `${colors.white}`,
   backgroundColor: 'transparent',
 });
 
 globalStyle(`${calendar} .react-calendar__tile:enabled:focus`, {
-  color: '#fff',
+  color: `${colors.white}`,
   backgroundColor: 'transparent',
 });
 
 globalStyle(`${calendar} .react-calendar__tile:enabled:hover::before`, {
-  background: '#D6DDE4',
+  background: `${colors.gray900}`,
 });
 
 globalStyle(`${calendar} .react-calendar__tile--active:enabled:focus`, {
-  color: '#fff',
+  color: `${colors.white}`,
   background: 'transparent',
 });
 
 globalStyle(`${calendar} .react-calendar__tile:enabled:focus::before`, {
-  background: '#D6DDE4',
+  background: `${colors.gray900}`,
 });
