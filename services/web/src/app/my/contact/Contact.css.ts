@@ -8,17 +8,6 @@ export const wrapper = style({
   paddingRight: '24px',
   overflow: 'auto',
 });
-
-export const totalCountWrapper = style({
-  paddingTop: '38px',
-  display: 'flex',
-  flexDirection: 'row',
-  gap: '1px',
-});
-
-export const profileWrapper = style({
-  display: 'flex',
-  flexDirection: 'column',
-  paddingTop: '26px',
-  gap: '16px',
+export const searchInputWrapper = style({
+  marginTop: '1.9rem',
 });

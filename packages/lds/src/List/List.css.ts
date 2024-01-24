@@ -11,5 +11,5 @@ export const listContent = style({
   height: '100%',
   padding: '1.6rem 2rem',
   borderRadius: '0.8rem',
-  backgroundColor: `${colors.gray000}`,
+  background: `${colors.gray000}`,
 });

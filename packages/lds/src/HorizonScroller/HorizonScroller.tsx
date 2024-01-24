@@ -10,7 +10,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const ChipGroup = ({ className, children }: Props) => {
+const HorizonScroller = ({ children, className }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
@@ -39,4 +39,4 @@ const ChipGroup = ({ className, children }: Props) => {
   );
 };
 
-export default ChipGroup;
+export default HorizonScroller;

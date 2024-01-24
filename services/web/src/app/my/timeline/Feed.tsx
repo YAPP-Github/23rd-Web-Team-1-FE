@@ -20,13 +20,12 @@ const Feed = () => {
         }}
         withModeChange
       />
-
       <Spacing size={20} />
       <section className={timelineCountWrapper}>
         <Txt typography="p3" fontWeight="medium" color={colors.gray950}>
           내 정보
         </Txt>
-        <Txt typography="p3" fontWeight="medium" color={colors.primary}>
+        <Txt typography="p3" fontWeight="medium" color={colors.blue500}>
           {timelineMockdata.length}
         </Txt>
       </section>

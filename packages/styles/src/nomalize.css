@@ -22,6 +22,11 @@ html {
 
 body {
   margin: 0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /**
@@ -147,6 +152,11 @@ sup {
 
 img {
   border-style: none;
+
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }
 
 /* Forms

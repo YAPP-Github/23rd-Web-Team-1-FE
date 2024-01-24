@@ -2,7 +2,7 @@
 
 import { useBodyScrollLock } from '@linker/react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useId } from 'react';
+import { MouseEventHandler, useId } from 'react';
 import { createPortal } from 'react-dom';
 
 import { dialogOverlay } from './DialogBase.css';
@@ -54,18 +54,19 @@ const DialogBase = ({
               open={open}
               onClose={onOpenChange}
               className={dialogOverlay({ overlayTheme })}
-            />
-
-            <motion.div
-              key={`dialog-content-${id}`}
-              initial="close"
-              animate={open ? 'open' : 'close'}
-              variants={motionVariants ?? baseMotionVariants}
-              transition={baseTransition}
-              className={className}
             >
-              {children}
-            </motion.div>
+              <motion.div
+                role="dialog"
+                key={`dialog-content-${id}`}
+                initial="close"
+                animate={open ? 'open' : 'close'}
+                variants={motionVariants ?? baseMotionVariants}
+                transition={baseTransition}
+                className={className}
+              >
+                {children}
+              </motion.div>
+            </DialogOverlay>
           </AnimatePresence>
         </DialogPortal>
       )}
@@ -76,7 +77,7 @@ const DialogBase = ({
 export default DialogBase;
 
 const DialogPortal = ({ children }: { children: React.ReactNode }) => {
-  const element = document.getElementById('dialog');
+  const element = document.getElementById('portal');
 
   if (element == null) {
     return <></>;
@@ -85,15 +86,14 @@ const DialogPortal = ({ children }: { children: React.ReactNode }) => {
   return createPortal(children, element);
 };
 
-const DialogOverlay = ({
-  open,
-  onClose,
-  className,
-}: {
+interface DialogOverlayProps {
   open?: boolean;
-  onClose?: () => void;
+  onClose?: MouseEventHandler<HTMLDivElement>;
   className: string;
-}) => {
+  children: React.ReactNode;
+}
+
+const DialogOverlay = ({ open, onClose, className, children }: DialogOverlayProps) => {
   return (
     <motion.div
       initial="close"
@@ -108,6 +108,8 @@ const DialogOverlay = ({
       }}
       onClick={onClose}
       className={className}
-    />
+    >
+      {children}
+    </motion.div>
   );
 };

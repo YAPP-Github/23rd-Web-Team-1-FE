@@ -1,35 +1,30 @@
-/* eslint-disable arrow-parens */
-import { Txt } from '@linker/lds';
-import { colors } from '@linker/styles';
-import { clsx } from 'clsx';
+'use client';
 
-import { wrapper, profileWrapper, totalCountWrapper } from './Contact.css';
-import contentMockdata from './__mock__';
-import ContactItem from './component/ContactItem/ContactItem';
+import { ContactData } from '@__server__/mocks/contact';
+import { SearchInput } from '@linker/lds';
+import { useState } from 'react';
 
-function Contact() {
+import { wrapper, searchInputWrapper } from './Contact.css';
+import ContactDefault from './component/ContactDefault/ContactDefault';
+
+interface ContactProps {
+  contactData: ContactData[];
+  contactSearchData?: ContactData[];
+}
+
+export default function Contact({ contactData }: ContactProps) {
+  const [query, setQuery] = useState('');
+
+  const onSubmit = () => {};
+
   return (
-    <section className={clsx(wrapper)}>
-      <article className={clsx(totalCountWrapper)}>
-        <Txt typography="p4" color={colors.gray800}>
-          전체
-        </Txt>
-        <Txt typography="p4" color={colors.gray800}>
-          {contentMockdata.length}
-        </Txt>
+    <section className={wrapper}>
+      <article className={searchInputWrapper}>
+        <form onSubmit={onSubmit}>
+          <SearchInput placeholder="연락처 검색하기" setQuery={setQuery} query={query} />
+        </form>
       </article>
-      <article className={profileWrapper}>
-        {contentMockdata.map((item) => (
-          <ContactItem
-            key={contentMockdata.indexOf(item)}
-            name={item.name}
-            career={item.career}
-            company={item.company}
-            profileImgUrl={item.profileImgUrl}
-          />
-        ))}
-      </article>
+      <div>{query ? <div></div> : <ContactDefault contactData={contactData} />}</div>
     </section>
   );
 }
-export default Contact;

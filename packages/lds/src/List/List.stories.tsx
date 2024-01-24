@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 
 import List from './List';
+import { Icon } from '../Icon';
 import { Spacing } from '../Spacing';
 import { Txt } from '../Txt';
 
@@ -24,12 +25,7 @@ export const Template: Story = {
             description="다가오는 일정을 확인하고 대화 주제를 확인해보세요."
             rightAddon={
               <button type="button">
-                <img
-                  src="https://static.im-linker.com/right-arrow-mono.png"
-                  alt=""
-                  width={28}
-                  height={28}
-                />
+                <Icon name="arrow" />
               </button>
             }
           />
@@ -48,12 +44,7 @@ export const Template: Story = {
             title="커피챗 진행"
             rightAddon={
               <button type="button">
-                <img
-                  src="https://static.im-linker.com/dots-vertical.svg"
-                  alt=""
-                  width={28}
-                  height={28}
-                />
+                <Icon name="arrow" />
               </button>
             }
           />
