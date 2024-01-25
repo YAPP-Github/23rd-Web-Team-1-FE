@@ -19586,15 +19586,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["moment", [\
-      ["npm:2.30.1", {\
-        "packageLocation": "./.yarn/cache/moment-npm-2.30.1-1c51a5c631-ae42d876d4.zip/node_modules/moment/",\
-        "packageDependencies": [\
-          ["moment", "npm:2.30.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["mri", [\
       ["npm:1.2.0", {\
         "packageLocation": "./.yarn/cache/mri-npm-1.2.0-8ecee0357d-6775a1d222.zip/node_modules/mri/",\
@@ -24901,7 +24892,6 @@ const RAW_RUNTIME_STATE =
           ["jest-environment-jsdom", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:29.7.0"],\
           ["jest-environment-node", "npm:29.7.0"],\
           ["jotai", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:2.6.0"],\
-          ["moment", "npm:2.30.1"],\
           ["msw", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:2.0.9"],\
           ["next", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:14.0.3"],\
           ["next-router-mock", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:0.9.10"],\

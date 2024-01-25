@@ -14,7 +14,7 @@ interface FeedProps {
 
 const Feed = ({ timelineItems }: FeedProps) => {
   const [date, setDate] = useState(new Date());
-  const [diffYear, setDiffYear] = useState(false); // TimelineItem들 사이에 연도가 다른지 판단
+  //const [diffYear, setDiffYear] = useState(false); // TimelineItem들 사이에 연도가 다른지 판단
 
   return (
     <>
