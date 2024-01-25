@@ -16,6 +16,7 @@ export type Typography =
   | 'p2'
   | 'p3'
   | 'p4'
+  | 'p5'
   | 'b1'
   | 'b2'
   | 'b3'

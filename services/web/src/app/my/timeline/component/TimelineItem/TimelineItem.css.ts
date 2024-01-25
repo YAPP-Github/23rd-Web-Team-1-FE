@@ -1,7 +1,30 @@
 import { colors } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
 
-export const timelineItmeInfoWrapper = style({
+export const timelineItemContainer = style({
+  display: 'flex',
+  flexDirection: 'row',
+  width: '100%',
+  paddingLeft: '2rem',
+});
+
+export const timelineItemTimeDividerWrapper = style({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+});
+export const timelineItemTimeDivider = style({
+  height: '100%',
+  border: `0.1rem solid ${colors.gray300}`,
+  background: `${colors.gray300}`,
+});
+export const timelineItemInfoWrapper = style({
+  display: 'flex',
+  flexDirection: 'row',
+  gap: '1rem',
+});
+
+export const timelineItmeInfoTextWrapper = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '0.5rem',
@@ -10,27 +33,14 @@ export const timelineRowWrapper = style({
   display: 'flex',
   flexDirection: 'row',
   gap: '0.4rem',
-});
-
-export const timelineItemHashtagWrapper = style({
-  marginTop: '2.6rem',
-  display: 'flex',
-  flexDirection: 'row',
-  gap: '0.7rem',
-});
-export const timelineItemHashtagBoxWrapper = style({
-  background: `${colors.gray100}`,
-  borderRadius: '0.3rem',
-  display: 'inline-block',
-  justifyContent: 'center',
   alignItems: 'center',
-  height: '2.6rem',
-  paddingTop: '0.3rem',
-  paddingRight: '1.3rem',
-  paddingLeft: '1.1rem',
-  paddingBottom: '0.5rem',
 });
 
+export const timelineColorDivider = style({
+  width: '0.4rem',
+  borderRadius: '0.8rem',
+  height: 'auto',
+});
 export const timelineItemDivider = style({
   marginTop: '1.2rem',
   width: '100%',
@@ -42,17 +52,4 @@ export const timelineItemMemoWrapper = style({
   marginTop: '1.4rem',
   display: 'flex',
   flexDirection: 'column',
-});
-
-export const timelineItemSubjectWrapper = style({
-  width: '100%',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  border: `0.1rem solid ${colors.gray200}`,
-  borderRadius: '0.8rem',
-  marginTop: '1.7rem',
-  height: '4rem',
-  paddingTop: '1rem',
-  paddingBottom: '1rem',
 });

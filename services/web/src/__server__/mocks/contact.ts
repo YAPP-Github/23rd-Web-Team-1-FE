@@ -8,9 +8,7 @@ export const contactHandlers = [
     return HttpResponse.json({ data: contact }, { status: 200 });
   }),
 ];
-export interface ContactDataRes {
-  contacts: ContactData[];
-}
+
 export interface ContactData {
   id: number;
   name: string;
@@ -18,7 +16,7 @@ export interface ContactData {
   job: string;
   association: string;
 }
-const contact = [
+const contact: ContactData[] = [
   {
     id: 1,
     name: '윤대용',

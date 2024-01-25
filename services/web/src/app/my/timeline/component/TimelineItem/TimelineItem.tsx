@@ -1,71 +1,120 @@
+'use client';
+import { TimelineItemProps } from '@__server__/mocks/feed';
 import { Icon, List } from '@linker/lds';
 import { Txt } from '@linker/lds';
+import { Spacing } from '@linker/lds';
 import { colors } from '@linker/styles';
+import { useEffect, useState } from 'react';
 
 import {
+  timelineItemContainer,
+  timelineItemTimeDividerWrapper,
+  timelineItemTimeDivider,
   timelineRowWrapper,
   timelineItemDivider,
-  timelineItemHashtagWrapper,
-  timelineItmeInfoWrapper,
+  timelineItemInfoWrapper,
+  timelineItmeInfoTextWrapper,
   timelineItemMemoWrapper,
-  timelineItemHashtagBoxWrapper,
+  timelineColorDivider,
 } from './TimelineItem.css';
 
-interface TimelineItemProps {
-  title: string;
-  time: string;
-  member: string;
-  hashtag: string[];
-  memo: string;
-}
+function TimelineItem({
+  title,
+  startDateTime,
+  endDateTime,
+  scheduleId,
+  member,
+  hex,
+  profileImgUrl,
+  memo,
+}: TimelineItemProps) {
+  const daysOfWeek = ['일', '월', '화', '수', '목', '금', '토'];
 
-function TimelineItem({ title, time, member, hashtag, memo }: TimelineItemProps) {
+  const startDay = startDateTime.slice(8, 10);
+  const startHour = startDateTime.slice(11, 13);
+  const startMin = startDateTime.slice(14, 16);
+  const endHour = endDateTime.slice(11, 13);
+  const endMin = endDateTime.slice(14, 16);
+  const [time, setTime] = useState('');
+  const [dayOfWeek, setDayOfWeek] = useState('');
+
+  useEffect(() => {
+    if (parseInt(startHour) >= 12) {
+      setTime(`오후 ${startHour}:${startMin} - ${endHour}:${endMin}`);
+    } else {
+      setTime(`오전 ${startHour}:${startMin} - ${endHour}:${endMin}`);
+    }
+    const dateObject = new Date(startDateTime);
+    const dayOfWeekIdx = dateObject.getDay();
+
+    setDayOfWeek(daysOfWeek[dayOfWeekIdx]);
+  }, [startHour, endHour, startDay]);
+
   return (
-    <List>
-      <List.Header
-        title={title}
-        rightAddon={
-          <button type="button">
-            <Icon name="more-gray" size={28} />
-          </button>
-        }
-      />
-      <section className={timelineItmeInfoWrapper}>
-        <div className={timelineRowWrapper}>
-          <Icon name="more-gray" size={28} />
-          <Txt typography="p3" color={colors.gray700} fontWeight="regular">
-            {time}
-          </Txt>
-        </div>
-        <div className={timelineRowWrapper}>
-          <Icon name="more-gray" size={28} />
-          <Txt typography="p3" color={colors.gray700} fontWeight="regular">
-            {member}
-          </Txt>
-        </div>
-      </section>
-      {hashtag && (
-        <section className={timelineItemHashtagWrapper}>
-          {hashtag.map((item) => (
-            <div className={timelineItemHashtagBoxWrapper} key={item}>
-              <Txt typography="p4" color={colors.gray700} fontWeight="regular">
-                {item}
+    <section className={timelineItemContainer}>
+      <div className={timelineItemTimeDividerWrapper}>
+        <Txt typography="p4" color={colors.black} fontWeight="bold">
+          {startDay}
+        </Txt>
+        <Spacing size={2} />
+        <Txt typography="p5" color={colors.gray700} fontWeight="bold">
+          {dayOfWeek}
+        </Txt>
+        <Spacing size={8} />
+        <div className={timelineItemTimeDivider}></div>
+      </div>
+      <List>
+        <section className={timelineItemInfoWrapper}>
+          <div className={timelineColorDivider} style={{ backgroundColor: hex }}></div>
+          <section className={timelineItmeInfoTextWrapper}>
+            <List.Header
+              title={title}
+              rightAddon={
+                <button type="button">
+                  <Icon name="more-gray" size={28} />
+                </button>
+              }
+            />
+            <div className={timelineRowWrapper}>
+              <Icon name="time-gray" size={28} />
+              <Txt typography="p3" color={colors.gray700} fontWeight="regular">
+                {time}
               </Txt>
             </div>
-          ))}
-        </section>
-      )}
-      {memo && (
-        <div>
-          <div className={timelineItemDivider}></div>
-          <section className={timelineItemMemoWrapper}>
-            <Txt typography="p2" color={colors.gray900} fontWeight="regular">
-              {memo}
-            </Txt>
+            {member && (
+              <div className={timelineRowWrapper}>
+                <Icon name="user" size={28} />
+                {member.length >= 2 ? (
+                  <div>
+                    <Txt typography="p3" color={colors.gray700} fontWeight="regular">
+                      {member[0]}
+                    </Txt>
+                    <Txt typography="p3" color={colors.gray500} fontWeight="regular">
+                      {`외 ${member.length - 1}명`}
+                    </Txt>
+                  </div>
+                ) : (
+                  <Txt typography="p3" color={colors.gray700} fontWeight="regular">
+                    {member[0]}
+                  </Txt>
+                )}
+              </div>
+            )}
           </section>
-        </div>
-      )}
-    </List>
+        </section>
+
+        {memo && (
+          <div>
+            <div className={timelineItemDivider}></div>
+            <section className={timelineItemMemoWrapper}>
+              <Txt typography="p2" color={colors.gray900} fontWeight="regular">
+                {memo}
+              </Txt>
+            </section>
+          </div>
+        )}
+      </List>
+    </section>
   );
 }
 export default TimelineItem;

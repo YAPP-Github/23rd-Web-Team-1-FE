@@ -3,6 +3,20 @@ import { http, HttpResponse } from 'msw';
 
 import { MOCK_API_URL } from '../constants';
 
+export interface TimelineRes {
+  schedules: TimelineItemProps[];
+}
+export interface TimelineItemProps {
+  scheduleId: number;
+  title: string;
+  profileImgUrl: string | null;
+  startDateTime: string;
+  endDateTime: string;
+  hex: string;
+  member: string | string[] | null;
+  memo: string | null;
+}
+
 export const feedHandlers = [
   http.get(`${MOCK_API_URL}/v1/my`, () => {
     return HttpResponse.json({ data: my }, { status: 200 });
@@ -38,7 +52,7 @@ const my = {
   scheduleNum: 0,
 };
 
-const upcomingSchedules = {
+const upcomingSchedules: TimelineRes = {
   schedules: [
     {
       scheduleId: 1,
@@ -46,6 +60,9 @@ const upcomingSchedules = {
       profileImgUrl: 'https://static.im-linker.com/profile1.png',
       startDateTime: '2024-01-17T13:12:42.936Z',
       endDateTime: '2024-01-17T13:12:42.936Z',
+      hex: '#58DB67',
+      member: ['이지우'],
+      memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
     },
     {
       scheduleId: 2,
@@ -53,6 +70,9 @@ const upcomingSchedules = {
       profileImgUrl: 'https://static.im-linker.com/profile2.png',
       startDateTime: '2024-01-17T13:12:42.936Z',
       endDateTime: '2024-01-17T13:12:42.936Z',
+      hex: '#26D1D1',
+      member: null,
+      memo: null,
     },
     {
       scheduleId: 3,
@@ -60,6 +80,9 @@ const upcomingSchedules = {
       profileImgUrl: null,
       startDateTime: '2024-01-17T13:12:42.936Z',
       endDateTime: '2024-01-17T13:12:42.936Z',
+      hex: '#FF70B0',
+      member: ['이지우', '이지우'],
+      memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
     },
   ],
 };

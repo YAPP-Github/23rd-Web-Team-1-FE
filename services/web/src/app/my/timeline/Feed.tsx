@@ -1,15 +1,20 @@
 'use client';
+import { TimelineRes } from '@__server__/mocks/feed';
 import { Calendar, Spacing } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { useState } from 'react';
 
-import { timelineItemWrapper, timelineCountWrapper } from './Feed.css';
-import timelineMockdata from './__mock__';
+import { timelineItemWrapper, timelineMonthWrapper } from './Feed.css';
 import TimelineItem from './component/TimelineItem/TimelineItem';
 
-const Feed = () => {
+interface FeedProps {
+  timelineItems: TimelineRes;
+}
+
+const Feed = ({ timelineItems }: FeedProps) => {
   const [date, setDate] = useState(new Date());
+  const [diffYear, setDiffYear] = useState(false); // TimelineItem들 사이에 연도가 다른지 판단
 
   return (
     <>
@@ -21,23 +26,24 @@ const Feed = () => {
         withModeChange
       />
       <Spacing size={20} />
-      <section className={timelineCountWrapper}>
-        <Txt typography="p3" fontWeight="medium" color={colors.gray950}>
-          내 정보
-        </Txt>
-        <Txt typography="p3" fontWeight="medium" color={colors.blue500}>
-          {timelineMockdata.length}
+
+      <section className={timelineMonthWrapper}>
+        <Txt typography="h7" fontWeight="bold" color={colors.black}>
+          {date.getMonth() + 1}월
         </Txt>
       </section>
       <section className={timelineItemWrapper}>
-        {timelineMockdata.map((item) => (
+        {timelineItems.schedules.map((item) => (
           <div key={item.title}>
             <TimelineItem
+              scheduleId={item.scheduleId}
+              profileImgUrl={item.profileImgUrl}
               title={item.title}
-              time={item.time}
-              hashtag={item.hashtag || []}
+              startDateTime={item.startDateTime}
+              endDateTime={item.endDateTime}
               member={item.member}
-              memo={item.memo || ''}
+              hex={item.hex}
+              memo={item.memo}
             />
           </div>
         ))}
