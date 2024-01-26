@@ -7,7 +7,7 @@ interface Props extends Omit<ImageProps, 'src' | 'alt' | 'width' | 'height'> {
   size?: number;
 }
 
-const Icon = ({ name, size = 32, className, ...props }: Props) => {
+const Icon = ({ name, size = 32, ...props }: Props) => {
   return (
     <Image
       src={`${bucket}/icons/${name}.svg`}
