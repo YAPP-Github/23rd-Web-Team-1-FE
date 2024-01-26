@@ -5682,7 +5682,12 @@ const RAW_RUNTIME_STATE =
           ["@vanilla-extract/css", "npm:1.14.0"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
+<<<<<<< HEAD
           ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.2"],\
+=======
+          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.1"],\
+          ["chromatic", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.0"],\
+>>>>>>> d1af9ad (chore: chromatic 설치)
           ["clsx", "npm:2.0.0"],\
           ["date-fns", "npm:3.3.1"],\
           ["date-fns-tz", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.0.0"],\
@@ -5802,7 +5807,12 @@ const RAW_RUNTIME_STATE =
           ["@vanilla-extract/css", "npm:1.14.0"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
+<<<<<<< HEAD
           ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.2"],\
+=======
+          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.1"],\
+          ["chromatic", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.0"],\
+>>>>>>> d1af9ad (chore: chromatic 설치)
           ["clsx", "npm:2.0.0"],\
           ["date-fns", "npm:3.3.1"],\
           ["date-fns-tz", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.0.0"],\
@@ -5859,7 +5869,12 @@ const RAW_RUNTIME_STATE =
           ["@vanilla-extract/css", "npm:1.14.0"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
+<<<<<<< HEAD
           ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.2"],\
+=======
+          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.1"],\
+          ["chromatic", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.0"],\
+>>>>>>> d1af9ad (chore: chromatic 설치)
           ["clsx", "npm:2.0.0"],\
           ["date-fns", "npm:3.3.1"],\
           ["date-fns-tz", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.0.0"],\
@@ -12873,6 +12888,32 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/chownr-npm-2.0.0-638f1c9c61-c57cf9dd07.zip/node_modules/chownr/",\
         "packageDependencies": [\
           ["chownr", "npm:2.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["chromatic", [\
+      ["npm:10.6.0", {\
+        "packageLocation": "./.yarn/cache/chromatic-npm-10.6.0-4b18fe575d-0831a692eb.zip/node_modules/chromatic/",\
+        "packageDependencies": [\
+          ["chromatic", "npm:10.6.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.0", {\
+        "packageLocation": "./.yarn/__virtual__/chromatic-virtual-2c79169365/0/cache/chromatic-npm-10.6.0-4b18fe575d-0831a692eb.zip/node_modules/chromatic/",\
+        "packageDependencies": [\
+          ["chromatic", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.0"],\
+          ["@types/chromatic-cypress", null],\
+          ["@types/chromatic-playwright", null],\
+          ["chromatic-cypress", null],\
+          ["chromatic-playwright", null]\
+        ],\
+        "packagePeers": [\
+          "@types/chromatic-cypress",\
+          "@types/chromatic-playwright",\
+          "chromatic-cypress",\
+          "chromatic-playwright"\
         ],\
         "linkType": "HARD"\
       }]\

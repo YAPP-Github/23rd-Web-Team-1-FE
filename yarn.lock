@@ -2668,6 +2668,7 @@ __metadata:
     "@vanilla-extract/dynamic": "npm:^2.1.0"
     "@vanilla-extract/recipes": "npm:^0.5.1"
     "@vanilla-extract/webpack-plugin": "npm:^2.3.1"
+    chromatic: "npm:^10.6.0"
     clsx: "npm:2.0.0"
     date-fns: "npm:^3.0.6"
     date-fns-tz: "npm:^2.0.0"
@@ -7290,6 +7291,25 @@ __metadata:
   version: 2.0.0
   resolution: "chownr@npm:2.0.0"
   checksum: c57cf9dd0791e2f18a5ee9c1a299ae6e801ff58fee96dc8bfd0dcb4738a6ce58dd252a3605b1c93c6418fe4f9d5093b28ffbf4d66648cb2a9c67eaef9679be2f
+  languageName: node
+  linkType: hard
+
+"chromatic@npm:^10.6.0":
+  version: 10.6.0
+  resolution: "chromatic@npm:10.6.0"
+  peerDependencies:
+    chromatic-cypress: ^0.4.0 || ^1.0.0
+    chromatic-playwright: ^0.4.0 || ^1.0.0
+  peerDependenciesMeta:
+    chromatic-cypress:
+      optional: true
+    chromatic-playwright:
+      optional: true
+  bin:
+    chroma: dist/bin.js
+    chromatic: dist/bin.js
+    chromatic-cli: dist/bin.js
+  checksum: 0831a692eb98799b7f9fc6b13888c265966bb60d67872d717f4dd73aa90d20bcd7847910bd4561c828d12bfa8ada7ba020fe17393b1d80bb64ad8ab75e556d71
   languageName: node
   linkType: hard
 
