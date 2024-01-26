@@ -55,9 +55,13 @@ const config = {
     config.optimization = {
       splitChunks: {
         chunks: 'async',
-        minSize: 30 * 1024, // 30KB
-        maxSize: 64 * 1024, // 1MB
+        minSize: 30 * 1024,
+        maxSize: 1024 * 1024,
       },
+    };
+    config.performance = {
+      maxAssetSize: 1024 * 1024,
+      maxEntrypointSize: 1024 * 1024,
     };
 
     return config;
