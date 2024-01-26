@@ -18,3 +18,9 @@ const getTimeline = () => {
 
   return response;
 };
+
+/*
+
+@todo: 특정 날짜의 일정 가져오기
+const getTimeItem = () => {};
+ */

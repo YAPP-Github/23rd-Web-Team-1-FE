@@ -33,7 +33,7 @@ export const timelineItmeInfoTextWrapper = style({
 });
 
 export const timelineItemHeaderWrapper = style({
-  marginBottom: '0.4rem',
+  marginBottom: '0.2rem',
 });
 export const timelineRowWrapper = style({
   display: 'flex',
