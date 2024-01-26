@@ -4,9 +4,14 @@ on:
   pull_request:
     branches:
       - develop
-    paths:
-      - '**.stories.tsx'
-    types: [opened, reopened]
+    # paths:
+    #   - '**.stories.tsx'
+    types: [opened, edited, reopened]
+  push:
+    branches:
+      - develop
+    # paths:
+    #   - '**.stories.tsx'
 
 jobs:
   chromatic:

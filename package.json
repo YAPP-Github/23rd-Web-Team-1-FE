@@ -24,7 +24,8 @@
     "lint": "yarn workspace web lint",
     "test": "yarn workspace web test",
     "postinstall": "husky install",
-    "storybook": "yarn workspace @linker/lds storybook"
+    "storybook": "yarn workspace @linker/lds storybook",
+    "build-storybook": "yarn workspace @linker/lds build-storybook"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
