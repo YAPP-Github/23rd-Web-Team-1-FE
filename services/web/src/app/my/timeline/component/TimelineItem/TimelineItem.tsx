@@ -16,6 +16,7 @@ import {
   timelineItmeInfoTextWrapper,
   timelineItemMemoWrapper,
   timelineColorDivider,
+  timelineItemHeaderWrapper,
 } from './TimelineItem.css';
 
 function TimelineItem({
@@ -66,9 +67,10 @@ function TimelineItem({
       <List>
         <section className={timelineItemInfoWrapper}>
           <div className={timelineColorDivider} style={{ backgroundColor: hex }}></div>
-          <section className={timelineItmeInfoTextWrapper}>
+          <div className={timelineItmeInfoTextWrapper}>
             <List.Header
               title={title}
+              className={timelineItemHeaderWrapper}
               rightAddon={
                 <button type="button">
                   <Icon name="more-gray" size={28} />
@@ -83,7 +85,7 @@ function TimelineItem({
             </div>
             {member && (
               <div className={timelineRowWrapper}>
-                <Icon name="user" size={28} />
+                <Icon name="user-gray" size={28} />
                 {member.length >= 2 ? (
                   <div>
                     <Txt typography="p3" color={colors.gray700} fontWeight="regular">
@@ -100,7 +102,7 @@ function TimelineItem({
                 )}
               </div>
             )}
-          </section>
+          </div>
         </section>
 
         {memo && (

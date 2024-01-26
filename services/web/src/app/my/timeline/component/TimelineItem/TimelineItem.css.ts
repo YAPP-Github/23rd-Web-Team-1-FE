@@ -26,8 +26,14 @@ export const timelineItemInfoWrapper = style({
 
 export const timelineItmeInfoTextWrapper = style({
   display: 'flex',
+  width: '100%',
   flexDirection: 'column',
   gap: '0.5rem',
+  marginBottom: '0.4rem',
+});
+
+export const timelineItemHeaderWrapper = style({
+  marginBottom: '0.4rem',
 });
 export const timelineRowWrapper = style({
   display: 'flex',

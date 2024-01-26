@@ -84,6 +84,16 @@ const upcomingSchedules: TimelineRes = {
       member: ['이지우', '이지우'],
       memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
     },
+    {
+      scheduleId: 4,
+      title: 'Yapp Design Study',
+      profileImgUrl: 'https://static.im-linker.com/profile1.png',
+      startDateTime: '2024-01-17T13:12:42.936Z',
+      endDateTime: '2024-01-18T13:12:42.936Z',
+      hex: '#58DB67',
+      member: ['이지우'],
+      memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
+    },
   ],
 };
 
