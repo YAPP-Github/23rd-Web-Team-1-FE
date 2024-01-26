@@ -1,6 +1,0 @@
-{
-  "buildScript": "build-storybook",
-  "autoAcceptChanges": "main",
-  "exitOnceUploaded": true,
-  "onlyChanged": true
-}

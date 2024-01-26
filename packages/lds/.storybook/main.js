@@ -1,6 +1,7 @@
 import { join, dirname } from 'path';
 
 import { VanillaExtractPlugin } from '@vanilla-extract/webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -44,10 +45,22 @@ const config = {
     };
   },
   webpackFinal: (config) => {
-    return {
-      ...config,
-      plugins: [...config.plugins, new VanillaExtractPlugin()],
+    config.plugins?.push(new VanillaExtractPlugin(), new MiniCssExtractPlugin());
+
+    config.module?.rules?.push({
+      test: /\.css$/i,
+      use: [MiniCssExtractPlugin.loader, 'css-loader'],
+    });
+
+    config.optimization = {
+      splitChunks: {
+        chunks: 'async',
+        minSize: 30 * 1024, // 30KB
+        maxSize: 64 * 1024, // 1MB
+      },
     };
+
+    return config;
   },
 };
 
