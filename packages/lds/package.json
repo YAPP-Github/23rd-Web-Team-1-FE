@@ -19,7 +19,6 @@
     "@storybook/blocks": "^7.5.3",
     "@storybook/nextjs": "^7.5.3",
     "@storybook/react": "^7.5.3",
-    "@storybook/react-webpack5": "^7.5.3",
     "@storybook/test": "^7.6.10",
     "@storybook/testing-library": "^0.2.2",
     "@types/babel__core": "^7.20.5",

@@ -1143,6 +1143,7 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+<<<<<<< HEAD
       ["virtual:8430ea66aa2fe5610b37fb4ad045a6ebcfc98a53f5d0665ba2d27d6a594882fa18fa076a741c8299dfb22dbb6d19a331894883907c37c2e3c4b0000f213e32e2#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-flow-virtual-952173bd70/0/cache/@babel-plugin-syntax-flow-npm-7.23.3-a878cc6a46-c6e6f355d6.zip/node_modules/@babel/plugin-syntax-flow/",\
         "packageDependencies": [\
@@ -1164,6 +1165,8 @@ const RAW_RUNTIME_STATE =
           ["@babel/plugin-syntax-flow", "virtual:9f192f2ac31f449df6cb60ac1614b3c4eb764cbd4af35b2cf2ba72ca58fbb92101348f8a804fc56d38e9b15d703e682cb59a11a9c3cce3e4aabbb8118460f9b7#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
 =======
+=======
+>>>>>>> efb9948 (chore: remove storybook/react-webpack5)
       ["virtual:8430ea66aa2fe5610b37fb4ad045a6ebcfc98a53f5d0665ba2d27d6a594882fa18fa076a741c8299dfb22dbb6d19a331894883907c37c2e3c4b0000f213e32e2#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-flow-virtual-952173bd70/0/cache/@babel-plugin-syntax-flow-npm-7.23.3-a878cc6a46-c6e6f355d6.zip/node_modules/@babel/plugin-syntax-flow/",\
         "packageDependencies": [\
@@ -2519,6 +2522,7 @@ const RAW_RUNTIME_STATE =
         "linkType": "SOFT"\
       }],\
 <<<<<<< HEAD
+<<<<<<< HEAD
       ["virtual:7430ab52aeacbca07f8991ac6428cc5881a617ba6c2403b52e380a9e6f052f00b067b95d0f66477651c470744083bfabf0b0e8d1651d3b6594370802b97b41a9#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-flow-strip-types-virtual-9f192f2ac3/0/cache/@babel-plugin-transform-flow-strip-types-npm-7.23.3-68d609a821-84af4b1f6d.zip/node_modules/@babel/plugin-transform-flow-strip-types/",\
         "packageDependencies": [\
@@ -2553,6 +2557,8 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
+=======
+>>>>>>> efb9948 (chore: remove storybook/react-webpack5)
       ["virtual:f568981b4de07b18887ac0f4f57918af492ecd5e0b5625b9730a71e845ac2caa71f1bef1e5a866c8b546abd1731552de9100b461eaedb51d33aa1e7f21cb9da0#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-flow-strip-types-virtual-8430ea66aa/0/cache/@babel-plugin-transform-flow-strip-types-npm-7.23.3-68d609a821-84af4b1f6d.zip/node_modules/@babel/plugin-transform-flow-strip-types/",\
         "packageDependencies": [\
@@ -4688,6 +4694,7 @@ const RAW_RUNTIME_STATE =
           "@types/babel__core"\
         ],\
         "linkType": "HARD"\
+<<<<<<< HEAD
       }],\
       ["virtual:dcd9259debf4d9531375247cfecfd5c37794cef2d87a2fc5da33f198a358641bfb7c6abaa6295aef0c02e1cc5f906e5775096030c7a32f907575a1700ff10125#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-preset-flow-virtual-7430ab52ae/0/cache/@babel-preset-flow-npm-7.23.3-1b8d202681-60b5dde796.zip/node_modules/@babel/preset-flow/",\
@@ -4704,6 +4711,8 @@ const RAW_RUNTIME_STATE =
           "@types/babel__core"\
         ],\
         "linkType": "HARD"\
+=======
+>>>>>>> efb9948 (chore: remove storybook/react-webpack5)
       }]\
     ]],\
     ["@babel/preset-modules", [\
@@ -6423,7 +6432,6 @@ const RAW_RUNTIME_STATE =
           ["@storybook/blocks", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
           ["@storybook/nextjs", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
           ["@storybook/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/react-webpack5", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
           ["@storybook/test", "npm:7.6.10"],\
 >>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@storybook/testing-library", "npm:0.2.2"],\
@@ -6576,7 +6584,6 @@ const RAW_RUNTIME_STATE =
           ["@storybook/blocks", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
           ["@storybook/nextjs", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
           ["@storybook/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/react-webpack5", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
           ["@storybook/test", "npm:7.6.10"],\
 >>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@storybook/testing-library", "npm:0.2.2"],\
@@ -6669,7 +6676,6 @@ const RAW_RUNTIME_STATE =
           ["@storybook/blocks", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
           ["@storybook/nextjs", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
           ["@storybook/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/react-webpack5", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
           ["@storybook/test", "npm:7.6.10"],\
 >>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@storybook/testing-library", "npm:0.2.2"],\
@@ -10072,6 +10078,7 @@ const RAW_RUNTIME_STATE =
           "typescript"\
         ],\
         "linkType": "HARD"\
+<<<<<<< HEAD
       }],\
       ["virtual:732ce32fc9893164bf3ac07df850008e763d6f886ba0fbca4a4dbe3ab06cb7e3054d0404eaf0b6593889084feacd89c143ffc0ccc38845b4313ddada3f060f8c#npm:7.6.10", {\
         "packageLocation": "./.yarn/__virtual__/@storybook-preset-react-webpack-virtual-dcd9259deb/0/cache/@storybook-preset-react-webpack-npm-7.6.10-ab4eb7db38-ad2ef50054.zip/node_modules/@storybook/preset-react-webpack/",\
@@ -10114,6 +10121,8 @@ const RAW_RUNTIME_STATE =
           "typescript"\
         ],\
         "linkType": "HARD"\
+=======
+>>>>>>> efb9948 (chore: remove storybook/react-webpack5)
       }]\
     ]],\
     ["@storybook/preview", [\
@@ -10282,6 +10291,7 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+<<<<<<< HEAD
     ["@storybook/react-webpack5", [\
       ["npm:7.6.10", {\
         "packageLocation": "./.yarn/cache/@storybook-react-webpack5-npm-7.6.10-17328bff6d-eae02d53d0.zip/node_modules/@storybook/react-webpack5/",\
@@ -10320,6 +10330,8 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+=======
+>>>>>>> efb9948 (chore: remove storybook/react-webpack5)
     ["@storybook/router", [\
       ["npm:7.6.10", {\
         "packageLocation": "./.yarn/cache/@storybook-router-npm-7.6.10-f8e02d6dbf-94b35ec718.zip/node_modules/@storybook/router/",\
