@@ -55,7 +55,7 @@ const Feed = ({ timelineItems }: FeedProps) => {
         <div>
           <section className={timelineMonthWrapper}>
             <Txt typography="h7" fontWeight="bold" color={colors.black}>
-              {`${date.getMonth()}월`}
+              {`${new Date().getMonth()}월`}
             </Txt>
           </section>
           <section className={timelineItemWrapper}>
@@ -76,7 +76,7 @@ const Feed = ({ timelineItems }: FeedProps) => {
           </section>
           <section className={timelineMonthWrapper}>
             <Txt typography="h7" fontWeight="bold" color={colors.black}>
-              {`${date.getFullYear()}년${date.getMonth()}${1}월`}
+              {`${new Date().getFullYear()}년${new Date().getMonth()}${1}월`}
             </Txt>
           </section>
           <section className={timelineItemWrapper}>
@@ -102,7 +102,7 @@ const Feed = ({ timelineItems }: FeedProps) => {
         <div>
           <section className={timelineMonthWrapper}>
             <Txt typography="h7" fontWeight="bold" color={colors.black}>
-              {date.getMonth() + 1}월
+              {new Date().getMonth() + 1}월
             </Txt>
           </section>
           <section className={timelineItemWrapper}>
