@@ -7,10 +7,10 @@ export const timelineItemWrapper = style({
   gap: '1.2rem',
 });
 
-export const timelineCountWrapper = style({
+export const timelineMonthWrapper = style({
   display: 'flex',
   flexDirection: 'row',
   gap: '0.3rem',
   marginTop: '3.7rem',
-  paddingLeft: '2rem',
+  paddingLeft: '1.6rem',
 });

@@ -79,7 +79,7 @@ const TileContent = ({ date, mark }: { date: Date; mark?: Array<Date | string> }
   });
 
   if (isMarked) {
-    html.push(<div key={Date.now()} className={dot}></div>);
+    html.push(<div key={Date.now()}></div>);
   }
 
   return <div>{html}</div>;
