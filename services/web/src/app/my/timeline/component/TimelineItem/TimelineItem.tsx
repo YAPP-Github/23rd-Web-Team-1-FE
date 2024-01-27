@@ -6,6 +6,7 @@ import { Spacing } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
+
 import { useEffect, useState } from 'react';
 
 import {
@@ -31,19 +32,15 @@ function TimelineItem({
   profileImgUrl,
   memo,
 }: TimelineItemProps) {
-  const startHour = startDateTime.slice(11, 13);
-  const startMin = startDateTime.slice(14, 16);
-  const endHour = endDateTime.slice(11, 13);
-  const endMin = endDateTime.slice(14, 16);
   const [time, setTime] = useState('');
 
   useEffect(() => {
-    if (parseInt(startHour) >= 12) {
-      setTime(`오후 ${startHour}:${startMin} - ${endHour}:${endMin}`);
+    if (parseInt(format(startDateTime, 'HH')) >= 12) {
+      setTime(`오후 ${format(startDateTime, 'HH:mm')} - ${format(endDateTime, 'HH:mm')}`);
     } else {
-      setTime(`오전 ${startHour}:${startMin} - ${endHour}:${endMin}`);
+      setTime(`오전 ${format(startDateTime, 'HH:mm')} - ${format(endDateTime, 'HH:mm')}`);
     }
-  }, [endHour, endMin, startHour, startMin]);
+  }, [startDateTime, endDateTime]);
 
   return (
     <section className={timelineItemContainer}>
@@ -80,18 +77,12 @@ function TimelineItem({
             {member && (
               <div className={timelineRowWrapper}>
                 <Icon name="user-gray" size={28} />
-                {member.length >= 2 ? (
-                  <div>
-                    <Txt typography="p3" color={colors.gray700} fontWeight="regular">
-                      {member[0]}
-                    </Txt>
-                    <Txt typography="p3" color={colors.gray500} fontWeight="regular">
-                      {`외 ${member.length - 1}명`}
-                    </Txt>
-                  </div>
-                ) : (
-                  <Txt typography="p3" color={colors.gray700} fontWeight="regular">
-                    {member[0]}
+                <Txt typography="p3" color={colors.gray700} fontWeight="regular">
+                  {member[0]}
+                </Txt>
+                {member.length >= 2 && (
+                  <Txt typography="p3" color={colors.gray500} fontWeight="regular">
+                    {`외 ${member.length - 1}명`}
                   </Txt>
                 )}
               </div>
