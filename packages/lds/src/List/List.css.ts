@@ -2,6 +2,7 @@ import { colors } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
 
 export const listContainer = style({
+  width: '100%',
   margin: '0 1.6rem',
 });
 
