@@ -1,9 +1,9 @@
+import type { Schedule } from '@/types/schedule';
 import { ky } from '@linker/ky';
 import { List } from '@linker/lds';
 import Link from 'next/link';
 
 import ScheduleItem from './ScheduleItem';
-import type { Schedule } from './ScheduleItem';
 import { listWrapper, listItem } from './UpcomingSchedule.css';
 
 const getUpcomingSchedule = ({ limit }: { limit: number }) => {

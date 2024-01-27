@@ -1,17 +1,10 @@
+import type { Schedule } from '@/types/schedule';
 import { ky } from '@linker/ky';
 import { List } from '@linker/lds';
 import { HorizonScroller } from '@linker/lds';
 
 import { wrapper, header, scheduleList } from './PreviousSchedule.css';
 import ScheduleCard from './ScheduleCard';
-
-interface Schedule {
-  scheduleId: number;
-  title: string;
-  startDateTime: string;
-  endDateTime: string;
-  profileImgUrl: string | null;
-}
 
 const getPreviousSchedules = ({ limit }: { limit: number }) => {
   return ky.get<{
