@@ -1,4 +1,4 @@
-import { colors } from '@linker/styles';
+import { colors, ellipsis } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
 
 export const card = style({
@@ -20,13 +20,12 @@ export const scheduleInfo = style({
   padding: '0 0.4rem',
 });
 
-export const titleInfo = style({
-  overflow: 'hidden',
-  WebkitLineClamp: 2,
-  display: '-webkit-box',
-  textOverflow: 'ellipsis',
-  WebkitBoxOrient: 'vertical',
-});
+export const titleInfo = style([
+  ellipsis,
+  {
+    WebkitLineClamp: 2,
+  },
+]);
 
 export const button = style({
   display: 'flex',

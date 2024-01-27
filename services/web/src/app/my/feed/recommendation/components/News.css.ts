@@ -1,4 +1,4 @@
-import { colors } from '@linker/styles';
+import { colors, ellipsis } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
 
 export const wrapper = style({
@@ -32,13 +32,12 @@ export const newsContent = style({
   overflow: 'hidden',
 });
 
-export const newsTitle = style({
-  overflow: 'hidden',
-  WebkitLineClamp: 2,
-  display: '-webkit-box',
-  textOverflow: 'ellipsis',
-  WebkitBoxOrient: 'vertical',
-});
+export const newsTitle = style([
+  ellipsis,
+  {
+    WebkitLineClamp: 2,
+  },
+]);
 
 export const newsImage = style({
   borderRadius: '0.4rem',
