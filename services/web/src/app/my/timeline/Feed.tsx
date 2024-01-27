@@ -15,6 +15,7 @@ interface FeedProps {
 
 const Feed = ({ timelineItems }: FeedProps) => {
   const [date, setDate] = useState(new Date());
+  const [selectDate, setSelectDate] = useState(false);
   const stdYear = format(timelineItems.schedules[0].startDateTime, 'yyyy');
   const [prevYear, setPrevYear] = useState<TimelineItemProps[]>();
   const [nextYear, setNextYear] = useState<TimelineItemProps[]>();
@@ -43,13 +44,42 @@ const Feed = ({ timelineItems }: FeedProps) => {
       <Calendar
         value={date}
         onChange={(value) => {
+          setSelectDate(true);
           setDate(value as Date);
         }}
         withModeChange
       />
       <Spacing size={20} />
+      {/* 특정 날짜를 선택했을 경우 */}
+      {selectDate && (
+        <div>
+          <section className={timelineMonthWrapper}>
+            <Txt typography="h7" fontWeight="bold" color={colors.black}>
+              {date.getMonth() + 1}월
+            </Txt>
+          </section>
+          <section className={timelineItemWrapper}>
+            {timelineItems.schedules.map((item) => (
+              <div key={item.scheduleId}>
+                <TimelineItem
+                  scheduleId={item.scheduleId}
+                  profileImgUrl={item.profileImgUrl}
+                  title={item.title}
+                  startDateTime={item.startDateTime}
+                  endDateTime={item.endDateTime}
+                  member={item.member}
+                  hex={item.hex}
+                  memo={item.memo}
+                />
+              </div>
+            ))}
+          </section>
+        </div>
+      )}
+
+      {/*특정 날짜를 선택하지 않은 경우 */}
       {/*연도가 다른 경우 */}
-      {hasDifferentYear && prevYear && nextYear && (
+      {!selectDate && hasDifferentYear && prevYear && nextYear && (
         <div>
           <section className={timelineMonthWrapper}>
             <Txt typography="h7" fontWeight="bold" color={colors.black}>
@@ -101,7 +131,7 @@ const Feed = ({ timelineItems }: FeedProps) => {
         </div>
       )}
       {/*연도가 다르지 않은 경우 */}
-      {hasDifferentYear === false && (
+      {!selectDate && hasDifferentYear === false && (
         <div>
           <section className={timelineMonthWrapper}>
             <Txt typography="h7" fontWeight="bold" color={colors.black}>
