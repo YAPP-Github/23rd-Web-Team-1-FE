@@ -58,12 +58,12 @@ async function Recommendation() {
         </Link>
       </div>
       <div className={schedule}>
-        {/* <Schedule
+        <Schedule
           title={title}
           profileImgUrl={profileImgUrl}
           startDateTime={startDateTime}
           endDateTime={endDateTime}
-        /> */}
+        />
       </div>
       <Carousel>
         {recommendations.map(({ tag, contents }, index) => (
