@@ -62,11 +62,11 @@ export default function ContactDefault({ contactData }: ContactProps) {
           전체
         </Txt>
         <Txt typography="p4" color={colors.gray800}>
-          {contactData.length}
+          {/* {contactData.length} */}
         </Txt>
       </article>
       <article className={profileWrapper}>
-        {contactData.map((item) => (
+        {/* {contactData!.map((item) => (
           <ContactItem
             key={item.id}
             name={item.name}
@@ -74,7 +74,7 @@ export default function ContactDefault({ contactData }: ContactProps) {
             association={item.association}
             profileImgUrl={item.profileImgUrl}
           />
-        ))}
+        ))} */}
       </article>
     </section>
   );

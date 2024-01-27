@@ -231,12 +231,15 @@ globalStyle(`${calendar} .react-calendar__tile::before`, {
 
 globalStyle(`${calendar} .react-calendar__tile--now`, {
   position: 'relative',
-  color: `${colors.white} !important`,
+  color: `${colors.blue500} `,
 });
 
-globalStyle(`${calendar} .react-calendar__tile--now::before`, {
-  backgroundColor: `${colors.gray900}`,
+globalStyle(`${calendar} .react-calendar__tile--now:enabled`, {
+  position: 'relative',
+  color: `${colors.blue500}`,
 });
+
+// globalStyle(`${calendar} .react-calendar__tile--now::before`, {});
 
 globalStyle(`${calendar} .react-calendar__tile:enabled:hover`, {
   color: `${colors.white}`,
