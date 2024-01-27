@@ -14,12 +14,4 @@ export const scheduleList = style({
   width: 'auto',
   overflowY: 'auto',
   padding: '0 2rem',
-
-  msOverflowStyle: 'none' /* Edge */,
-  scrollbarWidth: 'none' /* Firefox */,
-  selectors: {
-    '&::-webkit-scrollbar': {
-      display: 'none' /* Chrome, Safari, Opera */,
-    },
-  },
 });
