@@ -3,6 +3,7 @@ import { TimelineRes, TimelineItemProps } from '@__server__/mocks/feed';
 import { Calendar, Spacing } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
+import { format } from 'date-fns';
 import { useEffect, useState } from 'react';
 
 import { timelineItemWrapper, timelineMonthWrapper } from './Feed.css';
@@ -14,31 +15,28 @@ interface FeedProps {
 
 const Feed = ({ timelineItems }: FeedProps) => {
   const [date, setDate] = useState(new Date());
-  const [diffYear, setDiffYear] = useState(false);
-  const [diffIdx, setDiffIdx] = useState(0);
+  const stdYear = format(timelineItems.schedules[0].startDateTime, 'yyyy');
   const [prevYear, setPrevYear] = useState<TimelineItemProps[]>();
   const [nextYear, setNextYear] = useState<TimelineItemProps[]>();
 
+  // 받아온 데이터들 중 다른 연도가 있는지
+  // 연도가 하나라도 다른게 판단이 되면 diffYear가 true가됨
+  const hasDifferentYear = timelineItems.schedules.some((item) => {
+    const formattedYear = format(item.startDateTime, 'yyyy');
+
+    return formattedYear === stdYear;
+  });
+  // 연도가 다른 원소의 첫번째 인덱스를 리턴
+  const diffIdx = timelineItems.schedules.findIndex((item, index) => {
+    return format(item.startDateTime, 'yyyy') !== stdYear;
+  });
+
   useEffect(() => {
-    const stdYear = timelineItems.schedules[0].endDateTime.slice(0, 4);
-    const hasDifferentYear = timelineItems.schedules.some((item) => {
-      return item.endDateTime.slice(0, 4) !== stdYear;
-    });
-    // 연도가 다른 원소의 첫번째 인덱스를 리턴
-    const differentYearIndex = timelineItems.schedules.findIndex((item, index) => {
-      return item.endDateTime.slice(0, 4) !== stdYear;
-    });
-
-    setDiffYear(hasDifferentYear);
-    setDiffIdx(differentYearIndex);
-
-    if (hasDifferentYear) {
-      // prevYear에는 0부터 diffIdx-1까지의 원소 저장
-      setPrevYear(timelineItems.schedules.slice(0, diffIdx));
-      // nextYear에는 diffIdx부터 끝까지의 원소 저장
-      setNextYear(timelineItems.schedules.slice(diffIdx));
-    }
-  }, [timelineItems.schedules, diffIdx]);
+    // prevYear에는 0부터 diffIdx-1까지의 원소 저장
+    setPrevYear(timelineItems.schedules.slice(0, diffIdx));
+    // nextYear에는 diffIdx부터 끝까지의 원소 저장
+    setNextYear(timelineItems.schedules.slice(diffIdx));
+  }, [diffIdx, hasDifferentYear, timelineItems.schedules]);
 
   return (
     <>
@@ -51,15 +49,20 @@ const Feed = ({ timelineItems }: FeedProps) => {
       />
       <Spacing size={20} />
       {/*연도가 다른 경우 */}
-      {diffYear && prevYear && nextYear && (
+      {hasDifferentYear && prevYear && nextYear && (
         <div>
           <section className={timelineMonthWrapper}>
             <Txt typography="h7" fontWeight="bold" color={colors.black}>
-              {`${new Date().getMonth()}월`}
+              {/* 현재 달이 1월인 경우 */}
+              {new Date().getMonth() + 1 === 1 ? (
+                <div>12월</div>
+              ) : (
+                <div>{format(new Date(), 'M월')}</div>
+              )}
             </Txt>
           </section>
           <section className={timelineItemWrapper}>
-            {timelineItems.schedules.map((item) => (
+            {prevYear.map((item) => (
               <div key={item.title}>
                 <TimelineItem
                   scheduleId={item.scheduleId}
@@ -76,11 +79,11 @@ const Feed = ({ timelineItems }: FeedProps) => {
           </section>
           <section className={timelineMonthWrapper}>
             <Txt typography="h7" fontWeight="bold" color={colors.black}>
-              {`${new Date().getFullYear()}년${new Date().getMonth()}${1}월`}
+              {format(new Date(), 'yyyy년 M월')}
             </Txt>
           </section>
           <section className={timelineItemWrapper}>
-            {timelineItems.schedules.map((item) => (
+            {nextYear.map((item) => (
               <div key={item.title}>
                 <TimelineItem
                   scheduleId={item.scheduleId}
@@ -98,7 +101,7 @@ const Feed = ({ timelineItems }: FeedProps) => {
         </div>
       )}
       {/*연도가 다르지 않은 경우 */}
-      {diffYear === false && (
+      {hasDifferentYear === false && (
         <div>
           <section className={timelineMonthWrapper}>
             <Txt typography="h7" fontWeight="bold" color={colors.black}>

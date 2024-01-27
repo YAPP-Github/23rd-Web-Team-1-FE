@@ -4,6 +4,8 @@ import { Icon, List } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { Spacing } from '@linker/lds';
 import { colors } from '@linker/styles';
+import { format } from 'date-fns';
+import { ko } from 'date-fns/locale';
 import { useEffect, useState } from 'react';
 
 import {
@@ -29,15 +31,11 @@ function TimelineItem({
   profileImgUrl,
   memo,
 }: TimelineItemProps) {
-  const daysOfWeek = ['일', '월', '화', '수', '목', '금', '토'];
-
-  const startDay = startDateTime.slice(8, 10);
   const startHour = startDateTime.slice(11, 13);
   const startMin = startDateTime.slice(14, 16);
   const endHour = endDateTime.slice(11, 13);
   const endMin = endDateTime.slice(14, 16);
   const [time, setTime] = useState('');
-  const [dayOfWeek, setDayOfWeek] = useState('');
 
   useEffect(() => {
     if (parseInt(startHour) >= 12) {
@@ -45,21 +43,17 @@ function TimelineItem({
     } else {
       setTime(`오전 ${startHour}:${startMin} - ${endHour}:${endMin}`);
     }
-    const dateObject = new Date(startDateTime);
-    const dayOfWeekIdx = dateObject.getDay();
-
-    setDayOfWeek(daysOfWeek[dayOfWeekIdx]);
-  }, [startHour, endHour, startDay]);
+  }, [endHour, endMin, startHour, startMin]);
 
   return (
     <section className={timelineItemContainer}>
       <div className={timelineItemTimeDividerWrapper}>
         <Txt typography="p4" color={colors.black} fontWeight="bold">
-          {startDay}
+          {format(startDateTime, 'd')}
         </Txt>
         <Spacing size={2} />
         <Txt typography="p5" color={colors.gray700} fontWeight="bold">
-          {dayOfWeek}
+          {format(new Date(startDateTime), 'EEEE', { locale: ko }).slice(0, 1)}
         </Txt>
         <Spacing size={8} />
         <div className={timelineItemTimeDivider}></div>

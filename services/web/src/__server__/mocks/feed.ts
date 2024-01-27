@@ -26,6 +26,10 @@ export const feedHandlers = [
     return HttpResponse.json({ data: upcomingSchedules }, { status: 200 });
   }),
 
+  http.get(`${MOCK_API_URL}/v1/schedules/near-term/test`, () => {
+    return HttpResponse.json({ data: upcomingSchedules }, { status: 200 });
+  }),
+
   http.get(`${MOCK_API_URL}/v1/schedules/upcoming/recommendation`, () => {
     return HttpResponse.json({ data: conversationRecommendation }, { status: 200 });
   }),
@@ -59,7 +63,7 @@ const upcomingSchedules: TimelineRes = {
       title: 'Yapp Design Study',
       profileImgUrl: 'https://static.im-linker.com/profile1.png',
       startDateTime: '2023-12-28T13:12:42.936Z',
-      endDateTime: '2023-01-17T13:12:42.936Z',
+      endDateTime: '2023-12-30T13:12:42.936Z',
       hex: '#58DB67',
       member: ['이지우'],
       memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
@@ -68,8 +72,8 @@ const upcomingSchedules: TimelineRes = {
       scheduleId: 2,
       title: '박지훈과 저녁식사',
       profileImgUrl: 'https://static.im-linker.com/profile2.png',
-      startDateTime: '2024-01-17T13:12:42.936Z',
-      endDateTime: '2024-01-17T13:12:42.936Z',
+      startDateTime: '2024-01-11T13:12:42.936Z',
+      endDateTime: '2024-01-12T13:12:42.936Z',
       hex: '#26D1D1',
       member: null,
       memo: null,
@@ -78,8 +82,8 @@ const upcomingSchedules: TimelineRes = {
       scheduleId: 3,
       title: '기획전략팀 저녁 회식',
       profileImgUrl: null,
-      startDateTime: '2024-01-17T13:12:42.936Z',
-      endDateTime: '2024-01-17T13:12:42.936Z',
+      startDateTime: '2024-01-13T13:12:42.936Z',
+      endDateTime: '2024-01-14T13:12:42.936Z',
       hex: '#FF70B0',
       member: ['이지우', '이지우'],
       memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
@@ -88,8 +92,8 @@ const upcomingSchedules: TimelineRes = {
       scheduleId: 4,
       title: 'Yapp Design Study',
       profileImgUrl: 'https://static.im-linker.com/profile1.png',
-      startDateTime: '2024-01-17T13:12:42.936Z',
-      endDateTime: '2024-01-18T13:12:42.936Z',
+      startDateTime: '2024-01-15T13:12:42.936Z',
+      endDateTime: '2024-01-16T13:12:42.936Z',
       hex: '#58DB67',
       member: ['이지우'],
       memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
