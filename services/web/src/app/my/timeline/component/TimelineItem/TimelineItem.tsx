@@ -55,40 +55,42 @@ function TimelineItem({
         <Spacing size={8} />
         <div className={timelineItemTimeDivider}></div>
       </div>
-      <List>
-        <section className={timelineItemInfoWrapper}>
-          <div className={timelineColorDivider} style={{ backgroundColor: hex }}></div>
-          <div className={timelineItmeInfoTextWrapper}>
-            <List.Header
-              title={title}
-              className={timelineItemHeaderWrapper}
-              rightAddon={
-                <button type="button">
-                  <Icon name="more-gray" size={28} />
-                </button>
-              }
-            />
-            <div className={timelineRowWrapper}>
-              <Icon name="time-gray" size={28} />
-              <Txt typography="p3" color={colors.gray700} fontWeight="regular">
-                {time}
-              </Txt>
-            </div>
-            {member && (
+
+      <List className={timelineItemInfoWrapper}>
+        <List.Header
+          title={title}
+          description={
+            <>
               <div className={timelineRowWrapper}>
-                <Icon name="user-gray" size={28} />
+                <Icon name="time-gray" size={28} />
                 <Txt typography="p3" color={colors.gray700} fontWeight="regular">
-                  {member[0]}
+                  {time}
                 </Txt>
-                {member.length >= 2 && (
-                  <Txt typography="p3" color={colors.gray500} fontWeight="regular">
-                    {`외 ${member.length - 1}명`}
-                  </Txt>
-                )}
               </div>
-            )}
-          </div>
-        </section>
+
+              {member && (
+                <div className={timelineRowWrapper}>
+                  <Icon name="user-gray" size={28} />
+                  <Txt typography="p3" color={colors.gray700} fontWeight="regular">
+                    {member[0]}
+                  </Txt>
+                  {member.length >= 2 && (
+                    <Txt typography="p3" color={colors.gray500} fontWeight="regular">
+                      {`외 ${member.length - 1}명`}
+                    </Txt>
+                  )}
+                </div>
+              )}
+            </>
+          }
+          className={timelineItemHeaderWrapper}
+          rightAddon={
+            <button type="button">
+              <Icon name="more-gray" size={28} />
+            </button>
+          }
+          leftAddon={<div className={timelineColorDivider} style={{ backgroundColor: hex }} />}
+        />
 
         {memo && (
           <div>

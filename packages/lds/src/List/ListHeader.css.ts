@@ -1,7 +1,7 @@
 import { style } from '@vanilla-extract/css';
 
 export const headerContainer = style({
-  marginBottom: '2.2rem',
+  position: 'relative',
 });
 
 export const headerTitle = style({

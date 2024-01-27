@@ -20,7 +20,7 @@ export const timelineItemTimeDivider = style({
 });
 export const timelineItemInfoWrapper = style({
   display: 'flex',
-  flexDirection: 'row',
+  flexDirection: 'column',
   gap: '1rem',
 });
 
@@ -33,8 +33,9 @@ export const timelineItmeInfoTextWrapper = style({
 });
 
 export const timelineItemHeaderWrapper = style({
-  marginBottom: '0.2rem',
+  marginLeft: '1.4rem',
 });
+
 export const timelineRowWrapper = style({
   display: 'flex',
   flexDirection: 'row',
@@ -43,9 +44,11 @@ export const timelineRowWrapper = style({
 });
 
 export const timelineColorDivider = style({
+  position: 'absolute',
+  left: '-1.4rem',
   width: '0.4rem',
   borderRadius: '0.8rem',
-  height: 'auto',
+  height: '100%',
 });
 export const timelineItemDivider = style({
   marginTop: '1.2rem',
