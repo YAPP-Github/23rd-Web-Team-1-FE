@@ -2191,25 +2191,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@floating-ui/dom@npm:^1.6.0":
-  version: 1.6.0
-  resolution: "@floating-ui/dom@npm:1.6.0"
+"@floating-ui/dom@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "@floating-ui/dom@npm:1.6.1"
   dependencies:
     "@floating-ui/core": "npm:^1.6.0"
     "@floating-ui/utils": "npm:^0.2.1"
-  checksum: fc559385a27feddff31bdb9f4c8bc05e12bda5aac4e44e7b5850a2af3d2960bf58d72034ccc3fc6c1bf5e69a97d6b5958ee73a885b5e7e7594dc4fa2c22ba47d
+  checksum: c010feb55be37662eb4cc8d0a22e21359c25247bbdcd9557617fd305cf08c8f020435b17e4b4f410201ba9abe3a0dd96b5c42d56e85f7a5e11e7d30b85afc116
   languageName: node
   linkType: hard
 
 "@floating-ui/react-dom@npm:^2.0.0":
-  version: 2.0.7
-  resolution: "@floating-ui/react-dom@npm:2.0.7"
+  version: 2.0.8
+  resolution: "@floating-ui/react-dom@npm:2.0.8"
   dependencies:
-    "@floating-ui/dom": "npm:^1.6.0"
+    "@floating-ui/dom": "npm:^1.6.1"
   peerDependencies:
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: 15eb9ec493781253077e7e26c65c56586a1c92c414879c55d779cba5479d46b8897de06d61c831d03d24c24894257817fed9a515a4f2dc955666df5156dd757b
+  checksum: e57b2a498aecf8de0ec28adf434257fca7893bd9bd7e78b63ac98c63b29b9fc086fc175630154352f3610f5c4a0d329823837f4f6c235cc0459fde6417065590
   languageName: node
   linkType: hard
 
@@ -2584,12 +2584,12 @@ __metadata:
   linkType: hard
 
 "@jridgewell/trace-mapping@npm:^0.3.12, @jridgewell/trace-mapping@npm:^0.3.17, @jridgewell/trace-mapping@npm:^0.3.18, @jridgewell/trace-mapping@npm:^0.3.20, @jridgewell/trace-mapping@npm:^0.3.9":
-  version: 0.3.22
-  resolution: "@jridgewell/trace-mapping@npm:0.3.22"
+  version: 0.3.20
+  resolution: "@jridgewell/trace-mapping@npm:0.3.20"
   dependencies:
     "@jridgewell/resolve-uri": "npm:^3.1.0"
     "@jridgewell/sourcemap-codec": "npm:^1.4.14"
-  checksum: 48d3e3db00dbecb211613649a1849876ba5544a3f41cf5e6b99ea1130272d6cf18591b5b67389bce20f1c871b4ede5900c3b6446a7aab6d0a3b2fe806a834db7
+  checksum: 683117e4e6707ef50c725d6d0ec4234687ff751f36fa46c2b3068931eb6a86b49af374d3030200777666579a992b7470d1bd1c591e9bf64d764dda5295f33093
   languageName: node
   linkType: hard
 
@@ -4101,23 +4101,6 @@ __metadata:
 "@storybook/channels@npm:7.6.10":
   version: 7.6.10
   resolution: "@storybook/channels@npm:7.6.10"
-<<<<<<< HEAD
-=======
-  dependencies:
-    "@storybook/client-logger": "npm:7.6.10"
-    "@storybook/core-events": "npm:7.6.10"
-    "@storybook/global": "npm:^5.0.0"
-    qs: "npm:^6.10.0"
-    telejson: "npm:^7.2.0"
-    tiny-invariant: "npm:^1.3.1"
-  checksum: a476b23d1f5516394b40028b2842a243757d13e4bbd9cd64af01b1263e06d5a7c7870dbcbce602b77a4b3bdf680560c53565aaefc1d8b8e6edc42085a5dbd008
-  languageName: node
-  linkType: hard
-
-"@storybook/channels@npm:7.6.3":
-  version: 7.6.3
-  resolution: "@storybook/channels@npm:7.6.3"
->>>>>>> 4980335 (chore: storybook main 파일 수정)
   dependencies:
     "@storybook/client-logger": "npm:7.6.10"
     "@storybook/core-events": "npm:7.6.10"
@@ -4177,18 +4160,6 @@ __metadata:
     getstorybook: ./bin/index.js
     sb: ./bin/index.js
   checksum: bd8a4479ef895916f869157cb15bf72841e0195c5a75848a4d935ccf2f40f0ef33f531e0cf695805aef96de7893563b99d3acab82cb08e064fd45d93659cf4f0
-<<<<<<< HEAD
-=======
-  languageName: node
-  linkType: hard
-
-"@storybook/client-logger@npm:7.6.10":
-  version: 7.6.10
-  resolution: "@storybook/client-logger@npm:7.6.10"
-  dependencies:
-    "@storybook/global": "npm:^5.0.0"
-  checksum: b91191b0e99b46b9e19d0b8b8363992adfd738bf140c990f91317109b2ffa9bdff4ac590b8a9a733e54c5c884da799cba5e93e1e41efa097ed3ac902a08feeec
->>>>>>> 4980335 (chore: storybook main 파일 수정)
   languageName: node
   linkType: hard
 
@@ -4257,40 +4228,6 @@ __metadata:
 "@storybook/core-common@npm:7.6.10":
   version: 7.6.10
   resolution: "@storybook/core-common@npm:7.6.10"
-<<<<<<< HEAD
-=======
-  dependencies:
-    "@storybook/core-events": "npm:7.6.10"
-    "@storybook/node-logger": "npm:7.6.10"
-    "@storybook/types": "npm:7.6.10"
-    "@types/find-cache-dir": "npm:^3.2.1"
-    "@types/node": "npm:^18.0.0"
-    "@types/node-fetch": "npm:^2.6.4"
-    "@types/pretty-hrtime": "npm:^1.0.0"
-    chalk: "npm:^4.1.0"
-    esbuild: "npm:^0.18.0"
-    esbuild-register: "npm:^3.5.0"
-    file-system-cache: "npm:2.3.0"
-    find-cache-dir: "npm:^3.0.0"
-    find-up: "npm:^5.0.0"
-    fs-extra: "npm:^11.1.0"
-    glob: "npm:^10.0.0"
-    handlebars: "npm:^4.7.7"
-    lazy-universal-dotenv: "npm:^4.0.0"
-    node-fetch: "npm:^2.0.0"
-    picomatch: "npm:^2.3.0"
-    pkg-dir: "npm:^5.0.0"
-    pretty-hrtime: "npm:^1.0.3"
-    resolve-from: "npm:^5.0.0"
-    ts-dedent: "npm:^2.0.0"
-  checksum: e066bb20112293544e392cff11cf9570da254897afca5e8c3aa4dc1a264cdd34eb19554cf5e3ab0f954915b327729570feaeb238b0451bc1bb472c161547c39d
-  languageName: node
-  linkType: hard
-
-"@storybook/core-common@npm:7.6.3":
-  version: 7.6.3
-  resolution: "@storybook/core-common@npm:7.6.3"
->>>>>>> 4980335 (chore: storybook main 파일 수정)
   dependencies:
     "@storybook/core-events": "npm:7.6.10"
     "@storybook/node-logger": "npm:7.6.10"
@@ -4322,18 +4259,6 @@ __metadata:
 "@storybook/core-events@npm:7.6.10":
   version: 7.6.10
   resolution: "@storybook/core-events@npm:7.6.10"
-<<<<<<< HEAD
-=======
-  dependencies:
-    ts-dedent: "npm:^2.0.0"
-  checksum: a994130de91b829bdf2db7460e1535369bd2a11ba7b6edeba3e1dbf5b58f9afc3ff623ea7b012a88d746c6b068e18c837dbc4a225e64f6fe02fca25223bb5c53
-  languageName: node
-  linkType: hard
-
-"@storybook/core-events@npm:7.6.3":
-  version: 7.6.3
-  resolution: "@storybook/core-events@npm:7.6.3"
->>>>>>> 4980335 (chore: storybook main 파일 수정)
   dependencies:
     ts-dedent: "npm:^2.0.0"
   checksum: a994130de91b829bdf2db7460e1535369bd2a11ba7b6edeba3e1dbf5b58f9afc3ff623ea7b012a88d746c6b068e18c837dbc4a225e64f6fe02fca25223bb5c53
@@ -4415,26 +4340,6 @@ __metadata:
 "@storybook/csf-tools@npm:7.6.10":
   version: 7.6.10
   resolution: "@storybook/csf-tools@npm:7.6.10"
-<<<<<<< HEAD
-=======
-  dependencies:
-    "@babel/generator": "npm:^7.23.0"
-    "@babel/parser": "npm:^7.23.0"
-    "@babel/traverse": "npm:^7.23.2"
-    "@babel/types": "npm:^7.23.0"
-    "@storybook/csf": "npm:^0.1.2"
-    "@storybook/types": "npm:7.6.10"
-    fs-extra: "npm:^11.1.0"
-    recast: "npm:^0.23.1"
-    ts-dedent: "npm:^2.0.0"
-  checksum: 3d45a09f1433c53edd025948dfbabd5a4fd7ffe92df59fdae8e8c7b4abdec87a2b6067795301da001f12780d919e23e18748eb76c7b2b0323150e519a0c0cb65
-  languageName: node
-  linkType: hard
-
-"@storybook/csf-tools@npm:7.6.3":
-  version: 7.6.3
-  resolution: "@storybook/csf-tools@npm:7.6.3"
->>>>>>> 4980335 (chore: storybook main 파일 수정)
   dependencies:
     "@babel/generator": "npm:^7.23.0"
     "@babel/parser": "npm:^7.23.0"
@@ -4496,11 +4401,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@storybook/manager-api@npm:7.6.10":
-  version: 7.6.10
-  resolution: "@storybook/manager-api@npm:7.6.10"
-=======
 "@storybook/instrumenter@npm:7.6.10":
   version: 7.6.10
   resolution: "@storybook/instrumenter@npm:7.6.10"
@@ -4516,10 +4416,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/manager-api@npm:7.6.3":
-  version: 7.6.3
-  resolution: "@storybook/manager-api@npm:7.6.3"
->>>>>>> 4980335 (chore: storybook main 파일 수정)
+"@storybook/manager-api@npm:7.6.10":
+  version: 7.6.10
+  resolution: "@storybook/manager-api@npm:7.6.10"
   dependencies:
     "@storybook/channels": "npm:7.6.10"
     "@storybook/client-logger": "npm:7.6.10"
@@ -4619,16 +4518,6 @@ __metadata:
   version: 7.6.10
   resolution: "@storybook/node-logger@npm:7.6.10"
   checksum: 22006be3971cd17bfe7a742470750a7ccada1d0d4e368dd7ad963940bc3dfcdfac730630c0b7913af540e96402566b261f43bfaa2c24143d096375e433aedaff
-<<<<<<< HEAD
-=======
-  languageName: node
-  linkType: hard
-
-"@storybook/node-logger@npm:7.6.3":
-  version: 7.6.3
-  resolution: "@storybook/node-logger@npm:7.6.3"
-  checksum: b9262abf473341d01a2b8b263ee8df11d88359e2246c7996cd065534cb11b6fd63885fa8728bded7c16b6d58bbed58bd98f58aac52dd2155b06a523fd1772937
->>>>>>> 4980335 (chore: storybook main 파일 수정)
   languageName: node
   linkType: hard
 
@@ -4676,31 +4565,6 @@ __metadata:
 "@storybook/preview-api@npm:7.6.10":
   version: 7.6.10
   resolution: "@storybook/preview-api@npm:7.6.10"
-<<<<<<< HEAD
-=======
-  dependencies:
-    "@storybook/channels": "npm:7.6.10"
-    "@storybook/client-logger": "npm:7.6.10"
-    "@storybook/core-events": "npm:7.6.10"
-    "@storybook/csf": "npm:^0.1.2"
-    "@storybook/global": "npm:^5.0.0"
-    "@storybook/types": "npm:7.6.10"
-    "@types/qs": "npm:^6.9.5"
-    dequal: "npm:^2.0.2"
-    lodash: "npm:^4.17.21"
-    memoizerific: "npm:^1.11.3"
-    qs: "npm:^6.10.0"
-    synchronous-promise: "npm:^2.0.15"
-    ts-dedent: "npm:^2.0.0"
-    util-deprecate: "npm:^1.0.2"
-  checksum: 139336e7d41df6e3ccbaef8b14fbd14a919ce80ff411abb6e71355d4dd914cf902083b480d00a859ab817207a0e35fa0551de60019c33465809fd38eb12de027
-  languageName: node
-  linkType: hard
-
-"@storybook/preview-api@npm:7.6.3":
-  version: 7.6.3
-  resolution: "@storybook/preview-api@npm:7.6.3"
->>>>>>> 4980335 (chore: storybook main 파일 수정)
   dependencies:
     "@storybook/channels": "npm:7.6.10"
     "@storybook/client-logger": "npm:7.6.10"
@@ -4755,37 +4619,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@storybook/react-webpack5@npm:^7.5.3":
-  version: 7.6.10
-  resolution: "@storybook/react-webpack5@npm:7.6.10"
-  dependencies:
-    "@storybook/builder-webpack5": "npm:7.6.10"
-    "@storybook/preset-react-webpack": "npm:7.6.10"
-    "@storybook/react": "npm:7.6.10"
-    "@types/node": "npm:^18.0.0"
-  peerDependencies:
-    "@babel/core": ^7.22.0
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    typescript: "*"
-  peerDependenciesMeta:
-    "@babel/core":
-      optional: true
-    typescript:
-      optional: true
-  checksum: eae02d53d0604c2fbc62961de06d2cf08a4b68321d7e7482fcaba6a1801a43be2aed321ccf671a2ebd980a15d2555bad31acc138e072d417dba85713851e386b
-  languageName: node
-  linkType: hard
-
 "@storybook/react@npm:7.6.10, @storybook/react@npm:^7.5.3":
   version: 7.6.10
   resolution: "@storybook/react@npm:7.6.10"
-=======
-"@storybook/react@npm:7.6.3, @storybook/react@npm:^7.5.3":
-  version: 7.6.3
-  resolution: "@storybook/react@npm:7.6.3"
->>>>>>> efb9948 (chore: remove storybook/react-webpack5)
   dependencies:
     "@storybook/client-logger": "npm:7.6.10"
     "@storybook/core-client": "npm:7.6.10"
@@ -4830,31 +4666,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
 "@storybook/telemetry@npm:7.6.10, @storybook/telemetry@npm:^7.1.0":
   version: 7.6.10
   resolution: "@storybook/telemetry@npm:7.6.10"
-=======
-"@storybook/telemetry@npm:7.6.10":
-  version: 7.6.10
-  resolution: "@storybook/telemetry@npm:7.6.10"
-  dependencies:
-    "@storybook/client-logger": "npm:7.6.10"
-    "@storybook/core-common": "npm:7.6.10"
-    "@storybook/csf-tools": "npm:7.6.10"
-    chalk: "npm:^4.1.0"
-    detect-package-manager: "npm:^2.0.1"
-    fetch-retry: "npm:^5.0.2"
-    fs-extra: "npm:^11.1.0"
-    read-pkg-up: "npm:^7.0.1"
-  checksum: e97543701066ab893b8a5560cf080bdd8c9d1cc701ffc36c2522f6e48c5ab0fc1c7df98bc563054a6100140e8463ca99b805239e8523d379edfbb4a02f39abf2
-  languageName: node
-  linkType: hard
-
-"@storybook/telemetry@npm:^7.1.0-alpha.32":
-  version: 7.6.3
-  resolution: "@storybook/telemetry@npm:7.6.3"
->>>>>>> 4980335 (chore: storybook main 파일 수정)
   dependencies:
     "@storybook/client-logger": "npm:7.6.10"
     "@storybook/core-common": "npm:7.6.10"
@@ -4917,21 +4731,6 @@ __metadata:
 "@storybook/types@npm:7.6.10":
   version: 7.6.10
   resolution: "@storybook/types@npm:7.6.10"
-<<<<<<< HEAD
-=======
-  dependencies:
-    "@storybook/channels": "npm:7.6.10"
-    "@types/babel__core": "npm:^7.0.0"
-    "@types/express": "npm:^4.7.0"
-    file-system-cache: "npm:2.3.0"
-  checksum: 67e2be2e118c3b4b31d648337774dff9539eee91348e2cd541fda67774b8fd97993241057b2090feb9388b766cdb01e3cc04a1aa363be83bcc865829863c50e6
-  languageName: node
-  linkType: hard
-
-"@storybook/types@npm:7.6.3":
-  version: 7.6.3
-  resolution: "@storybook/types@npm:7.6.3"
->>>>>>> 4980335 (chore: storybook main 파일 수정)
   dependencies:
     "@storybook/channels": "npm:7.6.10"
     "@types/babel__core": "npm:^7.0.0"
@@ -5103,7 +4902,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:^9.0.0, @testing-library/dom@npm:^9.3.3":
+"@testing-library/dom@npm:^9.0.0, @testing-library/dom@npm:^9.3.1, @testing-library/dom@npm:^9.3.3":
   version: 9.3.4
   resolution: "@testing-library/dom@npm:9.3.4"
   dependencies:
@@ -5119,65 +4918,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@testing-library/jest-dom@npm:*, @testing-library/jest-dom@npm:^6.1.4":
-  version: 6.3.0
-  resolution: "@testing-library/jest-dom@npm:6.3.0"
-=======
-"@testing-library/dom@npm:^9.3.1":
-  version: 9.3.4
-  resolution: "@testing-library/dom@npm:9.3.4"
-  dependencies:
-    "@babel/code-frame": "npm:^7.10.4"
-    "@babel/runtime": "npm:^7.12.5"
-    "@types/aria-query": "npm:^5.0.1"
-    aria-query: "npm:5.1.3"
-    chalk: "npm:^4.1.0"
-    dom-accessibility-api: "npm:^0.5.9"
-    lz-string: "npm:^1.5.0"
-    pretty-format: "npm:^27.0.2"
-  checksum: 510da752ea76f4a10a0a4e3a77917b0302cf03effe576cd3534cab7e796533ee2b0e9fb6fb11b911a1ebd7c70a0bb6f235bf4f816c9b82b95b8fe0cddfd10975
-  languageName: node
-  linkType: hard
-
-"@testing-library/jest-dom@npm:*":
-  version: 6.2.0
-  resolution: "@testing-library/jest-dom@npm:6.2.0"
->>>>>>> 4980335 (chore: storybook main 파일 수정)
-  dependencies:
-    "@adobe/css-tools": "npm:^4.3.2"
-    "@babel/runtime": "npm:^7.9.2"
-    aria-query: "npm:^5.0.0"
-    chalk: "npm:^3.0.0"
-    css.escape: "npm:^1.5.1"
-    dom-accessibility-api: "npm:^0.6.3"
-    lodash: "npm:^4.17.15"
-    redent: "npm:^3.0.0"
-  peerDependencies:
-    "@jest/globals": ">= 28"
-    "@types/bun": "*"
-    "@types/jest": ">= 28"
-    jest: ">= 28"
-    vitest: ">= 0.32"
-  peerDependenciesMeta:
-    "@jest/globals":
-      optional: true
-    "@types/bun":
-      optional: true
-    "@types/jest":
-      optional: true
-    jest:
-      optional: true
-    vitest:
-      optional: true
-<<<<<<< HEAD
-  checksum: d96e552cfe5a72fa0a4c21655a9fabe6ffce6a066323c8a0f5847f39ff88229cd2455c9af41d3381b672d65469e74752d29e35dd04c15d8241a9f6a1e7cb78c6
-=======
-  checksum: 4af88d4b6208eda58fad47a520057893a381b972e7b043d7787c0111c887bdc82ed959bed07c21700f2816d4a1e315a519a0aabce120708ad7ba79577374f0fd
-  languageName: node
-  linkType: hard
-
-"@testing-library/jest-dom@npm:^6.1.3":
+"@testing-library/jest-dom@npm:*, @testing-library/jest-dom@npm:^6.1.3, @testing-library/jest-dom@npm:^6.1.4":
   version: 6.3.0
   resolution: "@testing-library/jest-dom@npm:6.3.0"
   dependencies:
@@ -5207,37 +4948,6 @@ __metadata:
     vitest:
       optional: true
   checksum: d96e552cfe5a72fa0a4c21655a9fabe6ffce6a066323c8a0f5847f39ff88229cd2455c9af41d3381b672d65469e74752d29e35dd04c15d8241a9f6a1e7cb78c6
-  languageName: node
-  linkType: hard
-
-"@testing-library/jest-dom@npm:^6.1.4":
-  version: 6.1.5
-  resolution: "@testing-library/jest-dom@npm:6.1.5"
-  dependencies:
-    "@adobe/css-tools": "npm:^4.3.1"
-    "@babel/runtime": "npm:^7.9.2"
-    aria-query: "npm:^5.0.0"
-    chalk: "npm:^3.0.0"
-    css.escape: "npm:^1.5.1"
-    dom-accessibility-api: "npm:^0.5.6"
-    lodash: "npm:^4.17.15"
-    redent: "npm:^3.0.0"
-  peerDependencies:
-    "@jest/globals": ">= 28"
-    "@types/jest": ">= 28"
-    jest: ">= 28"
-    vitest: ">= 0.32"
-  peerDependenciesMeta:
-    "@jest/globals":
-      optional: true
-    "@types/jest":
-      optional: true
-    jest:
-      optional: true
-    vitest:
-      optional: true
-  checksum: 3bc45dc9cb6dc49134e79ef636612b8639014bdd8c85c3741a78a92345147d03f9efeefc2f02ad306764a62f8c236b0e0ef3d5a68c16af1c51887be45d253f6b
->>>>>>> 4980335 (chore: storybook main 파일 수정)
   languageName: node
   linkType: hard
 
@@ -5688,11 +5398,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:^20, @types/node@npm:^20.10.0, @types/node@npm:^20.10.4":
-  version: 20.11.7
-  resolution: "@types/node@npm:20.11.7"
+  version: 20.11.8
+  resolution: "@types/node@npm:20.11.8"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: ff0428c093987f1f6e3400b91450077cf006d7f0e4ff316e20636218562c53761565ceb06bd7a161badf46e6884d78b554c7b1c3a7717cf5cb8c97f461ecd754
+  checksum: 09aceafd6f2a0aa4b22081cd23e66193cf9032f627cf30b94db76a16cbce9e758fa6e9cc118c46678b9520764d1915d89be5d5df5049b2dcf1d5f79e3a350586
   languageName: node
   linkType: hard
 
@@ -6035,11 +5745,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@typescript-eslint/utils@npm:^5.62.0":
-=======
-"@typescript-eslint/utils@npm:^5.45.0, @typescript-eslint/utils@npm:^5.54.0":
->>>>>>> db802e0 (chore: build storybook 명령어 추가)
+"@typescript-eslint/utils@npm:^5.45.0, @typescript-eslint/utils@npm:^5.62.0":
   version: 5.62.0
   resolution: "@typescript-eslint/utils@npm:5.62.0"
   dependencies:
@@ -6094,8 +5800,8 @@ __metadata:
   linkType: hard
 
 "@vanilla-extract/css@npm:^1.14.0":
-  version: 1.14.0
-  resolution: "@vanilla-extract/css@npm:1.14.0"
+  version: 1.14.1
+  resolution: "@vanilla-extract/css@npm:1.14.1"
   dependencies:
     "@emotion/hash": "npm:^0.9.0"
     "@vanilla-extract/private": "npm:^1.0.3"
@@ -6108,7 +5814,7 @@ __metadata:
     media-query-parser: "npm:^2.0.2"
     modern-ahocorasick: "npm:^1.0.0"
     outdent: "npm:^0.8.0"
-  checksum: b708fa88705c72db4a4ed5246247910ca0297a6ef1edb3c64aa1ace3d4aee4bb739afcf5cf190ea4398f800aa96586c4ed4013b794924afa851b68723655cfb5
+  checksum: 7ecdddfc6d24e80ee43496577294b580c71fa6fdbaa022c91930abf0dbe0923dd3f886e452b1f5ebe12dbfb61b080a5e3ef8939a897bf5b5e0dd8c93f04267f0
   languageName: node
   linkType: hard
 
@@ -6121,7 +5827,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vanilla-extract/integration@npm:^6.2.5, @vanilla-extract/integration@npm:^6.3.0":
+"@vanilla-extract/integration@npm:^6.3.0":
   version: 6.3.0
   resolution: "@vanilla-extract/integration@npm:6.3.0"
   dependencies:
@@ -6153,13 +5859,13 @@ __metadata:
   linkType: hard
 
 "@vanilla-extract/next-plugin@npm:^2.3.2":
-  version: 2.3.3
-  resolution: "@vanilla-extract/next-plugin@npm:2.3.3"
+  version: 2.3.4
+  resolution: "@vanilla-extract/next-plugin@npm:2.3.4"
   dependencies:
-    "@vanilla-extract/webpack-plugin": "npm:^2.3.2"
+    "@vanilla-extract/webpack-plugin": "npm:^2.3.3"
   peerDependencies:
     next: ">=12.1.7"
-  checksum: fbcdec5397ac82bc22668707e12ad2dfe2f0ef5ead1c28f104b54fd85092221d4b9cca47e4f45cda927d2ad6e2f5df857596394584ede8e784e398e14cd101b6
+  checksum: 4271080b566b6351076b86e342cca8264afe4474678e24e535ca57148dab28ad88c08e54c9cab36256b9f7392ad58376d888d2d679993a7490a94a54c01e70f9
   languageName: node
   linkType: hard
 
@@ -6188,17 +5894,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vanilla-extract/webpack-plugin@npm:^2.3.1, @vanilla-extract/webpack-plugin@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "@vanilla-extract/webpack-plugin@npm:2.3.2"
+"@vanilla-extract/webpack-plugin@npm:^2.3.1, @vanilla-extract/webpack-plugin@npm:^2.3.3":
+  version: 2.3.3
+  resolution: "@vanilla-extract/webpack-plugin@npm:2.3.3"
   dependencies:
-    "@vanilla-extract/integration": "npm:^6.2.5"
+    "@vanilla-extract/integration": "npm:^6.3.0"
     chalk: "npm:^4.1.1"
     debug: "npm:^4.3.1"
     loader-utils: "npm:^2.0.0"
   peerDependencies:
     webpack: ^4.30.0 || ^5.20.2
-  checksum: e91203b8bfba0fef7398bdcf58a338fa469a60d9447ba48cc9a312b33e31ffa9be183af15cc6d2cfda9c026c9d88de0169366f8f04ffac07a83fe04341102cb9
+  checksum: 5fe0f3337af1b121f3715c20fb66b305f09c0b37f346054b93dad4893a22d5c9f84d5ff1d670e416b1164096327c6d80162f6b73b2ce2e1b48382c926365272f
   languageName: node
   linkType: hard
 
@@ -7569,9 +7275,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001406, caniuse-lite@npm:^1.0.30001579, caniuse-lite@npm:^1.0.30001580":
-  version: 1.0.30001580
-  resolution: "caniuse-lite@npm:1.0.30001580"
-  checksum: b626d25d792c766383a47c9efe1384f7d3c3b23e0ee70bf121e8b3a628806a96a21def16a44e58b75f4a5e23b5e008f51c2cc1e8be477b8c8d9493dcc170dd0e
+  version: 1.0.30001581
+  resolution: "caniuse-lite@npm:1.0.30001581"
+  checksum: c2d049514e6af5e9a9b23646b7828191f4c2d3ef1ad999d3efe02683d56d0067d616e2eadb055fe5477f870b22e7252dc09834f95007c95f310d8eca30cfa912
   languageName: node
   linkType: hard
 
@@ -7692,8 +7398,8 @@ __metadata:
   linkType: hard
 
 "chromatic@npm:^10.6.0":
-  version: 10.6.0
-  resolution: "chromatic@npm:10.6.0"
+  version: 10.6.1
+  resolution: "chromatic@npm:10.6.1"
   peerDependencies:
     chromatic-cypress: ^0.4.0 || ^1.0.0
     chromatic-playwright: ^0.4.0 || ^1.0.0
@@ -7706,7 +7412,7 @@ __metadata:
     chroma: dist/bin.js
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
-  checksum: 0831a692eb98799b7f9fc6b13888c265966bb60d67872d717f4dd73aa90d20bcd7847910bd4561c828d12bfa8ada7ba020fe17393b1d80bb64ad8ab75e556d71
+  checksum: 59716d191b91adfe9decf4e4c87c33059f598157f3a2121833836cca8c2099341e1af0be4563b5c31b6eb1167e293d214acae736d11930968358a6015cdc9b53
   languageName: node
   linkType: hard
 
@@ -8346,25 +8052,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-loader@npm:^6.7.1, css-loader@npm:^6.7.3":
-  version: 6.9.1
-  resolution: "css-loader@npm:6.9.1"
-  dependencies:
-    icss-utils: "npm:^5.1.0"
-    postcss: "npm:^8.4.33"
-    postcss-modules-extract-imports: "npm:^3.0.0"
-    postcss-modules-local-by-default: "npm:^4.0.4"
-    postcss-modules-scope: "npm:^3.1.1"
-    postcss-modules-values: "npm:^4.0.0"
-    postcss-value-parser: "npm:^4.2.0"
-    semver: "npm:^7.5.4"
-  peerDependencies:
-    webpack: ^5.0.0
-  checksum: 6f897406188ed7f6db03daab0602ed86df1e967b48a048ab72d0ee223e59ab9e13c5235481b12deb79e12aadf0be43bc3bdee71e1dc1e875e4bcd91c05b464af
-  languageName: node
-  linkType: hard
-
-"css-loader@npm:^6.9.1":
+"css-loader@npm:^6.7.1, css-loader@npm:^6.7.3, css-loader@npm:^6.9.1":
   version: 6.9.1
   resolution: "css-loader@npm:6.9.1"
   dependencies:
@@ -10549,17 +10237,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
 "get-east-asian-width@npm:^1.0.0":
   version: 1.2.0
   resolution: "get-east-asian-width@npm:1.2.0"
   checksum: c9b280e7c7c67fb89fa17e867c4a9d1c9f1321aba2a9ee27bff37fb6ca9552bccda328c70a80c1f83a0e39ba1b7e3427e60f47823402d19e7a41b83417ec047a
-=======
+  languageName: node
+  linkType: hard
+
 "get-func-name@npm:^2.0.1, get-func-name@npm:^2.0.2":
   version: 2.0.2
   resolution: "get-func-name@npm:2.0.2"
   checksum: 3f62f4c23647de9d46e6f76d2b3eafe58933a9b3830c60669e4180d6c601ce1b4aa310ba8366143f55e52b139f992087a9f0647274e8745621fa2af7e0acf13b
->>>>>>> 4980335 (chore: storybook main 파일 수정)
   languageName: node
   linkType: hard
 
@@ -14679,36 +14367,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"postcss-modules-scope@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "postcss-modules-scope@npm:3.1.1"
-=======
-"postcss-modules-local-by-default@npm:^4.0.4":
-  version: 4.0.4
-  resolution: "postcss-modules-local-by-default@npm:4.0.4"
-  dependencies:
-    icss-utils: "npm:^5.0.0"
-    postcss-selector-parser: "npm:^6.0.2"
-    postcss-value-parser: "npm:^4.1.0"
-  peerDependencies:
-    postcss: ^8.1.0
-  checksum: 45790af417b2ed6ed26e9922724cf3502569995833a2489abcfc2bb44166096762825cc02f6132cc6a2fb235165e76b859f9d90e8a057bc188a1b2c17f2d7af0
-  languageName: node
-  linkType: hard
-
-"postcss-modules-scope@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "postcss-modules-scope@npm:3.0.0"
->>>>>>> 4980335 (chore: storybook main 파일 수정)
-  dependencies:
-    postcss-selector-parser: "npm:^6.0.4"
-  peerDependencies:
-    postcss: ^8.1.0
-  checksum: ca035969eba62cf126864b10d7722e49c0d4f050cbd4618b6e9714d81b879cf4c53a5682501e00f9622e8f4ea6d7d7d53af295ae935fa833e0cc0bda416a287b
-  languageName: node
-  linkType: hard
-
 "postcss-modules-scope@npm:^3.1.1":
   version: 3.1.1
   resolution: "postcss-modules-scope@npm:3.1.1"
@@ -14759,11 +14417,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
 "postcss@npm:^8.2.14, postcss@npm:^8.4.21, postcss@npm:^8.4.32, postcss@npm:^8.4.33":
-=======
-"postcss@npm:^8.4.33":
->>>>>>> 4980335 (chore: storybook main 파일 수정)
   version: 8.4.33
   resolution: "postcss@npm:8.4.33"
   dependencies:
@@ -16235,7 +15889,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
 "sirv@npm:^2.0.3":
   version: 2.0.4
   resolution: "sirv@npm:2.0.4"
@@ -16244,16 +15897,6 @@ __metadata:
     mrmime: "npm:^2.0.0"
     totalist: "npm:^3.0.0"
   checksum: 24f42cf06895017e589c9d16fc3f1c6c07fe8b0dbafce8a8b46322cfba67b7f2498610183954cb0e9d089c8cb60002a7ee7e8bca6a91a0d7042bfbc3473c95c3
-=======
-"sirv@npm:^1.0.7":
-  version: 1.0.19
-  resolution: "sirv@npm:1.0.19"
-  dependencies:
-    "@polka/url": "npm:^1.0.0-next.20"
-    mrmime: "npm:^1.0.0"
-    totalist: "npm:^1.0.0"
-  checksum: b6833ab4d41f5e449ffcb4d89caac45d97de4b246f984f9b9fa86a0107689562c22d24788b533a58a10cf2cfcebb7e6c678ffa84ac7d3392fca9d18b1bd7ee05
->>>>>>> 4980335 (chore: storybook main 파일 수정)
   languageName: node
   linkType: hard
 
@@ -16479,11 +16122,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"storybook@npm:^7.5.3":
-=======
 "storybook@npm:^7.6.10":
->>>>>>> 4980335 (chore: storybook main 파일 수정)
   version: 7.6.10
   resolution: "storybook@npm:7.6.10"
   dependencies:
@@ -17046,15 +16685,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-=======
-"tiny-warning@npm:^1.0.0":
-  version: 1.0.3
-  resolution: "tiny-warning@npm:1.0.3"
-  checksum: da62c4acac565902f0624b123eed6dd3509bc9a8d30c06e017104bedcf5d35810da8ff72864400ad19c5c7806fc0a8323c68baf3e326af7cb7d969f846100d71
-  languageName: node
-  linkType: hard
-
 "tinyspy@npm:^2.1.1":
   version: 2.2.0
   resolution: "tinyspy@npm:2.2.0"
@@ -17062,14 +16692,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"titleize@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "titleize@npm:3.0.0"
-  checksum: 71fbbeabbfb36ccd840559f67f21e356e1d03da2915b32d2ae1a60ddcc13a124be2739f696d2feb884983441d159a18649e8d956648d591bdad35c430a6b6d28
-  languageName: node
-  linkType: hard
-
->>>>>>> 4980335 (chore: storybook main 파일 수정)
 "tmp@npm:^0.0.33":
   version: 0.0.33
   resolution: "tmp@npm:0.0.33"

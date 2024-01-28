@@ -66,7 +66,7 @@ const RAW_RUNTIME_STATE =
           ["@linker/eslint-config", "workspace:packages/eslint-config"],\
           ["@linker/eslint-plugin", "workspace:packages/eslint-plugin"],\
           ["@tanstack/eslint-plugin-query", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:5.17.22"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/prettier", "npm:3.0.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:5150ddf72639c78026dd42fb70c98db909b5b4705d92e6f4c006404aac57f9ed11b6f4301fb318563ae47c142354f07129b31abbd0e3a58319a40761e044e693#npm:6.19.1"],\
           ["@typescript-eslint/parser", "virtual:5150ddf72639c78026dd42fb70c98db909b5b4705d92e6f4c006404aac57f9ed11b6f4301fb318563ae47c142354f07129b31abbd0e3a58319a40761e044e693#npm:6.19.1"],\
@@ -111,7 +111,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@ampproject/remapping", "npm:2.2.1"],\
           ["@jridgewell/gen-mapping", "npm:0.3.3"],\
-          ["@jridgewell/trace-mapping", "npm:0.3.22"]\
+          ["@jridgewell/trace-mapping", "npm:0.3.20"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -177,7 +177,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/generator", "npm:7.23.6"],\
           ["@babel/types", "npm:7.23.9"],\
           ["@jridgewell/gen-mapping", "npm:0.3.3"],\
-          ["@jridgewell/trace-mapping", "npm:0.3.22"],\
+          ["@jridgewell/trace-mapping", "npm:0.3.20"],\
           ["jsesc", "npm:2.5.2"]\
         ],\
         "linkType": "HARD"\
@@ -247,29 +247,17 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-<<<<<<< HEAD
       ["virtual:c3988d475ffc64032a37ae9d885b13614675308614696b7b3152a62faf8574e48a0ffb1a81df83d4baa408e0e22a048895e7c93bac316159613516d3009c92d3#npm:7.23.9", {\
         "packageLocation": "./.yarn/__virtual__/@babel-helper-create-class-features-plugin-virtual-6419018e6f/0/cache/@babel-helper-create-class-features-plugin-npm-7.23.9-369c030eff-91c8aa8888.zip/node_modules/@babel/helper-create-class-features-plugin/",\
         "packageDependencies": [\
           ["@babel/helper-create-class-features-plugin", "virtual:c3988d475ffc64032a37ae9d885b13614675308614696b7b3152a62faf8574e48a0ffb1a81df83d4baa408e0e22a048895e7c93bac316159613516d3009c92d3#npm:7.23.9"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:2eba077f1013f2bc0b87930fdda737a2e2175e11fa4e8cf6190b2bd1b96b0017902baba188b2f837b8be1a14f7d92f4dac5835c86aacae297882d9e63b6a3cba#npm:7.23.5", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-helper-create-class-features-plugin-virtual-9538590e19/0/cache/@babel-helper-create-class-features-plugin-npm-7.23.5-8ef9fe9a4a-cd951e81b6.zip/node_modules/@babel/helper-create-class-features-plugin/",\
-        "packageDependencies": [\
-          ["@babel/helper-create-class-features-plugin", "virtual:2eba077f1013f2bc0b87930fdda737a2e2175e11fa4e8cf6190b2bd1b96b0017902baba188b2f837b8be1a14f7d92f4dac5835c86aacae297882d9e63b6a3cba#npm:7.23.5"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-annotate-as-pure", "npm:7.22.5"],\
           ["@babel/helper-environment-visitor", "npm:7.22.20"],\
           ["@babel/helper-function-name", "npm:7.23.0"],\
           ["@babel/helper-member-expression-to-functions", "npm:7.23.0"],\
           ["@babel/helper-optimise-call-expression", "npm:7.22.5"],\
-<<<<<<< HEAD
           ["@babel/helper-replace-supers", "virtual:6419018e6f5738f3e8a27647d887746f52bfbbd74b1e5788aadfe74c78272534cdebd1be88b0253bc8b9b2ec5aed7ee6ec1adb714bf088a7f8a7b392ce5a75c9#npm:7.22.20"],\
-=======
-          ["@babel/helper-replace-supers", "virtual:9538590e196fe5a71a435e7cc2a23de5ac409b21b056f42f8116fc5062213d8fd271531b4f2c78461aa12605e63d00a7d4760c2cb45b8075f309ca7099334df4#npm:7.22.20"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-skip-transparent-expression-wrappers", "npm:7.22.5"],\
           ["@babel/helper-split-export-declaration", "npm:7.22.6"],\
           ["@types/babel__core", null],\
@@ -306,19 +294,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-<<<<<<< HEAD
       ["virtual:2fdf0f6dec1f774861eefdc0744259bead28180c5299eb787decdcf3ca5a9b1680ba4ca0fdc969eb2f108d0aa3110dfb0bd7774507887aa85ac24fd519574190#npm:7.22.15", {\
         "packageLocation": "./.yarn/__virtual__/@babel-helper-create-regexp-features-plugin-virtual-446b1bd4e6/0/cache/@babel-helper-create-regexp-features-plugin-npm-7.22.15-5f0e03b865-886b675e82.zip/node_modules/@babel/helper-create-regexp-features-plugin/",\
         "packageDependencies": [\
           ["@babel/helper-create-regexp-features-plugin", "virtual:2fdf0f6dec1f774861eefdc0744259bead28180c5299eb787decdcf3ca5a9b1680ba4ca0fdc969eb2f108d0aa3110dfb0bd7774507887aa85ac24fd519574190#npm:7.22.15"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:acd1a85ebde12ca2b2017d1393013c7efda4d4a1a2e88353ba1c4e7091561cd984fe571817363abe92bc40fa26c98e878605734dcb69633fd7c4d0718ff1a207#npm:7.22.15", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-helper-create-regexp-features-plugin-virtual-da01de8032/0/cache/@babel-helper-create-regexp-features-plugin-npm-7.22.15-5f0e03b865-886b675e82.zip/node_modules/@babel/helper-create-regexp-features-plugin/",\
-        "packageDependencies": [\
-          ["@babel/helper-create-regexp-features-plugin", "virtual:acd1a85ebde12ca2b2017d1393013c7efda4d4a1a2e88353ba1c4e7091561cd984fe571817363abe92bc40fa26c98e878605734dcb69633fd7c4d0718ff1a207#npm:7.22.15"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-annotate-as-pure", "npm:7.22.5"],\
           ["@types/babel__core", null],\
           ["regexpu-core", "npm:5.3.2"],\
@@ -357,21 +337,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-<<<<<<< HEAD
       ["virtual:b80dd2354b2f965b863a22584b1680f36051ee3550f1a5771b04e49e8e868b705ff4524070c15c0f2e6180f42b47ee43489c52dbc70acef9c58c5ffcfc80e85f#npm:0.5.0", {\
         "packageLocation": "./.yarn/__virtual__/@babel-helper-define-polyfill-provider-virtual-8f3f225f4b/0/cache/@babel-helper-define-polyfill-provider-npm-0.5.0-f9749c8844-f849e816ec.zip/node_modules/@babel/helper-define-polyfill-provider/",\
         "packageDependencies": [\
           ["@babel/helper-define-polyfill-provider", "virtual:b80dd2354b2f965b863a22584b1680f36051ee3550f1a5771b04e49e8e868b705ff4524070c15c0f2e6180f42b47ee43489c52dbc70acef9c58c5ffcfc80e85f#npm:0.5.0"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-compilation-targets", "npm:7.23.6"],\
-=======
-      ["virtual:77246024c7ffe8808227a0b4c41458bb82c25c7f0a8ecf7620b7d1565dc1f28dff14cfb8a000784728451444cac1361516ba9c347e676386796ffb54609e41ed#npm:0.4.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-helper-define-polyfill-provider-virtual-d30937e753/0/cache/@babel-helper-define-polyfill-provider-npm-0.4.3-d83b051e74-9ab9d6a2cf.zip/node_modules/@babel/helper-define-polyfill-provider/",\
-        "packageDependencies": [\
-          ["@babel/helper-define-polyfill-provider", "virtual:77246024c7ffe8808227a0b4c41458bb82c25c7f0a8ecf7620b7d1565dc1f28dff14cfb8a000784728451444cac1361516ba9c347e676386796ffb54609e41ed#npm:0.4.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-compilation-targets", "npm:7.22.15"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", null],\
           ["debug", "virtual:1ff4b5f90832ba0a9c93ba1223af226e44ba70c1126a3740d93562b97bc36544e896a5e95908196f7458713e6a6089a34bfc67362fc6df7fa093bd06c878be47#npm:4.3.4"],\
@@ -523,19 +494,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-<<<<<<< HEAD
       ["virtual:8077d29e865674ff5d419002645c45850ead9a1de2c0604313d15dd16d58117c0fcd292e97a00808657bc6a1d984fca8ee5f02200ecb5f25b44670e31b33ebd0#npm:7.22.20", {\
         "packageLocation": "./.yarn/__virtual__/@babel-helper-remap-async-to-generator-virtual-83aa02b8d6/0/cache/@babel-helper-remap-async-to-generator-npm-7.22.20-86fe82a5c7-2fe6300a6f.zip/node_modules/@babel/helper-remap-async-to-generator/",\
         "packageDependencies": [\
           ["@babel/helper-remap-async-to-generator", "virtual:8077d29e865674ff5d419002645c45850ead9a1de2c0604313d15dd16d58117c0fcd292e97a00808657bc6a1d984fca8ee5f02200ecb5f25b44670e31b33ebd0#npm:7.22.20"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:707ff5f2ed2e1cfcb4ea1f6eb3f30938ac491162c80353c135ed82e53b3e7a49033cb3fd42c481f8b4d260c50947adbb0a96dc2c1b1deb4cd9f690aa470942f5#npm:7.22.20", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-helper-remap-async-to-generator-virtual-99ae745692/0/cache/@babel-helper-remap-async-to-generator-npm-7.22.20-86fe82a5c7-2fe6300a6f.zip/node_modules/@babel/helper-remap-async-to-generator/",\
-        "packageDependencies": [\
-          ["@babel/helper-remap-async-to-generator", "virtual:707ff5f2ed2e1cfcb4ea1f6eb3f30938ac491162c80353c135ed82e53b3e7a49033cb3fd42c481f8b4d260c50947adbb0a96dc2c1b1deb4cd9f690aa470942f5#npm:7.22.20"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-annotate-as-pure", "npm:7.22.5"],\
           ["@babel/helper-environment-visitor", "npm:7.22.20"],\
           ["@babel/helper-wrap-function", "npm:7.22.20"],\
@@ -556,19 +519,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:597cbfb42c5ef9aa72061a03025a1e0e03519f523ab548bcb761a86803aeb9204e96631dd0e7ad27beacd87faf3751b39d52100b04bb908b1b710b5998cd9578#npm:7.22.20", {\
         "packageLocation": "./.yarn/__virtual__/@babel-helper-replace-supers-virtual-29a4e15a5b/0/cache/@babel-helper-replace-supers-npm-7.22.20-7e1aa74118-617666f57b.zip/node_modules/@babel/helper-replace-supers/",\
         "packageDependencies": [\
           ["@babel/helper-replace-supers", "virtual:597cbfb42c5ef9aa72061a03025a1e0e03519f523ab548bcb761a86803aeb9204e96631dd0e7ad27beacd87faf3751b39d52100b04bb908b1b710b5998cd9578#npm:7.22.20"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:9538590e196fe5a71a435e7cc2a23de5ac409b21b056f42f8116fc5062213d8fd271531b4f2c78461aa12605e63d00a7d4760c2cb45b8075f309ca7099334df4#npm:7.22.20", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-helper-replace-supers-virtual-926631b593/0/cache/@babel-helper-replace-supers-npm-7.22.20-7e1aa74118-617666f57b.zip/node_modules/@babel/helper-replace-supers/",\
-        "packageDependencies": [\
-          ["@babel/helper-replace-supers", "virtual:9538590e196fe5a71a435e7cc2a23de5ac409b21b056f42f8116fc5062213d8fd271531b4f2c78461aa12605e63d00a7d4760c2cb45b8075f309ca7099334df4#npm:7.22.20"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-environment-visitor", "npm:7.22.20"],\
           ["@babel/helper-member-expression-to-functions", "npm:7.23.0"],\
           ["@babel/helper-optimise-call-expression", "npm:7.22.5"],\
@@ -708,19 +663,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-bugfix-safari-id-destructuring-collision-in-function-expression-virtual-d6689d8639/0/cache/@babel-plugin-bugfix-safari-id-destructuring-collision-in-function-expression-npm-7.23.3-a51815aae0-ddbaf2c396.zip/node_modules/@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression/",\
         "packageDependencies": [\
           ["@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-bugfix-safari-id-destructuring-collision-in-function-expression-virtual-2404efa120/0/cache/@babel-plugin-bugfix-safari-id-destructuring-collision-in-function-expression-npm-7.23.3-a51815aae0-ddbaf2c396.zip/node_modules/@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression/",\
-        "packageDependencies": [\
-          ["@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -753,7 +700,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-bugfix-v8-spread-parameters-in-optional-chaining-virtual-d92dc3b7c8/0/cache/@babel-plugin-bugfix-v8-spread-parameters-in-optional-chaining-npm-7.23.3-52e94f4fb6-434b9d710a.zip/node_modules/@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining/",\
         "packageDependencies": [\
@@ -763,17 +709,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-skip-transparent-expression-wrappers", "npm:7.22.5"],\
           ["@babel/plugin-transform-optional-chaining", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4"],\
           ["@types/babel__core", "npm:7.20.5"]\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-bugfix-v8-spread-parameters-in-optional-chaining-virtual-42d1e1e690/0/cache/@babel-plugin-bugfix-v8-spread-parameters-in-optional-chaining-npm-7.23.3-52e94f4fb6-434b9d710a.zip/node_modules/@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining/",\
-        "packageDependencies": [\
-          ["@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-          ["@babel/helper-skip-transparent-expression-wrappers", "npm:7.22.5"],\
-          ["@babel/plugin-transform-optional-chaining", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@types/babel__core", null]\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -806,19 +741,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.7", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-bugfix-v8-static-class-fields-redefine-readonly-virtual-7cb82e2a5c/0/cache/@babel-plugin-bugfix-v8-static-class-fields-redefine-readonly-npm-7.23.7-2ad104f28d-3b0c9554cd.zip/node_modules/@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly/",\
         "packageDependencies": [\
           ["@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.7"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-bugfix-v8-static-class-fields-redefine-readonly-virtual-93d8ba5c55/0/cache/@babel-plugin-bugfix-v8-static-class-fields-redefine-readonly-npm-7.23.3-8e374e50d5-6e13f14949.zip/node_modules/@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly/",\
-        "packageDependencies": [\
-          ["@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-environment-visitor", "npm:7.22.20"],\
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
@@ -853,21 +780,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.21.0-placeholder-for-preset-env.2", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-proposal-private-property-in-object-virtual-586c577e0b/0/cache/@babel-plugin-proposal-private-property-in-object-npm-7.21.0-placeholder-for-preset-env.2-eb70026c88-fab70f399a.zip/node_modules/@babel/plugin-proposal-private-property-in-object/",\
         "packageDependencies": [\
           ["@babel/plugin-proposal-private-property-in-object", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.21.0-placeholder-for-preset-env.2"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@types/babel__core", "npm:7.20.5"]\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.21.0-placeholder-for-preset-env.2", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-proposal-private-property-in-object-virtual-1fcdb978db/0/cache/@babel-plugin-proposal-private-property-in-object-npm-7.21.0-placeholder-for-preset-env.2-eb70026c88-fab70f399a.zip/node_modules/@babel/plugin-proposal-private-property-in-object/",\
-        "packageDependencies": [\
-          ["@babel/plugin-proposal-private-property-in-object", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.21.0-placeholder-for-preset-env.2"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@types/babel__core", null]\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -1008,19 +926,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.14.5", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-class-static-block-virtual-8bc0c19fa3/0/cache/@babel-plugin-syntax-class-static-block-npm-7.14.5-7bdd0ff1b3-3e80814b5b.zip/node_modules/@babel/plugin-syntax-class-static-block/",\
         "packageDependencies": [\
           ["@babel/plugin-syntax-class-static-block", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.14.5"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.14.5", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-class-static-block-virtual-9d7415250b/0/cache/@babel-plugin-syntax-class-static-block-npm-7.14.5-7bdd0ff1b3-3e80814b5b.zip/node_modules/@babel/plugin-syntax-class-static-block/",\
-        "packageDependencies": [\
-          ["@babel/plugin-syntax-class-static-block", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.14.5"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -1053,19 +963,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.8.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-dynamic-import-virtual-a1f8881fbe/0/cache/@babel-plugin-syntax-dynamic-import-npm-7.8.3-fb9ff5634a-ce307af83c.zip/node_modules/@babel/plugin-syntax-dynamic-import/",\
         "packageDependencies": [\
           ["@babel/plugin-syntax-dynamic-import", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.8.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.8.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-dynamic-import-virtual-eb1c3bc69c/0/cache/@babel-plugin-syntax-dynamic-import-npm-7.8.3-fb9ff5634a-ce307af83c.zip/node_modules/@babel/plugin-syntax-dynamic-import/",\
-        "packageDependencies": [\
-          ["@babel/plugin-syntax-dynamic-import", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.8.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -1098,19 +1000,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.8.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-export-namespace-from-virtual-5a2bfdc466/0/cache/@babel-plugin-syntax-export-namespace-from-npm-7.8.3-1747201aa9-85740478be.zip/node_modules/@babel/plugin-syntax-export-namespace-from/",\
         "packageDependencies": [\
           ["@babel/plugin-syntax-export-namespace-from", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.8.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.8.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-export-namespace-from-virtual-8e6dac31ac/0/cache/@babel-plugin-syntax-export-namespace-from-npm-7.8.3-1747201aa9-85740478be.zip/node_modules/@babel/plugin-syntax-export-namespace-from/",\
-        "packageDependencies": [\
-          ["@babel/plugin-syntax-export-namespace-from", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.8.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -1143,7 +1037,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:8430ea66aa2fe5610b37fb4ad045a6ebcfc98a53f5d0665ba2d27d6a594882fa18fa076a741c8299dfb22dbb6d19a331894883907c37c2e3c4b0000f213e32e2#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-flow-virtual-952173bd70/0/cache/@babel-plugin-syntax-flow-npm-7.23.3-a878cc6a46-c6e6f355d6.zip/node_modules/@babel/plugin-syntax-flow/",\
         "packageDependencies": [\
@@ -1151,30 +1044,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", null]\
-        ],\
-        "packagePeers": [\
-          "@babel/core",\
-          "@types/babel__core"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-<<<<<<< HEAD
-      ["virtual:9f192f2ac31f449df6cb60ac1614b3c4eb764cbd4af35b2cf2ba72ca58fbb92101348f8a804fc56d38e9b15d703e682cb59a11a9c3cce3e4aabbb8118460f9b7#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-flow-virtual-293844c4c4/0/cache/@babel-plugin-syntax-flow-npm-7.23.3-a878cc6a46-c6e6f355d6.zip/node_modules/@babel/plugin-syntax-flow/",\
-        "packageDependencies": [\
-          ["@babel/plugin-syntax-flow", "virtual:9f192f2ac31f449df6cb60ac1614b3c4eb764cbd4af35b2cf2ba72ca58fbb92101348f8a804fc56d38e9b15d703e682cb59a11a9c3cce3e4aabbb8118460f9b7#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.9"],\
-=======
-=======
->>>>>>> efb9948 (chore: remove storybook/react-webpack5)
-      ["virtual:8430ea66aa2fe5610b37fb4ad045a6ebcfc98a53f5d0665ba2d27d6a594882fa18fa076a741c8299dfb22dbb6d19a331894883907c37c2e3c4b0000f213e32e2#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-flow-virtual-952173bd70/0/cache/@babel-plugin-syntax-flow-npm-7.23.3-a878cc6a46-c6e6f355d6.zip/node_modules/@babel/plugin-syntax-flow/",\
-        "packageDependencies": [\
-          ["@babel/plugin-syntax-flow", "virtual:8430ea66aa2fe5610b37fb4ad045a6ebcfc98a53f5d0665ba2d27d6a594882fa18fa076a741c8299dfb22dbb6d19a331894883907c37c2e3c4b0000f213e32e2#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
-          ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-          ["@types/babel__core", "npm:7.20.5"]\
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -1191,19 +1060,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-assertions-virtual-7319c6fc1b/0/cache/@babel-plugin-syntax-import-assertions-npm-7.23.3-ccd90cbe78-883e6b35b2.zip/node_modules/@babel/plugin-syntax-import-assertions/",\
         "packageDependencies": [\
           ["@babel/plugin-syntax-import-assertions", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-assertions-virtual-b62b3e170b/0/cache/@babel-plugin-syntax-import-assertions-npm-7.23.3-ccd90cbe78-883e6b35b2.zip/node_modules/@babel/plugin-syntax-import-assertions/",\
-        "packageDependencies": [\
-          ["@babel/plugin-syntax-import-assertions", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -1236,19 +1097,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-attributes-virtual-30f4565cbe/0/cache/@babel-plugin-syntax-import-attributes-npm-7.23.3-066c86a5e0-9aed7661ff.zip/node_modules/@babel/plugin-syntax-import-attributes/",\
         "packageDependencies": [\
           ["@babel/plugin-syntax-import-attributes", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-attributes-virtual-172b1be07f/0/cache/@babel-plugin-syntax-import-attributes-npm-7.23.3-066c86a5e0-9aed7661ff.zip/node_modules/@babel/plugin-syntax-import-attributes/",\
-        "packageDependencies": [\
-          ["@babel/plugin-syntax-import-attributes", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -1614,19 +1467,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.14.5", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-private-property-in-object-virtual-33bfcdcc2f/0/cache/@babel-plugin-syntax-private-property-in-object-npm-7.14.5-ee837fdbb2-b317174783.zip/node_modules/@babel/plugin-syntax-private-property-in-object/",\
         "packageDependencies": [\
           ["@babel/plugin-syntax-private-property-in-object", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.14.5"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.14.5", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-private-property-in-object-virtual-a086ebb962/0/cache/@babel-plugin-syntax-private-property-in-object-npm-7.14.5-ee837fdbb2-b317174783.zip/node_modules/@babel/plugin-syntax-private-property-in-object/",\
-        "packageDependencies": [\
-          ["@babel/plugin-syntax-private-property-in-object", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.14.5"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -1733,21 +1578,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.18.6", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-unicode-sets-regex-virtual-002c1f8542/0/cache/@babel-plugin-syntax-unicode-sets-regex-npm-7.18.6-b618a36bfd-a651d700fe.zip/node_modules/@babel/plugin-syntax-unicode-sets-regex/",\
         "packageDependencies": [\
           ["@babel/plugin-syntax-unicode-sets-regex", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.18.6"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-create-regexp-features-plugin", "virtual:002c1f85422a8fdb3fd4c1b97e20135495055cf7d170e638437f9c82f744676940f92f11f974f0cc006126b8db89597626e5b9d52df364cde9279231efed0b60#npm:7.22.15"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.18.6", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-unicode-sets-regex-virtual-acd1a85ebd/0/cache/@babel-plugin-syntax-unicode-sets-regex-npm-7.18.6-b618a36bfd-a651d700fe.zip/node_modules/@babel/plugin-syntax-unicode-sets-regex/",\
-        "packageDependencies": [\
-          ["@babel/plugin-syntax-unicode-sets-regex", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.18.6"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-create-regexp-features-plugin", "virtual:acd1a85ebde12ca2b2017d1393013c7efda4d4a1a2e88353ba1c4e7091561cd984fe571817363abe92bc40fa26c98e878605734dcb69633fd7c4d0718ff1a207#npm:7.22.15"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -1781,19 +1617,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-arrow-functions-virtual-840f5f1505/0/cache/@babel-plugin-transform-arrow-functions-npm-7.23.3-075e670a22-1e99118176.zip/node_modules/@babel/plugin-transform-arrow-functions/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-arrow-functions", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-arrow-functions-virtual-1c7d539d8b/0/cache/@babel-plugin-transform-arrow-functions-npm-7.23.3-075e670a22-1e99118176.zip/node_modules/@babel/plugin-transform-arrow-functions/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-arrow-functions", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -1826,7 +1654,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.9", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-async-generator-functions-virtual-1b5aca9460/0/cache/@babel-plugin-transform-async-generator-functions-npm-7.23.9-190920332d-d402494087.zip/node_modules/@babel/plugin-transform-async-generator-functions/",\
         "packageDependencies": [\
@@ -1837,18 +1664,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-remap-async-to-generator", "virtual:1b5aca9460bd2f94b925ab53193ec4257d161d67759f3be889888f185fdb8fdcd78328aa5f787e32dbf619935e14687744e3dfbed0fb5fb900ef93756dac5a25#npm:7.22.20"],\
           ["@babel/plugin-syntax-async-generators", "virtual:cb8d570790ac6a1173685de7a31a9afed9af6ada2167bf9d094a88deb04fa4e0f23723099191699003269f9cb01d33a2c18beab747a6a69068df6c9ee1aa3752#npm:7.8.4"],\
           ["@types/babel__core", "npm:7.20.5"]\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-async-generator-functions-virtual-707ff5f2ed/0/cache/@babel-plugin-transform-async-generator-functions-npm-7.23.4-68b9c4d57a-e2fc132c90.zip/node_modules/@babel/plugin-transform-async-generator-functions/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-async-generator-functions", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-environment-visitor", "npm:7.22.20"],\
-          ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-          ["@babel/helper-remap-async-to-generator", "virtual:707ff5f2ed2e1cfcb4ea1f6eb3f30938ac491162c80353c135ed82e53b3e7a49033cb3fd42c481f8b4d260c50947adbb0a96dc2c1b1deb4cd9f690aa470942f5#npm:7.22.20"],\
-          ["@babel/plugin-syntax-async-generators", "virtual:ba1c0e1ca64eb2d0239b3eed2dcd904b02bec7c388c425e832f80080c28047a34349bdf847af35395682a84967d8c0d3855919199454485ed09f8786b7299687#npm:7.8.4"],\
-          ["@types/babel__core", null]\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -1882,7 +1697,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-async-to-generator-virtual-e235a6b6f5/0/cache/@babel-plugin-transform-async-to-generator-npm-7.23.3-307eac7840-2e9d9795d4.zip/node_modules/@babel/plugin-transform-async-to-generator/",\
         "packageDependencies": [\
@@ -1892,17 +1706,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/helper-remap-async-to-generator", "virtual:1b5aca9460bd2f94b925ab53193ec4257d161d67759f3be889888f185fdb8fdcd78328aa5f787e32dbf619935e14687744e3dfbed0fb5fb900ef93756dac5a25#npm:7.22.20"],\
           ["@types/babel__core", "npm:7.20.5"]\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-async-to-generator-virtual-a90a990569/0/cache/@babel-plugin-transform-async-to-generator-npm-7.23.3-307eac7840-2e9d9795d4.zip/node_modules/@babel/plugin-transform-async-to-generator/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-async-to-generator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-module-imports", "npm:7.22.15"],\
-          ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-          ["@babel/helper-remap-async-to-generator", "virtual:707ff5f2ed2e1cfcb4ea1f6eb3f30938ac491162c80353c135ed82e53b3e7a49033cb3fd42c481f8b4d260c50947adbb0a96dc2c1b1deb4cd9f690aa470942f5#npm:7.22.20"],\
-          ["@types/babel__core", null]\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -1935,19 +1738,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-block-scoped-functions-virtual-496c27cd41/0/cache/@babel-plugin-transform-block-scoped-functions-npm-7.23.3-faef6cb23c-e63b16d94e.zip/node_modules/@babel/plugin-transform-block-scoped-functions/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-block-scoped-functions", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-block-scoped-functions-virtual-04c553ae9b/0/cache/@babel-plugin-transform-block-scoped-functions-npm-7.23.3-faef6cb23c-e63b16d94e.zip/node_modules/@babel/plugin-transform-block-scoped-functions/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-block-scoped-functions", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -1980,19 +1775,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-block-scoping-virtual-9e905fa1d0/0/cache/@babel-plugin-transform-block-scoping-npm-7.23.4-f593115a07-bbb965a3ac.zip/node_modules/@babel/plugin-transform-block-scoping/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-block-scoping", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-block-scoping-virtual-2ef7bbd21a/0/cache/@babel-plugin-transform-block-scoping-npm-7.23.4-f593115a07-bbb965a3ac.zip/node_modules/@babel/plugin-transform-block-scoping/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-block-scoping", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -2025,21 +1812,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-class-properties-virtual-19b4c86210/0/cache/@babel-plugin-transform-class-properties-npm-7.23.3-1985dbd0c9-9c6f8366f6.zip/node_modules/@babel/plugin-transform-class-properties/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-class-properties", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-create-class-features-plugin", "virtual:19b4c86210f759ab18ea6dbbb4a3e1013b6c97068d3aa596d8233058536953fe993219b35df0f466769496f749fd2993e6c061f9109a1d91d09b479b5a2bce15#npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-class-properties-virtual-2eba077f10/0/cache/@babel-plugin-transform-class-properties-npm-7.23.3-1985dbd0c9-9c6f8366f6.zip/node_modules/@babel/plugin-transform-class-properties/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-class-properties", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-create-class-features-plugin", "virtual:2eba077f1013f2bc0b87930fdda737a2e2175e11fa4e8cf6190b2bd1b96b0017902baba188b2f837b8be1a14f7d92f4dac5835c86aacae297882d9e63b6a3cba#npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -2073,7 +1851,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-class-static-block-virtual-73ca95b53a/0/cache/@babel-plugin-transform-class-static-block-npm-7.23.4-18ec246f6b-c8bfaba19a.zip/node_modules/@babel/plugin-transform-class-static-block/",\
         "packageDependencies": [\
@@ -2083,17 +1860,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/plugin-syntax-class-static-block", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.14.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-class-static-block-virtual-ba692dcfa2/0/cache/@babel-plugin-transform-class-static-block-npm-7.23.4-18ec246f6b-c8bfaba19a.zip/node_modules/@babel/plugin-transform-class-static-block/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-class-static-block", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-create-class-features-plugin", "virtual:2eba077f1013f2bc0b87930fdda737a2e2175e11fa4e8cf6190b2bd1b96b0017902baba188b2f837b8be1a14f7d92f4dac5835c86aacae297882d9e63b6a3cba#npm:7.23.5"],\
-          ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-          ["@babel/plugin-syntax-class-static-block", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.14.5"],\
-          ["@types/babel__core", null]\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -2126,29 +1892,17 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.8", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-classes-virtual-86a13a68f3/0/cache/@babel-plugin-transform-classes-npm-7.23.8-9414d76d27-4bb4b19e7a.zip/node_modules/@babel/plugin-transform-classes/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-classes", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.8"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.5", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-classes-virtual-e5118eacfc/0/cache/@babel-plugin-transform-classes-npm-7.23.5-a4b0f4f686-f6c4fed2f4.zip/node_modules/@babel/plugin-transform-classes/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-classes", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.5"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-annotate-as-pure", "npm:7.22.5"],\
           ["@babel/helper-compilation-targets", "npm:7.23.6"],\
           ["@babel/helper-environment-visitor", "npm:7.22.20"],\
           ["@babel/helper-function-name", "npm:7.23.0"],\
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-<<<<<<< HEAD
           ["@babel/helper-replace-supers", "virtual:597cbfb42c5ef9aa72061a03025a1e0e03519f523ab548bcb761a86803aeb9204e96631dd0e7ad27beacd87faf3751b39d52100b04bb908b1b710b5998cd9578#npm:7.22.20"],\
-=======
-          ["@babel/helper-replace-supers", "virtual:9538590e196fe5a71a435e7cc2a23de5ac409b21b056f42f8116fc5062213d8fd271531b4f2c78461aa12605e63d00a7d4760c2cb45b8075f309ca7099334df4#npm:7.22.20"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-split-export-declaration", "npm:7.22.6"],\
           ["@types/babel__core", "npm:7.20.5"],\
           ["globals", "npm:11.12.0"]\
@@ -2189,19 +1943,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-computed-properties-virtual-f4f35f1079/0/cache/@babel-plugin-transform-computed-properties-npm-7.23.3-577cba24db-e75593e02c.zip/node_modules/@babel/plugin-transform-computed-properties/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-computed-properties", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-computed-properties-virtual-c2096ee78e/0/cache/@babel-plugin-transform-computed-properties-npm-7.23.3-577cba24db-e75593e02c.zip/node_modules/@babel/plugin-transform-computed-properties/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-computed-properties", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/template", "npm:7.23.9"],\
           ["@types/babel__core", "npm:7.20.5"]\
@@ -2236,19 +1982,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-destructuring-virtual-25d2545208/0/cache/@babel-plugin-transform-destructuring-npm-7.23.3-87261a505b-5abd93718a.zip/node_modules/@babel/plugin-transform-destructuring/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-destructuring", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-destructuring-virtual-bad6adf61b/0/cache/@babel-plugin-transform-destructuring-npm-7.23.3-87261a505b-5abd93718a.zip/node_modules/@babel/plugin-transform-destructuring/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-destructuring", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -2281,21 +2019,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-dotall-regex-virtual-550c8b1cd5/0/cache/@babel-plugin-transform-dotall-regex-npm-7.23.3-c58f69ad0d-a2dbbf7f1e.zip/node_modules/@babel/plugin-transform-dotall-regex/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-dotall-regex", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-create-regexp-features-plugin", "virtual:002c1f85422a8fdb3fd4c1b97e20135495055cf7d170e638437f9c82f744676940f92f11f974f0cc006126b8db89597626e5b9d52df364cde9279231efed0b60#npm:7.22.15"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-dotall-regex-virtual-ae0ae3d44b/0/cache/@babel-plugin-transform-dotall-regex-npm-7.23.3-c58f69ad0d-a2dbbf7f1e.zip/node_modules/@babel/plugin-transform-dotall-regex/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-dotall-regex", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-create-regexp-features-plugin", "virtual:acd1a85ebde12ca2b2017d1393013c7efda4d4a1a2e88353ba1c4e7091561cd984fe571817363abe92bc40fa26c98e878605734dcb69633fd7c4d0718ff1a207#npm:7.22.15"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -2329,19 +2058,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-duplicate-keys-virtual-9f1b72cd5f/0/cache/@babel-plugin-transform-duplicate-keys-npm-7.23.3-3a8708b4b8-c2a21c34dc.zip/node_modules/@babel/plugin-transform-duplicate-keys/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-duplicate-keys", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-duplicate-keys-virtual-c599ae24fc/0/cache/@babel-plugin-transform-duplicate-keys-npm-7.23.3-3a8708b4b8-c2a21c34dc.zip/node_modules/@babel/plugin-transform-duplicate-keys/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-duplicate-keys", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -2374,7 +2095,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-dynamic-import-virtual-210223cb44/0/cache/@babel-plugin-transform-dynamic-import-npm-7.23.4-fe39d6fb4e-57a722604c.zip/node_modules/@babel/plugin-transform-dynamic-import/",\
         "packageDependencies": [\
@@ -2383,16 +2103,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/plugin-syntax-dynamic-import", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.8.3"],\
           ["@types/babel__core", "npm:7.20.5"]\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-dynamic-import-virtual-71cd4aae88/0/cache/@babel-plugin-transform-dynamic-import-npm-7.23.4-fe39d6fb4e-57a722604c.zip/node_modules/@babel/plugin-transform-dynamic-import/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-dynamic-import", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-          ["@babel/plugin-syntax-dynamic-import", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.8.3"],\
-          ["@types/babel__core", null]\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -2424,19 +2134,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-exponentiation-operator-virtual-c9754855b3/0/cache/@babel-plugin-transform-exponentiation-operator-npm-7.23.3-2e061c8635-00d05ab14a.zip/node_modules/@babel/plugin-transform-exponentiation-operator/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-exponentiation-operator", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-exponentiation-operator-virtual-32e608c09c/0/cache/@babel-plugin-transform-exponentiation-operator-npm-7.23.3-2e061c8635-00d05ab14a.zip/node_modules/@babel/plugin-transform-exponentiation-operator/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-exponentiation-operator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-builder-binary-assignment-operator-visitor", "npm:7.22.15"],\
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
@@ -2471,7 +2173,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-export-namespace-from-virtual-a0a34d34d7/0/cache/@babel-plugin-transform-export-namespace-from-npm-7.23.4-0d1961d05c-9f770a81bf.zip/node_modules/@babel/plugin-transform-export-namespace-from/",\
         "packageDependencies": [\
@@ -2480,16 +2181,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/plugin-syntax-export-namespace-from", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.8.3"],\
           ["@types/babel__core", "npm:7.20.5"]\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-export-namespace-from-virtual-dfee13ed27/0/cache/@babel-plugin-transform-export-namespace-from-npm-7.23.4-0d1961d05c-9f770a81bf.zip/node_modules/@babel/plugin-transform-export-namespace-from/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-export-namespace-from", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-          ["@babel/plugin-syntax-export-namespace-from", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.8.3"],\
-          ["@types/babel__core", null]\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -2521,49 +2212,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
-<<<<<<< HEAD
-      ["virtual:7430ab52aeacbca07f8991ac6428cc5881a617ba6c2403b52e380a9e6f052f00b067b95d0f66477651c470744083bfabf0b0e8d1651d3b6594370802b97b41a9#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-flow-strip-types-virtual-9f192f2ac3/0/cache/@babel-plugin-transform-flow-strip-types-npm-7.23.3-68d609a821-84af4b1f6d.zip/node_modules/@babel/plugin-transform-flow-strip-types/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-flow-strip-types", "virtual:7430ab52aeacbca07f8991ac6428cc5881a617ba6c2403b52e380a9e6f052f00b067b95d0f66477651c470744083bfabf0b0e8d1651d3b6594370802b97b41a9#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.9"],\
-          ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-          ["@babel/plugin-syntax-flow", "virtual:9f192f2ac31f449df6cb60ac1614b3c4eb764cbd4af35b2cf2ba72ca58fbb92101348f8a804fc56d38e9b15d703e682cb59a11a9c3cce3e4aabbb8118460f9b7#npm:7.23.3"],\
-          ["@types/babel__core", "npm:7.20.5"]\
-        ],\
-        "packagePeers": [\
-          "@babel/core",\
-          "@types/babel__core"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:f568981b4de07b18887ac0f4f57918af492ecd5e0b5625b9730a71e845ac2caa71f1bef1e5a866c8b546abd1731552de9100b461eaedb51d33aa1e7f21cb9da0#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-flow-strip-types-virtual-8430ea66aa/0/cache/@babel-plugin-transform-flow-strip-types-npm-7.23.3-68d609a821-84af4b1f6d.zip/node_modules/@babel/plugin-transform-flow-strip-types/",\
-=======
-      ["virtual:adfd3290b8adccc49d967b9796ac8aa50b651f955f4303a90becb92fc8b3c1c3e4b7b96e3bbe2de0bcc387188473f225ceb7f0df9513e7fd296501964bbd39b7#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-flow-strip-types-virtual-349054cc92/0/cache/@babel-plugin-transform-flow-strip-types-npm-7.23.3-68d609a821-84af4b1f6d.zip/node_modules/@babel/plugin-transform-flow-strip-types/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
-        "packageDependencies": [\
-          ["@babel/plugin-transform-flow-strip-types", "virtual:f568981b4de07b18887ac0f4f57918af492ecd5e0b5625b9730a71e845ac2caa71f1bef1e5a866c8b546abd1731552de9100b461eaedb51d33aa1e7f21cb9da0#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.9"],\
-          ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-          ["@babel/plugin-syntax-flow", "virtual:8430ea66aa2fe5610b37fb4ad045a6ebcfc98a53f5d0665ba2d27d6a594882fa18fa076a741c8299dfb22dbb6d19a331894883907c37c2e3c4b0000f213e32e2#npm:7.23.3"],\
-          ["@types/babel__core", null]\
-        ],\
-        "packagePeers": [\
-          "@babel/core",\
-          "@types/babel__core"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-=======
->>>>>>> efb9948 (chore: remove storybook/react-webpack5)
       ["virtual:f568981b4de07b18887ac0f4f57918af492ecd5e0b5625b9730a71e845ac2caa71f1bef1e5a866c8b546abd1731552de9100b461eaedb51d33aa1e7f21cb9da0#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-flow-strip-types-virtual-8430ea66aa/0/cache/@babel-plugin-transform-flow-strip-types-npm-7.23.3-68d609a821-84af4b1f6d.zip/node_modules/@babel/plugin-transform-flow-strip-types/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-flow-strip-types", "virtual:f568981b4de07b18887ac0f4f57918af492ecd5e0b5625b9730a71e845ac2caa71f1bef1e5a866c8b546abd1731552de9100b461eaedb51d33aa1e7f21cb9da0#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
+          ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/plugin-syntax-flow", "virtual:8430ea66aa2fe5610b37fb4ad045a6ebcfc98a53f5d0665ba2d27d6a594882fa18fa076a741c8299dfb22dbb6d19a331894883907c37c2e3c4b0000f213e32e2#npm:7.23.3"],\
           ["@types/babel__core", null]\
@@ -2583,19 +2236,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.6", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-for-of-virtual-7cfd769592/0/cache/@babel-plugin-transform-for-of-npm-7.23.6-4162168dc0-b84ef1f26a.zip/node_modules/@babel/plugin-transform-for-of/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-for-of", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.6"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-for-of-virtual-cfb6d529d0/0/cache/@babel-plugin-transform-for-of-npm-7.23.3-c937a6c8d8-745054f125.zip/node_modules/@babel/plugin-transform-for-of/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-for-of", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/helper-skip-transparent-expression-wrappers", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
@@ -2630,21 +2275,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-function-name-virtual-7d73557db3/0/cache/@babel-plugin-transform-function-name-npm-7.23.3-22a0af572d-355c6dbe07.zip/node_modules/@babel/plugin-transform-function-name/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-function-name", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-compilation-targets", "npm:7.23.6"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-function-name-virtual-52a3f6440d/0/cache/@babel-plugin-transform-function-name-npm-7.23.3-22a0af572d-355c6dbe07.zip/node_modules/@babel/plugin-transform-function-name/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-function-name", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-compilation-targets", "npm:7.22.15"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-function-name", "npm:7.23.0"],\
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
@@ -2680,19 +2316,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-json-strings-virtual-10430c004b/0/cache/@babel-plugin-transform-json-strings-npm-7.23.4-25326c15c6-f901982023.zip/node_modules/@babel/plugin-transform-json-strings/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-json-strings", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-json-strings-virtual-e3394c27e8/0/cache/@babel-plugin-transform-json-strings-npm-7.23.4-25326c15c6-f901982023.zip/node_modules/@babel/plugin-transform-json-strings/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-json-strings", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/plugin-syntax-json-strings", "virtual:cb8d570790ac6a1173685de7a31a9afed9af6ada2167bf9d094a88deb04fa4e0f23723099191699003269f9cb01d33a2c18beab747a6a69068df6c9ee1aa3752#npm:7.8.3"],\
           ["@types/babel__core", "npm:7.20.5"]\
@@ -2727,19 +2355,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-literals-virtual-57cbd77e04/0/cache/@babel-plugin-transform-literals-npm-7.23.3-8cde3810a5-519a544cd5.zip/node_modules/@babel/plugin-transform-literals/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-literals", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-literals-virtual-61a9800648/0/cache/@babel-plugin-transform-literals-npm-7.23.3-8cde3810a5-519a544cd5.zip/node_modules/@babel/plugin-transform-literals/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-literals", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -2772,19 +2392,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-logical-assignment-operators-virtual-541ab7c033/0/cache/@babel-plugin-transform-logical-assignment-operators-npm-7.23.4-b3bb488d5a-2ae1dc9b4f.zip/node_modules/@babel/plugin-transform-logical-assignment-operators/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-logical-assignment-operators", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-logical-assignment-operators-virtual-e9f6d9ee93/0/cache/@babel-plugin-transform-logical-assignment-operators-npm-7.23.4-b3bb488d5a-2ae1dc9b4f.zip/node_modules/@babel/plugin-transform-logical-assignment-operators/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-logical-assignment-operators", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/plugin-syntax-logical-assignment-operators", "virtual:cb8d570790ac6a1173685de7a31a9afed9af6ada2167bf9d094a88deb04fa4e0f23723099191699003269f9cb01d33a2c18beab747a6a69068df6c9ee1aa3752#npm:7.10.4"],\
           ["@types/babel__core", "npm:7.20.5"]\
@@ -2819,19 +2431,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-member-expression-literals-virtual-0f436cc2ce/0/cache/@babel-plugin-transform-member-expression-literals-npm-7.23.3-fa154ff8fa-95cec13c36.zip/node_modules/@babel/plugin-transform-member-expression-literals/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-member-expression-literals", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-member-expression-literals-virtual-89545260b7/0/cache/@babel-plugin-transform-member-expression-literals-npm-7.23.3-fa154ff8fa-95cec13c36.zip/node_modules/@babel/plugin-transform-member-expression-literals/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-member-expression-literals", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -2864,21 +2468,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-modules-amd-virtual-9dcf5860cb/0/cache/@babel-plugin-transform-modules-amd-npm-7.23.3-7ac658fe3d-48c87dee2c.zip/node_modules/@babel/plugin-transform-modules-amd/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-modules-amd", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-module-transforms", "virtual:9dcf5860cb6fe368302e0152e45fc2056d1bb46d6898505dd5cce01505348869d6a64809a15ba83f4c735eb21d17d66040e8daff52f7b8dd0ce2f259d3b5c0e6#npm:7.23.3"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-modules-amd-virtual-c18b55a200/0/cache/@babel-plugin-transform-modules-amd-npm-7.23.3-7ac658fe3d-48c87dee2c.zip/node_modules/@babel/plugin-transform-modules-amd/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-modules-amd", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-module-transforms", "virtual:67291ea9b8b5fe6fdb5e5618ff75ba27d2b6524459d164d4bd9b3a173aecd5e459c3062effd92695ae5ad2a2fa9e8a4529f589d0797f8c463d380673442d6a84#npm:7.23.3"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -2912,21 +2507,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-modules-commonjs-virtual-0b7fa83717/0/cache/@babel-plugin-transform-modules-commonjs-npm-7.23.3-024eed1eda-a3bc082d0d.zip/node_modules/@babel/plugin-transform-modules-commonjs/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-modules-commonjs", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-module-transforms", "virtual:9dcf5860cb6fe368302e0152e45fc2056d1bb46d6898505dd5cce01505348869d6a64809a15ba83f4c735eb21d17d66040e8daff52f7b8dd0ce2f259d3b5c0e6#npm:7.23.3"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-modules-commonjs-virtual-c6d1e2dcc8/0/cache/@babel-plugin-transform-modules-commonjs-npm-7.23.3-024eed1eda-a3bc082d0d.zip/node_modules/@babel/plugin-transform-modules-commonjs/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-modules-commonjs", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-module-transforms", "virtual:67291ea9b8b5fe6fdb5e5618ff75ba27d2b6524459d164d4bd9b3a173aecd5e459c3062effd92695ae5ad2a2fa9e8a4529f589d0797f8c463d380673442d6a84#npm:7.23.3"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/helper-simple-access", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
@@ -2962,19 +2548,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.9", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-modules-systemjs-virtual-291616c825/0/cache/@babel-plugin-transform-modules-systemjs-npm-7.23.9-8e4e9bf07c-4bb800e5a9.zip/node_modules/@babel/plugin-transform-modules-systemjs/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-modules-systemjs", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.9"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-modules-systemjs-virtual-4589f7f403/0/cache/@babel-plugin-transform-modules-systemjs-npm-7.23.3-e1bf1dc0f6-051112de75.zip/node_modules/@babel/plugin-transform-modules-systemjs/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-modules-systemjs", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-hoist-variables", "npm:7.22.5"],\
           ["@babel/helper-module-transforms", "virtual:9dcf5860cb6fe368302e0152e45fc2056d1bb46d6898505dd5cce01505348869d6a64809a15ba83f4c735eb21d17d66040e8daff52f7b8dd0ce2f259d3b5c0e6#npm:7.23.3"],\
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
@@ -3013,21 +2591,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-modules-umd-virtual-01c3848092/0/cache/@babel-plugin-transform-modules-umd-npm-7.23.3-57a981fcdd-e3f3af8356.zip/node_modules/@babel/plugin-transform-modules-umd/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-modules-umd", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-module-transforms", "virtual:9dcf5860cb6fe368302e0152e45fc2056d1bb46d6898505dd5cce01505348869d6a64809a15ba83f4c735eb21d17d66040e8daff52f7b8dd0ce2f259d3b5c0e6#npm:7.23.3"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-modules-umd-virtual-4f29767ca0/0/cache/@babel-plugin-transform-modules-umd-npm-7.23.3-57a981fcdd-e3f3af8356.zip/node_modules/@babel/plugin-transform-modules-umd/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-modules-umd", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-module-transforms", "virtual:67291ea9b8b5fe6fdb5e5618ff75ba27d2b6524459d164d4bd9b3a173aecd5e459c3062effd92695ae5ad2a2fa9e8a4529f589d0797f8c463d380673442d6a84#npm:7.23.3"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -3061,21 +2630,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.22.5", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-named-capturing-groups-regex-virtual-7850ba461e/0/cache/@babel-plugin-transform-named-capturing-groups-regex-npm-7.22.5-b9360fd04d-3ee564ddee.zip/node_modules/@babel/plugin-transform-named-capturing-groups-regex/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-named-capturing-groups-regex", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.22.5"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-create-regexp-features-plugin", "virtual:002c1f85422a8fdb3fd4c1b97e20135495055cf7d170e638437f9c82f744676940f92f11f974f0cc006126b8db89597626e5b9d52df364cde9279231efed0b60#npm:7.22.15"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.22.5", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-named-capturing-groups-regex-virtual-a153f90555/0/cache/@babel-plugin-transform-named-capturing-groups-regex-npm-7.22.5-b9360fd04d-3ee564ddee.zip/node_modules/@babel/plugin-transform-named-capturing-groups-regex/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-named-capturing-groups-regex", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.22.5"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-create-regexp-features-plugin", "virtual:acd1a85ebde12ca2b2017d1393013c7efda4d4a1a2e88353ba1c4e7091561cd984fe571817363abe92bc40fa26c98e878605734dcb69633fd7c4d0718ff1a207#npm:7.22.15"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -3109,19 +2669,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-new-target-virtual-f447a63098/0/cache/@babel-plugin-transform-new-target-npm-7.23.3-b0eceec895-e505338931.zip/node_modules/@babel/plugin-transform-new-target/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-new-target", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-new-target-virtual-a235d90957/0/cache/@babel-plugin-transform-new-target-npm-7.23.3-b0eceec895-e505338931.zip/node_modules/@babel/plugin-transform-new-target/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-new-target", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -3154,19 +2706,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-nullish-coalescing-operator-virtual-1035143755/0/cache/@babel-plugin-transform-nullish-coalescing-operator-npm-7.23.4-299cdc91f7-a27d73ea13.zip/node_modules/@babel/plugin-transform-nullish-coalescing-operator/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-nullish-coalescing-operator", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-nullish-coalescing-operator-virtual-a1a5682318/0/cache/@babel-plugin-transform-nullish-coalescing-operator-npm-7.23.4-299cdc91f7-a27d73ea13.zip/node_modules/@babel/plugin-transform-nullish-coalescing-operator/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-nullish-coalescing-operator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/plugin-syntax-nullish-coalescing-operator", "virtual:cb8d570790ac6a1173685de7a31a9afed9af6ada2167bf9d094a88deb04fa4e0f23723099191699003269f9cb01d33a2c18beab747a6a69068df6c9ee1aa3752#npm:7.8.3"],\
           ["@types/babel__core", "npm:7.20.5"]\
@@ -3201,19 +2745,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-numeric-separator-virtual-4c670e44d4/0/cache/@babel-plugin-transform-numeric-separator-npm-7.23.4-4178669dda-6ba0e5db3c.zip/node_modules/@babel/plugin-transform-numeric-separator/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-numeric-separator", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-numeric-separator-virtual-a06428639b/0/cache/@babel-plugin-transform-numeric-separator-npm-7.23.4-4178669dda-6ba0e5db3c.zip/node_modules/@babel/plugin-transform-numeric-separator/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-numeric-separator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/plugin-syntax-numeric-separator", "virtual:cb8d570790ac6a1173685de7a31a9afed9af6ada2167bf9d094a88deb04fa4e0f23723099191699003269f9cb01d33a2c18beab747a6a69068df6c9ee1aa3752#npm:7.10.4"],\
           ["@types/babel__core", "npm:7.20.5"]\
@@ -3248,30 +2784,17 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-object-rest-spread-virtual-e1c62367fb/0/cache/@babel-plugin-transform-object-rest-spread-npm-7.23.4-f1646391ee-656f09c4ec.zip/node_modules/@babel/plugin-transform-object-rest-spread/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-object-rest-spread", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-object-rest-spread-virtual-87e27002bc/0/cache/@babel-plugin-transform-object-rest-spread-npm-7.23.4-f1646391ee-656f09c4ec.zip/node_modules/@babel/plugin-transform-object-rest-spread/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-object-rest-spread", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/compat-data", "npm:7.23.5"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-compilation-targets", "npm:7.23.6"],\
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-<<<<<<< HEAD
           ["@babel/plugin-syntax-object-rest-spread", "virtual:cb8d570790ac6a1173685de7a31a9afed9af6ada2167bf9d094a88deb04fa4e0f23723099191699003269f9cb01d33a2c18beab747a6a69068df6c9ee1aa3752#npm:7.8.3"],\
           ["@babel/plugin-transform-parameters", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@types/babel__core", "npm:7.20.5"]\
-=======
-          ["@babel/plugin-syntax-object-rest-spread", "virtual:ba1c0e1ca64eb2d0239b3eed2dcd904b02bec7c388c425e832f80080c28047a34349bdf847af35395682a84967d8c0d3855919199454485ed09f8786b7299687#npm:7.8.3"],\
-          ["@babel/plugin-transform-parameters", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@types/babel__core", null]\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -3306,7 +2829,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-object-super-virtual-80e8089063/0/cache/@babel-plugin-transform-object-super-npm-7.23.3-2ee36db368-e495497186.zip/node_modules/@babel/plugin-transform-object-super/",\
         "packageDependencies": [\
@@ -3315,16 +2837,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/helper-replace-supers", "virtual:597cbfb42c5ef9aa72061a03025a1e0e03519f523ab548bcb761a86803aeb9204e96631dd0e7ad27beacd87faf3751b39d52100b04bb908b1b710b5998cd9578#npm:7.22.20"],\
           ["@types/babel__core", "npm:7.20.5"]\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-object-super-virtual-22f1616198/0/cache/@babel-plugin-transform-object-super-npm-7.23.3-2ee36db368-e495497186.zip/node_modules/@babel/plugin-transform-object-super/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-object-super", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-          ["@babel/helper-replace-supers", "virtual:9538590e196fe5a71a435e7cc2a23de5ac409b21b056f42f8116fc5062213d8fd271531b4f2c78461aa12605e63d00a7d4760c2cb45b8075f309ca7099334df4#npm:7.22.20"],\
-          ["@types/babel__core", null]\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -3356,19 +2868,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-optional-catch-binding-virtual-75160f9880/0/cache/@babel-plugin-transform-optional-catch-binding-npm-7.23.4-0aaf7afc3b-d50b5ee142.zip/node_modules/@babel/plugin-transform-optional-catch-binding/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-optional-catch-binding", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-optional-catch-binding-virtual-a7e4520891/0/cache/@babel-plugin-transform-optional-catch-binding-npm-7.23.4-0aaf7afc3b-d50b5ee142.zip/node_modules/@babel/plugin-transform-optional-catch-binding/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-optional-catch-binding", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/plugin-syntax-optional-catch-binding", "virtual:cb8d570790ac6a1173685de7a31a9afed9af6ada2167bf9d094a88deb04fa4e0f23723099191699003269f9cb01d33a2c18beab747a6a69068df6c9ee1aa3752#npm:7.8.3"],\
           ["@types/babel__core", "npm:7.20.5"]\
@@ -3403,19 +2907,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-optional-chaining-virtual-33833d519e/0/cache/@babel-plugin-transform-optional-chaining-npm-7.23.4-acce4f379c-0ef24e889d.zip/node_modules/@babel/plugin-transform-optional-chaining/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-optional-chaining", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-optional-chaining-virtual-968bbac042/0/cache/@babel-plugin-transform-optional-chaining-npm-7.23.4-acce4f379c-0ef24e889d.zip/node_modules/@babel/plugin-transform-optional-chaining/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-optional-chaining", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/helper-skip-transparent-expression-wrappers", "npm:7.22.5"],\
           ["@babel/plugin-syntax-optional-chaining", "virtual:cb8d570790ac6a1173685de7a31a9afed9af6ada2167bf9d094a88deb04fa4e0f23723099191699003269f9cb01d33a2c18beab747a6a69068df6c9ee1aa3752#npm:7.8.3"],\
@@ -3452,19 +2948,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-parameters-virtual-6f8b7aa413/0/cache/@babel-plugin-transform-parameters-npm-7.23.3-8115e8405e-a8c36c3fc2.zip/node_modules/@babel/plugin-transform-parameters/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-parameters", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-parameters-virtual-aa162997d7/0/cache/@babel-plugin-transform-parameters-npm-7.23.3-8115e8405e-a8c36c3fc2.zip/node_modules/@babel/plugin-transform-parameters/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-parameters", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -3497,21 +2985,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-private-methods-virtual-5495540f77/0/cache/@babel-plugin-transform-private-methods-npm-7.23.3-6fbe3a2d73-cedc1285c4.zip/node_modules/@babel/plugin-transform-private-methods/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-private-methods", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-create-class-features-plugin", "virtual:19b4c86210f759ab18ea6dbbb4a3e1013b6c97068d3aa596d8233058536953fe993219b35df0f466769496f749fd2993e6c061f9109a1d91d09b479b5a2bce15#npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-private-methods-virtual-c12842a5bb/0/cache/@babel-plugin-transform-private-methods-npm-7.23.3-6fbe3a2d73-cedc1285c4.zip/node_modules/@babel/plugin-transform-private-methods/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-private-methods", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-create-class-features-plugin", "virtual:2eba077f1013f2bc0b87930fdda737a2e2175e11fa4e8cf6190b2bd1b96b0017902baba188b2f837b8be1a14f7d92f4dac5835c86aacae297882d9e63b6a3cba#npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -3545,7 +3024,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.4", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-private-property-in-object-virtual-7dad8e2451/0/cache/@babel-plugin-transform-private-property-in-object-npm-7.23.4-d336ac9145-02eef2ee98.zip/node_modules/@babel/plugin-transform-private-property-in-object/",\
         "packageDependencies": [\
@@ -3556,18 +3034,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/plugin-syntax-private-property-in-object", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.14.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-private-property-in-object-virtual-3a655ce1d8/0/cache/@babel-plugin-transform-private-property-in-object-npm-7.23.4-d336ac9145-02eef2ee98.zip/node_modules/@babel/plugin-transform-private-property-in-object/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-private-property-in-object", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-annotate-as-pure", "npm:7.22.5"],\
-          ["@babel/helper-create-class-features-plugin", "virtual:2eba077f1013f2bc0b87930fdda737a2e2175e11fa4e8cf6190b2bd1b96b0017902baba188b2f837b8be1a14f7d92f4dac5835c86aacae297882d9e63b6a3cba#npm:7.23.5"],\
-          ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-          ["@babel/plugin-syntax-private-property-in-object", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.14.5"],\
-          ["@types/babel__core", null]\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -3601,19 +3067,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-property-literals-virtual-1245772d45/0/cache/@babel-plugin-transform-property-literals-npm-7.23.3-1436506b14-16b048c8e8.zip/node_modules/@babel/plugin-transform-property-literals/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-property-literals", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-property-literals-virtual-61462c8451/0/cache/@babel-plugin-transform-property-literals-npm-7.23.3-1436506b14-16b048c8e8.zip/node_modules/@babel/plugin-transform-property-literals/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-property-literals", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -3804,19 +3262,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-regenerator-virtual-ee7095a1cc/0/cache/@babel-plugin-transform-regenerator-npm-7.23.3-cee91d69db-7fdacc7b40.zip/node_modules/@babel/plugin-transform-regenerator/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-regenerator", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-regenerator-virtual-58eb402bf4/0/cache/@babel-plugin-transform-regenerator-npm-7.23.3-cee91d69db-7fdacc7b40.zip/node_modules/@babel/plugin-transform-regenerator/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-regenerator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"],\
           ["regenerator-transform", "npm:0.15.2"]\
@@ -3851,19 +3301,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-reserved-words-virtual-f257a45085/0/cache/@babel-plugin-transform-reserved-words-npm-7.23.3-e8480dbdf1-298c4440dd.zip/node_modules/@babel/plugin-transform-reserved-words/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-reserved-words", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-reserved-words-virtual-203f50ce22/0/cache/@babel-plugin-transform-reserved-words-npm-7.23.3-e8480dbdf1-298c4440dd.zip/node_modules/@babel/plugin-transform-reserved-words/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-reserved-words", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -3904,15 +3346,9 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-module-imports", "npm:7.22.15"],\
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", null],\
-<<<<<<< HEAD
           ["babel-plugin-polyfill-corejs2", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:0.4.8"],\
           ["babel-plugin-polyfill-corejs3", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:0.9.0"],\
           ["babel-plugin-polyfill-regenerator", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:0.5.5"],\
-=======
-          ["babel-plugin-polyfill-corejs2", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.4.6"],\
-          ["babel-plugin-polyfill-corejs3", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.8.6"],\
-          ["babel-plugin-polyfill-regenerator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.5.3"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["semver", "npm:6.3.1"]\
         ],\
         "packagePeers": [\
@@ -3930,19 +3366,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-shorthand-properties-virtual-fc7f52a429/0/cache/@babel-plugin-transform-shorthand-properties-npm-7.23.3-cd63dc80d3-5d677a0367.zip/node_modules/@babel/plugin-transform-shorthand-properties/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-shorthand-properties", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-shorthand-properties-virtual-a5a5624734/0/cache/@babel-plugin-transform-shorthand-properties-npm-7.23.3-cd63dc80d3-5d677a0367.zip/node_modules/@babel/plugin-transform-shorthand-properties/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-shorthand-properties", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -3975,19 +3403,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-spread-virtual-3194320dd1/0/cache/@babel-plugin-transform-spread-npm-7.23.3-46cef4a974-c6372d2f78.zip/node_modules/@babel/plugin-transform-spread/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-spread", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-spread-virtual-335d1408cc/0/cache/@babel-plugin-transform-spread-npm-7.23.3-46cef4a974-c6372d2f78.zip/node_modules/@babel/plugin-transform-spread/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-spread", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/helper-skip-transparent-expression-wrappers", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
@@ -4022,19 +3442,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-sticky-regex-virtual-49b9113451/0/cache/@babel-plugin-transform-sticky-regex-npm-7.23.3-39d3bbf577-53e55eb257.zip/node_modules/@babel/plugin-transform-sticky-regex/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-sticky-regex", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-sticky-regex-virtual-369e00bdca/0/cache/@babel-plugin-transform-sticky-regex-npm-7.23.3-39d3bbf577-53e55eb257.zip/node_modules/@babel/plugin-transform-sticky-regex/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-sticky-regex", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -4067,19 +3479,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-template-literals-virtual-e47955d586/0/cache/@babel-plugin-transform-template-literals-npm-7.23.3-c9ccbc42af-b16c5cb0b8.zip/node_modules/@babel/plugin-transform-template-literals/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-template-literals", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-template-literals-virtual-72a1cf3430/0/cache/@babel-plugin-transform-template-literals-npm-7.23.3-c9ccbc42af-b16c5cb0b8.zip/node_modules/@babel/plugin-transform-template-literals/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-template-literals", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -4112,19 +3516,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-typeof-symbol-virtual-fa9a2bb4b5/0/cache/@babel-plugin-transform-typeof-symbol-npm-7.23.3-db025fdf33-0af7184379.zip/node_modules/@babel/plugin-transform-typeof-symbol/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-typeof-symbol", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-typeof-symbol-virtual-5feba455b8/0/cache/@babel-plugin-transform-typeof-symbol-npm-7.23.3-db025fdf33-0af7184379.zip/node_modules/@babel/plugin-transform-typeof-symbol/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-typeof-symbol", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -4157,7 +3553,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:12669512dcae3de1aa28f3009e7f6ada4fafc888514eaefdf78331d6a337e6b762f44e1f00d0187fa791d3220ace765e67f9ffe93c048f2474d2c2a0cc120fc6#npm:7.23.6", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-typescript-virtual-7b7eb77bcc/0/cache/@babel-plugin-transform-typescript-npm-7.23.6-844378e798-a816811129.zip/node_modules/@babel/plugin-transform-typescript/",\
         "packageDependencies": [\
@@ -4165,15 +3560,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-annotate-as-pure", "npm:7.22.5"],\
           ["@babel/helper-create-class-features-plugin", "virtual:c3988d475ffc64032a37ae9d885b13614675308614696b7b3152a62faf8574e48a0ffb1a81df83d4baa408e0e22a048895e7c93bac316159613516d3009c92d3#npm:7.23.9"],\
-=======
-      ["virtual:12669512dcae3de1aa28f3009e7f6ada4fafc888514eaefdf78331d6a337e6b762f44e1f00d0187fa791d3220ace765e67f9ffe93c048f2474d2c2a0cc120fc6#npm:7.23.5", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-typescript-virtual-5b79957fa7/0/cache/@babel-plugin-transform-typescript-npm-7.23.5-90551c425f-f8cfea9160.zip/node_modules/@babel/plugin-transform-typescript/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-typescript", "virtual:12669512dcae3de1aa28f3009e7f6ada4fafc888514eaefdf78331d6a337e6b762f44e1f00d0187fa791d3220ace765e67f9ffe93c048f2474d2c2a0cc120fc6#npm:7.23.5"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-annotate-as-pure", "npm:7.22.5"],\
-          ["@babel/helper-create-class-features-plugin", "virtual:2eba077f1013f2bc0b87930fdda737a2e2175e11fa4e8cf6190b2bd1b96b0017902baba188b2f837b8be1a14f7d92f4dac5835c86aacae297882d9e63b6a3cba#npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/plugin-syntax-typescript", "virtual:15ef0a4ad61c166598c4d195dc64a0b7270b186e9a584ea25871b4181189fa5a61a49aa37f6bcda6ffed25499ff900f1a33224b0c22868c8eb1eaf1dd4f0dc11#npm:7.23.3"],\
           ["@types/babel__core", null]\
@@ -4210,19 +3596,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-unicode-escapes-virtual-7de2a75120/0/cache/@babel-plugin-transform-unicode-escapes-npm-7.23.3-a6c6f6fa8b-561c429183.zip/node_modules/@babel/plugin-transform-unicode-escapes/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-unicode-escapes", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-unicode-escapes-virtual-954933c754/0/cache/@babel-plugin-transform-unicode-escapes-npm-7.23.3-a6c6f6fa8b-561c429183.zip/node_modules/@babel/plugin-transform-unicode-escapes/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-unicode-escapes", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -4255,21 +3633,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-unicode-property-regex-virtual-9514450918/0/cache/@babel-plugin-transform-unicode-property-regex-npm-7.23.3-46bb4e833e-2298461a19.zip/node_modules/@babel/plugin-transform-unicode-property-regex/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-unicode-property-regex", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-create-regexp-features-plugin", "virtual:002c1f85422a8fdb3fd4c1b97e20135495055cf7d170e638437f9c82f744676940f92f11f974f0cc006126b8db89597626e5b9d52df364cde9279231efed0b60#npm:7.22.15"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-unicode-property-regex-virtual-20f4301c96/0/cache/@babel-plugin-transform-unicode-property-regex-npm-7.23.3-46bb4e833e-2298461a19.zip/node_modules/@babel/plugin-transform-unicode-property-regex/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-unicode-property-regex", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-create-regexp-features-plugin", "virtual:acd1a85ebde12ca2b2017d1393013c7efda4d4a1a2e88353ba1c4e7091561cd984fe571817363abe92bc40fa26c98e878605734dcb69633fd7c4d0718ff1a207#npm:7.22.15"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -4303,21 +3672,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-unicode-regex-virtual-4012ef319f/0/cache/@babel-plugin-transform-unicode-regex-npm-7.23.3-f988eab71c-c5f835d174.zip/node_modules/@babel/plugin-transform-unicode-regex/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-unicode-regex", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-create-regexp-features-plugin", "virtual:002c1f85422a8fdb3fd4c1b97e20135495055cf7d170e638437f9c82f744676940f92f11f974f0cc006126b8db89597626e5b9d52df364cde9279231efed0b60#npm:7.22.15"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-unicode-regex-virtual-542a1432c5/0/cache/@babel-plugin-transform-unicode-regex-npm-7.23.3-f988eab71c-c5f835d174.zip/node_modules/@babel/plugin-transform-unicode-regex/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-unicode-regex", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-create-regexp-features-plugin", "virtual:acd1a85ebde12ca2b2017d1393013c7efda4d4a1a2e88353ba1c4e7091561cd984fe571817363abe92bc40fa26c98e878605734dcb69633fd7c4d0718ff1a207#npm:7.22.15"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -4351,21 +3711,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3", {\
         "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-unicode-sets-regex-virtual-cb70637ddf/0/cache/@babel-plugin-transform-unicode-sets-regex-npm-7.23.3-1ff1fd53b1-79d0b4c951.zip/node_modules/@babel/plugin-transform-unicode-sets-regex/",\
         "packageDependencies": [\
           ["@babel/plugin-transform-unicode-sets-regex", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:7.23.3"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-create-regexp-features-plugin", "virtual:002c1f85422a8fdb3fd4c1b97e20135495055cf7d170e638437f9c82f744676940f92f11f974f0cc006126b8db89597626e5b9d52df364cde9279231efed0b60#npm:7.22.15"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-unicode-sets-regex-virtual-815fb1ec7e/0/cache/@babel-plugin-transform-unicode-sets-regex-npm-7.23.3-1ff1fd53b1-79d0b4c951.zip/node_modules/@babel/plugin-transform-unicode-sets-regex/",\
-        "packageDependencies": [\
-          ["@babel/plugin-transform-unicode-sets-regex", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-create-regexp-features-plugin", "virtual:acd1a85ebde12ca2b2017d1393013c7efda4d4a1a2e88353ba1c4e7091561cd984fe571817363abe92bc40fa26c98e878605734dcb69633fd7c4d0718ff1a207#npm:7.22.15"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@types/babel__core", "npm:7.20.5"]\
         ],\
@@ -4492,23 +3843,15 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-<<<<<<< HEAD
       ["virtual:aa13efc2fe5e30c528aafb40f3191477d710b27fb761b4fbebc5eea45b7682a18e5766acffc1844fc6acb4b7f51c3f6c7bbf2685b4de40835bd4a4a67c519308#npm:7.23.9", {\
         "packageLocation": "./.yarn/__virtual__/@babel-preset-env-virtual-b7ee065ae3/0/cache/@babel-preset-env-npm-7.23.9-ecf3dc35c0-0214ac9434.zip/node_modules/@babel/preset-env/",\
         "packageDependencies": [\
           ["@babel/preset-env", "virtual:aa13efc2fe5e30c528aafb40f3191477d710b27fb761b4fbebc5eea45b7682a18e5766acffc1844fc6acb4b7f51c3f6c7bbf2685b4de40835bd4a4a67c519308#npm:7.23.9"],\
-=======
-      ["virtual:aa13efc2fe5e30c528aafb40f3191477d710b27fb761b4fbebc5eea45b7682a18e5766acffc1844fc6acb4b7f51c3f6c7bbf2685b4de40835bd4a4a67c519308#npm:7.23.5", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-preset-env-virtual-150c637a00/0/cache/@babel-preset-env-npm-7.23.5-93e06d183e-9c2c2ca7a8.zip/node_modules/@babel/preset-env/",\
-        "packageDependencies": [\
-          ["@babel/preset-env", "virtual:aa13efc2fe5e30c528aafb40f3191477d710b27fb761b4fbebc5eea45b7682a18e5766acffc1844fc6acb4b7f51c3f6c7bbf2685b4de40835bd4a4a67c519308#npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/compat-data", "npm:7.23.5"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-compilation-targets", "npm:7.23.6"],\
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/helper-validator-option", "npm:7.23.5"],\
-<<<<<<< HEAD
           ["@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:7.23.3"],\
           ["@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:7.23.3"],\
           ["@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:7.23.7"],\
@@ -4520,19 +3863,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/plugin-syntax-export-namespace-from", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:7.8.3"],\
           ["@babel/plugin-syntax-import-assertions", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:7.23.3"],\
           ["@babel/plugin-syntax-import-attributes", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:7.23.3"],\
-=======
-          ["@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-proposal-private-property-in-object", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.21.0-placeholder-for-preset-env.2"],\
-          ["@babel/plugin-syntax-async-generators", "virtual:ba1c0e1ca64eb2d0239b3eed2dcd904b02bec7c388c425e832f80080c28047a34349bdf847af35395682a84967d8c0d3855919199454485ed09f8786b7299687#npm:7.8.4"],\
-          ["@babel/plugin-syntax-class-properties", "virtual:ba1c0e1ca64eb2d0239b3eed2dcd904b02bec7c388c425e832f80080c28047a34349bdf847af35395682a84967d8c0d3855919199454485ed09f8786b7299687#npm:7.12.13"],\
-          ["@babel/plugin-syntax-class-static-block", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.14.5"],\
-          ["@babel/plugin-syntax-dynamic-import", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.8.3"],\
-          ["@babel/plugin-syntax-export-namespace-from", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.8.3"],\
-          ["@babel/plugin-syntax-import-assertions", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-syntax-import-attributes", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/plugin-syntax-import-meta", "virtual:ba1c0e1ca64eb2d0239b3eed2dcd904b02bec7c388c425e832f80080c28047a34349bdf847af35395682a84967d8c0d3855919199454485ed09f8786b7299687#npm:7.10.4"],\
           ["@babel/plugin-syntax-json-strings", "virtual:ba1c0e1ca64eb2d0239b3eed2dcd904b02bec7c388c425e832f80080c28047a34349bdf847af35395682a84967d8c0d3855919199454485ed09f8786b7299687#npm:7.8.3"],\
           ["@babel/plugin-syntax-logical-assignment-operators", "virtual:ba1c0e1ca64eb2d0239b3eed2dcd904b02bec7c388c425e832f80080c28047a34349bdf847af35395682a84967d8c0d3855919199454485ed09f8786b7299687#npm:7.10.4"],\
@@ -4541,7 +3871,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/plugin-syntax-object-rest-spread", "virtual:ba1c0e1ca64eb2d0239b3eed2dcd904b02bec7c388c425e832f80080c28047a34349bdf847af35395682a84967d8c0d3855919199454485ed09f8786b7299687#npm:7.8.3"],\
           ["@babel/plugin-syntax-optional-catch-binding", "virtual:ba1c0e1ca64eb2d0239b3eed2dcd904b02bec7c388c425e832f80080c28047a34349bdf847af35395682a84967d8c0d3855919199454485ed09f8786b7299687#npm:7.8.3"],\
           ["@babel/plugin-syntax-optional-chaining", "virtual:ba1c0e1ca64eb2d0239b3eed2dcd904b02bec7c388c425e832f80080c28047a34349bdf847af35395682a84967d8c0d3855919199454485ed09f8786b7299687#npm:7.8.3"],\
-<<<<<<< HEAD
           ["@babel/plugin-syntax-private-property-in-object", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:7.14.5"],\
           ["@babel/plugin-syntax-top-level-await", "virtual:ba1c0e1ca64eb2d0239b3eed2dcd904b02bec7c388c425e832f80080c28047a34349bdf847af35395682a84967d8c0d3855919199454485ed09f8786b7299687#npm:7.14.5"],\
           ["@babel/plugin-syntax-unicode-sets-regex", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:7.18.6"],\
@@ -4599,65 +3928,6 @@ const RAW_RUNTIME_STATE =
           ["babel-plugin-polyfill-corejs3", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:0.9.0"],\
           ["babel-plugin-polyfill-regenerator", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:0.5.5"],\
           ["core-js-compat", "npm:3.35.1"],\
-=======
-          ["@babel/plugin-syntax-private-property-in-object", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.14.5"],\
-          ["@babel/plugin-syntax-top-level-await", "virtual:ba1c0e1ca64eb2d0239b3eed2dcd904b02bec7c388c425e832f80080c28047a34349bdf847af35395682a84967d8c0d3855919199454485ed09f8786b7299687#npm:7.14.5"],\
-          ["@babel/plugin-syntax-unicode-sets-regex", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.18.6"],\
-          ["@babel/plugin-transform-arrow-functions", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-async-generator-functions", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-async-to-generator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-block-scoped-functions", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-block-scoping", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-class-properties", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-class-static-block", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-classes", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.5"],\
-          ["@babel/plugin-transform-computed-properties", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-destructuring", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-dotall-regex", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-duplicate-keys", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-dynamic-import", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-exponentiation-operator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-export-namespace-from", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-for-of", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-function-name", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-json-strings", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-literals", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-logical-assignment-operators", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-member-expression-literals", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-modules-amd", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-modules-commonjs", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-modules-systemjs", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-modules-umd", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-named-capturing-groups-regex", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.22.5"],\
-          ["@babel/plugin-transform-new-target", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-nullish-coalescing-operator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-numeric-separator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-object-rest-spread", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-object-super", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-optional-catch-binding", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-optional-chaining", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-parameters", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-private-methods", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-private-property-in-object", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-property-literals", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-regenerator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-reserved-words", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-shorthand-properties", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-spread", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-sticky-regex", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-template-literals", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-typeof-symbol", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-unicode-escapes", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-unicode-property-regex", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-unicode-regex", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-unicode-sets-regex", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/preset-modules", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.1.6-no-external-plugins"],\
-          ["@types/babel__core", null],\
-          ["babel-plugin-polyfill-corejs2", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.4.6"],\
-          ["babel-plugin-polyfill-corejs3", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.8.6"],\
-          ["babel-plugin-polyfill-regenerator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.5.3"],\
-          ["core-js-compat", "npm:3.33.3"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["semver", "npm:6.3.1"]\
         ],\
         "packagePeers": [\
@@ -4679,11 +3949,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@babel-preset-flow-virtual-f568981b4d/0/cache/@babel-preset-flow-npm-7.23.3-1b8d202681-60b5dde796.zip/node_modules/@babel/preset-flow/",\
         "packageDependencies": [\
           ["@babel/preset-flow", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.23.3"],\
-<<<<<<< HEAD
           ["@babel/core", "npm:7.23.9"],\
-=======
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/helper-validator-option", "npm:7.23.5"],\
           ["@babel/plugin-transform-flow-strip-types", "virtual:f568981b4de07b18887ac0f4f57918af492ecd5e0b5625b9730a71e845ac2caa71f1bef1e5a866c8b546abd1731552de9100b461eaedb51d33aa1e7f21cb9da0#npm:7.23.3"],\
@@ -4694,25 +3960,6 @@ const RAW_RUNTIME_STATE =
           "@types/babel__core"\
         ],\
         "linkType": "HARD"\
-<<<<<<< HEAD
-      }],\
-      ["virtual:dcd9259debf4d9531375247cfecfd5c37794cef2d87a2fc5da33f198a358641bfb7c6abaa6295aef0c02e1cc5f906e5775096030c7a32f907575a1700ff10125#npm:7.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-preset-flow-virtual-7430ab52ae/0/cache/@babel-preset-flow-npm-7.23.3-1b8d202681-60b5dde796.zip/node_modules/@babel/preset-flow/",\
-        "packageDependencies": [\
-          ["@babel/preset-flow", "virtual:dcd9259debf4d9531375247cfecfd5c37794cef2d87a2fc5da33f198a358641bfb7c6abaa6295aef0c02e1cc5f906e5775096030c7a32f907575a1700ff10125#npm:7.23.3"],\
-          ["@babel/core", "npm:7.23.9"],\
-          ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-          ["@babel/helper-validator-option", "npm:7.23.5"],\
-          ["@babel/plugin-transform-flow-strip-types", "virtual:7430ab52aeacbca07f8991ac6428cc5881a617ba6c2403b52e380a9e6f052f00b067b95d0f66477651c470744083bfabf0b0e8d1651d3b6594370802b97b41a9#npm:7.23.3"],\
-          ["@types/babel__core", "npm:7.20.5"]\
-        ],\
-        "packagePeers": [\
-          "@babel/core",\
-          "@types/babel__core"\
-        ],\
-        "linkType": "HARD"\
-=======
->>>>>>> efb9948 (chore: remove storybook/react-webpack5)
       }]\
     ]],\
     ["@babel/preset-modules", [\
@@ -4723,19 +3970,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:0.1.6-no-external-plugins", {\
         "packageLocation": "./.yarn/__virtual__/@babel-preset-modules-virtual-83720cee96/0/cache/@babel-preset-modules-npm-0.1.6-no-external-plugins-0ae0b52ff3-039aba98a6.zip/node_modules/@babel/preset-modules/",\
         "packageDependencies": [\
           ["@babel/preset-modules", "virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:0.1.6-no-external-plugins"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.1.6-no-external-plugins", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-preset-modules-virtual-ac67890854/0/cache/@babel-preset-modules-npm-0.1.6-no-external-plugins-0ae0b52ff3-039aba98a6.zip/node_modules/@babel/preset-modules/",\
-        "packageDependencies": [\
-          ["@babel/preset-modules", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.1.6-no-external-plugins"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/types", "npm:7.23.9"],\
           ["@types/babel__core", "npm:7.20.5"],\
@@ -4841,21 +4080,12 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@babel-preset-typescript-virtual-12669512dc/0/cache/@babel-preset-typescript-npm-7.23.3-f4c363b2f7-c4add0f3fc.zip/node_modules/@babel/preset-typescript/",\
         "packageDependencies": [\
           ["@babel/preset-typescript", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.23.3"],\
-<<<<<<< HEAD
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-plugin-utils", "npm:7.22.5"],\
           ["@babel/helper-validator-option", "npm:7.23.5"],\
           ["@babel/plugin-syntax-jsx", "virtual:15ef0a4ad61c166598c4d195dc64a0b7270b186e9a584ea25871b4181189fa5a61a49aa37f6bcda6ffed25499ff900f1a33224b0c22868c8eb1eaf1dd4f0dc11#npm:7.23.3"],\
           ["@babel/plugin-transform-modules-commonjs", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:7.23.3"],\
           ["@babel/plugin-transform-typescript", "virtual:12669512dcae3de1aa28f3009e7f6ada4fafc888514eaefdf78331d6a337e6b762f44e1f00d0187fa791d3220ace765e67f9ffe93c048f2474d2c2a0cc120fc6#npm:7.23.6"],\
-=======
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-plugin-utils", "npm:7.22.5"],\
-          ["@babel/helper-validator-option", "npm:7.23.5"],\
-          ["@babel/plugin-syntax-jsx", "virtual:15ef0a4ad61c166598c4d195dc64a0b7270b186e9a584ea25871b4181189fa5a61a49aa37f6bcda6ffed25499ff900f1a33224b0c22868c8eb1eaf1dd4f0dc11#npm:7.23.3"],\
-          ["@babel/plugin-transform-modules-commonjs", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-typescript", "virtual:12669512dcae3de1aa28f3009e7f6ada4fafc888514eaefdf78331d6a337e6b762f44e1f00d0187fa791d3220ace765e67f9ffe93c048f2474d2c2a0cc120fc6#npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@types/babel__core", null]\
         ],\
         "packagePeers": [\
@@ -4873,19 +4103,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.23.7", {\
         "packageLocation": "./.yarn/__virtual__/@babel-register-virtual-6b3997212a/0/cache/@babel-register-npm-7.23.7-6ea2280083-c72a6d4856.zip/node_modules/@babel/register/",\
         "packageDependencies": [\
           ["@babel/register", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.23.7"],\
           ["@babel/core", "npm:7.23.9"],\
-=======
-      ["virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.22.15", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-register-virtual-082f223609/0/cache/@babel-register-npm-7.22.15-13445da448-5497be6773.zip/node_modules/@babel/register/",\
-        "packageDependencies": [\
-          ["@babel/register", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.22.15"],\
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@types/babel__core", null],\
           ["clone-deep", "npm:4.0.1"],\
           ["find-cache-dir", "npm:2.1.0"],\
@@ -5671,10 +4893,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
-      ["virtual:6eec398a4132b5372ea5ffc0bc36d4c81602b7e444a89685d0d958016d8fd53df5c0c97c6a8bf99951469e2c6c06135dd192e9309f6e39b1a4c85e0faabe1f6b#npm:4.4.0", {\
-        "packageLocation": "./.yarn/__virtual__/@eslint-community-eslint-utils-virtual-719be7711d/0/cache/@eslint-community-eslint-utils-npm-4.4.0-d1791bd5a3-8d70bcdcd8.zip/node_modules/@eslint-community/eslint-utils/",\
-=======
       ["virtual:253a152bc87267f8c251ece718d9b1f3db7820e67989adeeca3d66d00a09750c33d54069fe7064b30289ad44ae286becc3fd70ace70e5c1915de5bae3c24847d#npm:4.4.0", {\
         "packageLocation": "./.yarn/__virtual__/@eslint-community-eslint-utils-virtual-c6c472661d/0/cache/@eslint-community-eslint-utils-npm-4.4.0-d1791bd5a3-8d70bcdcd8.zip/node_modules/@eslint-community/eslint-utils/",\
         "packageDependencies": [\
@@ -5689,9 +4907,8 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:8736507c17e995ef31571b70811862f4d0b0261c8e94b60764869da821bcd488d5a9c38f10ad1282a1f94cf8d70730f7b7b56d0a6f4e334235a8869b3b4c6516#npm:4.4.0", {\
-        "packageLocation": "./.yarn/__virtual__/@eslint-community-eslint-utils-virtual-9d6b4945e8/0/cache/@eslint-community-eslint-utils-npm-4.4.0-d1791bd5a3-8d70bcdcd8.zip/node_modules/@eslint-community/eslint-utils/",\
->>>>>>> db802e0 (chore: build storybook 명령어 추가)
+      ["virtual:6eec398a4132b5372ea5ffc0bc36d4c81602b7e444a89685d0d958016d8fd53df5c0c97c6a8bf99951469e2c6c06135dd192e9309f6e39b1a4c85e0faabe1f6b#npm:4.4.0", {\
+        "packageLocation": "./.yarn/__virtual__/@eslint-community-eslint-utils-virtual-719be7711d/0/cache/@eslint-community-eslint-utils-npm-4.4.0-d1791bd5a3-8d70bcdcd8.zip/node_modules/@eslint-community/eslint-utils/",\
         "packageDependencies": [\
           ["@eslint-community/eslint-utils", "virtual:6eec398a4132b5372ea5ffc0bc36d4c81602b7e444a89685d0d958016d8fd53df5c0c97c6a8bf99951469e2c6c06135dd192e9309f6e39b1a4c85e0faabe1f6b#npm:4.4.0"],\
           ["@types/eslint", null],\
@@ -5761,10 +4978,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@floating-ui/dom", [\
-      ["npm:1.6.0", {\
-        "packageLocation": "./.yarn/cache/@floating-ui-dom-npm-1.6.0-dc81f598cd-fc559385a2.zip/node_modules/@floating-ui/dom/",\
+      ["npm:1.6.1", {\
+        "packageLocation": "./.yarn/cache/@floating-ui-dom-npm-1.6.1-55a222b4ad-c010feb55b.zip/node_modules/@floating-ui/dom/",\
         "packageDependencies": [\
-          ["@floating-ui/dom", "npm:1.6.0"],\
+          ["@floating-ui/dom", "npm:1.6.1"],\
           ["@floating-ui/core", "npm:1.6.0"],\
           ["@floating-ui/utils", "npm:0.2.1"]\
         ],\
@@ -5772,18 +4989,18 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@floating-ui/react-dom", [\
-      ["npm:2.0.7", {\
-        "packageLocation": "./.yarn/cache/@floating-ui-react-dom-npm-2.0.7-df3f5f04a3-15eb9ec493.zip/node_modules/@floating-ui/react-dom/",\
+      ["npm:2.0.8", {\
+        "packageLocation": "./.yarn/cache/@floating-ui-react-dom-npm-2.0.8-adede82f46-e57b2a498a.zip/node_modules/@floating-ui/react-dom/",\
         "packageDependencies": [\
-          ["@floating-ui/react-dom", "npm:2.0.7"]\
+          ["@floating-ui/react-dom", "npm:2.0.8"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:2c72fbce631d898818851256aba01bf9892e2733ee5a454969159aae9b8bc34d52e3d35b268599d7de8f092068469e5a7e4dfe3a7bb270938a05917389df11fb#npm:2.0.7", {\
-        "packageLocation": "./.yarn/__virtual__/@floating-ui-react-dom-virtual-ad37f640f6/0/cache/@floating-ui-react-dom-npm-2.0.7-df3f5f04a3-15eb9ec493.zip/node_modules/@floating-ui/react-dom/",\
+      ["virtual:2c72fbce631d898818851256aba01bf9892e2733ee5a454969159aae9b8bc34d52e3d35b268599d7de8f092068469e5a7e4dfe3a7bb270938a05917389df11fb#npm:2.0.8", {\
+        "packageLocation": "./.yarn/__virtual__/@floating-ui-react-dom-virtual-4a53c08ee8/0/cache/@floating-ui-react-dom-npm-2.0.8-adede82f46-e57b2a498a.zip/node_modules/@floating-ui/react-dom/",\
         "packageDependencies": [\
-          ["@floating-ui/react-dom", "virtual:2c72fbce631d898818851256aba01bf9892e2733ee5a454969159aae9b8bc34d52e3d35b268599d7de8f092068469e5a7e4dfe3a7bb270938a05917389df11fb#npm:2.0.7"],\
-          ["@floating-ui/dom", "npm:1.6.0"],\
+          ["@floating-ui/react-dom", "virtual:2c72fbce631d898818851256aba01bf9892e2733ee5a454969159aae9b8bc34d52e3d35b268599d7de8f092068469e5a7e4dfe3a7bb270938a05917389df11fb#npm:2.0.8"],\
+          ["@floating-ui/dom", "npm:1.6.1"],\
           ["@types/react", null],\
           ["@types/react-dom", null],\
           ["react", null],\
@@ -5797,11 +5014,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:962da51b7a7c1fbdf74632c2cce9424ccff6b8d5a437f2ff4ee59dec38628610140d075d4fa1c1f40afbc9e1b70d4ad951f4988daac3a12190c7f7ff2570c12b#npm:2.0.7", {\
-        "packageLocation": "./.yarn/__virtual__/@floating-ui-react-dom-virtual-094ab80373/0/cache/@floating-ui-react-dom-npm-2.0.7-df3f5f04a3-15eb9ec493.zip/node_modules/@floating-ui/react-dom/",\
+      ["virtual:962da51b7a7c1fbdf74632c2cce9424ccff6b8d5a437f2ff4ee59dec38628610140d075d4fa1c1f40afbc9e1b70d4ad951f4988daac3a12190c7f7ff2570c12b#npm:2.0.8", {\
+        "packageLocation": "./.yarn/__virtual__/@floating-ui-react-dom-virtual-581eb3d940/0/cache/@floating-ui-react-dom-npm-2.0.8-adede82f46-e57b2a498a.zip/node_modules/@floating-ui/react-dom/",\
         "packageDependencies": [\
-          ["@floating-ui/react-dom", "virtual:962da51b7a7c1fbdf74632c2cce9424ccff6b8d5a437f2ff4ee59dec38628610140d075d4fa1c1f40afbc9e1b70d4ad951f4988daac3a12190c7f7ff2570c12b#npm:2.0.7"],\
-          ["@floating-ui/dom", "npm:1.6.0"],\
+          ["@floating-ui/react-dom", "virtual:962da51b7a7c1fbdf74632c2cce9424ccff6b8d5a437f2ff4ee59dec38628610140d075d4fa1c1f40afbc9e1b70d4ad951f4988daac3a12190c7f7ff2570c12b#npm:2.0.8"],\
+          ["@floating-ui/dom", "npm:1.6.1"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", "npm:18.2.18"],\
           ["react", "npm:18.2.0"],\
@@ -5908,7 +5125,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@jest/console", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["chalk", "npm:4.1.2"],\
           ["jest-message-util", "npm:29.7.0"],\
           ["jest-util", "npm:29.7.0"],\
@@ -5934,7 +5151,7 @@ const RAW_RUNTIME_STATE =
           ["@jest/test-result", "npm:29.7.0"],\
           ["@jest/transform", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/node-notifier", null],\
           ["@types/ts-node", null],\
           ["ansi-escapes", "npm:4.3.2"],\
@@ -5979,7 +5196,7 @@ const RAW_RUNTIME_STATE =
           ["@jest/test-result", "npm:29.7.0"],\
           ["@jest/transform", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/node-notifier", null],\
           ["@types/ts-node", null],\
           ["ansi-escapes", "npm:4.3.2"],\
@@ -6024,7 +5241,7 @@ const RAW_RUNTIME_STATE =
           ["@jest/test-result", "npm:29.7.0"],\
           ["@jest/transform", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/node-notifier", null],\
           ["@types/ts-node", null],\
           ["ansi-escapes", "npm:4.3.2"],\
@@ -6078,7 +5295,7 @@ const RAW_RUNTIME_STATE =
           ["@jest/environment", "npm:29.7.0"],\
           ["@jest/fake-timers", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["jest-mock", "npm:29.7.0"]\
         ],\
         "linkType": "HARD"\
@@ -6112,7 +5329,7 @@ const RAW_RUNTIME_STATE =
           ["@jest/fake-timers", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
           ["@sinonjs/fake-timers", "npm:10.3.0"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["jest-message-util", "npm:29.7.0"],\
           ["jest-mock", "npm:29.7.0"],\
           ["jest-util", "npm:29.7.0"]\
@@ -6150,8 +5367,8 @@ const RAW_RUNTIME_STATE =
           ["@jest/test-result", "npm:29.7.0"],\
           ["@jest/transform", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@jridgewell/trace-mapping", "npm:0.3.22"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@jridgewell/trace-mapping", "npm:0.3.20"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/node-notifier", null],\
           ["chalk", "npm:4.1.2"],\
           ["collect-v8-coverage", "npm:1.0.2"],\
@@ -6194,7 +5411,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@jest-source-map-npm-29.6.3-8bb8289263-bcc5a8697d.zip/node_modules/@jest/source-map/",\
         "packageDependencies": [\
           ["@jest/source-map", "npm:29.6.3"],\
-          ["@jridgewell/trace-mapping", "npm:0.3.22"],\
+          ["@jridgewell/trace-mapping", "npm:0.3.20"],\
           ["callsites", "npm:3.1.0"],\
           ["graceful-fs", "npm:4.2.11"]\
         ],\
@@ -6234,7 +5451,7 @@ const RAW_RUNTIME_STATE =
           ["@jest/transform", "npm:29.7.0"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@jridgewell/trace-mapping", "npm:0.3.22"],\
+          ["@jridgewell/trace-mapping", "npm:0.3.20"],\
           ["babel-plugin-istanbul", "npm:6.1.1"],\
           ["chalk", "npm:4.1.2"],\
           ["convert-source-map", "npm:2.0.0"],\
@@ -6258,7 +5475,7 @@ const RAW_RUNTIME_STATE =
           ["@jest/types", "npm:27.5.1"],\
           ["@types/istanbul-lib-coverage", "npm:2.0.6"],\
           ["@types/istanbul-reports", "npm:3.0.4"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/yargs", "npm:16.0.9"],\
           ["chalk", "npm:4.1.2"]\
         ],\
@@ -6271,7 +5488,7 @@ const RAW_RUNTIME_STATE =
           ["@jest/schemas", "npm:29.6.3"],\
           ["@types/istanbul-lib-coverage", "npm:2.0.6"],\
           ["@types/istanbul-reports", "npm:3.0.4"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/yargs", "npm:17.0.32"],\
           ["chalk", "npm:4.1.2"]\
         ],\
@@ -6285,7 +5502,7 @@ const RAW_RUNTIME_STATE =
           ["@jridgewell/gen-mapping", "npm:0.3.3"],\
           ["@jridgewell/set-array", "npm:1.1.2"],\
           ["@jridgewell/sourcemap-codec", "npm:1.4.15"],\
-          ["@jridgewell/trace-mapping", "npm:0.3.22"]\
+          ["@jridgewell/trace-mapping", "npm:0.3.20"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6314,7 +5531,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@jridgewell/source-map", "npm:0.3.5"],\
           ["@jridgewell/gen-mapping", "npm:0.3.3"],\
-          ["@jridgewell/trace-mapping", "npm:0.3.22"]\
+          ["@jridgewell/trace-mapping", "npm:0.3.20"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6329,10 +5546,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@jridgewell/trace-mapping", [\
-      ["npm:0.3.22", {\
-        "packageLocation": "./.yarn/cache/@jridgewell-trace-mapping-npm-0.3.22-0baba2f798-48d3e3db00.zip/node_modules/@jridgewell/trace-mapping/",\
+      ["npm:0.3.20", {\
+        "packageLocation": "./.yarn/cache/@jridgewell-trace-mapping-npm-0.3.20-d90f282910-683117e4e6.zip/node_modules/@jridgewell/trace-mapping/",\
         "packageDependencies": [\
-          ["@jridgewell/trace-mapping", "npm:0.3.22"],\
+          ["@jridgewell/trace-mapping", "npm:0.3.20"],\
           ["@jridgewell/resolve-uri", "npm:3.1.1"],\
           ["@jridgewell/sourcemap-codec", "npm:1.4.15"]\
         ],\
@@ -6380,7 +5597,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/eslint-plugin/",\
         "packageDependencies": [\
           ["@linker/eslint-plugin", "workspace:packages/eslint-plugin"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@typescript-eslint/eslint-plugin", "virtual:5150ddf72639c78026dd42fb70c98db909b5b4705d92e6f4c006404aac57f9ed11b6f4301fb318563ae47c142354f07129b31abbd0e3a58319a40761e044e693#npm:6.19.1"],\
           ["@typescript-eslint/parser", "virtual:5150ddf72639c78026dd42fb70c98db909b5b4705d92e6f4c006404aac57f9ed11b6f4301fb318563ae47c142354f07129b31abbd0e3a58319a40761e044e693#npm:6.19.1"],\
           ["eslint", "npm:8.56.0"],\
@@ -6397,7 +5614,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/ky/",\
         "packageDependencies": [\
           ["@linker/ky", "workspace:packages/ky"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["ky", "npm:1.2.0"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"]\
         ],\
@@ -6415,7 +5632,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/preset-typescript", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.23.3"],\
           ["@linker/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#workspace:packages/react"],\
           ["@linker/styles", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#workspace:packages/styles"],\
-<<<<<<< HEAD
           ["@storybook/addon-essentials", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
           ["@storybook/addon-interactions", "npm:7.6.10"],\
           ["@storybook/addon-links", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
@@ -6423,17 +5639,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/blocks", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
           ["@storybook/nextjs", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
           ["@storybook/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
-          ["@storybook/react-webpack5", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
-=======
-          ["@storybook/addon-essentials", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/addon-interactions", "npm:7.6.3"],\
-          ["@storybook/addon-links", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/addon-onboarding", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:1.0.8"],\
-          ["@storybook/blocks", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/nextjs", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
           ["@storybook/test", "npm:7.6.10"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@storybook/testing-library", "npm:0.2.2"],\
           ["@types/babel__core", "npm:7.20.5"],\
           ["@types/babel__preset-env", "npm:7.9.6"],\
@@ -6442,32 +5648,19 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.18"],\
           ["@types/vanilla-extract__css", null],\
           ["@types/vanilla-extract__dynamic", null],\
-          ["@vanilla-extract/css", "npm:1.14.0"],\
+          ["@vanilla-extract/css", "npm:1.14.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
-<<<<<<< HEAD
-          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.2"],\
-=======
-          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.1"],\
-          ["chromatic", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.0"],\
->>>>>>> d1af9ad (chore: chromatic 설치)
+          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.3"],\
+          ["chromatic", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.1"],\
           ["clsx", "npm:2.0.0"],\
-<<<<<<< HEAD
-          ["date-fns", "npm:3.3.1"],\
-=======
           ["css-loader", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:6.9.1"],\
-          ["date-fns", "npm:3.0.6"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
+          ["date-fns", "npm:3.3.1"],\
           ["date-fns-tz", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.0.0"],\
-<<<<<<< HEAD
-          ["framer-motion", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.18.0"],\
-          ["next", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:14.1.0"],\
-=======
           ["eslint-plugin-storybook", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.6.15"],\
-          ["framer-motion", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.17.9"],\
+          ["framer-motion", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.18.0"],\
           ["mini-css-extract-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.7.7"],\
-          ["next", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:14.0.3"],\
->>>>>>> db802e0 (chore: build storybook 명령어 추가)
+          ["next", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:14.1.0"],\
           ["next-themes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.2.1"],\
           ["prop-types", "npm:15.8.1"],\
           ["react", "npm:18.2.0"],\
@@ -6475,11 +5668,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:18.2.0"],\
           ["react-hook-form", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.49.3"],\
           ["storybook", "npm:7.6.10"],\
-<<<<<<< HEAD
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
-=======
-          ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["use-debounce", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.0.0"],\
           ["webpack", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:5.90.0"]\
         ],\
@@ -6514,7 +5703,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/blocks", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
           ["@storybook/nextjs", "virtual:8e4a5a8ab7b614a55c5075525934fc4414752457be028f2ecc67a21045bccde0c75d90c56d529977721f2703ec7c6197682b9e0fa18b6fa4b9a84ecced95ca39#npm:7.6.10"],\
           ["@storybook/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
-          ["@storybook/react-webpack5", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
+          ["@storybook/test", "npm:7.6.10"],\
           ["@storybook/testing-library", "npm:0.2.2"],\
           ["@types/babel__core", "npm:7.20.5"],\
           ["@types/babel__preset-env", "npm:7.9.6"],\
@@ -6523,14 +5712,18 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.18"],\
           ["@types/vanilla-extract__css", null],\
           ["@types/vanilla-extract__dynamic", null],\
-          ["@vanilla-extract/css", "npm:1.14.0"],\
+          ["@vanilla-extract/css", "npm:1.14.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
-          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.2"],\
+          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.3"],\
+          ["chromatic", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.1"],\
           ["clsx", "npm:2.0.0"],\
+          ["css-loader", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:6.9.1"],\
           ["date-fns", "npm:3.3.1"],\
           ["date-fns-tz", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.0.0"],\
+          ["eslint-plugin-storybook", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.6.15"],\
           ["framer-motion", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.18.0"],\
+          ["mini-css-extract-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.7.7"],\
           ["next", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:14.0.3"],\
           ["next-themes", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:0.2.1"],\
           ["prop-types", "npm:15.8.1"],\
@@ -6567,7 +5760,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/preset-typescript", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.23.3"],\
           ["@linker/react", "virtual:ac0469655944d15a338c519c2ceffc32cce6347cb7cb5a45462c2341e4717e8e68d3e8e9f2c4650f259824932fafe25d5849c9fb9fd6d07e2fb67c901dec65f4#workspace:packages/react"],\
           ["@linker/styles", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#workspace:packages/styles"],\
-<<<<<<< HEAD
           ["@storybook/addon-essentials", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
           ["@storybook/addon-interactions", "npm:7.6.10"],\
           ["@storybook/addon-links", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
@@ -6575,17 +5767,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/blocks", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
           ["@storybook/nextjs", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
           ["@storybook/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
-          ["@storybook/react-webpack5", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
-=======
-          ["@storybook/addon-essentials", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/addon-interactions", "npm:7.6.3"],\
-          ["@storybook/addon-links", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/addon-onboarding", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:1.0.8"],\
-          ["@storybook/blocks", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/nextjs", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
           ["@storybook/test", "npm:7.6.10"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@storybook/testing-library", "npm:0.2.2"],\
           ["@types/babel__core", "npm:7.20.5"],\
           ["@types/babel__preset-env", "npm:7.9.6"],\
@@ -6594,32 +5776,19 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.18"],\
           ["@types/vanilla-extract__css", null],\
           ["@types/vanilla-extract__dynamic", null],\
-          ["@vanilla-extract/css", "npm:1.14.0"],\
+          ["@vanilla-extract/css", "npm:1.14.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
-<<<<<<< HEAD
-          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.2"],\
-=======
-          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.1"],\
-          ["chromatic", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.0"],\
->>>>>>> d1af9ad (chore: chromatic 설치)
+          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.3"],\
+          ["chromatic", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.1"],\
           ["clsx", "npm:2.0.0"],\
-<<<<<<< HEAD
-          ["date-fns", "npm:3.3.1"],\
-=======
           ["css-loader", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:6.9.1"],\
-          ["date-fns", "npm:3.0.6"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
+          ["date-fns", "npm:3.3.1"],\
           ["date-fns-tz", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.0.0"],\
-<<<<<<< HEAD
-          ["framer-motion", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.18.0"],\
-          ["next", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:14.1.0"],\
-=======
           ["eslint-plugin-storybook", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.6.15"],\
-          ["framer-motion", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.17.9"],\
+          ["framer-motion", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.18.0"],\
           ["mini-css-extract-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.7.7"],\
-          ["next", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:14.0.3"],\
->>>>>>> db802e0 (chore: build storybook 명령어 추가)
+          ["next", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:14.1.0"],\
           ["next-themes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.2.1"],\
           ["prop-types", "npm:15.8.1"],\
           ["react", "npm:18.2.0"],\
@@ -6627,11 +5796,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:18.2.0"],\
           ["react-hook-form", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.49.3"],\
           ["storybook", "npm:7.6.10"],\
-<<<<<<< HEAD
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
-=======
-          ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["use-debounce", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.0.0"],\
           ["webpack", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:5.90.0"]\
         ],\
@@ -6659,7 +5824,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/preset-typescript", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.23.3"],\
           ["@linker/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#workspace:packages/react"],\
           ["@linker/styles", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#workspace:packages/styles"],\
-<<<<<<< HEAD
           ["@storybook/addon-essentials", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
           ["@storybook/addon-interactions", "npm:7.6.10"],\
           ["@storybook/addon-links", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
@@ -6667,48 +5831,25 @@ const RAW_RUNTIME_STATE =
           ["@storybook/blocks", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
           ["@storybook/nextjs", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
           ["@storybook/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
-          ["@storybook/react-webpack5", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
-=======
-          ["@storybook/addon-essentials", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/addon-interactions", "npm:7.6.3"],\
-          ["@storybook/addon-links", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/addon-onboarding", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:1.0.8"],\
-          ["@storybook/blocks", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/nextjs", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
           ["@storybook/test", "npm:7.6.10"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@storybook/testing-library", "npm:0.2.2"],\
           ["@types/babel__core", "npm:7.20.5"],\
           ["@types/babel__preset-env", "npm:7.9.6"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", "npm:18.2.18"],\
-          ["@vanilla-extract/css", "npm:1.14.0"],\
+          ["@vanilla-extract/css", "npm:1.14.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
-<<<<<<< HEAD
-          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.2"],\
-=======
-          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.1"],\
-          ["chromatic", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.0"],\
->>>>>>> d1af9ad (chore: chromatic 설치)
+          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.3"],\
+          ["chromatic", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.1"],\
           ["clsx", "npm:2.0.0"],\
-<<<<<<< HEAD
-          ["date-fns", "npm:3.3.1"],\
-=======
           ["css-loader", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:6.9.1"],\
-          ["date-fns", "npm:3.0.6"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
+          ["date-fns", "npm:3.3.1"],\
           ["date-fns-tz", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.0.0"],\
-<<<<<<< HEAD
-          ["framer-motion", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.18.0"],\
-          ["next", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:14.1.0"],\
-=======
           ["eslint-plugin-storybook", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.6.15"],\
-          ["framer-motion", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.17.9"],\
+          ["framer-motion", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.18.0"],\
           ["mini-css-extract-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.7.7"],\
-          ["next", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:14.0.3"],\
->>>>>>> db802e0 (chore: build storybook 명령어 추가)
+          ["next", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:14.1.0"],\
           ["next-themes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.2.1"],\
           ["prop-types", "npm:15.8.1"],\
           ["react", "npm:18.2.0"],\
@@ -6716,11 +5857,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:18.2.0"],\
           ["react-hook-form", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.49.3"],\
           ["storybook", "npm:7.6.10"],\
-<<<<<<< HEAD
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
-=======
-          ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["use-debounce", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.0.0"],\
           ["webpack", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:5.90.0"]\
         ],\
@@ -6749,12 +5886,12 @@ const RAW_RUNTIME_STATE =
           ["@types/testing-library__jest-dom", "npm:6.0.0"],\
           ["@types/vanilla-extract__css", null],\
           ["@types/vanilla-extract__dynamic", null],\
-          ["@vanilla-extract/css", "npm:1.14.0"],\
+          ["@vanilla-extract/css", "npm:1.14.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/jest-transform", "npm:1.1.3"],\
-          ["@vanilla-extract/next-plugin", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:2.3.3"],\
+          ["@vanilla-extract/next-plugin", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:2.3.4"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
-          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.2"],\
+          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.3"],\
           ["clsx", "npm:2.0.0"],\
           ["jest", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:29.7.0"],\
           ["jest-environment-jsdom", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:29.7.0"],\
@@ -6801,12 +5938,12 @@ const RAW_RUNTIME_STATE =
           ["@types/testing-library__jest-dom", "npm:6.0.0"],\
           ["@types/vanilla-extract__css", null],\
           ["@types/vanilla-extract__dynamic", null],\
-          ["@vanilla-extract/css", "npm:1.14.0"],\
+          ["@vanilla-extract/css", "npm:1.14.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/jest-transform", "npm:1.1.3"],\
-          ["@vanilla-extract/next-plugin", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:2.3.3"],\
+          ["@vanilla-extract/next-plugin", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:2.3.4"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
-          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.2"],\
+          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.3"],\
           ["clsx", "npm:2.0.0"],\
           ["jest", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:29.7.0"],\
           ["jest-environment-jsdom", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:29.7.0"],\
@@ -6853,12 +5990,12 @@ const RAW_RUNTIME_STATE =
           ["@types/testing-library__jest-dom", "npm:6.0.0"],\
           ["@types/vanilla-extract__css", null],\
           ["@types/vanilla-extract__dynamic", null],\
-          ["@vanilla-extract/css", "npm:1.14.0"],\
+          ["@vanilla-extract/css", "npm:1.14.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/jest-transform", "npm:1.1.3"],\
-          ["@vanilla-extract/next-plugin", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:2.3.3"],\
+          ["@vanilla-extract/next-plugin", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:2.3.4"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
-          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.2"],\
+          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.3"],\
           ["clsx", "npm:2.0.0"],\
           ["jest", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:29.7.0"],\
           ["jest-environment-jsdom", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:29.7.0"],\
@@ -6902,12 +6039,12 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", "npm:18.2.18"],\
           ["@types/testing-library__jest-dom", "npm:6.0.0"],\
-          ["@vanilla-extract/css", "npm:1.14.0"],\
+          ["@vanilla-extract/css", "npm:1.14.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/jest-transform", "npm:1.1.3"],\
-          ["@vanilla-extract/next-plugin", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:2.3.3"],\
+          ["@vanilla-extract/next-plugin", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:2.3.4"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
-          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.2"],\
+          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.3"],\
           ["clsx", "npm:2.0.0"],\
           ["jest", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:29.7.0"],\
           ["jest-environment-jsdom", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:29.7.0"],\
@@ -6937,7 +6074,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.18"],\
           ["@types/vanilla-extract__css", null],\
           ["@types/vanilla-extract__dynamic", null],\
-          ["@vanilla-extract/css", "npm:1.14.0"],\
+          ["@vanilla-extract/css", "npm:1.14.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
           ["@vanilla-extract/sprinkles", "virtual:3a8833b1aa00274bb4e4f4e2f6e03501d91c26c8ef4d55a2158a803071987442cf17c4d0a9f003b135504e21ee24ebaf3409a5bb92e1aa0072eedf03b8aec9c2#npm:1.6.1"],\
@@ -6969,7 +6106,7 @@ const RAW_RUNTIME_STATE =
           ["@types/babel__preset-env", "npm:7.9.6"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", "npm:18.2.18"],\
-          ["@vanilla-extract/css", "npm:1.14.0"],\
+          ["@vanilla-extract/css", "npm:1.14.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
           ["@vanilla-extract/sprinkles", "virtual:3a8833b1aa00274bb4e4f4e2f6e03501d91c26c8ef4d55a2158a803071987442cf17c4d0a9f003b135504e21ee24ebaf3409a5bb92e1aa0072eedf03b8aec9c2#npm:1.6.1"],\
@@ -7843,7 +6980,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@radix-ui/react-popper", "virtual:1b132e852b6dffc1a366fa170a6246be0059207947b458a27a27cb29a150ab83b3750d99546f5585f9710c39477d76e6df7255975a00128d4fcb7ad5f168122c#npm:1.1.2"],\
           ["@babel/runtime", "npm:7.23.9"],\
-          ["@floating-ui/react-dom", "virtual:962da51b7a7c1fbdf74632c2cce9424ccff6b8d5a437f2ff4ee59dec38628610140d075d4fa1c1f40afbc9e1b70d4ad951f4988daac3a12190c7f7ff2570c12b#npm:2.0.7"],\
+          ["@floating-ui/react-dom", "virtual:962da51b7a7c1fbdf74632c2cce9424ccff6b8d5a437f2ff4ee59dec38628610140d075d4fa1c1f40afbc9e1b70d4ad951f4988daac3a12190c7f7ff2570c12b#npm:2.0.8"],\
           ["@radix-ui/react-arrow", "virtual:962da51b7a7c1fbdf74632c2cce9424ccff6b8d5a437f2ff4ee59dec38628610140d075d4fa1c1f40afbc9e1b70d4ad951f4988daac3a12190c7f7ff2570c12b#npm:1.0.3"],\
           ["@radix-ui/react-compose-refs", "virtual:1b132e852b6dffc1a366fa170a6246be0059207947b458a27a27cb29a150ab83b3750d99546f5585f9710c39477d76e6df7255975a00128d4fcb7ad5f168122c#npm:1.0.1"],\
           ["@radix-ui/react-context", "virtual:1b132e852b6dffc1a366fa170a6246be0059207947b458a27a27cb29a150ab83b3750d99546f5585f9710c39477d76e6df7255975a00128d4fcb7ad5f168122c#npm:1.0.1"],\
@@ -7871,7 +7008,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@radix-ui/react-popper", "virtual:3ebb43e0e23eafb0d82e17167f2eafea0dfd23c401b4d5ab31d4383f6dfb02b34c510c40b96d899c05ff5b3e9609a9a099648b76b831d8c528336747c39073db#npm:1.1.2"],\
           ["@babel/runtime", "npm:7.23.9"],\
-          ["@floating-ui/react-dom", "virtual:2c72fbce631d898818851256aba01bf9892e2733ee5a454969159aae9b8bc34d52e3d35b268599d7de8f092068469e5a7e4dfe3a7bb270938a05917389df11fb#npm:2.0.7"],\
+          ["@floating-ui/react-dom", "virtual:2c72fbce631d898818851256aba01bf9892e2733ee5a454969159aae9b8bc34d52e3d35b268599d7de8f092068469e5a7e4dfe3a7bb270938a05917389df11fb#npm:2.0.8"],\
           ["@radix-ui/react-arrow", "virtual:2c72fbce631d898818851256aba01bf9892e2733ee5a454969159aae9b8bc34d52e3d35b268599d7de8f092068469e5a7e4dfe3a7bb270938a05917389df11fb#npm:1.0.3"],\
           ["@radix-ui/react-compose-refs", "virtual:3ebb43e0e23eafb0d82e17167f2eafea0dfd23c401b4d5ab31d4383f6dfb02b34c510c40b96d899c05ff5b3e9609a9a099648b76b831d8c528336747c39073db#npm:1.0.1"],\
           ["@radix-ui/react-context", "virtual:3ebb43e0e23eafb0d82e17167f2eafea0dfd23c401b4d5ab31d4383f6dfb02b34c510c40b96d899c05ff5b3e9609a9a099648b76b831d8c528336747c39073db#npm:1.0.1"],\
@@ -9259,7 +8396,7 @@ const RAW_RUNTIME_STATE =
           ["case-sensitive-paths-webpack-plugin", "npm:2.4.0"],\
           ["cjs-module-lexer", "npm:1.2.3"],\
           ["constants-browserify", "npm:1.0.0"],\
-          ["css-loader", "virtual:3dca107af9fb2423c491f49cee255d1b7fc698af0e98c0d6e907a311ffb27bfa883814294885b7883a1ca4450c2568e2404ca1864dc8b5292a8550e3147d61fc#npm:6.9.1"],\
+          ["css-loader", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:6.9.1"],\
           ["es-module-lexer", "npm:1.4.1"],\
           ["express", "npm:4.18.2"],\
           ["fork-ts-checker-webpack-plugin", "virtual:a5bd696cc54722235dae6f9a598f17e8e4d712cfe404bac62b8e8d3fb1943a4844c37a9be08a15c46840f9244f9b3915f1669946d1f54d696ca7f63218d1e109#npm:8.0.0"],\
@@ -9292,22 +8429,6 @@ const RAW_RUNTIME_STATE =
     ["@storybook/channels", [\
       ["npm:7.6.10", {\
         "packageLocation": "./.yarn/cache/@storybook-channels-npm-7.6.10-788c9f84d4-a476b23d1f.zip/node_modules/@storybook/channels/",\
-<<<<<<< HEAD
-=======
-        "packageDependencies": [\
-          ["@storybook/channels", "npm:7.6.10"],\
-          ["@storybook/client-logger", "npm:7.6.10"],\
-          ["@storybook/core-events", "npm:7.6.10"],\
-          ["@storybook/global", "npm:5.0.0"],\
-          ["qs", "npm:6.11.2"],\
-          ["telejson", "npm:7.2.0"],\
-          ["tiny-invariant", "npm:1.3.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.6.3", {\
-        "packageLocation": "./.yarn/cache/@storybook-channels-npm-7.6.3-0c928c4655-378161310e.zip/node_modules/@storybook/channels/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         "packageDependencies": [\
           ["@storybook/channels", "npm:7.6.10"],\
           ["@storybook/client-logger", "npm:7.6.10"],\
@@ -9325,15 +8446,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@storybook-cli-npm-7.6.10-af9955952e-bd8a4479ef.zip/node_modules/@storybook/cli/",\
         "packageDependencies": [\
           ["@storybook/cli", "npm:7.6.10"],\
-<<<<<<< HEAD
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/preset-env", "virtual:aa13efc2fe5e30c528aafb40f3191477d710b27fb761b4fbebc5eea45b7682a18e5766acffc1844fc6acb4b7f51c3f6c7bbf2685b4de40835bd4a4a67c519308#npm:7.23.9"],\
           ["@babel/types", "npm:7.23.9"],\
-=======
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/preset-env", "virtual:aa13efc2fe5e30c528aafb40f3191477d710b27fb761b4fbebc5eea45b7682a18e5766acffc1844fc6acb4b7f51c3f6c7bbf2685b4de40835bd4a4a67c519308#npm:7.23.5"],\
-          ["@babel/types", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@ndelangen/get-tarball", "npm:3.0.9"],\
           ["@storybook/codemod", "npm:7.6.10"],\
           ["@storybook/core-common", "npm:7.6.10"],\
@@ -9378,17 +8493,6 @@ const RAW_RUNTIME_STATE =
     ["@storybook/client-logger", [\
       ["npm:7.6.10", {\
         "packageLocation": "./.yarn/cache/@storybook-client-logger-npm-7.6.10-34e1d210fb-b91191b0e9.zip/node_modules/@storybook/client-logger/",\
-<<<<<<< HEAD
-=======
-        "packageDependencies": [\
-          ["@storybook/client-logger", "npm:7.6.10"],\
-          ["@storybook/global", "npm:5.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.6.3", {\
-        "packageLocation": "./.yarn/cache/@storybook-client-logger-npm-7.6.3-70cd285187-d42c003e05.zip/node_modules/@storybook/client-logger/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         "packageDependencies": [\
           ["@storybook/client-logger", "npm:7.6.10"],\
           ["@storybook/global", "npm:5.0.0"]\
@@ -9401,15 +8505,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@storybook-codemod-npm-7.6.10-aa13efc2fe-fad0d2758e.zip/node_modules/@storybook/codemod/",\
         "packageDependencies": [\
           ["@storybook/codemod", "npm:7.6.10"],\
-<<<<<<< HEAD
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/preset-env", "virtual:aa13efc2fe5e30c528aafb40f3191477d710b27fb761b4fbebc5eea45b7682a18e5766acffc1844fc6acb4b7f51c3f6c7bbf2685b4de40835bd4a4a67c519308#npm:7.23.9"],\
           ["@babel/types", "npm:7.23.9"],\
-=======
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/preset-env", "virtual:aa13efc2fe5e30c528aafb40f3191477d710b27fb761b4fbebc5eea45b7682a18e5766acffc1844fc6acb4b7f51c3f6c7bbf2685b4de40835bd4a4a67c519308#npm:7.23.5"],\
-          ["@babel/types", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@storybook/csf", "npm:0.1.2"],\
           ["@storybook/csf-tools", "npm:7.6.10"],\
           ["@storybook/node-logger", "npm:7.6.10"],\
@@ -9502,39 +8600,6 @@ const RAW_RUNTIME_STATE =
     ["@storybook/core-common", [\
       ["npm:7.6.10", {\
         "packageLocation": "./.yarn/cache/@storybook-core-common-npm-7.6.10-7f43bbe375-e066bb2011.zip/node_modules/@storybook/core-common/",\
-<<<<<<< HEAD
-=======
-        "packageDependencies": [\
-          ["@storybook/core-common", "npm:7.6.10"],\
-          ["@storybook/core-events", "npm:7.6.10"],\
-          ["@storybook/node-logger", "npm:7.6.10"],\
-          ["@storybook/types", "npm:7.6.10"],\
-          ["@types/find-cache-dir", "npm:3.2.1"],\
-          ["@types/node", "npm:18.19.0"],\
-          ["@types/node-fetch", "npm:2.6.9"],\
-          ["@types/pretty-hrtime", "npm:1.0.3"],\
-          ["chalk", "npm:4.1.2"],\
-          ["esbuild", "npm:0.18.20"],\
-          ["esbuild-register", "virtual:7f43bbe375b9fcd31deccb9ab1b0e7099879682f69cd232cbd9e6edab05c7497ebe470795e1a112961e644d161dea07521f4adc67cc5075d649a07db964aec7d#npm:3.5.0"],\
-          ["file-system-cache", "npm:2.3.0"],\
-          ["find-cache-dir", "npm:3.3.2"],\
-          ["find-up", "npm:5.0.0"],\
-          ["fs-extra", "npm:11.2.0"],\
-          ["glob", "npm:10.3.10"],\
-          ["handlebars", "npm:4.7.8"],\
-          ["lazy-universal-dotenv", "npm:4.0.0"],\
-          ["node-fetch", "virtual:7f43bbe375b9fcd31deccb9ab1b0e7099879682f69cd232cbd9e6edab05c7497ebe470795e1a112961e644d161dea07521f4adc67cc5075d649a07db964aec7d#npm:2.7.0"],\
-          ["picomatch", "npm:2.3.1"],\
-          ["pkg-dir", "npm:5.0.0"],\
-          ["pretty-hrtime", "npm:1.0.3"],\
-          ["resolve-from", "npm:5.0.0"],\
-          ["ts-dedent", "npm:2.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.6.3", {\
-        "packageLocation": "./.yarn/cache/@storybook-core-common-npm-7.6.3-fbd916c1e8-69b5319b52.zip/node_modules/@storybook/core-common/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         "packageDependencies": [\
           ["@storybook/core-common", "npm:7.6.10"],\
           ["@storybook/core-events", "npm:7.6.10"],\
@@ -9567,17 +8632,6 @@ const RAW_RUNTIME_STATE =
     ["@storybook/core-events", [\
       ["npm:7.6.10", {\
         "packageLocation": "./.yarn/cache/@storybook-core-events-npm-7.6.10-1c558d5366-a994130de9.zip/node_modules/@storybook/core-events/",\
-<<<<<<< HEAD
-=======
-        "packageDependencies": [\
-          ["@storybook/core-events", "npm:7.6.10"],\
-          ["ts-dedent", "npm:2.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.6.3", {\
-        "packageLocation": "./.yarn/cache/@storybook-core-events-npm-7.6.3-163b3ab932-635f65d429.zip/node_modules/@storybook/core-events/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         "packageDependencies": [\
           ["@storybook/core-events", "npm:7.6.10"],\
           ["ts-dedent", "npm:2.2.0"]\
@@ -9630,11 +8684,7 @@ const RAW_RUNTIME_STATE =
           ["util", "npm:0.12.5"],\
           ["util-deprecate", "npm:1.0.2"],\
           ["watchpack", "npm:2.4.0"],\
-<<<<<<< HEAD
           ["ws", "virtual:526f2dd7b758c4a1495bcf391dcf797abc04efbed4ad6442c3362358be5ab08e2053c148231af56fb31240dc5f884529c9bf022bbd0bc13c242690e077b6c4d6#npm:8.16.0"]\
-=======
-          ["ws", "virtual:526f2dd7b758c4a1495bcf391dcf797abc04efbed4ad6442c3362358be5ab08e2053c148231af56fb31240dc5f884529c9bf022bbd0bc13c242690e077b6c4d6#npm:8.14.2"]\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         ],\
         "linkType": "HARD"\
       }]\
@@ -9685,25 +8735,6 @@ const RAW_RUNTIME_STATE =
     ["@storybook/csf-tools", [\
       ["npm:7.6.10", {\
         "packageLocation": "./.yarn/cache/@storybook-csf-tools-npm-7.6.10-8e0acc9cd6-3d45a09f14.zip/node_modules/@storybook/csf-tools/",\
-<<<<<<< HEAD
-=======
-        "packageDependencies": [\
-          ["@storybook/csf-tools", "npm:7.6.10"],\
-          ["@babel/generator", "npm:7.23.5"],\
-          ["@babel/parser", "npm:7.23.5"],\
-          ["@babel/traverse", "npm:7.23.5"],\
-          ["@babel/types", "npm:7.23.5"],\
-          ["@storybook/csf", "npm:0.1.2"],\
-          ["@storybook/types", "npm:7.6.10"],\
-          ["fs-extra", "npm:11.2.0"],\
-          ["recast", "npm:0.23.4"],\
-          ["ts-dedent", "npm:2.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.6.3", {\
-        "packageLocation": "./.yarn/cache/@storybook-csf-tools-npm-7.6.3-93114324dc-d6c392ac2a.zip/node_modules/@storybook/csf-tools/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         "packageDependencies": [\
           ["@storybook/csf-tools", "npm:7.6.10"],\
           ["@babel/generator", "npm:7.23.6"],\
@@ -9753,12 +8784,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-<<<<<<< HEAD
-    ["@storybook/manager", [\
-      ["npm:7.6.10", {\
-        "packageLocation": "./.yarn/cache/@storybook-manager-npm-7.6.10-0a60e6c8d0-82bcfc8a33.zip/node_modules/@storybook/manager/",\
-        "packageDependencies": [\
-=======
     ["@storybook/instrumenter", [\
       ["npm:7.6.10", {\
         "packageLocation": "./.yarn/cache/@storybook-instrumenter-npm-7.6.10-14b58ef025-08790e49d0.zip/node_modules/@storybook/instrumenter/",\
@@ -9779,7 +8804,6 @@ const RAW_RUNTIME_STATE =
       ["npm:7.6.10", {\
         "packageLocation": "./.yarn/cache/@storybook-manager-npm-7.6.10-0a60e6c8d0-82bcfc8a33.zip/node_modules/@storybook/manager/",\
         "packageDependencies": [\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@storybook/manager", "npm:7.6.10"]\
         ],\
         "linkType": "HARD"\
@@ -9831,7 +8855,6 @@ const RAW_RUNTIME_STATE =
           ["@storybook/nextjs", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/plugin-syntax-bigint", "virtual:ba1c0e1ca64eb2d0239b3eed2dcd904b02bec7c388c425e832f80080c28047a34349bdf847af35395682a84967d8c0d3855919199454485ed09f8786b7299687#npm:7.8.3"],\
-<<<<<<< HEAD
           ["@babel/plugin-syntax-dynamic-import", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:7.8.3"],\
           ["@babel/plugin-syntax-import-assertions", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:7.23.3"],\
           ["@babel/plugin-transform-class-properties", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:7.23.3"],\
@@ -9843,19 +8866,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/preset-react", "virtual:3dca107af9fb2423c491f49cee255d1b7fc698af0e98c0d6e907a311ffb27bfa883814294885b7883a1ca4450c2568e2404ca1864dc8b5292a8550e3147d61fc#npm:7.23.3"],\
           ["@babel/preset-typescript", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.23.3"],\
           ["@babel/runtime", "npm:7.23.9"],\
-=======
-          ["@babel/plugin-syntax-dynamic-import", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.8.3"],\
-          ["@babel/plugin-syntax-import-assertions", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-class-properties", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-export-namespace-from", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-numeric-separator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-object-rest-spread", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-runtime", "virtual:58201178e18eff801e177bc4d1d5ac8187b6b7e6ee4255298243a46d883295ba076e8ede5144b0583cf7a24756b0280f97f51f2f58c7412e21ea1fe99333a567#npm:7.23.4"],\
-          ["@babel/preset-env", "virtual:aa13efc2fe5e30c528aafb40f3191477d710b27fb761b4fbebc5eea45b7682a18e5766acffc1844fc6acb4b7f51c3f6c7bbf2685b4de40835bd4a4a67c519308#npm:7.23.5"],\
-          ["@babel/preset-react", "virtual:58201178e18eff801e177bc4d1d5ac8187b6b7e6ee4255298243a46d883295ba076e8ede5144b0583cf7a24756b0280f97f51f2f58c7412e21ea1fe99333a567#npm:7.23.3"],\
-          ["@babel/preset-typescript", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.23.3"],\
-          ["@babel/runtime", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@next/font", null],\
           ["@storybook/addon-actions", "npm:7.6.10"],\
           ["@storybook/builder-webpack5", "virtual:3dca107af9fb2423c491f49cee255d1b7fc698af0e98c0d6e907a311ffb27bfa883814294885b7883a1ca4450c2568e2404ca1864dc8b5292a8550e3147d61fc#npm:7.6.10"],\
@@ -9873,7 +8883,7 @@ const RAW_RUNTIME_STATE =
           ["@types/semver", "npm:7.5.6"],\
           ["@types/typescript", null],\
           ["@types/webpack", null],\
-          ["css-loader", "virtual:3dca107af9fb2423c491f49cee255d1b7fc698af0e98c0d6e907a311ffb27bfa883814294885b7883a1ca4450c2568e2404ca1864dc8b5292a8550e3147d61fc#npm:6.9.1"],\
+          ["css-loader", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:6.9.1"],\
           ["find-up", "npm:5.0.0"],\
           ["fs-extra", "npm:11.2.0"],\
           ["image-size", "npm:1.1.1"],\
@@ -9947,7 +8957,7 @@ const RAW_RUNTIME_STATE =
           ["@types/semver", "npm:7.5.6"],\
           ["@types/typescript", null],\
           ["@types/webpack", null],\
-          ["css-loader", "virtual:3dca107af9fb2423c491f49cee255d1b7fc698af0e98c0d6e907a311ffb27bfa883814294885b7883a1ca4450c2568e2404ca1864dc8b5292a8550e3147d61fc#npm:6.9.1"],\
+          ["css-loader", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:6.9.1"],\
           ["find-up", "npm:5.0.0"],\
           ["fs-extra", "npm:11.2.0"],\
           ["image-size", "npm:1.1.1"],\
@@ -9991,16 +9001,6 @@ const RAW_RUNTIME_STATE =
     ["@storybook/node-logger", [\
       ["npm:7.6.10", {\
         "packageLocation": "./.yarn/cache/@storybook-node-logger-npm-7.6.10-5aea0c40fb-22006be397.zip/node_modules/@storybook/node-logger/",\
-<<<<<<< HEAD
-=======
-        "packageDependencies": [\
-          ["@storybook/node-logger", "npm:7.6.10"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.6.3", {\
-        "packageLocation": "./.yarn/cache/@storybook-node-logger-npm-7.6.3-8e59372971-b9262abf47.zip/node_modules/@storybook/node-logger/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         "packageDependencies": [\
           ["@storybook/node-logger", "npm:7.6.10"]\
         ],\
@@ -10027,7 +9027,6 @@ const RAW_RUNTIME_STATE =
       ["virtual:3dca107af9fb2423c491f49cee255d1b7fc698af0e98c0d6e907a311ffb27bfa883814294885b7883a1ca4450c2568e2404ca1864dc8b5292a8550e3147d61fc#npm:7.6.10", {\
         "packageLocation": "./.yarn/__virtual__/@storybook-preset-react-webpack-virtual-b51c357499/0/cache/@storybook-preset-react-webpack-npm-7.6.10-ab4eb7db38-ad2ef50054.zip/node_modules/@storybook/preset-react-webpack/",\
         "packageDependencies": [\
-<<<<<<< HEAD
           ["@storybook/preset-react-webpack", "virtual:3dca107af9fb2423c491f49cee255d1b7fc698af0e98c0d6e907a311ffb27bfa883814294885b7883a1ca4450c2568e2404ca1864dc8b5292a8550e3147d61fc#npm:7.6.10"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/preset-flow", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.23.3"],\
@@ -10038,18 +9037,6 @@ const RAW_RUNTIME_STATE =
           ["@storybook/node-logger", "npm:7.6.10"],\
           ["@storybook/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
           ["@storybook/react-docgen-typescript-plugin", "virtual:b51c35749968a8ed0350186e9d0083ae1d9a90ef5dfff6d7006720bf49fa8b71caf8438268961b36e663efa3846c4e699bb857a159281a35fa643daf6e28092b#npm:1.0.6--canary.9.0c3f3b7.0"],\
-=======
-          ["@storybook/preset-react-webpack", "virtual:58201178e18eff801e177bc4d1d5ac8187b6b7e6ee4255298243a46d883295ba076e8ede5144b0583cf7a24756b0280f97f51f2f58c7412e21ea1fe99333a567#npm:7.6.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/preset-flow", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.23.3"],\
-          ["@babel/preset-react", "virtual:58201178e18eff801e177bc4d1d5ac8187b6b7e6ee4255298243a46d883295ba076e8ede5144b0583cf7a24756b0280f97f51f2f58c7412e21ea1fe99333a567#npm:7.23.3"],\
-          ["@pmmmwh/react-refresh-webpack-plugin", "virtual:a7d50fb0d38f327e932b116d01f87579e7fb69461591625372d871cd4534c050193d64041ed911ffb3fcdf0b08ffc384827d54566cea333f045c8b8af6b9adff#npm:0.5.11"],\
-          ["@storybook/core-webpack", "npm:7.6.3"],\
-          ["@storybook/docs-tools", "npm:7.6.3"],\
-          ["@storybook/node-logger", "npm:7.6.3"],\
-          ["@storybook/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.3"],\
-          ["@storybook/react-docgen-typescript-plugin", "virtual:a7d50fb0d38f327e932b116d01f87579e7fb69461591625372d871cd4534c050193d64041ed911ffb3fcdf0b08ffc384827d54566cea333f045c8b8af6b9adff#npm:1.0.6--canary.9.0c3f3b7.0"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@types/babel__core", null],\
           ["@types/node", "npm:18.19.10"],\
           ["@types/react", "npm:18.2.48"],\
@@ -10078,51 +9065,6 @@ const RAW_RUNTIME_STATE =
           "typescript"\
         ],\
         "linkType": "HARD"\
-<<<<<<< HEAD
-      }],\
-      ["virtual:732ce32fc9893164bf3ac07df850008e763d6f886ba0fbca4a4dbe3ab06cb7e3054d0404eaf0b6593889084feacd89c143ffc0ccc38845b4313ddada3f060f8c#npm:7.6.10", {\
-        "packageLocation": "./.yarn/__virtual__/@storybook-preset-react-webpack-virtual-dcd9259deb/0/cache/@storybook-preset-react-webpack-npm-7.6.10-ab4eb7db38-ad2ef50054.zip/node_modules/@storybook/preset-react-webpack/",\
-        "packageDependencies": [\
-          ["@storybook/preset-react-webpack", "virtual:732ce32fc9893164bf3ac07df850008e763d6f886ba0fbca4a4dbe3ab06cb7e3054d0404eaf0b6593889084feacd89c143ffc0ccc38845b4313ddada3f060f8c#npm:7.6.10"],\
-          ["@babel/core", "npm:7.23.9"],\
-          ["@babel/preset-flow", "virtual:dcd9259debf4d9531375247cfecfd5c37794cef2d87a2fc5da33f198a358641bfb7c6abaa6295aef0c02e1cc5f906e5775096030c7a32f907575a1700ff10125#npm:7.23.3"],\
-          ["@babel/preset-react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.23.3"],\
-          ["@pmmmwh/react-refresh-webpack-plugin", "virtual:b51c35749968a8ed0350186e9d0083ae1d9a90ef5dfff6d7006720bf49fa8b71caf8438268961b36e663efa3846c4e699bb857a159281a35fa643daf6e28092b#npm:0.5.11"],\
-          ["@storybook/core-webpack", "npm:7.6.10"],\
-          ["@storybook/docs-tools", "npm:7.6.10"],\
-          ["@storybook/node-logger", "npm:7.6.10"],\
-          ["@storybook/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
-          ["@storybook/react-docgen-typescript-plugin", "virtual:b51c35749968a8ed0350186e9d0083ae1d9a90ef5dfff6d7006720bf49fa8b71caf8438268961b36e663efa3846c4e699bb857a159281a35fa643daf6e28092b#npm:1.0.6--canary.9.0c3f3b7.0"],\
-          ["@types/babel__core", "npm:7.20.5"],\
-          ["@types/node", "npm:18.19.10"],\
-          ["@types/react", "npm:18.2.48"],\
-          ["@types/react-dom", "npm:18.2.18"],\
-          ["@types/semver", "npm:7.5.6"],\
-          ["@types/typescript", null],\
-          ["babel-plugin-add-react-displayname", "npm:0.0.5"],\
-          ["fs-extra", "npm:11.2.0"],\
-          ["magic-string", "npm:0.30.5"],\
-          ["react", "npm:18.2.0"],\
-          ["react-docgen", "npm:7.0.3"],\
-          ["react-dom", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:18.2.0"],\
-          ["react-refresh", "npm:0.14.0"],\
-          ["semver", "npm:7.5.4"],\
-          ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
-          ["webpack", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:5.90.0"]\
-        ],\
-        "packagePeers": [\
-          "@babel/core",\
-          "@types/babel__core",\
-          "@types/react-dom",\
-          "@types/react",\
-          "@types/typescript",\
-          "react-dom",\
-          "react",\
-          "typescript"\
-        ],\
-        "linkType": "HARD"\
-=======
->>>>>>> efb9948 (chore: remove storybook/react-webpack5)
       }]\
     ]],\
     ["@storybook/preview", [\
@@ -10137,30 +9079,6 @@ const RAW_RUNTIME_STATE =
     ["@storybook/preview-api", [\
       ["npm:7.6.10", {\
         "packageLocation": "./.yarn/cache/@storybook-preview-api-npm-7.6.10-818a6eba53-139336e7d4.zip/node_modules/@storybook/preview-api/",\
-<<<<<<< HEAD
-=======
-        "packageDependencies": [\
-          ["@storybook/preview-api", "npm:7.6.10"],\
-          ["@storybook/channels", "npm:7.6.10"],\
-          ["@storybook/client-logger", "npm:7.6.10"],\
-          ["@storybook/core-events", "npm:7.6.10"],\
-          ["@storybook/csf", "npm:0.1.2"],\
-          ["@storybook/global", "npm:5.0.0"],\
-          ["@storybook/types", "npm:7.6.10"],\
-          ["@types/qs", "npm:6.9.10"],\
-          ["dequal", "npm:2.0.3"],\
-          ["lodash", "npm:4.17.21"],\
-          ["memoizerific", "npm:1.11.3"],\
-          ["qs", "npm:6.11.2"],\
-          ["synchronous-promise", "npm:2.0.17"],\
-          ["ts-dedent", "npm:2.2.0"],\
-          ["util-deprecate", "npm:1.0.2"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.6.3", {\
-        "packageLocation": "./.yarn/cache/@storybook-preview-api-npm-7.6.3-3341a261c0-a661168c5d.zip/node_modules/@storybook/preview-api/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         "packageDependencies": [\
           ["@storybook/preview-api", "npm:7.6.10"],\
           ["@storybook/channels", "npm:7.6.10"],\
@@ -10291,47 +9209,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-<<<<<<< HEAD
-    ["@storybook/react-webpack5", [\
-      ["npm:7.6.10", {\
-        "packageLocation": "./.yarn/cache/@storybook-react-webpack5-npm-7.6.10-17328bff6d-eae02d53d0.zip/node_modules/@storybook/react-webpack5/",\
-        "packageDependencies": [\
-          ["@storybook/react-webpack5", "npm:7.6.10"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10", {\
-        "packageLocation": "./.yarn/__virtual__/@storybook-react-webpack5-virtual-732ce32fc9/0/cache/@storybook-react-webpack5-npm-7.6.10-17328bff6d-eae02d53d0.zip/node_modules/@storybook/react-webpack5/",\
-        "packageDependencies": [\
-          ["@storybook/react-webpack5", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
-          ["@babel/core", "npm:7.23.9"],\
-          ["@storybook/builder-webpack5", "virtual:3dca107af9fb2423c491f49cee255d1b7fc698af0e98c0d6e907a311ffb27bfa883814294885b7883a1ca4450c2568e2404ca1864dc8b5292a8550e3147d61fc#npm:7.6.10"],\
-          ["@storybook/preset-react-webpack", "virtual:732ce32fc9893164bf3ac07df850008e763d6f886ba0fbca4a4dbe3ab06cb7e3054d0404eaf0b6593889084feacd89c143ffc0ccc38845b4313ddada3f060f8c#npm:7.6.10"],\
-          ["@storybook/react", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.6.10"],\
-          ["@types/babel__core", "npm:7.20.5"],\
-          ["@types/node", "npm:18.19.10"],\
-          ["@types/react", "npm:18.2.48"],\
-          ["@types/react-dom", "npm:18.2.18"],\
-          ["@types/typescript", null],\
-          ["react", "npm:18.2.0"],\
-          ["react-dom", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:18.2.0"],\
-          ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"]\
-        ],\
-        "packagePeers": [\
-          "@babel/core",\
-          "@types/babel__core",\
-          "@types/react-dom",\
-          "@types/react",\
-          "@types/typescript",\
-          "react-dom",\
-          "react",\
-          "typescript"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-=======
->>>>>>> efb9948 (chore: remove storybook/react-webpack5)
     ["@storybook/router", [\
       ["npm:7.6.10", {\
         "packageLocation": "./.yarn/cache/@storybook-router-npm-7.6.10-f8e02d6dbf-94b35ec718.zip/node_modules/@storybook/router/",\
@@ -10347,24 +9224,6 @@ const RAW_RUNTIME_STATE =
     ["@storybook/telemetry", [\
       ["npm:7.6.10", {\
         "packageLocation": "./.yarn/cache/@storybook-telemetry-npm-7.6.10-70552baacb-e975437010.zip/node_modules/@storybook/telemetry/",\
-<<<<<<< HEAD
-=======
-        "packageDependencies": [\
-          ["@storybook/telemetry", "npm:7.6.10"],\
-          ["@storybook/client-logger", "npm:7.6.10"],\
-          ["@storybook/core-common", "npm:7.6.10"],\
-          ["@storybook/csf-tools", "npm:7.6.10"],\
-          ["chalk", "npm:4.1.2"],\
-          ["detect-package-manager", "npm:2.0.1"],\
-          ["fetch-retry", "npm:5.0.6"],\
-          ["fs-extra", "npm:11.2.0"],\
-          ["read-pkg-up", "npm:7.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.6.3", {\
-        "packageLocation": "./.yarn/cache/@storybook-telemetry-npm-7.6.3-02fde88051-98a8007f91.zip/node_modules/@storybook/telemetry/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         "packageDependencies": [\
           ["@storybook/telemetry", "npm:7.6.10"],\
           ["@storybook/client-logger", "npm:7.6.10"],\
@@ -10466,20 +9325,6 @@ const RAW_RUNTIME_STATE =
     ["@storybook/types", [\
       ["npm:7.6.10", {\
         "packageLocation": "./.yarn/cache/@storybook-types-npm-7.6.10-4b9c73ecea-67e2be2e11.zip/node_modules/@storybook/types/",\
-<<<<<<< HEAD
-=======
-        "packageDependencies": [\
-          ["@storybook/types", "npm:7.6.10"],\
-          ["@storybook/channels", "npm:7.6.10"],\
-          ["@types/babel__core", "npm:7.20.5"],\
-          ["@types/express", "npm:4.17.21"],\
-          ["file-system-cache", "npm:2.3.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.6.3", {\
-        "packageLocation": "./.yarn/cache/@storybook-types-npm-7.6.3-bd2bab50f2-0c1d2caed9.zip/node_modules/@storybook/types/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         "packageDependencies": [\
           ["@storybook/types", "npm:7.6.10"],\
           ["@storybook/channels", "npm:7.6.10"],\
@@ -10704,21 +9549,6 @@ const RAW_RUNTIME_STATE =
           ["pretty-format", "npm:27.5.1"]\
         ],\
         "linkType": "HARD"\
-      }],\
-      ["npm:9.3.4", {\
-        "packageLocation": "./.yarn/cache/@testing-library-dom-npm-9.3.4-cfb609c4fc-510da752ea.zip/node_modules/@testing-library/dom/",\
-        "packageDependencies": [\
-          ["@testing-library/dom", "npm:9.3.4"],\
-          ["@babel/code-frame", "npm:7.23.5"],\
-          ["@babel/runtime", "npm:7.23.5"],\
-          ["@types/aria-query", "npm:5.0.4"],\
-          ["aria-query", "npm:5.1.3"],\
-          ["chalk", "npm:4.1.2"],\
-          ["dom-accessibility-api", "npm:0.5.16"],\
-          ["lz-string", "npm:1.5.0"],\
-          ["pretty-format", "npm:27.5.1"]\
-        ],\
-        "linkType": "HARD"\
       }]\
     ]],\
     ["@testing-library/jest-dom", [\
@@ -10732,29 +9562,9 @@ const RAW_RUNTIME_STATE =
       ["virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:6.3.0", {\
         "packageLocation": "./.yarn/__virtual__/@testing-library-jest-dom-virtual-ff6e75feb2/0/cache/@testing-library-jest-dom-npm-6.3.0-3bc6b7f30a-d96e552cfe.zip/node_modules/@testing-library/jest-dom/",\
         "packageDependencies": [\
-<<<<<<< HEAD
           ["@testing-library/jest-dom", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:6.3.0"],\
           ["@adobe/css-tools", "npm:4.3.3"],\
           ["@babel/runtime", "npm:7.23.9"],\
-=======
-          ["@testing-library/jest-dom", "npm:6.2.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["npm:6.3.0", {\
-        "packageLocation": "./.yarn/cache/@testing-library-jest-dom-npm-6.3.0-3bc6b7f30a-d96e552cfe.zip/node_modules/@testing-library/jest-dom/",\
-        "packageDependencies": [\
-          ["@testing-library/jest-dom", "npm:6.3.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:6.1.5", {\
-        "packageLocation": "./.yarn/__virtual__/@testing-library-jest-dom-virtual-23d06f9f64/0/cache/@testing-library-jest-dom-npm-6.1.5-3fbc61949e-3bc45dc9cb.zip/node_modules/@testing-library/jest-dom/",\
-        "packageDependencies": [\
-          ["@testing-library/jest-dom", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:6.1.5"],\
-          ["@adobe/css-tools", "npm:4.3.2"],\
-          ["@babel/runtime", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@jest/globals", null],\
           ["@types/bun", null],\
           ["@types/jest", "npm:29.5.11"],\
@@ -10780,16 +9590,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-<<<<<<< HEAD
-      ["virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:6.3.0", {\
-        "packageLocation": "./.yarn/__virtual__/@testing-library-jest-dom-virtual-1c9168d09f/0/cache/@testing-library-jest-dom-npm-6.3.0-3bc6b7f30a-d96e552cfe.zip/node_modules/@testing-library/jest-dom/",\
-=======
       ["virtual:7e6e3274162627f266a1e11da84fc930b2d442b19d626f2aa28f340031e9504044ff04551eb45915b4baadf61e3c3ba11d72ed540de8a224bfac85b1984368d3#npm:6.3.0", {\
         "packageLocation": "./.yarn/__virtual__/@testing-library-jest-dom-virtual-eb5c0b1257/0/cache/@testing-library-jest-dom-npm-6.3.0-3bc6b7f30a-d96e552cfe.zip/node_modules/@testing-library/jest-dom/",\
         "packageDependencies": [\
           ["@testing-library/jest-dom", "virtual:7e6e3274162627f266a1e11da84fc930b2d442b19d626f2aa28f340031e9504044ff04551eb45915b4baadf61e3c3ba11d72ed540de8a224bfac85b1984368d3#npm:6.3.0"],\
-          ["@adobe/css-tools", "npm:4.3.2"],\
-          ["@babel/runtime", "npm:7.23.5"],\
+          ["@adobe/css-tools", "npm:4.3.3"],\
+          ["@babel/runtime", "npm:7.23.9"],\
           ["@jest/globals", null],\
           ["@types/bun", null],\
           ["@types/jest", null],\
@@ -10815,9 +9621,8 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:6.1.5", {\
-        "packageLocation": "./.yarn/__virtual__/@testing-library-jest-dom-virtual-c63072d952/0/cache/@testing-library-jest-dom-npm-6.1.5-3fbc61949e-3bc45dc9cb.zip/node_modules/@testing-library/jest-dom/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
+      ["virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:6.3.0", {\
+        "packageLocation": "./.yarn/__virtual__/@testing-library-jest-dom-virtual-1c9168d09f/0/cache/@testing-library-jest-dom-npm-6.3.0-3bc6b7f30a-d96e552cfe.zip/node_modules/@testing-library/jest-dom/",\
         "packageDependencies": [\
           ["@testing-library/jest-dom", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:6.3.0"],\
           ["@adobe/css-tools", "npm:4.3.3"],\
@@ -10832,37 +9637,6 @@ const RAW_RUNTIME_STATE =
           ["css.escape", "npm:1.5.1"],\
           ["dom-accessibility-api", "npm:0.6.3"],\
           ["jest", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:29.7.0"],\
-          ["lodash", "npm:4.17.21"],\
-          ["redent", "npm:3.0.0"],\
-          ["vitest", null]\
-        ],\
-        "packagePeers": [\
-          "@jest/globals",\
-          "@types/bun",\
-          "@types/jest",\
-          "@types/jest__globals",\
-          "@types/vitest",\
-          "jest",\
-          "vitest"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:bbabcfc8e9f7f9fe57e7e0746644002c15649680c990bc440f2b461e68ce3d2d0faa7c179bdac5bdb7385f5101d9cc50a7e59df9a0ab8fd59671acf076942bda#npm:6.3.0", {\
-        "packageLocation": "./.yarn/__virtual__/@testing-library-jest-dom-virtual-fde51e484b/0/cache/@testing-library-jest-dom-npm-6.3.0-3bc6b7f30a-d96e552cfe.zip/node_modules/@testing-library/jest-dom/",\
-        "packageDependencies": [\
-          ["@testing-library/jest-dom", "virtual:bbabcfc8e9f7f9fe57e7e0746644002c15649680c990bc440f2b461e68ce3d2d0faa7c179bdac5bdb7385f5101d9cc50a7e59df9a0ab8fd59671acf076942bda#npm:6.3.0"],\
-          ["@adobe/css-tools", "npm:4.3.3"],\
-          ["@babel/runtime", "npm:7.23.9"],\
-          ["@jest/globals", null],\
-          ["@types/bun", null],\
-          ["@types/jest", null],\
-          ["@types/jest__globals", null],\
-          ["@types/vitest", null],\
-          ["aria-query", "npm:5.3.0"],\
-          ["chalk", "npm:3.0.0"],\
-          ["css.escape", "npm:1.5.1"],\
-          ["dom-accessibility-api", "npm:0.6.3"],\
-          ["jest", null],\
           ["lodash", "npm:4.17.21"],\
           ["redent", "npm:3.0.0"],\
           ["vitest", null]\
@@ -10940,10 +9714,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@testing-library/user-event", [\
-<<<<<<< HEAD
-      ["npm:14.5.2", {\
-        "packageLocation": "./.yarn/cache/@testing-library-user-event-npm-14.5.2-ec9587901c-49821459d8.zip/node_modules/@testing-library/user-event/",\
-=======
       ["npm:14.3.0", {\
         "packageLocation": "./.yarn/cache/@testing-library-user-event-npm-14.3.0-570c508fee-07aac130b2.zip/node_modules/@testing-library/user-event/",\
         "packageDependencies": [\
@@ -10951,9 +9721,8 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["npm:14.5.1", {\
-        "packageLocation": "./.yarn/cache/@testing-library-user-event-npm-14.5.1-daca21fbcb-696e1328c2.zip/node_modules/@testing-library/user-event/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
+      ["npm:14.5.2", {\
+        "packageLocation": "./.yarn/cache/@testing-library-user-event-npm-14.5.2-ec9587901c-49821459d8.zip/node_modules/@testing-library/user-event/",\
         "packageDependencies": [\
           ["@testing-library/user-event", "npm:14.5.2"]\
         ],\
@@ -11100,7 +9869,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/body-parser", "npm:1.19.5"],\
           ["@types/connect", "npm:3.4.38"],\
-          ["@types/node", "npm:20.11.7"]\
+          ["@types/node", "npm:20.11.8"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11119,7 +9888,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-connect-npm-3.4.38-a8a4c38337-7eb1bc5342.zip/node_modules/@types/connect/",\
         "packageDependencies": [\
           ["@types/connect", "npm:3.4.38"],\
-          ["@types/node", "npm:20.11.7"]\
+          ["@types/node", "npm:20.11.8"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11138,7 +9907,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-cors-npm-2.8.17-2556d16051-469bd85e29.zip/node_modules/@types/cors/",\
         "packageDependencies": [\
           ["@types/cors", "npm:2.8.17"],\
-          ["@types/node", "npm:20.11.7"]\
+          ["@types/node", "npm:20.11.8"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11148,7 +9917,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-cross-spawn-npm-6.0.6-fbe5fe9243-b4172927cd.zip/node_modules/@types/cross-spawn/",\
         "packageDependencies": [\
           ["@types/cross-spawn", "npm:6.0.6"],\
-          ["@types/node", "npm:20.11.7"]\
+          ["@types/node", "npm:20.11.8"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11261,7 +10030,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-4.17.42-88f99db252-0824c55dc7.zip/node_modules/@types/express-serve-static-core/",\
         "packageDependencies": [\
           ["@types/express-serve-static-core", "npm:4.17.42"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/qs", "npm:6.9.11"],\
           ["@types/range-parser", "npm:1.2.7"],\
           ["@types/send", "npm:0.17.4"]\
@@ -11283,7 +10052,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-graceful-fs-npm-4.1.9-ebd697fe83-79d746a8f0.zip/node_modules/@types/graceful-fs/",\
         "packageDependencies": [\
           ["@types/graceful-fs", "npm:4.1.9"],\
-          ["@types/node", "npm:20.11.7"]\
+          ["@types/node", "npm:20.11.8"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11351,7 +10120,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-jsdom-npm-20.0.1-5bb899e006-15fbb9a0bf.zip/node_modules/@types/jsdom/",\
         "packageDependencies": [\
           ["@types/jsdom", "npm:20.0.1"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/tough-cookie", "npm:4.0.5"],\
           ["parse5", "npm:7.1.2"]\
         ],\
@@ -11447,10 +10216,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:20.11.7", {\
-        "packageLocation": "./.yarn/cache/@types-node-npm-20.11.7-a2c302dd6c-ff0428c093.zip/node_modules/@types/node/",\
+      ["npm:20.11.8", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-20.11.8-34a7827ebd-09aceafd6f.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
@@ -11461,7 +10230,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-node-fetch-npm-2.6.11-55289bb1a8-c416df8f18.zip/node_modules/@types/node-fetch/",\
         "packageDependencies": [\
           ["@types/node-fetch", "npm:2.6.11"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["form-data", "npm:4.0.0"]\
         ],\
         "linkType": "HARD"\
@@ -11586,7 +10355,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/send", "npm:0.17.4"],\
           ["@types/mime", "npm:1.3.5"],\
-          ["@types/node", "npm:20.11.7"]\
+          ["@types/node", "npm:20.11.8"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11598,7 +10367,7 @@ const RAW_RUNTIME_STATE =
           ["@types/serve-static", "npm:1.15.5"],\
           ["@types/http-errors", "npm:2.0.4"],\
           ["@types/mime", "npm:3.0.4"],\
-          ["@types/node", "npm:20.11.7"]\
+          ["@types/node", "npm:20.11.8"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11626,7 +10395,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-testing-library__jest-dom-npm-6.0.0-bbabcfc8e9-1b4db1aa3c.zip/node_modules/@types/testing-library__jest-dom/",\
         "packageDependencies": [\
           ["@types/testing-library__jest-dom", "npm:6.0.0"],\
-          ["@testing-library/jest-dom", "virtual:bbabcfc8e9f7f9fe57e7e0746644002c15649680c990bc440f2b461e68ce3d2d0faa7c179bdac5bdb7385f5101d9cc50a7e59df9a0ab8fd59671acf076942bda#npm:6.3.0"]\
+          ["@testing-library/jest-dom", "virtual:7e6e3274162627f266a1e11da84fc930b2d442b19d626f2aa28f340031e9504044ff04551eb45915b4baadf61e3c3ba11d72ed540de8a224bfac85b1984368d3#npm:6.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12011,6 +10780,27 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
+      ["virtual:bf12a72a81b9f6a03072af762eef1bf531d53b28fb47bb79db049628726dfd6fe7f1705b7385f433f3372629687095d1ac35b83a5dae2503af01841b1d1c4333#npm:5.62.0", {\
+        "packageLocation": "./.yarn/__virtual__/@typescript-eslint-utils-virtual-253a152bc8/0/cache/@typescript-eslint-utils-npm-5.62.0-907f2d579e-15ef13e439.zip/node_modules/@typescript-eslint/utils/",\
+        "packageDependencies": [\
+          ["@typescript-eslint/utils", "virtual:bf12a72a81b9f6a03072af762eef1bf531d53b28fb47bb79db049628726dfd6fe7f1705b7385f433f3372629687095d1ac35b83a5dae2503af01841b1d1c4333#npm:5.62.0"],\
+          ["@eslint-community/eslint-utils", "virtual:253a152bc87267f8c251ece718d9b1f3db7820e67989adeeca3d66d00a09750c33d54069fe7064b30289ad44ae286becc3fd70ace70e5c1915de5bae3c24847d#npm:4.4.0"],\
+          ["@types/eslint", null],\
+          ["@types/json-schema", "npm:7.0.15"],\
+          ["@types/semver", "npm:7.5.6"],\
+          ["@typescript-eslint/scope-manager", "npm:5.62.0"],\
+          ["@typescript-eslint/types", "npm:5.62.0"],\
+          ["@typescript-eslint/typescript-estree", "virtual:1dcdff20904748ca9f5907ac2725be6e672930ef917e6878b22f981a298d5cb6576fef7b4183e8bbd1093ec7978f402a9ee0a12af6720c6186aeab9002e4989e#npm:5.62.0"],\
+          ["eslint", null],\
+          ["eslint-scope", "npm:5.1.1"],\
+          ["semver", "npm:7.5.4"]\
+        ],\
+        "packagePeers": [\
+          "@types/eslint",\
+          "eslint"\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["virtual:f3131f67957b7bd46bf01ac8bc0ef028247b01f55d68199abddf638caa3057476d1529420ce654fccc2e29e976296235bacf8a527822b31e2c71a410f21bcb78#npm:5.62.0", {\
         "packageLocation": "./.yarn/__virtual__/@typescript-eslint-utils-virtual-1dcdff2090/0/cache/@typescript-eslint-utils-npm-5.62.0-907f2d579e-15ef13e439.zip/node_modules/@typescript-eslint/utils/",\
         "packageDependencies": [\
@@ -12023,27 +10813,6 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/types", "npm:5.62.0"],\
           ["@typescript-eslint/typescript-estree", "virtual:1dcdff20904748ca9f5907ac2725be6e672930ef917e6878b22f981a298d5cb6576fef7b4183e8bbd1093ec7978f402a9ee0a12af6720c6186aeab9002e4989e#npm:5.62.0"],\
           ["eslint", "npm:8.56.0"],\
-          ["eslint-scope", "npm:5.1.1"],\
-          ["semver", "npm:7.5.4"]\
-        ],\
-        "packagePeers": [\
-          "@types/eslint",\
-          "eslint"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:bf12a72a81b9f6a03072af762eef1bf531d53b28fb47bb79db049628726dfd6fe7f1705b7385f433f3372629687095d1ac35b83a5dae2503af01841b1d1c4333#npm:5.62.0", {\
-        "packageLocation": "./.yarn/__virtual__/@typescript-eslint-utils-virtual-253a152bc8/0/cache/@typescript-eslint-utils-npm-5.62.0-907f2d579e-15ef13e439.zip/node_modules/@typescript-eslint/utils/",\
-        "packageDependencies": [\
-          ["@typescript-eslint/utils", "virtual:bf12a72a81b9f6a03072af762eef1bf531d53b28fb47bb79db049628726dfd6fe7f1705b7385f433f3372629687095d1ac35b83a5dae2503af01841b1d1c4333#npm:5.62.0"],\
-          ["@eslint-community/eslint-utils", "virtual:253a152bc87267f8c251ece718d9b1f3db7820e67989adeeca3d66d00a09750c33d54069fe7064b30289ad44ae286becc3fd70ace70e5c1915de5bae3c24847d#npm:4.4.0"],\
-          ["@types/eslint", null],\
-          ["@types/json-schema", "npm:7.0.15"],\
-          ["@types/semver", "npm:7.5.6"],\
-          ["@typescript-eslint/scope-manager", "npm:5.62.0"],\
-          ["@typescript-eslint/types", "npm:5.62.0"],\
-          ["@typescript-eslint/typescript-estree", "virtual:8e0bdcadeb180f9e748f4edc12b16504081338db7ce331744cf3f944b123148a317a3bffc71da1871ffb5928a996188438c07dd90f5a6c973eb4ee88ffdbec5c#npm:5.62.0"],\
-          ["eslint", null],\
           ["eslint-scope", "npm:5.1.1"],\
           ["semver", "npm:7.5.4"]\
         ],\
@@ -12094,10 +10863,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vanilla-extract/css", [\
-      ["npm:1.14.0", {\
-        "packageLocation": "./.yarn/cache/@vanilla-extract-css-npm-1.14.0-be44bd19a5-b708fa8870.zip/node_modules/@vanilla-extract/css/",\
+      ["npm:1.14.1", {\
+        "packageLocation": "./.yarn/cache/@vanilla-extract-css-npm-1.14.1-e45984360c-7ecdddfc6d.zip/node_modules/@vanilla-extract/css/",\
         "packageDependencies": [\
-          ["@vanilla-extract/css", "npm:1.14.0"],\
+          ["@vanilla-extract/css", "npm:1.14.1"],\
           ["@emotion/hash", "npm:0.9.1"],\
           ["@vanilla-extract/private", "npm:1.0.3"],\
           ["chalk", "npm:4.1.2"],\
@@ -12131,7 +10900,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/plugin-syntax-typescript", "virtual:15ef0a4ad61c166598c4d195dc64a0b7270b186e9a584ea25871b4181189fa5a61a49aa37f6bcda6ffed25499ff900f1a33224b0c22868c8eb1eaf1dd4f0dc11#npm:7.23.3"],\
           ["@vanilla-extract/babel-plugin-debug-ids", "npm:1.0.4"],\
-          ["@vanilla-extract/css", "npm:1.14.0"],\
+          ["@vanilla-extract/css", "npm:1.14.1"],\
           ["esbuild", "npm:0.19.12"],\
           ["eval", "npm:0.1.8"],\
           ["find-up", "npm:5.0.0"],\
@@ -12157,19 +10926,19 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vanilla-extract/next-plugin", [\
-      ["npm:2.3.3", {\
-        "packageLocation": "./.yarn/cache/@vanilla-extract-next-plugin-npm-2.3.3-25c5919993-fbcdec5397.zip/node_modules/@vanilla-extract/next-plugin/",\
+      ["npm:2.3.4", {\
+        "packageLocation": "./.yarn/cache/@vanilla-extract-next-plugin-npm-2.3.4-8556c5f271-4271080b56.zip/node_modules/@vanilla-extract/next-plugin/",\
         "packageDependencies": [\
-          ["@vanilla-extract/next-plugin", "npm:2.3.3"]\
+          ["@vanilla-extract/next-plugin", "npm:2.3.4"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:2.3.3", {\
-        "packageLocation": "./.yarn/__virtual__/@vanilla-extract-next-plugin-virtual-66be82c9f6/0/cache/@vanilla-extract-next-plugin-npm-2.3.3-25c5919993-fbcdec5397.zip/node_modules/@vanilla-extract/next-plugin/",\
+      ["virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:2.3.4", {\
+        "packageLocation": "./.yarn/__virtual__/@vanilla-extract-next-plugin-virtual-052f8896b6/0/cache/@vanilla-extract-next-plugin-npm-2.3.4-8556c5f271-4271080b56.zip/node_modules/@vanilla-extract/next-plugin/",\
         "packageDependencies": [\
-          ["@vanilla-extract/next-plugin", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:2.3.3"],\
+          ["@vanilla-extract/next-plugin", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:2.3.4"],\
           ["@types/next", null],\
-          ["@vanilla-extract/webpack-plugin", "virtual:66be82c9f680110c82d4e26a325a094f454d1ed6b5cee6cc02225f8a2ce05b56330e88c5e5882909dd9e5824c8aa126b1ff854deaa8a8c63c7ae6978f5dc86a1#npm:2.3.2"],\
+          ["@vanilla-extract/webpack-plugin", "virtual:052f8896b6e1db64edc763d2ba71ee3bfd935cc7ff371907dc1ae11fa9d46ba7d21bc4745bb82ea1edc73b586c7f5d790a4847d2d06024f4932ee42724dc2d20#npm:2.3.3"],\
           ["next", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:14.1.0"]\
         ],\
         "packagePeers": [\
@@ -12178,12 +10947,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:2.3.3", {\
-        "packageLocation": "./.yarn/__virtual__/@vanilla-extract-next-plugin-virtual-71248d7fcd/0/cache/@vanilla-extract-next-plugin-npm-2.3.3-25c5919993-fbcdec5397.zip/node_modules/@vanilla-extract/next-plugin/",\
+      ["virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:2.3.4", {\
+        "packageLocation": "./.yarn/__virtual__/@vanilla-extract-next-plugin-virtual-f206345093/0/cache/@vanilla-extract-next-plugin-npm-2.3.4-8556c5f271-4271080b56.zip/node_modules/@vanilla-extract/next-plugin/",\
         "packageDependencies": [\
-          ["@vanilla-extract/next-plugin", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:2.3.3"],\
+          ["@vanilla-extract/next-plugin", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:2.3.4"],\
           ["@types/next", null],\
-          ["@vanilla-extract/webpack-plugin", "virtual:66be82c9f680110c82d4e26a325a094f454d1ed6b5cee6cc02225f8a2ce05b56330e88c5e5882909dd9e5824c8aa126b1ff854deaa8a8c63c7ae6978f5dc86a1#npm:2.3.2"],\
+          ["@vanilla-extract/webpack-plugin", "virtual:052f8896b6e1db64edc763d2ba71ee3bfd935cc7ff371907dc1ae11fa9d46ba7d21bc4745bb82ea1edc73b586c7f5d790a4847d2d06024f4932ee42724dc2d20#npm:2.3.3"],\
           ["next", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:14.0.3"]\
         ],\
         "packagePeers": [\
@@ -12215,7 +10984,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
           ["@types/vanilla-extract__css", null],\
-          ["@vanilla-extract/css", "npm:1.14.0"]\
+          ["@vanilla-extract/css", "npm:1.14.1"]\
         ],\
         "packagePeers": [\
           "@types/vanilla-extract__css",\
@@ -12237,7 +11006,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@vanilla-extract/sprinkles", "virtual:3a8833b1aa00274bb4e4f4e2f6e03501d91c26c8ef4d55a2158a803071987442cf17c4d0a9f003b135504e21ee24ebaf3409a5bb92e1aa0072eedf03b8aec9c2#npm:1.6.1"],\
           ["@types/vanilla-extract__css", null],\
-          ["@vanilla-extract/css", "npm:1.14.0"]\
+          ["@vanilla-extract/css", "npm:1.14.1"]\
         ],\
         "packagePeers": [\
           "@types/vanilla-extract__css",\
@@ -12247,17 +11016,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vanilla-extract/webpack-plugin", [\
-      ["npm:2.3.2", {\
-        "packageLocation": "./.yarn/cache/@vanilla-extract-webpack-plugin-npm-2.3.2-709c7b751c-e91203b8bf.zip/node_modules/@vanilla-extract/webpack-plugin/",\
+      ["npm:2.3.3", {\
+        "packageLocation": "./.yarn/cache/@vanilla-extract-webpack-plugin-npm-2.3.3-3bfb6ad4ab-5fe0f3337a.zip/node_modules/@vanilla-extract/webpack-plugin/",\
         "packageDependencies": [\
-          ["@vanilla-extract/webpack-plugin", "npm:2.3.2"]\
+          ["@vanilla-extract/webpack-plugin", "npm:2.3.3"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.2", {\
-        "packageLocation": "./.yarn/__virtual__/@vanilla-extract-webpack-plugin-virtual-a36e3b5c50/0/cache/@vanilla-extract-webpack-plugin-npm-2.3.2-709c7b751c-e91203b8bf.zip/node_modules/@vanilla-extract/webpack-plugin/",\
+      ["virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.3", {\
+        "packageLocation": "./.yarn/__virtual__/@vanilla-extract-webpack-plugin-virtual-99d122f560/0/cache/@vanilla-extract-webpack-plugin-npm-2.3.3-3bfb6ad4ab-5fe0f3337a.zip/node_modules/@vanilla-extract/webpack-plugin/",\
         "packageDependencies": [\
-          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.2"],\
+          ["@vanilla-extract/webpack-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.3.3"],\
           ["@types/webpack", null],\
           ["@vanilla-extract/integration", "npm:6.3.0"],\
           ["chalk", "npm:4.1.2"],\
@@ -12271,10 +11040,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:66be82c9f680110c82d4e26a325a094f454d1ed6b5cee6cc02225f8a2ce05b56330e88c5e5882909dd9e5824c8aa126b1ff854deaa8a8c63c7ae6978f5dc86a1#npm:2.3.2", {\
-        "packageLocation": "./.yarn/__virtual__/@vanilla-extract-webpack-plugin-virtual-4fece47148/0/cache/@vanilla-extract-webpack-plugin-npm-2.3.2-709c7b751c-e91203b8bf.zip/node_modules/@vanilla-extract/webpack-plugin/",\
+      ["virtual:052f8896b6e1db64edc763d2ba71ee3bfd935cc7ff371907dc1ae11fa9d46ba7d21bc4745bb82ea1edc73b586c7f5d790a4847d2d06024f4932ee42724dc2d20#npm:2.3.3", {\
+        "packageLocation": "./.yarn/__virtual__/@vanilla-extract-webpack-plugin-virtual-ed17ff53ac/0/cache/@vanilla-extract-webpack-plugin-npm-2.3.3-3bfb6ad4ab-5fe0f3337a.zip/node_modules/@vanilla-extract/webpack-plugin/",\
         "packageDependencies": [\
-          ["@vanilla-extract/webpack-plugin", "virtual:66be82c9f680110c82d4e26a325a094f454d1ed6b5cee6cc02225f8a2ce05b56330e88c5e5882909dd9e5824c8aa126b1ff854deaa8a8c63c7ae6978f5dc86a1#npm:2.3.2"],\
+          ["@vanilla-extract/webpack-plugin", "virtual:052f8896b6e1db64edc763d2ba71ee3bfd935cc7ff371907dc1ae11fa9d46ba7d21bc4745bb82ea1edc73b586c7f5d790a4847d2d06024f4932ee42724dc2d20#npm:2.3.3"],\
           ["@types/webpack", null],\
           ["@vanilla-extract/integration", "npm:6.3.0"],\
           ["chalk", "npm:4.1.2"],\
@@ -13282,11 +12051,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/babel-core-virtual-cc35e8131a/0/cache/babel-core-npm-7.0.0-bridge.0-7fe146b78f-2a1cb87901.zip/node_modules/babel-core/",\
         "packageDependencies": [\
           ["babel-core", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.0.0-bridge.0"],\
-<<<<<<< HEAD
           ["@babel/core", "npm:7.23.9"],\
-=======
-          ["@babel/core", "npm:7.23.5"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@types/babel__core", null]\
         ],\
         "packagePeers": [\
@@ -13395,7 +12160,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:0.4.8", {\
         "packageLocation": "./.yarn/__virtual__/babel-plugin-polyfill-corejs2-virtual-5d25a444da/0/cache/babel-plugin-polyfill-corejs2-npm-0.4.8-c655c174a4-6b5a79bdc1.zip/node_modules/babel-plugin-polyfill-corejs2/",\
         "packageDependencies": [\
@@ -13404,16 +12168,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-define-polyfill-provider", "virtual:5d25a444da44541566992df827e86829e2886669f045a87361d8e25559f1a04c42c40f0563ff95c7700782528e553f582a22ba167aa3ce0b07b90832637a4198#npm:0.5.0"],\
           ["@types/babel__core", "npm:7.20.5"],\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.4.6", {\
-        "packageLocation": "./.yarn/__virtual__/babel-plugin-polyfill-corejs2-virtual-77246024c7/0/cache/babel-plugin-polyfill-corejs2-npm-0.4.6-5d68b7e716-736b1bb8e5.zip/node_modules/babel-plugin-polyfill-corejs2/",\
-        "packageDependencies": [\
-          ["babel-plugin-polyfill-corejs2", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.4.6"],\
-          ["@babel/compat-data", "npm:7.23.5"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-define-polyfill-provider", "virtual:77246024c7ffe8808227a0b4c41458bb82c25c7f0a8ecf7620b7d1565dc1f28dff14cfb8a000784728451444cac1361516ba9c347e676386796ffb54609e41ed#npm:0.4.3"],\
-          ["@types/babel__core", null],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["semver", "npm:6.3.1"]\
         ],\
         "packagePeers": [\
@@ -13447,7 +12201,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:0.9.0", {\
         "packageLocation": "./.yarn/__virtual__/babel-plugin-polyfill-corejs3-virtual-a1b18c6a34/0/cache/babel-plugin-polyfill-corejs3-npm-0.9.0-444a62ae31-efdf9ba82e.zip/node_modules/babel-plugin-polyfill-corejs3/",\
         "packageDependencies": [\
@@ -13456,16 +12209,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-define-polyfill-provider", "virtual:5d25a444da44541566992df827e86829e2886669f045a87361d8e25559f1a04c42c40f0563ff95c7700782528e553f582a22ba167aa3ce0b07b90832637a4198#npm:0.5.0"],\
           ["@types/babel__core", "npm:7.20.5"],\
           ["core-js-compat", "npm:3.35.1"]\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.8.6", {\
-        "packageLocation": "./.yarn/__virtual__/babel-plugin-polyfill-corejs3-virtual-1a569bd450/0/cache/babel-plugin-polyfill-corejs3-npm-0.8.6-d745af59c0-2d9c926fda.zip/node_modules/babel-plugin-polyfill-corejs3/",\
-        "packageDependencies": [\
-          ["babel-plugin-polyfill-corejs3", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.8.6"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-define-polyfill-provider", "virtual:77246024c7ffe8808227a0b4c41458bb82c25c7f0a8ecf7620b7d1565dc1f28dff14cfb8a000784728451444cac1361516ba9c347e676386796ffb54609e41ed#npm:0.4.3"],\
-          ["@types/babel__core", null],\
-          ["core-js-compat", "npm:3.33.3"]\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -13497,7 +12240,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
       ["virtual:88cef1b3ae10450c448e936d3de9f744cb9602ce640561f84ebe9326682cc262fe4ddfa73d5b151b4c3bec4a7c6845af099451a3b4806bebd6d2caa872c87222#npm:0.5.5", {\
         "packageLocation": "./.yarn/__virtual__/babel-plugin-polyfill-regenerator-virtual-ef7499f2f9/0/cache/babel-plugin-polyfill-regenerator-npm-0.5.5-4829ad3cd0-3a9b482867.zip/node_modules/babel-plugin-polyfill-regenerator/",\
         "packageDependencies": [\
@@ -13505,15 +12247,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/helper-define-polyfill-provider", "virtual:5d25a444da44541566992df827e86829e2886669f045a87361d8e25559f1a04c42c40f0563ff95c7700782528e553f582a22ba167aa3ce0b07b90832637a4198#npm:0.5.0"],\
           ["@types/babel__core", "npm:7.20.5"]\
-=======
-      ["virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.5.3", {\
-        "packageLocation": "./.yarn/__virtual__/babel-plugin-polyfill-regenerator-virtual-c6a0d10e8c/0/cache/babel-plugin-polyfill-regenerator-npm-0.5.3-b48e14d6a2-2bb546582c.zip/node_modules/babel-plugin-polyfill-regenerator/",\
-        "packageDependencies": [\
-          ["babel-plugin-polyfill-regenerator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:0.5.3"],\
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/helper-define-polyfill-provider", "virtual:77246024c7ffe8808227a0b4c41458bb82c25c7f0a8ecf7620b7d1565dc1f28dff14cfb8a000784728451444cac1361516ba9c347e676386796ffb54609e41ed#npm:0.4.3"],\
-          ["@types/babel__core", null]\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -13881,7 +12614,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/browserslist-npm-4.22.3-c3c1809375-d46a906c79.zip/node_modules/browserslist/",\
         "packageDependencies": [\
           ["browserslist", "npm:4.22.3"],\
-          ["caniuse-lite", "npm:1.0.30001580"],\
+          ["caniuse-lite", "npm:1.0.30001581"],\
           ["electron-to-chromium", "npm:1.4.648"],\
           ["node-releases", "npm:2.0.14"],\
           ["update-browserslist-db", "virtual:c3c1809375389507a1aeedf534fd79f857bb3c64ecc9e006768cadbfe62986d5f0c6d60929598771fa39a935d74fd2f97a9ee5a236e30da17e2b3a480f1ecae0#npm:1.0.13"]\
@@ -14082,10 +12815,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["caniuse-lite", [\
-      ["npm:1.0.30001580", {\
-        "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001580-0920f47d30-b626d25d79.zip/node_modules/caniuse-lite/",\
+      ["npm:1.0.30001581", {\
+        "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001581-7909cc6e66-c2d049514e.zip/node_modules/caniuse-lite/",\
         "packageDependencies": [\
-          ["caniuse-lite", "npm:1.0.30001580"]\
+          ["caniuse-lite", "npm:1.0.30001581"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -14214,17 +12947,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["chromatic", [\
-      ["npm:10.6.0", {\
-        "packageLocation": "./.yarn/cache/chromatic-npm-10.6.0-4b18fe575d-0831a692eb.zip/node_modules/chromatic/",\
+      ["npm:10.6.1", {\
+        "packageLocation": "./.yarn/cache/chromatic-npm-10.6.1-bb821da1df-59716d191b.zip/node_modules/chromatic/",\
         "packageDependencies": [\
-          ["chromatic", "npm:10.6.0"]\
+          ["chromatic", "npm:10.6.1"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.0", {\
-        "packageLocation": "./.yarn/__virtual__/chromatic-virtual-2c79169365/0/cache/chromatic-npm-10.6.0-4b18fe575d-0831a692eb.zip/node_modules/chromatic/",\
+      ["virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.1", {\
+        "packageLocation": "./.yarn/__virtual__/chromatic-virtual-2940bf8b7f/0/cache/chromatic-npm-10.6.1-bb821da1df-59716d191b.zip/node_modules/chromatic/",\
         "packageDependencies": [\
-          ["chromatic", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.0"],\
+          ["chromatic", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.6.1"],\
           ["@types/chromatic-cypress", null],\
           ["@types/chromatic-playwright", null],\
           ["chromatic-cypress", null],\
@@ -14980,17 +13713,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
-      ["virtual:3dca107af9fb2423c491f49cee255d1b7fc698af0e98c0d6e907a311ffb27bfa883814294885b7883a1ca4450c2568e2404ca1864dc8b5292a8550e3147d61fc#npm:6.9.1", {\
-        "packageLocation": "./.yarn/__virtual__/css-loader-virtual-96a99af413/0/cache/css-loader-npm-6.9.1-56b1641a2b-6f89740618.zip/node_modules/css-loader/",\
-=======
-      ["npm:6.9.1", {\
-        "packageLocation": "./.yarn/cache/css-loader-npm-6.9.1-56b1641a2b-6f89740618.zip/node_modules/css-loader/",\
-        "packageDependencies": [\
-          ["css-loader", "npm:6.9.1"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
       ["virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:6.9.1", {\
         "packageLocation": "./.yarn/__virtual__/css-loader-virtual-08fb34c7dd/0/cache/css-loader-npm-6.9.1-56b1641a2b-6f89740618.zip/node_modules/css-loader/",\
         "packageDependencies": [\
@@ -15002,28 +13724,6 @@ const RAW_RUNTIME_STATE =
           ["postcss-modules-local-by-default", "virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:4.0.4"],\
           ["postcss-modules-scope", "virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:3.1.1"],\
           ["postcss-modules-values", "virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:4.0.0"],\
-          ["postcss-value-parser", "npm:4.2.0"],\
-          ["semver", "npm:7.5.4"],\
-          ["webpack", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:5.89.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/webpack",\
-          "webpack"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:58201178e18eff801e177bc4d1d5ac8187b6b7e6ee4255298243a46d883295ba076e8ede5144b0583cf7a24756b0280f97f51f2f58c7412e21ea1fe99333a567#npm:6.8.1", {\
-        "packageLocation": "./.yarn/__virtual__/css-loader-virtual-88bf52d6b0/0/cache/css-loader-npm-6.8.1-30d84b4cf1-f20bb2a181.zip/node_modules/css-loader/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
-        "packageDependencies": [\
-          ["css-loader", "virtual:3dca107af9fb2423c491f49cee255d1b7fc698af0e98c0d6e907a311ffb27bfa883814294885b7883a1ca4450c2568e2404ca1864dc8b5292a8550e3147d61fc#npm:6.9.1"],\
-          ["@types/webpack", null],\
-          ["icss-utils", "virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:5.1.0"],\
-          ["postcss", "npm:8.4.33"],\
-          ["postcss-modules-extract-imports", "virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:3.0.0"],\
-          ["postcss-modules-local-by-default", "virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:4.0.4"],\
-          ["postcss-modules-scope", "virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:3.1.1"],\
-          ["postcss-modules-values", "virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:4.0.0"],\
           ["postcss-value-parser", "npm:4.2.0"],\
           ["semver", "npm:7.5.4"],\
           ["webpack", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:5.90.0"]\
@@ -16917,7 +15617,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/eval-npm-0.1.8-0cd081d9ca-27366ad289.zip/node_modules/eval/",\
         "packageDependencies": [\
           ["eval", "npm:0.1.8"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["require-like", "npm:0.1.2"]\
         ],\
         "linkType": "HARD"\
@@ -17645,19 +16345,20 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-<<<<<<< HEAD
     ["get-east-asian-width", [\
       ["npm:1.2.0", {\
         "packageLocation": "./.yarn/cache/get-east-asian-width-npm-1.2.0-6cd8491dbe-c9b280e7c7.zip/node_modules/get-east-asian-width/",\
         "packageDependencies": [\
           ["get-east-asian-width", "npm:1.2.0"]\
-=======
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["get-func-name", [\
       ["npm:2.0.2", {\
         "packageLocation": "./.yarn/cache/get-func-name-npm-2.0.2-409dbe3703-3f62f4c236.zip/node_modules/get-func-name/",\
         "packageDependencies": [\
           ["get-func-name", "npm:2.0.2"]\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
         ],\
         "linkType": "HARD"\
       }]\
@@ -18385,28 +17086,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
-      ["virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:5.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/icss-utils-virtual-99d97837f2/0/cache/icss-utils-npm-5.1.0-8d8c062d07-5c324d2835.zip/node_modules/icss-utils/",\
-=======
       ["virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:5.1.0", {\
         "packageLocation": "./.yarn/__virtual__/icss-utils-virtual-5646cc1795/0/cache/icss-utils-npm-5.1.0-8d8c062d07-5c324d2835.zip/node_modules/icss-utils/",\
         "packageDependencies": [\
           ["icss-utils", "virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:5.1.0"],\
-          ["@types/postcss", null],\
-          ["postcss", "npm:8.4.33"]\
-        ],\
-        "packagePeers": [\
-          "@types/postcss",\
-          "postcss"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:88bf52d6b0736d0b2922336376bacaf7aefa3e606e2594fa2a2b571466d58161262d6466cb56ee5781199b09d90ea6ac7fa5f76b3787adbd20cd1063c8d9f42f#npm:5.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/icss-utils-virtual-992fffc6d5/0/cache/icss-utils-npm-5.1.0-8d8c062d07-5c324d2835.zip/node_modules/icss-utils/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
-        "packageDependencies": [\
-          ["icss-utils", "virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:5.1.0"],\
           ["@types/postcss", null],\
           ["postcss", "npm:8.4.33"]\
         ],\
@@ -19318,7 +18001,7 @@ const RAW_RUNTIME_STATE =
           ["@jest/expect", "npm:29.7.0"],\
           ["@jest/test-result", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["chalk", "npm:4.1.2"],\
           ["co", "npm:4.6.0"],\
           ["dedent", "virtual:f7679858c638e2e5ade31901dd2b1e5007918fdc7d84fefb11f4200f46ba2e43b9d662fb793507b517bb1e725144e51f6d68f60f9f6100fd52144f042f58f0bc#npm:1.5.1"],\
@@ -19489,7 +18172,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.23.9"],\
           ["@jest/test-sequencer", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/ts-node", null],\
           ["babel-jest", "virtual:cf6bc276eac13587e47819b999dcda4c90289699a3ec039dd7980f8902bac361d8f631f49a08c3eade0298fa31b3470256ee5a6be25f122771ad82af383cf463#npm:29.7.0"],\
           ["chalk", "npm:4.1.2"],\
@@ -19526,7 +18209,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.23.9"],\
           ["@jest/test-sequencer", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/ts-node", null],\
           ["babel-jest", "virtual:cf6bc276eac13587e47819b999dcda4c90289699a3ec039dd7980f8902bac361d8f631f49a08c3eade0298fa31b3470256ee5a6be25f122771ad82af383cf463#npm:29.7.0"],\
           ["chalk", "npm:4.1.2"],\
@@ -19600,7 +18283,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.23.9"],\
           ["@jest/test-sequencer", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/ts-node", null],\
           ["babel-jest", "virtual:cf6bc276eac13587e47819b999dcda4c90289699a3ec039dd7980f8902bac361d8f631f49a08c3eade0298fa31b3470256ee5a6be25f122771ad82af383cf463#npm:29.7.0"],\
           ["chalk", "npm:4.1.2"],\
@@ -19722,7 +18405,7 @@ const RAW_RUNTIME_STATE =
           ["@jest/types", "npm:29.6.3"],\
           ["@types/canvas", null],\
           ["@types/jsdom", "npm:20.0.1"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["canvas", null],\
           ["jest-mock", "npm:29.7.0"],\
           ["jest-util", "npm:29.7.0"],\
@@ -19743,7 +18426,7 @@ const RAW_RUNTIME_STATE =
           ["@jest/environment", "npm:29.7.0"],\
           ["@jest/fake-timers", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["jest-mock", "npm:29.7.0"],\
           ["jest-util", "npm:29.7.0"]\
         ],\
@@ -19766,7 +18449,7 @@ const RAW_RUNTIME_STATE =
           ["jest-haste-map", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
           ["@types/graceful-fs", "npm:4.1.9"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["anymatch", "npm:3.1.3"],\
           ["fb-watchman", "npm:2.0.2"],\
           ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"],\
@@ -19828,7 +18511,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["jest-mock", "npm:27.5.1"],\
           ["@jest/types", "npm:27.5.1"],\
-          ["@types/node", "npm:20.11.7"]\
+          ["@types/node", "npm:20.11.8"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -19837,7 +18520,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["jest-mock", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["jest-util", "npm:29.7.0"]\
         ],\
         "linkType": "HARD"\
@@ -19913,7 +18596,7 @@ const RAW_RUNTIME_STATE =
           ["@jest/test-result", "npm:29.7.0"],\
           ["@jest/transform", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["chalk", "npm:4.1.2"],\
           ["emittery", "npm:0.13.1"],\
           ["graceful-fs", "npm:4.2.11"],\
@@ -19945,7 +18628,7 @@ const RAW_RUNTIME_STATE =
           ["@jest/test-result", "npm:29.7.0"],\
           ["@jest/transform", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["chalk", "npm:4.1.2"],\
           ["cjs-module-lexer", "npm:1.2.3"],\
           ["collect-v8-coverage", "npm:1.0.2"],\
@@ -19999,7 +18682,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["jest-util", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["chalk", "npm:4.1.2"],\
           ["ci-info", "npm:3.9.0"],\
           ["graceful-fs", "npm:4.2.11"],\
@@ -20030,7 +18713,7 @@ const RAW_RUNTIME_STATE =
           ["jest-watcher", "npm:29.7.0"],\
           ["@jest/test-result", "npm:29.7.0"],\
           ["@jest/types", "npm:29.6.3"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["ansi-escapes", "npm:4.3.2"],\
           ["chalk", "npm:4.1.2"],\
           ["emittery", "npm:0.13.1"],\
@@ -20045,7 +18728,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/jest-worker-npm-27.5.1-1c110b5894-06c6e2a845.zip/node_modules/jest-worker/",\
         "packageDependencies": [\
           ["jest-worker", "npm:27.5.1"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["merge-stream", "npm:2.0.0"],\
           ["supports-color", "npm:8.1.1"]\
         ],\
@@ -20055,7 +18738,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/jest-worker-npm-29.7.0-4d3567fed6-364cbaef00.zip/node_modules/jest-worker/",\
         "packageDependencies": [\
           ["jest-worker", "npm:29.7.0"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["jest-util", "npm:29.7.0"],\
           ["merge-stream", "npm:2.0.0"],\
           ["supports-color", "npm:8.1.1"]\
@@ -20134,7 +18817,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/jscodeshift-virtual-3bd9ad566a/0/cache/jscodeshift-npm-0.15.1-cabf242d9a-7cece7b99f.zip/node_modules/jscodeshift/",\
         "packageDependencies": [\
           ["jscodeshift", "virtual:aa13efc2fe5e30c528aafb40f3191477d710b27fb761b4fbebc5eea45b7682a18e5766acffc1844fc6acb4b7f51c3f6c7bbf2685b4de40835bd4a4a67c519308#npm:0.15.1"],\
-<<<<<<< HEAD
           ["@babel/core", "npm:7.23.9"],\
           ["@babel/parser", "npm:7.23.9"],\
           ["@babel/plugin-transform-class-properties", "virtual:b7ee065ae356590a6be796c950902b2024344b8dc8d617d829ed5b94fc4122b8425d7feaccae220abea590f2276d44604afeb174a3c34ffa226dbd65bdec2f45#npm:7.23.3"],\
@@ -20146,19 +18828,6 @@ const RAW_RUNTIME_STATE =
           ["@babel/preset-flow", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.23.3"],\
           ["@babel/preset-typescript", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.23.3"],\
           ["@babel/register", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.23.7"],\
-=======
-          ["@babel/core", "npm:7.23.5"],\
-          ["@babel/parser", "npm:7.23.5"],\
-          ["@babel/plugin-transform-class-properties", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-modules-commonjs", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/plugin-transform-nullish-coalescing-operator", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-optional-chaining", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.4"],\
-          ["@babel/plugin-transform-private-methods", "virtual:150c637a00134bc5e39db911699c85ce47f9d8479fa23e517408cbcf543a2be165b561f7500b36130e63ca381523f595f1797e2b590f29f2dbac75303b93833b#npm:7.23.3"],\
-          ["@babel/preset-env", "virtual:aa13efc2fe5e30c528aafb40f3191477d710b27fb761b4fbebc5eea45b7682a18e5766acffc1844fc6acb4b7f51c3f6c7bbf2685b4de40835bd4a4a67c519308#npm:7.23.5"],\
-          ["@babel/preset-flow", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.23.3"],\
-          ["@babel/preset-typescript", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.23.3"],\
-          ["@babel/register", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.22.15"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@types/babel__preset-env", null],\
           ["babel-core", "virtual:3bd9ad566ad83d9fe0c9c273288e859eaf115b0147af2826dc99389ccff0b537ba18a432a59c55d3256a89f05587d7f4002d1385642cfc84d2bbe1ccf83fdf0a#npm:7.0.0-bridge.0"],\
           ["chalk", "npm:4.1.2"],\
@@ -20216,11 +18885,7 @@ const RAW_RUNTIME_STATE =
           ["whatwg-encoding", "npm:2.0.0"],\
           ["whatwg-mimetype", "npm:3.0.0"],\
           ["whatwg-url", "npm:11.0.0"],\
-<<<<<<< HEAD
           ["ws", "virtual:526f2dd7b758c4a1495bcf391dcf797abc04efbed4ad6442c3362358be5ab08e2053c148231af56fb31240dc5f884529c9bf022bbd0bc13c242690e077b6c4d6#npm:8.16.0"],\
-=======
-          ["ws", "virtual:526f2dd7b758c4a1495bcf391dcf797abc04efbed4ad6442c3362358be5ab08e2053c148231af56fb31240dc5f884529c9bf022bbd0bc13c242690e077b6c4d6#npm:8.14.2"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["xml-name-validator", "npm:4.0.0"]\
         ],\
         "packagePeers": [\
@@ -20473,7 +19138,7 @@ const RAW_RUNTIME_STATE =
           ["@linker/eslint-config", "workspace:packages/eslint-config"],\
           ["@linker/eslint-plugin", "workspace:packages/eslint-plugin"],\
           ["@tanstack/eslint-plugin-query", "virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:5.17.22"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/prettier", "npm:3.0.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:5150ddf72639c78026dd42fb70c98db909b5b4705d92e6f4c006404aac57f9ed11b6f4301fb318563ae47c142354f07129b31abbd0e3a58319a40761e044e693#npm:6.19.1"],\
           ["@typescript-eslint/parser", "virtual:5150ddf72639c78026dd42fb70c98db909b5b4705d92e6f4c006404aac57f9ed11b6f4301fb318563ae47c142354f07129b31abbd0e3a58319a40761e044e693#npm:6.19.1"],\
@@ -21171,7 +19836,7 @@ const RAW_RUNTIME_STATE =
           ["mini-css-extract-plugin", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:2.7.7"],\
           ["@types/webpack", null],\
           ["schema-utils", "npm:4.2.0"],\
-          ["webpack", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:5.89.0"]\
+          ["webpack", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:5.90.0"]\
         ],\
         "packagePeers": [\
           "@types/webpack",\
@@ -21543,7 +20208,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.18"],\
           ["@types/sass", null],\
           ["busboy", "npm:1.6.0"],\
-          ["caniuse-lite", "npm:1.0.30001580"],\
+          ["caniuse-lite", "npm:1.0.30001581"],\
           ["graceful-fs", "npm:4.2.11"],\
           ["postcss", "npm:8.4.31"],\
           ["react", "npm:18.2.0"],\
@@ -21584,7 +20249,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.18"],\
           ["@types/sass", null],\
           ["busboy", "npm:1.6.0"],\
-          ["caniuse-lite", "npm:1.0.30001580"],\
+          ["caniuse-lite", "npm:1.0.30001581"],\
           ["postcss", "npm:8.4.31"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:18.2.0"],\
@@ -22705,28 +21370,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
-      ["virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:3.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/postcss-modules-extract-imports-virtual-a8ac807918/0/cache/postcss-modules-extract-imports-npm-3.0.0-619311282d-8d68bb735c.zip/node_modules/postcss-modules-extract-imports/",\
-=======
       ["virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:3.0.0", {\
         "packageLocation": "./.yarn/__virtual__/postcss-modules-extract-imports-virtual-2fb3a7b8a7/0/cache/postcss-modules-extract-imports-npm-3.0.0-619311282d-8d68bb735c.zip/node_modules/postcss-modules-extract-imports/",\
         "packageDependencies": [\
           ["postcss-modules-extract-imports", "virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:3.0.0"],\
-          ["@types/postcss", null],\
-          ["postcss", "npm:8.4.33"]\
-        ],\
-        "packagePeers": [\
-          "@types/postcss",\
-          "postcss"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:88bf52d6b0736d0b2922336376bacaf7aefa3e606e2594fa2a2b571466d58161262d6466cb56ee5781199b09d90ea6ac7fa5f76b3787adbd20cd1063c8d9f42f#npm:3.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/postcss-modules-extract-imports-virtual-35904765bb/0/cache/postcss-modules-extract-imports-npm-3.0.0-619311282d-8d68bb735c.zip/node_modules/postcss-modules-extract-imports/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
-        "packageDependencies": [\
-          ["postcss-modules-extract-imports", "virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:3.0.0"],\
           ["@types/postcss", null],\
           ["postcss", "npm:8.4.33"]\
         ],\
@@ -22745,40 +21392,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
-      ["virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:4.0.4", {\
-        "packageLocation": "./.yarn/__virtual__/postcss-modules-local-by-default-virtual-01cd6bb1b1/0/cache/postcss-modules-local-by-default-npm-4.0.4-8827d7f55a-45790af417.zip/node_modules/postcss-modules-local-by-default/",\
-=======
-      ["npm:4.0.4", {\
-        "packageLocation": "./.yarn/cache/postcss-modules-local-by-default-npm-4.0.4-8827d7f55a-45790af417.zip/node_modules/postcss-modules-local-by-default/",\
-        "packageDependencies": [\
-          ["postcss-modules-local-by-default", "npm:4.0.4"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
       ["virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:4.0.4", {\
         "packageLocation": "./.yarn/__virtual__/postcss-modules-local-by-default-virtual-9ed5575c0f/0/cache/postcss-modules-local-by-default-npm-4.0.4-8827d7f55a-45790af417.zip/node_modules/postcss-modules-local-by-default/",\
         "packageDependencies": [\
           ["postcss-modules-local-by-default", "virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:4.0.4"],\
           ["@types/postcss", null],\
           ["icss-utils", "virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:5.1.0"],\
-          ["postcss", "npm:8.4.33"],\
-          ["postcss-selector-parser", "npm:6.0.13"],\
-          ["postcss-value-parser", "npm:4.2.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/postcss",\
-          "postcss"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:88bf52d6b0736d0b2922336376bacaf7aefa3e606e2594fa2a2b571466d58161262d6466cb56ee5781199b09d90ea6ac7fa5f76b3787adbd20cd1063c8d9f42f#npm:4.0.3", {\
-        "packageLocation": "./.yarn/__virtual__/postcss-modules-local-by-default-virtual-59b26f44ac/0/cache/postcss-modules-local-by-default-npm-4.0.3-f6674d7148-4f671d77cb.zip/node_modules/postcss-modules-local-by-default/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
-        "packageDependencies": [\
-          ["postcss-modules-local-by-default", "virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:4.0.4"],\
-          ["@types/postcss", null],\
-          ["icss-utils", "virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:5.1.0"],\
           ["postcss", "npm:8.4.33"],\
           ["postcss-selector-parser", "npm:6.0.15"],\
           ["postcss-value-parser", "npm:4.2.0"]\
@@ -22798,36 +21417,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
-      ["virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:3.1.1", {\
-        "packageLocation": "./.yarn/__virtual__/postcss-modules-scope-virtual-70dbb10d5d/0/cache/postcss-modules-scope-npm-3.1.1-e7a1c8c946-ca035969eb.zip/node_modules/postcss-modules-scope/",\
-=======
-      ["npm:3.1.1", {\
-        "packageLocation": "./.yarn/cache/postcss-modules-scope-npm-3.1.1-e7a1c8c946-ca035969eb.zip/node_modules/postcss-modules-scope/",\
-        "packageDependencies": [\
-          ["postcss-modules-scope", "npm:3.1.1"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
       ["virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:3.1.1", {\
         "packageLocation": "./.yarn/__virtual__/postcss-modules-scope-virtual-3474f3a27e/0/cache/postcss-modules-scope-npm-3.1.1-e7a1c8c946-ca035969eb.zip/node_modules/postcss-modules-scope/",\
         "packageDependencies": [\
           ["postcss-modules-scope", "virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:3.1.1"],\
-          ["@types/postcss", null],\
-          ["postcss", "npm:8.4.33"],\
-          ["postcss-selector-parser", "npm:6.0.13"]\
-        ],\
-        "packagePeers": [\
-          "@types/postcss",\
-          "postcss"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:88bf52d6b0736d0b2922336376bacaf7aefa3e606e2594fa2a2b571466d58161262d6466cb56ee5781199b09d90ea6ac7fa5f76b3787adbd20cd1063c8d9f42f#npm:3.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/postcss-modules-scope-virtual-36cc0f9204/0/cache/postcss-modules-scope-npm-3.0.0-0678040a26-cc36b8111c.zip/node_modules/postcss-modules-scope/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
-        "packageDependencies": [\
-          ["postcss-modules-scope", "virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:3.1.1"],\
           ["@types/postcss", null],\
           ["postcss", "npm:8.4.33"],\
           ["postcss-selector-parser", "npm:6.0.15"]\
@@ -22847,31 +21440,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-<<<<<<< HEAD
-      ["virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:4.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/postcss-modules-values-virtual-88ef255319/0/cache/postcss-modules-values-npm-4.0.0-63d7ec543a-18021961a4.zip/node_modules/postcss-modules-values/",\
-=======
       ["virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:4.0.0", {\
         "packageLocation": "./.yarn/__virtual__/postcss-modules-values-virtual-f1ba96dee8/0/cache/postcss-modules-values-npm-4.0.0-63d7ec543a-18021961a4.zip/node_modules/postcss-modules-values/",\
         "packageDependencies": [\
           ["postcss-modules-values", "virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:4.0.0"],\
           ["@types/postcss", null],\
           ["icss-utils", "virtual:08fb34c7dd7698dc7a7f94017d645fbd5b72c9baf2c6167ed78e93a525d48cbe944d6d93ac955c4b43cf2d7848c7bf4691a19292b481d814f973c4e018c1e6e5#npm:5.1.0"],\
-          ["postcss", "npm:8.4.33"]\
-        ],\
-        "packagePeers": [\
-          "@types/postcss",\
-          "postcss"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:88bf52d6b0736d0b2922336376bacaf7aefa3e606e2594fa2a2b571466d58161262d6466cb56ee5781199b09d90ea6ac7fa5f76b3787adbd20cd1063c8d9f42f#npm:4.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/postcss-modules-values-virtual-d60b1c0dfd/0/cache/postcss-modules-values-npm-4.0.0-63d7ec543a-18021961a4.zip/node_modules/postcss-modules-values/",\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
-        "packageDependencies": [\
-          ["postcss-modules-values", "virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:4.0.0"],\
-          ["@types/postcss", null],\
-          ["icss-utils", "virtual:96a99af413fbaff038be8c315e86f4822c1b628e0098d236a85164550f8f61d891a6ed02cd0bf7e9e7249a413d1d99b67cccf2d9582d63ba3776185ec435ad88#npm:5.1.0"],\
           ["postcss", "npm:8.4.33"]\
         ],\
         "packagePeers": [\
@@ -25479,7 +24053,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-db9f3c2966/0/cache/terser-webpack-plugin-npm-5.3.10-3bde1920fb-fb1c2436ae.zip/node_modules/terser-webpack-plugin/",\
         "packageDependencies": [\
           ["terser-webpack-plugin", "virtual:8e187b841de2927d72ee4034fbc85b986c3184590dee5ff013d3aa0301568879befb3f90b016d35719255f2913381771ad42263d78648e23688ed603baee20b8#npm:5.3.10"],\
-          ["@jridgewell/trace-mapping", "npm:0.3.22"],\
+          ["@jridgewell/trace-mapping", "npm:0.3.20"],\
           ["@swc/core", null],\
           ["@types/esbuild", null],\
           ["@types/swc__core", null],\
@@ -25509,7 +24083,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-eaa2e9d910/0/cache/terser-webpack-plugin-npm-5.3.10-3bde1920fb-fb1c2436ae.zip/node_modules/terser-webpack-plugin/",\
         "packageDependencies": [\
           ["terser-webpack-plugin", "virtual:a5bd696cc54722235dae6f9a598f17e8e4d712cfe404bac62b8e8d3fb1943a4844c37a9be08a15c46840f9244f9b3915f1669946d1f54d696ca7f63218d1e109#npm:5.3.10"],\
-          ["@jridgewell/trace-mapping", "npm:0.3.22"],\
+          ["@jridgewell/trace-mapping", "npm:0.3.20"],\
           ["@swc/core", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:1.3.106"],\
           ["@types/esbuild", null],\
           ["@types/swc__core", null],\
@@ -25613,17 +24187,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-<<<<<<< HEAD
-=======
-    ["tiny-warning", [\
-      ["npm:1.0.3", {\
-        "packageLocation": "./.yarn/cache/tiny-warning-npm-1.0.3-750b7a07c4-da62c4acac.zip/node_modules/tiny-warning/",\
-        "packageDependencies": [\
-          ["tiny-warning", "npm:1.0.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["tinyspy", [\
       ["npm:2.2.0", {\
         "packageLocation": "./.yarn/cache/tinyspy-npm-2.2.0-226debb582-bcc5a08c2d.zip/node_modules/tinyspy/",\
@@ -25633,16 +24196,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["titleize", [\
-      ["npm:3.0.0", {\
-        "packageLocation": "./.yarn/cache/titleize-npm-3.0.0-7deac2f3a3-71fbbeabbf.zip/node_modules/titleize/",\
-        "packageDependencies": [\
-          ["titleize", "npm:3.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
     ["tmp", [\
       ["npm:0.0.33", {\
         "packageLocation": "./.yarn/cache/tmp-npm-0.0.33-bcbf65df2a-09c0abfd16.zip/node_modules/tmp/",\
@@ -25869,7 +24422,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
@@ -25905,7 +24458,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
@@ -26678,7 +25231,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/v8-to-istanbul-npm-9.2.0-fb333cc45f-18dd8cebfb.zip/node_modules/v8-to-istanbul/",\
         "packageDependencies": [\
           ["v8-to-istanbul", "npm:9.2.0"],\
-          ["@jridgewell/trace-mapping", "npm:0.3.22"],\
+          ["@jridgewell/trace-mapping", "npm:0.3.20"],\
           ["@types/istanbul-lib-coverage", "npm:2.0.6"],\
           ["convert-source-map", "npm:2.0.0"]\
         ],\
@@ -26850,13 +25403,13 @@ const RAW_RUNTIME_STATE =
           ["@types/cors", "npm:2.8.17"],\
           ["@types/express", "npm:4.17.21"],\
           ["@types/jest", "npm:29.5.11"],\
-          ["@types/node", "npm:20.11.7"],\
+          ["@types/node", "npm:20.11.8"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", "npm:18.2.18"],\
-          ["@vanilla-extract/css", "npm:1.14.0"],\
+          ["@vanilla-extract/css", "npm:1.14.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/jest-transform", "npm:1.1.3"],\
-          ["@vanilla-extract/next-plugin", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:2.3.3"],\
+          ["@vanilla-extract/next-plugin", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:2.3.4"],\
           ["@vanilla-extract/recipes", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:0.5.1"],\
           ["@vanilla-extract/sprinkles", "virtual:3a8833b1aa00274bb4e4f4e2f6e03501d91c26c8ef4d55a2158a803071987442cf17c4d0a9f003b135504e21ee24ebaf3409a5bb92e1aa0072eedf03b8aec9c2#npm:1.6.1"],\
           ["clsx", "npm:2.1.0"],\
@@ -27273,17 +25826,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-<<<<<<< HEAD
       ["virtual:526f2dd7b758c4a1495bcf391dcf797abc04efbed4ad6442c3362358be5ab08e2053c148231af56fb31240dc5f884529c9bf022bbd0bc13c242690e077b6c4d6#npm:8.16.0", {\
         "packageLocation": "./.yarn/__virtual__/ws-virtual-ef918b67a4/0/cache/ws-npm-8.16.0-46943f6199-7c511c59e9.zip/node_modules/ws/",\
         "packageDependencies": [\
           ["ws", "virtual:526f2dd7b758c4a1495bcf391dcf797abc04efbed4ad6442c3362358be5ab08e2053c148231af56fb31240dc5f884529c9bf022bbd0bc13c242690e077b6c4d6#npm:8.16.0"],\
-=======
-      ["virtual:493ca27caa9730d53796bf46d93d1213703387136db60f7b816041e959d3cb1a62bc13be34a82de626dbd98398e8e9e974646b7441d583184447b1e29d391402#npm:7.5.9", {\
-        "packageLocation": "./.yarn/__virtual__/ws-virtual-9849d83d78/0/cache/ws-npm-7.5.9-26f12a5ed6-171e350129.zip/node_modules/ws/",\
-        "packageDependencies": [\
-          ["ws", "virtual:493ca27caa9730d53796bf46d93d1213703387136db60f7b816041e959d3cb1a62bc13be34a82de626dbd98398e8e9e974646b7441d583184447b1e29d391402#npm:7.5.9"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@types/bufferutil", null],\
           ["@types/utf-8-validate", null],\
           ["bufferutil", null],\
@@ -27297,17 +25843,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-<<<<<<< HEAD
       ["virtual:57768ac46c56f84ed2602a325a7058b7cd8bcbeca704995d8ca8dce47055cb63fd910c635e0fd2cb7ae48b70755c7adf2c18a98e9f57a1f1c8d707383a5fed10#npm:7.5.9", {\
         "packageLocation": "./.yarn/__virtual__/ws-virtual-c933fba4a7/0/cache/ws-npm-7.5.9-26f12a5ed6-171e350129.zip/node_modules/ws/",\
         "packageDependencies": [\
           ["ws", "virtual:57768ac46c56f84ed2602a325a7058b7cd8bcbeca704995d8ca8dce47055cb63fd910c635e0fd2cb7ae48b70755c7adf2c18a98e9f57a1f1c8d707383a5fed10#npm:7.5.9"],\
-=======
-      ["virtual:526f2dd7b758c4a1495bcf391dcf797abc04efbed4ad6442c3362358be5ab08e2053c148231af56fb31240dc5f884529c9bf022bbd0bc13c242690e077b6c4d6#npm:8.14.2", {\
-        "packageLocation": "./.yarn/__virtual__/ws-virtual-e6ff8b55d6/0/cache/ws-npm-8.14.2-b339ac47a2-815ff01d9b.zip/node_modules/ws/",\
-        "packageDependencies": [\
-          ["ws", "virtual:526f2dd7b758c4a1495bcf391dcf797abc04efbed4ad6442c3362358be5ab08e2053c148231af56fb31240dc5f884529c9bf022bbd0bc13c242690e077b6c4d6#npm:8.14.2"],\
->>>>>>> 4980335 (chore: storybook main 파일 수정)
           ["@types/bufferutil", null],\
           ["@types/utf-8-validate", null],\
           ["bufferutil", null],\
