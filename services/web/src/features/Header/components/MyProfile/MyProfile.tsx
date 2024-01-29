@@ -26,7 +26,7 @@ function MyProfile({ isMinimize }: ProfileProps) {
       return;
     }
 
-    router.push(process.env.NEXT_PUBLIC_KAKAO_LOGIN_URL);
+    router.replace(`${process.env.NEXT_PUBLIC_KAKAO_LOGIN_URL}`);
   };
 
   return (
