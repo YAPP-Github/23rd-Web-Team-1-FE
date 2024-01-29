@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { ThemeProvider } from 'next-themes';
 import { useEffect } from 'react';
 
-import { setTokens } from '@utils/token';
+import { setTokens } from '@utils/token/client';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const params = useSearchParams();

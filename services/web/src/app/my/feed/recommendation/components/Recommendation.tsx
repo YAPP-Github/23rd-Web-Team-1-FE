@@ -3,7 +3,7 @@ import { List, Carousel, CarouselItem } from '@linker/lds';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { getTokens } from '@utils/token';
+import { getTokens } from '@utils/token/server';
 
 import News from './News';
 import { wrapper, header, schedule, newsItem } from './Recommendation.css';
@@ -36,7 +36,7 @@ const getRecommendation = () => {
 };
 
 async function Recommendation() {
-  const accessToken = (await getTokens()).accessToken;
+  const accessToken = getTokens().accessToken;
 
   if (accessToken == null) {
     return;

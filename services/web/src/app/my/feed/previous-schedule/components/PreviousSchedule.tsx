@@ -3,7 +3,7 @@ import { ky } from '@linker/ky';
 import { List } from '@linker/lds';
 import { HorizonScroller } from '@linker/lds';
 
-import { getTokens } from '@utils/token';
+import { getTokens } from '@utils/token/server';
 
 import { wrapper, header, scheduleList } from './PreviousSchedule.css';
 import ScheduleCard from './ScheduleCard';
@@ -15,7 +15,7 @@ const getPreviousSchedules = ({ limit }: { limit: number }) => {
 };
 
 async function PreviousSchedule() {
-  const accessToken = (await getTokens()).accessToken;
+  const accessToken = getTokens().accessToken;
 
   if (accessToken == null) {
     return;

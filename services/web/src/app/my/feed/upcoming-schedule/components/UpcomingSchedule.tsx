@@ -3,7 +3,7 @@ import { ky } from '@linker/ky';
 import { List } from '@linker/lds';
 import Link from 'next/link';
 
-import { getTokens } from '@utils/token';
+import { getTokens } from '@utils/token/server';
 
 import ScheduleItem from './ScheduleItem';
 import { listWrapper, listItem } from './UpcomingSchedule.css';
@@ -15,7 +15,7 @@ const getUpcomingSchedule = ({ limit }: { limit: number }) => {
 };
 
 async function UpcomingSchedule() {
-  const accessToken = (await getTokens()).accessToken;
+  const accessToken = getTokens().accessToken;
 
   if (accessToken == null) {
     return;
