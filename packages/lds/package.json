@@ -31,7 +31,6 @@
     "@vanilla-extract/webpack-plugin": "^2.3.1",
     "chromatic": "^10.6.0",
     "css-loader": "^6.9.1",
-    "eslint-plugin-storybook": "^0.6.15",
     "mini-css-extract-plugin": "^2.7.7",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
