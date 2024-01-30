@@ -8,6 +8,7 @@ export * from './Icon';
 export * from './Layout';
 export * from './List';
 export * from './Modal';
+export * from './Profile';
 export * from './Spacing';
 export * from './Tabs';
 export * from './Txt';

@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import Button from './Button';
 import { Icon } from '../Icon';
+import { Spacing } from '../Spacing';
 
 const COMPONENT_DESCRIPTION = `
   - \`<Button />\`: 기본 버튼 컴포넌트
@@ -27,7 +28,36 @@ type Story = StoryObj<typeof Button>;
 
 export const Basic: Story = {
   render: () => {
-    return <Button />;
+    return (
+      <>
+        {/* primary */}
+        <div style={{ display: 'flex', alignItems: 'flex-end', gap: 8 }}>
+          <Button>primary</Button>
+          <Button size="small">primary</Button>
+          <Button size="small" disabled>
+            primary
+          </Button>
+        </div>
+
+        <Spacing size={16} />
+
+        {/* secondary */}
+        <div style={{ display: 'flex', alignItems: 'flex-end', gap: 8 }}>
+          <Button variant="secondary">primary</Button>
+          <Button variant="secondary" size="small">
+            primary
+          </Button>
+          <Button variant="secondary" size="small" disabled>
+            primary
+          </Button>
+        </div>
+
+        <Spacing size={16} />
+
+        {/* kakao */}
+        <Button.KakaoLogin onClick={() => null} style={{ width: '20rem' }} />
+      </>
+    );
   },
 };
 

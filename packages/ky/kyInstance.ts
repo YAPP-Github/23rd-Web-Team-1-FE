@@ -1,5 +1,6 @@
 /* eslint-disable require-await */
 import ky, { KyInstance, Options } from 'ky';
+import { cookies } from 'next/headers';
 
 const kyInstance = ky.create({
   retry: 0,
@@ -8,6 +9,31 @@ const kyInstance = ky.create({
   hooks: {
     beforeRequest: [
       (request) => {
+        const cookieStore = cookies();
+        const accessToken = cookieStore.get('accessToken')?.value;
+
+        if (accessToken == null) {
+          return;
+        }
+
+        request.headers.set('Authorization', `Bearer ${accessToken}`);
+      },
+    ],
+    beforeError: [
+      (error) => {
+        const cookieStore = cookies();
+        const accessToken = cookieStore.get('accessToken')?.value;
+
+        if (accessToken != null && error.response?.status === 401) {
+          cookieStore.delete('accessToken');
+          cookieStore.delete('refreshToken');
+        }
+
+        return error;
+      },
+    ],
+    afterResponse: [
+      (_request, _option, response) => {
         // TODO(@useonglee): 토큰 로직 추가하기
       },
     ],

@@ -3,7 +3,8 @@ import { style } from '@vanilla-extract/css';
 
 export const listContainer = style({
   width: '100%',
-  margin: '0 1.6rem',
+  margin: '0 auto',
+  padding: '0 1.6rem',
 });
 
 export const listContent = style({

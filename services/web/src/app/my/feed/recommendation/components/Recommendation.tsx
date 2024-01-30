@@ -3,6 +3,8 @@ import { List, Carousel, CarouselItem } from '@linker/lds';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { getTokens } from '@utils/token/server';
+
 import News from './News';
 import { wrapper, header, schedule, newsItem } from './Recommendation.css';
 import Schedule from './Schedule';
@@ -34,6 +36,12 @@ const getRecommendation = () => {
 };
 
 async function Recommendation() {
+  const accessToken = getTokens().accessToken;
+
+  if (accessToken == null) {
+    return;
+  }
+
   const { title, profileImgUrl, startDateTime, endDateTime, recommendations } =
     await getRecommendation();
 
