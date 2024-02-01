@@ -9,8 +9,8 @@ import { Txt } from '../Txt';
 
 interface Props {
   title: ReactNode;
-  typograyphy: Typography;
-  color: string;
+  typograyphy?: Typography;
+  color?: string;
   fontWeight?: FontWeight;
   description?: ReactNode;
   icon?: ReactNode;
