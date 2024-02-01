@@ -77,9 +77,7 @@ jobs:
           ssh -i private_key.pem -o StrictHostKeyChecking=no ubuntu@$EC2_IP "
           aws ecr get-login-password --region ap-northeast-2 |
           sudo docker login --username AWS --password-stdin 903755389667.dkr.ecr.ap-northeast-2.amazonaws.com/linker &&
-          if [ \$(sudo docker ps -q -f name=linker) ]; then
-              sudo docker stop linker &&
-              sudo docker rm linker
-          fi &&
+          sudo docker container rm -f $(docker container ls -a --quiet)
+          sudo docker rmi $(docker images -q) -f
           sudo docker image pull 903755389667.dkr.ecr.ap-northeast-2.amazonaws.com/linker:$IMAGE_TAG &&
           sudo docker container run --name linker -d -p 3000:3000 903755389667.dkr.ecr.ap-northeast-2.amazonaws.com/linker:$IMAGE_TAG"
