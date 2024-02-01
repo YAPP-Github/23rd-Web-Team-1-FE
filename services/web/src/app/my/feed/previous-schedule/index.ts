@@ -1,1 +1,1 @@
-export { default as PreviousSchedule } from './PreviousSchedule';
+export { default as PreviousSchedule } from './components/PreviousSchedule';

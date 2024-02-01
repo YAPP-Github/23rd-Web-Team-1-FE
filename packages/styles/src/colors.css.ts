@@ -36,6 +36,7 @@ const semantic = {
 
 const gradation = {
   gradationBlue: 'linear-gradient(to right, #713EFF, #0989FF)',
+
   gradationMagenta: 'linear-gradient(to right, #FB7A93, #FF586C);',
 };
 
@@ -44,6 +45,8 @@ const baseColors = {
   black: '#000000',
   background: '#f1f3f5',
   overay: 'rgba(0, 0, 0, 0.6)',
+  kakao: '#F8DF02',
+  kakaoText: '#391B1B',
   ...primary,
   ...secondary,
   ...semantic,
@@ -54,6 +57,7 @@ const colorVariants = createThemeContract({
   colors: {
     ...baseColors,
     gray000: null,
+    gray050: null,
     gray100: null,
     gray200: null,
     gray300: null,
@@ -72,33 +76,35 @@ export const { colors } = colorVariants;
 export const lightThemeVars = createTheme(colorVariants, {
   colors: {
     ...baseColors,
-    gray000: '#ffffff',
-    gray100: '#f4f8f9',
-    gray200: '#eff1f4',
-    gray300: '#e2e5e8',
-    gray400: '#c1c3c6',
-    gray500: '#a1a5a7',
-    gray600: '#797b7e',
+    gray000: '#FFFFFF',
+    gray050: '#F4F6F9',
+    gray100: '#EFF1F4',
+    gray200: '#E2E5E8',
+    gray300: '#C1C3C6',
+    gray400: '#A1A5A7',
+    gray500: '#96999D',
+    gray600: '#797B7E',
     gray700: '#656769',
-    gray800: '#46484a',
+    gray800: '#46484A',
     gray900: '#242628',
-    gray950: '#242424',
+    gray950: '#0E0E0E',
   },
 });
 
 export const darkThemeVars = createTheme(colorVariants, {
   colors: {
     ...baseColors,
-    gray000: '#000000',
-    gray100: '#f4f8f9',
-    gray200: '#eff1f4',
-    gray300: '#e2e5e8',
-    gray400: '#c1c3c6',
-    gray500: '#a1a5a7',
-    gray600: '#797b7e',
+    gray000: '#FFFFFF',
+    gray050: '#F4F6F9',
+    gray100: '#EFF1F4',
+    gray200: '#E2E5E8',
+    gray300: '#C1C3C6',
+    gray400: '#A1A5A7',
+    gray500: '#96999D',
+    gray600: '#797B7E',
     gray700: '#656769',
-    gray800: '#46484a',
+    gray800: '#46484A',
     gray900: '#242628',
-    gray950: '#242424',
+    gray950: '#0E0E0E',
   },
 });

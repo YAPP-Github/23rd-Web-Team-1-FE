@@ -8,11 +8,18 @@ export const modalContent = style({
   top: '12rem',
   left: 0,
   right: 0,
-  maxWidth: '72rem',
-  maxHeight: '72rem',
+  maxWidth: '32rem',
+  maxHeight: '68rem',
   width: '100%',
-  height: '100%',
   margin: '0 auto',
+  padding: '2rem',
+  borderRadius: '2rem',
   backgroundColor: `${colors.gray000}`,
   zIndex: `${MODAL_Z_INDEX}`,
+});
+
+export const modalBottom = style({
+  position: 'absolute',
+  bottom: '2rem',
+  width: '28rem',
 });

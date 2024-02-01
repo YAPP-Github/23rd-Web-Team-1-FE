@@ -1,3 +1,4 @@
+import type { Schedule } from '@/types/schedule';
 import { Icon, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { format } from 'date-fns';
@@ -12,14 +13,6 @@ import {
   dateWrapper,
   date,
 } from './ScheduleItem.css';
-
-export interface Schedule {
-  scheduleId: number;
-  title: string;
-  startDateTime: string;
-  endDateTime: string;
-  profileImgUrl: string | null;
-}
 
 interface ScheduleItemProps {
   schedule: Schedule;

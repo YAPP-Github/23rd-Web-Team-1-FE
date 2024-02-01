@@ -9,5 +9,5 @@
     "skipLibCheck": true,
     "jsx": "react-jsx"
   },
-  "exclude": ["**/jest.setup.ts", "**/*.test.*", "**/*.spec.*"]
+  "exclude": ["node_modules", "**/**/*.stories.*"]
 }

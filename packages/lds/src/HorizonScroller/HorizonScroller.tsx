@@ -6,8 +6,8 @@ import { useLayoutEffect, useRef } from 'react';
 import { horizonScroller } from './HorizonScroller.css';
 
 interface Props {
-  children: React.ReactNode;
   className?: string;
+  children: React.ReactNode;
 }
 
 const HorizonScroller = ({ children, className }: Props) => {

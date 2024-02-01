@@ -1,82 +1,34 @@
-import { colors } from '@linker/styles';
-import { style } from '@vanilla-extract/css';
-
-export const minimizeStyle = style({});
+import { globalStyle, style } from '@vanilla-extract/css';
 
 export const profileWrapper = style({
   display: 'flex',
   alignItems: 'center',
   padding: '2rem',
-
-  selectors: {
-    [`&.${minimizeStyle}`]: {
-      padding: '1.2rem 2rem',
-    },
-  },
 });
 
-export const profileImageWrapper = style({
+export const profileContainer = style({
   display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  overflow: 'hidden',
-  width: '7.2rem',
-  height: '7.2rem',
-  boxSizing: 'content-box',
-  border: `2px solid ${colors.gray000}`,
-  borderRadius: '42%',
-
-  selectors: {
-    [`&.${minimizeStyle}`]: {
-      width: '4rem',
-      height: '4rem',
-    },
-  },
+  padding: '1.6rem 2rem 2.4rem ',
 });
 
 export const profileImage = style({
-  width: '100%',
-  height: '100%',
-  objectFit: 'cover',
-  objectPosition: 'top',
+  marginRight: '1.6rem',
 });
 
-export const profileInfo = style({
-  marginLeft: '2.2rem',
-  color: `${colors.gray000}`,
+export const profileContent = style({
+  display: 'flex',
+  flexDirection: 'column',
 });
 
-export const name = style({
-  fontSize: '2.4rem',
-  fontWeight: 'bold',
-
-  selectors: {
-    [`&.${minimizeStyle}`]: {
-      fontSize: '1.6rem',
-    },
-  },
+export const profileName = style({
+  display: 'flex',
+  marginBottom: '0.6rem',
 });
 
-export const job = style({
-  marginTop: '4px',
-  fontSize: '1.4rem',
-  fontWeight: 'normal',
-
-  selectors: {
-    [`&.${minimizeStyle}`]: {
-      display: 'none',
-    },
-  },
+export const loginModal = style({
+  height: '46rem',
 });
 
-export const tag = style({
-  marginTop: '6px',
-  fontSize: '1.2rem',
-  fontWeight: 'normal',
-
-  selectors: {
-    [`&.${minimizeStyle}`]: {
-      display: 'none',
-    },
-  },
+globalStyle(`.minimize`, {
+  padding: '1.2rem 2rem',
 });
