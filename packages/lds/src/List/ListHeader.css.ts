@@ -14,3 +14,7 @@ export const iconWrapper = style({
   height: '2.8rem',
   marginRight: '0.8rem',
 });
+
+export const descriptipon = style({
+  marginTop: '0.6rem',
+});
