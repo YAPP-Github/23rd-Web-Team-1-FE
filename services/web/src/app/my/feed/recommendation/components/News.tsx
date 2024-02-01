@@ -1,4 +1,4 @@
-import { Txt } from '@linker/lds';
+import { Icon, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import Image from 'next/image';
 
@@ -14,12 +14,7 @@ function News({ tag, contents }: NewsProps) {
   return (
     <div className={wrapper}>
       <div className={tagWrapper}>
-        <Image
-          src="https://static.im-linker.com/question.png"
-          width={28}
-          height={28}
-          alt="question-icon"
-        />
+        <Icon name="question-fill-purple" size={28} />
         <p>
           <Txt typography="b1">{tag.name}</Txt>
           <Txt typography="b1" color="#8b8b8b">

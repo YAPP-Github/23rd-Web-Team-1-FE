@@ -1,7 +1,6 @@
-import { Txt } from '@linker/lds';
+import { Icon, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { differenceInDays, parseISO } from 'date-fns';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { card, titleInfo, scheduleInfo, button } from './ScheduleCard.css';
@@ -31,12 +30,7 @@ function ScheduleCard({ title, endDateTime }: ScheduleCardProps) {
       </div>
       {/** @todo 일정기록 페이지와 연결 필요 */}
       <Link className={button} href="">
-        <Image
-          src="https://static.im-linker.com/pencil.png"
-          width={20}
-          height={20}
-          alt="pencil-icon"
-        />
+        <Icon name="pencil-fill-blue" size={20} />
         <Txt typography="p5" color={colors.gray600}>
           노트쓰기
         </Txt>
