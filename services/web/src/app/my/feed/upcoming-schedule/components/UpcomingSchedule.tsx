@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { getTokens } from '@utils/token/server';
 
 import ScheduleItem from './ScheduleItem';
-import { listWrapper, listItem } from './UpcomingSchedule.css';
+import { listWrapper, listItem, listHeader } from './UpcomingSchedule.css';
 
 const getUpcomingSchedule = ({ limit }: { limit: number }) => {
   return ky.get<{
@@ -28,6 +28,7 @@ async function UpcomingSchedule() {
       <List.Header
         title="다가오는 일정 확인하기"
         description="예정된 일정의 관심 대화주제를 확인해보세요"
+        className={listHeader}
       />
       {schedules.map((schedule) => (
         <Link

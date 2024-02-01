@@ -6,6 +6,7 @@ export const wrapper = style({
 
 export const header = style({
   padding: '0 2rem',
+  marginBottom: '2.2rem',
 });
 
 export const scheduleList = style({
