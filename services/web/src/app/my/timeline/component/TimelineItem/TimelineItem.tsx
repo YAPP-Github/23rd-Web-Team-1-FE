@@ -6,7 +6,6 @@ import { Spacing } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
-
 import { useEffect, useState } from 'react';
 
 import {
@@ -16,7 +15,6 @@ import {
   timelineRowWrapper,
   timelineItemDivider,
   timelineItemInfoWrapper,
-  timelineItmeInfoTextWrapper,
   timelineItemMemoWrapper,
   timelineColorDivider,
   timelineItemHeaderWrapper,
@@ -59,6 +57,8 @@ function TimelineItem({
       <List className={timelineItemInfoWrapper}>
         <List.Header
           title={title}
+          color={`${colors.black}`}
+          typograyphy="h7"
           description={
             <>
               <div className={timelineRowWrapper}>

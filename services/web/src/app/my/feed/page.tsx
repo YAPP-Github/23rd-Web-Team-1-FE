@@ -1,3 +1,5 @@
+import { MyHeader } from '@features/Header';
+
 import { ContactBanner } from './contact-banner';
 import { wrapper } from './page.css';
 import { PreviousSchedule } from './previous-schedule';
@@ -8,6 +10,7 @@ import { UpcomingSchedule } from './upcoming-schedule';
 export default function FeedPage() {
   return (
     <article className={wrapper}>
+      <MyHeader />
       <ContactBanner />
       <UpcomingSchedule />
       <Recommendation />

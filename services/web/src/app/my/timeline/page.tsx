@@ -1,4 +1,5 @@
 import { TimelineRes } from '@__server__/mocks/feed';
+import { MyHeader } from '@features/Header';
 import { ky } from '@linker/ky';
 
 import Feed from './Feed';
@@ -8,6 +9,7 @@ export default async function TimelinePage() {
 
   return (
     <div>
+      <MyHeader />
       <Feed timelineItems={timelineItemsData} />
     </div>
   );

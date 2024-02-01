@@ -7,7 +7,7 @@ export const listContainer = style({
 });
 
 export const listContent = style({
-  minWidth: '34.3rem',
+  // minWidth: '34.3rem',
   width: '100%',
   height: '100%',
   padding: '1.6rem 2rem',

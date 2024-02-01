@@ -22,6 +22,8 @@ export const timelineItemInfoWrapper = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '1rem',
+  position: 'relative',
+  zIndex: '-10',
 });
 
 export const timelineItmeInfoTextWrapper = style({
