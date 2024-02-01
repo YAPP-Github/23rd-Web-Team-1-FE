@@ -2,6 +2,11 @@
 import ky, { KyInstance, Options } from 'ky';
 import { cookies } from 'next/headers';
 
+interface Tokens {
+  accessToken: string;
+  refreshToken: string;
+}
+
 const kyInstance = ky.create({
   retry: 0,
   credentials: 'include',
@@ -19,22 +24,30 @@ const kyInstance = ky.create({
         request.headers.set('Authorization', `Bearer ${accessToken}`);
       },
     ],
-    beforeError: [
-      (error) => {
-        const cookieStore = cookies();
-        const accessToken = cookieStore.get('accessToken')?.value;
-
-        if (accessToken != null && error.response?.status === 401) {
-          cookieStore.delete('accessToken');
-          cookieStore.delete('refreshToken');
-        }
-
-        return error;
-      },
-    ],
     afterResponse: [
-      (_request, _option, response) => {
-        // TODO(@useonglee): 토큰 로직 추가하기
+      async (_request, _option, response) => {
+        if (response.status === 403) {
+          const cookieStore = cookies();
+          const accessToken = cookieStore.get('accessToken')?.value;
+          const refreshToken = cookieStore.get('refreshToken')?.value;
+
+          const response: { data: Tokens } = await ky
+            .post(`${prefix}/v1/auth/token/re-issue`, {
+              json: {
+                accessToken,
+                refreshToken,
+              },
+              headers: {
+                Authorization: `Bearer ${accessToken}`,
+              },
+            })
+            .json();
+
+          cookieStore.set('accessToken', response.data.accessToken);
+          cookieStore.set('refreshToken', response.data.refreshToken);
+
+          return;
+        }
       },
     ],
   },
