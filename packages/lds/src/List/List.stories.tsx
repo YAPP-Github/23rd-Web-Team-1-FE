@@ -25,7 +25,7 @@ export const Template: Story = {
             description="다가오는 일정을 확인하고 대화 주제를 확인해보세요."
             rightAddon={
               <button type="button">
-                <Icon name="arrow" />
+                <Icon name="next" size={24} />
               </button>
             }
           />
@@ -44,7 +44,7 @@ export const Template: Story = {
             title="커피챗 진행"
             rightAddon={
               <button type="button">
-                <Icon name="arrow" />
+                <Icon name="next" size={24} />
               </button>
             }
           />
