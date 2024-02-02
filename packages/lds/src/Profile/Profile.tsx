@@ -5,22 +5,32 @@ import Image, { ImageProps } from 'next/image';
 
 import { profile } from './Profile.css';
 
+const PROFILE_SIZE = {
+  xLarge: 64,
+  large: 56,
+  medium: 48,
+  small: 36,
+};
+
+type ProfileSize = keyof typeof PROFILE_SIZE;
+
 interface Props extends Omit<ImageProps, 'src' | 'alt'> {
-  profileImgUrl?: string;
+  imageUrl?: string;
   alt?: string;
   className?: string;
+  size?: ProfileSize;
 }
 
 const PROFILE_DEFAULT_IMAGE_URL = 'https://static.im-linker.com/images/profile-default.png';
 
-const Profile = ({ profileImgUrl, alt = '', className, ...props }: Props) => {
+const Profile = ({ imageUrl, alt = '', className, size = 'large', ...props }: Props) => {
   return (
     <Image
-      src={profileImgUrl ?? PROFILE_DEFAULT_IMAGE_URL}
-      blurDataURL={profileImgUrl ?? PROFILE_DEFAULT_IMAGE_URL}
+      src={imageUrl ?? PROFILE_DEFAULT_IMAGE_URL}
+      blurDataURL={imageUrl ?? PROFILE_DEFAULT_IMAGE_URL}
       alt={alt === '' ? '기본 프로필 이미지' : alt}
-      width={64}
-      height={64}
+      width={PROFILE_SIZE[size]}
+      height={PROFILE_SIZE[size]}
       placeholder="blur"
       className={clsx(profile, className)}
       {...props}
