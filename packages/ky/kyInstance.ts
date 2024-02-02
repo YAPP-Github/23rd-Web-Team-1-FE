@@ -25,7 +25,7 @@ const kyInstance = ky.create({
       },
     ],
     afterResponse: [
-      async (_request, _option, response) => {
+      async (request, _option, response) => {
         if (response.status === 403) {
           const cookieStore = cookies();
           const accessToken = cookieStore.get('accessToken')?.value;
@@ -46,7 +46,7 @@ const kyInstance = ky.create({
           cookieStore.set('accessToken', response.data.accessToken);
           cookieStore.set('refreshToken', response.data.refreshToken);
 
-          return;
+          return ky(request);
         }
       },
     ],
