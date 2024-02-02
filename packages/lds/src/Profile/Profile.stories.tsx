@@ -24,7 +24,7 @@ export const Template: Story = {
 
         {/* 샘플 이미지 */}
         <Profile
-          profileImgUrl="https://static.im-linker.com/images/profile-sample.png"
+          imageUrl="https://static.im-linker.com/images/profile-sample.png"
           alt="샘플 이미지"
         />
       </>
