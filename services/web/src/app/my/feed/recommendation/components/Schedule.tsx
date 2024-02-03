@@ -1,4 +1,4 @@
-import { Txt } from '@linker/lds';
+import { Icon, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { format, isSameDay } from 'date-fns';
 import { ko } from 'date-fns/locale';
@@ -47,12 +47,7 @@ function Schedule({ title, profileImgUrl, startDateTime, endDateTime }: Schedule
       <div>
         <Txt typography="h7">{title}</Txt>
         <div className={scheduleDateWrapper}>
-          <Image
-            src="https://static.im-linker.com/time.png"
-            width={14}
-            height={14}
-            alt="time-icon"
-          />
+          <Icon name="time-gray" size={18} />
           <Txt className={scheduleDateInfo} typography="p3" color={colors.gray700}>
             {formatDateDuration(startDateTime, endDateTime)}
           </Txt>

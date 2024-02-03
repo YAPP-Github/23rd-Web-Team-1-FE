@@ -19,7 +19,7 @@ const ListRow = ({ content, withArrow, disabled, className, onClick }: Props) =>
       <div>{content}</div>
       {withArrow && (
         <button type="button" disabled={disabled}>
-          <Icon name="arrow" />
+          <Icon name="next-gray" size={24} />
         </button>
       )}
     </li>

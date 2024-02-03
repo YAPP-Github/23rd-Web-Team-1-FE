@@ -4,7 +4,7 @@ import { style } from '@vanilla-extract/css';
 export const wrapper = style({
   display: 'flex',
   gap: '1.4rem',
-  paddingBottom: '1.6rem',
+  padding: '2rem 0rem 1.6rem',
   borderBottom: `1px solid ${colors.gray200}`,
 });
 

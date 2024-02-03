@@ -37,7 +37,7 @@ function ScheduleItem({ schedule }: ScheduleItemProps) {
       <div className={scheduleInfo}>
         <Txt typography="p1">{schedule.title}</Txt>
         <div className={dateWrapper}>
-          <Icon name="time-gray" size={12} />
+          <Icon name="time-gray" size={18} />
           <Txt className={date} typography="p3" color={colors.gray700}>
             {format(schedule.startDateTime, 'yyyy. MM. dd. EEE', { locale: ko })}
           </Txt>

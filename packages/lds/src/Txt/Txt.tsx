@@ -25,13 +25,25 @@ interface TxtProps<T extends keyof JSX.IntrinsicElements = 'span'>
 
 const Txt = forwardRef<HTMLElement, TxtProps>(
   (
-    { typography = 'p1', as: Component = 'span', children, className, color, ...props }: TxtProps,
+    {
+      typography = 'p1',
+      as: Component = 'span',
+      children,
+      className,
+      color,
+      fontWeight,
+      ...props
+    }: TxtProps,
     ref,
   ) => {
     return (
       <Component
         ref={ref}
-        className={clsx(typographyRecipe({ type: typography }), colorVariant, className)}
+        className={clsx(
+          typographyRecipe({ type: typography, fontWeight: fontWeight ?? typography }),
+          colorVariant,
+          className,
+        )}
         style={assignInlineVars(colorVar, { color: color ?? colors.gray950, ...props.style })}
         {...(props as any)}
       >

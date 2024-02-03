@@ -47,9 +47,28 @@ const config = {
   webpackFinal: (config) => {
     config.plugins?.push(new VanillaExtractPlugin(), new MiniCssExtractPlugin());
 
+    config.module?.rules?.forEach((rule) => {
+      if (
+        typeof rule !== 'string' &&
+        rule &&
+        rule.test instanceof RegExp &&
+        rule.test.test('test.css')
+      ) {
+        rule.exclude = /\.vanilla\.css$/i;
+      }
+    });
+
     config.module?.rules?.push({
-      test: /\.css$/i,
-      use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      test: /\.vanilla\.css$/i,
+      use: [
+        MiniCssExtractPlugin.loader,
+        {
+          loader: require.resolve('css-loader'),
+          options: {
+            url: false,
+          },
+        },
+      ],
     });
 
     config.optimization = {
