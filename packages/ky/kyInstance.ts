@@ -1,6 +1,5 @@
 /* eslint-disable require-await */
 import ky, { KyInstance, Options } from 'ky';
-import { cookies } from 'next/headers';
 
 interface Tokens {
   accessToken: string;
@@ -13,40 +12,44 @@ const kyInstance = ky.create({
   timeout: 15_000,
   hooks: {
     beforeRequest: [
-      (request) => {
+      async (request) => {
+        const { cookies } = await import('next/headers');
+
         const cookieStore = cookies();
         const accessToken = cookieStore.get('accessToken')?.value;
 
-        if (accessToken == null) {
-          return;
+        if (accessToken) {
+          request.headers.set('Authorization', `Bearer ${accessToken}`);
         }
-
-        request.headers.set('Authorization', `Bearer ${accessToken}`);
       },
     ],
     afterResponse: [
       async (request, _option, response) => {
         if (response.status === 403) {
+          const { cookies } = await import('next/headers');
+
           const cookieStore = cookies();
           const accessToken = cookieStore.get('accessToken')?.value;
           const refreshToken = cookieStore.get('refreshToken')?.value;
 
-          const response: { data: Tokens } = await ky
-            .post(`${prefix}/v1/auth/token/re-issue`, {
-              json: {
-                accessToken,
-                refreshToken,
-              },
-              headers: {
-                Authorization: `Bearer ${accessToken}`,
-              },
-            })
-            .json();
+          if (accessToken && refreshToken) {
+            const response: { data: Tokens } = await ky
+              .post(`${prefix}/v1/auth/token/re-issue`, {
+                json: {
+                  accessToken,
+                  refreshToken,
+                },
+                headers: {
+                  Authorization: `Bearer ${accessToken}`,
+                },
+              })
+              .json();
 
-          cookieStore.set('accessToken', response.data.accessToken);
-          cookieStore.set('refreshToken', response.data.refreshToken);
+            cookieStore.set('accessToken', response.data.accessToken);
+            cookieStore.set('refreshToken', response.data.refreshToken);
 
-          return ky(request);
+            return ky(request);
+          }
         }
       },
     ],
