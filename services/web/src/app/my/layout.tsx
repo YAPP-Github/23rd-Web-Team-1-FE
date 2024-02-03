@@ -1,12 +1,27 @@
-'use client';
-
-import { MyHeader } from '@features/Header';
+import { MyInfo } from '@/types/myInfo';
+import { ky } from '@linker/ky';
 import { Button, Layout, Icon } from '@linker/lds';
 
-function MyLayout({ children }: { children: React.ReactNode }) {
+import { getTokens } from '@utils/token/server';
+
+import MyProviders from './providers';
+
+const getMyInfo = () => {
+  if (getTokens()?.accessToken == null) {
+    return null;
+  }
+
+  const data = ky.get<MyInfo>('/v1/my');
+
+  return data;
+};
+
+async function MyLayout({ children }: { children: React.ReactNode }) {
+  const myInfo = await getMyInfo();
+  const isUser = myInfo != null && getTokens()?.accessToken != null;
+
   return (
-    <>
-      <MyHeader />
+    <MyProviders myInfo={myInfo} isUser={isUser}>
       <Layout>
         {children}
 
@@ -14,7 +29,7 @@ function MyLayout({ children }: { children: React.ReactNode }) {
           <Icon name="plus-white" size={42} />
         </Button.FAB>
       </Layout>
-    </>
+    </MyProviders>
   );
 }
 

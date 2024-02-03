@@ -1,3 +1,4 @@
+import { colors } from '@linker/styles';
 import { globalStyle, style } from '@vanilla-extract/css';
 
 export const profileWrapper = style({
@@ -22,7 +23,15 @@ export const profileContent = style({
 
 export const profileName = style({
   display: 'flex',
+  alignItems: 'center',
+  gap: '0.6rem',
   marginBottom: '0.6rem',
+});
+
+export const profileInfo = style({
+  display: 'flex',
+  gap: '1.2rem',
+  color: colors.white,
 });
 
 export const loginModal = style({

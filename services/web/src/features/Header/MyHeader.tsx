@@ -12,7 +12,7 @@ import useMinimize from './hooks/useMinimize';
 const MINIMIZE_THRESHOLD = 150;
 const MAXIMIZE_THRESHOLD = 30;
 
-function MeHeaderContent() {
+function MyHeaderContent() {
   const tabInfos = useRef<TabInfo[]>([
     { href: '/my/feed', text: '피드', textSpan: null },
     { href: '/my/contact', text: '연락처', textSpan: null },
@@ -35,4 +35,4 @@ function MeHeaderContent() {
   );
 }
 
-export default MeHeaderContent;
+export default MyHeaderContent;
