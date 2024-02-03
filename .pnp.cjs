@@ -9522,6 +9522,27 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:5.18.0", {\
+        "packageLocation": "./.yarn/cache/@tanstack-eslint-plugin-query-npm-5.18.0-4e9bfb9e32-a18fb45dde.zip/node_modules/@tanstack/eslint-plugin-query/",\
+        "packageDependencies": [\
+          ["@tanstack/eslint-plugin-query", "npm:5.18.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:5.18.0", {\
+        "packageLocation": "./.yarn/__virtual__/@tanstack-eslint-plugin-query-virtual-a9baf8e948/0/cache/@tanstack-eslint-plugin-query-npm-5.18.0-4e9bfb9e32-a18fb45dde.zip/node_modules/@tanstack/eslint-plugin-query/",\
+        "packageDependencies": [\
+          ["@tanstack/eslint-plugin-query", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:5.18.0"],\
+          ["@types/eslint", null],\
+          ["@typescript-eslint/utils", "virtual:f3131f67957b7bd46bf01ac8bc0ef028247b01f55d68199abddf638caa3057476d1529420ce654fccc2e29e976296235bacf8a527822b31e2c71a410f21bcb78#npm:5.62.0"],\
+          ["eslint", "npm:8.56.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/eslint",\
+          "eslint"\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["virtual:e28c82453614a1c603b5d15fb497246f49c062a175c06a40357683aa735aa3eb79b37a22ce24c2ced128e10f315ff5ba9ae7ff5817e016307b52e17e02108715#npm:5.17.22", {\
         "packageLocation": "./.yarn/__virtual__/@tanstack-eslint-plugin-query-virtual-f3131f6795/0/cache/@tanstack-eslint-plugin-query-npm-5.17.22-7bdce1e3a7-162611f9db.zip/node_modules/@tanstack/eslint-plugin-query/",\
         "packageDependencies": [\
@@ -9533,6 +9554,38 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@types/eslint",\
           "eslint"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@tanstack/query-core", [\
+      ["npm:5.18.0", {\
+        "packageLocation": "./.yarn/cache/@tanstack-query-core-npm-5.18.0-36ff187f6b-e20fe65e14.zip/node_modules/@tanstack/query-core/",\
+        "packageDependencies": [\
+          ["@tanstack/query-core", "npm:5.18.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@tanstack/react-query", [\
+      ["npm:5.18.0", {\
+        "packageLocation": "./.yarn/cache/@tanstack-react-query-npm-5.18.0-2e8d9fd9a5-3d84d8b381.zip/node_modules/@tanstack/react-query/",\
+        "packageDependencies": [\
+          ["@tanstack/react-query", "npm:5.18.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:5.18.0", {\
+        "packageLocation": "./.yarn/__virtual__/@tanstack-react-query-virtual-cea19e7639/0/cache/@tanstack-react-query-npm-5.18.0-2e8d9fd9a5-3d84d8b381.zip/node_modules/@tanstack/react-query/",\
+        "packageDependencies": [\
+          ["@tanstack/react-query", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:5.18.0"],\
+          ["@tanstack/query-core", "npm:5.18.0"],\
+          ["@types/react", "npm:18.2.48"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -25361,6 +25414,8 @@ const RAW_RUNTIME_STATE =
           ["@next/bundle-analyzer", "npm:14.1.0"],\
           ["@swc/core", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:1.3.106"],\
           ["@swc/jest", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:0.2.31"],\
+          ["@tanstack/eslint-plugin-query", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:5.18.0"],\
+          ["@tanstack/react-query", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:5.18.0"],\
           ["@testing-library/dom", "npm:9.3.4"],\
           ["@testing-library/jest-dom", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:6.3.0"],\
           ["@testing-library/react", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:14.1.2"],\
