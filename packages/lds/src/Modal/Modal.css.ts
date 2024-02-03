@@ -5,7 +5,7 @@ import { MODAL_Z_INDEX } from '../constants';
 
 export const modalContent = style({
   position: 'absolute',
-  top: '12rem',
+  top: 'calc(100vh / 5)',
   left: 0,
   right: 0,
   maxWidth: '32rem',
