@@ -4,42 +4,45 @@ import { List } from '@linker/lds';
 import { Icon } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
+import clsx from 'clsx';
 import { useRouter } from 'next/navigation';
 
 import { InviationItem } from './InvitationItem/InvitationItem';
 import {
-  timelineDetailHeaderIconWrapper,
-  timelineDetailHeaderWrapper,
-  timelineDetailCalendarWrapper,
-  timelineDetailCalendarDropDownWrapper,
-  timelineDetailWrapper,
-  timelineDetailTitleContainer,
-  timelineColorDivider,
-  timelineDetailTitleWrapper,
-  timelineDetailInvitationWrapper,
-  timelineDetailTitleTimeWrapper,
-  timelineDetailNoteWrapper,
-  timelineDetailCalendarDropDownElipse,
-} from './TimelineDetail.css';
+  scheduleHeaderIconWrapper,
+  scheduleHeaderWrapper,
+  scheduleCalendarWrapper,
+  scheduleCalendarDropDownWrapper,
+  scheduleWrapper,
+  scheduleTitleContainer,
+  scheduleColorDivider,
+  scheduleTitleWrapper,
+  scheduleInvitationWrapper,
+  scheduleTitleTimeWrapper,
+  scheduleNoteWrapper,
+  scheduleCalendarDropDownElipse,
+  calendarElipseColor,
+} from './Schedule.css';
 
-export const TimelineDetail = () => {
+export const Schedule = () => {
   const router = useRouter();
+
   const handleCloseClick = () => {
     router.push(`/my/timeline`);
   };
   const handleEditClick = () => {};
   const handleMoreClick = () => {};
   const handleNoteClick = () => {
-    router.push('/my/timeline/1/note');
+    router.push('/schedule/1/note');
   };
 
   return (
-    <section className={timelineDetailWrapper}>
-      <header className={timelineDetailHeaderWrapper}>
+    <section className={scheduleWrapper}>
+      <header className={scheduleHeaderWrapper}>
         <button onClick={handleCloseClick}>
           <Icon name="close" size={32} />
         </button>
-        <div className={timelineDetailHeaderIconWrapper}>
+        <div className={scheduleHeaderIconWrapper}>
           <button onClick={handleEditClick}>
             <Icon name="pencil" size={28} />
           </button>
@@ -48,15 +51,15 @@ export const TimelineDetail = () => {
           </button>
         </div>
       </header>
-      <article className={timelineDetailTitleContainer}>
-        <div className={timelineDetailTitleWrapper}>
-          <div className={timelineColorDivider} style={{ backgroundColor: '#58DB67 ' }}></div>
+      <article className={scheduleTitleContainer}>
+        <div className={scheduleTitleWrapper}>
+          <div className={scheduleColorDivider} style={{ backgroundColor: '#58DB67 ' }}></div>
           <Txt typography="h5">
             이지우 커피챗 진행이지우 커피챗 진행이지우 커피챗 진행이지우 커피챗 진행이지우 커
             🥹🥹✨✨
           </Txt>
         </div>
-        <div className={timelineDetailTitleTimeWrapper}>
+        <div className={scheduleTitleTimeWrapper}>
           <Txt typography="p1" fontWeight="regular">
             2024. 12. 31. 목요일
           </Txt>
@@ -67,7 +70,7 @@ export const TimelineDetail = () => {
         </div>
       </article>
 
-      <List className={timelineDetailCalendarWrapper}>
+      <List className={scheduleCalendarWrapper}>
         <List.Header
           title={'캘린더'}
           fontWeight="regular"
@@ -75,10 +78,9 @@ export const TimelineDetail = () => {
           typograyphy="p1"
           rightAddon={
             <button>
-              <div className={timelineDetailCalendarDropDownWrapper}>
+              <div className={scheduleCalendarDropDownWrapper}>
                 <div
-                  className={timelineDetailCalendarDropDownElipse}
-                  style={{ backgroundColor: '#58DB67 ' }}
+                  className={clsx(scheduleCalendarDropDownElipse, calendarElipseColor.birthday)}
                 ></div>
                 <Txt typography="p1" fontWeight="medium">
                   직장
@@ -89,7 +91,7 @@ export const TimelineDetail = () => {
           }
         />
       </List>
-      <List className={timelineDetailInvitationWrapper}>
+      <List className={scheduleInvitationWrapper}>
         <List.Header
           title={'초대받은 사람'}
           fontWeight="regular"
@@ -100,7 +102,7 @@ export const TimelineDetail = () => {
         <InviationItem />
         <InviationItem />
       </List>
-      <List className={timelineDetailNoteWrapper}>
+      <List className={scheduleNoteWrapper}>
         <List.Header
           title={'노트'}
           fontWeight="regular"

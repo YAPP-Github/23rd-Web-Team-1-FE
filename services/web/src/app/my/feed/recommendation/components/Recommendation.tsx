@@ -52,6 +52,7 @@ async function Recommendation() {
         <Link href="">
           <List.Header
             title="대화 주제 추천 받기"
+            typograyphy="h7"
             rightAddon={
               <button type="button">
                 <Image

@@ -4,19 +4,19 @@ import { colors } from '@linker/styles';
 import Image from 'next/image';
 
 import {
-  timelineDetailItemInvitaionProfileWrppaer,
-  timelineDetailItemInvitationWrapper,
-  timelineDetailItemInvitaionProfileImgWrppaer,
-  timelineDetailItemInvitationContainer,
-  timelineDetailItemInvitaionDivider,
+  invitaionProfileWrppaer,
+  invitationWrapper,
+  invitaionProfileImgWrppaer,
+  invitationContainer,
+  invitaionDivider,
 } from './InvitationItem.css';
 
 export const InviationItem = () => {
   return (
-    <div className={timelineDetailItemInvitationContainer}>
-      <div className={timelineDetailItemInvitationWrapper}>
-        <div className={timelineDetailItemInvitaionProfileWrppaer}>
-          <div className={timelineDetailItemInvitaionProfileImgWrppaer}>
+    <div className={invitationContainer}>
+      <div className={invitationWrapper}>
+        <div className={invitaionProfileWrppaer}>
+          <div className={invitaionProfileImgWrppaer}>
             <Image
               src={'https://static.im-linker.com/images/profile-sample.png'}
               width={28}
@@ -32,7 +32,7 @@ export const InviationItem = () => {
           <Icon name="next" size={20} />
         </button>
       </div>
-      <div className={timelineDetailItemInvitaionDivider}></div>
+      <div className={invitaionDivider}></div>
     </div>
   );
 };

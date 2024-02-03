@@ -1,5 +1,4 @@
 import { TimelineRes } from '@__server__/mocks/feed';
-import { MyHeader } from '@features/Header';
 import { ky } from '@linker/ky';
 
 import Feed from './Feed';
@@ -7,12 +6,7 @@ import Feed from './Feed';
 export default async function TimelinePage() {
   const timelineItemsData = await getTimeline();
 
-  return (
-    <div>
-      <MyHeader />
-      <Feed timelineItems={timelineItemsData} />
-    </div>
-  );
+  return <Feed timelineItems={timelineItemsData} />;
 }
 
 const getTimeline = () => {

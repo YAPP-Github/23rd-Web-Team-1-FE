@@ -1,11 +1,12 @@
 'use client';
 
+import { MyHeader } from '@features/Header';
 import { Button, Layout, Icon } from '@linker/lds';
 
 function MyLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      {/* <MyHeader /> */}
+      <MyHeader />
       <Layout>
         {children}
 

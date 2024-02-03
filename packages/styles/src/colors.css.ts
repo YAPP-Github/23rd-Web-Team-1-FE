@@ -15,7 +15,7 @@ const primary = {
 
 const secondary = {
   green: '#58DB67',
-  lightBlue: '#111CDF2',
+  lightBlue: '#11CDF2',
   purple: '#CE7AF0',
   magenta: '#FF70B0',
   orange: '#FF875C',

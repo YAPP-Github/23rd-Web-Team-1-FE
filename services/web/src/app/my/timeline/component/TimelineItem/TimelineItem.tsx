@@ -57,7 +57,7 @@ function TimelineItem({
       <List className={timelineItemInfoWrapper}>
         <List.Header
           title={title}
-          color={`${colors.black}`}
+          color={colors.black}
           typograyphy="h7"
           description={
             <>

@@ -14,7 +14,7 @@ import {
 export const NoteDetail = () => {
   const router = useRouter();
   const handleBackClick = () => {
-    router.push('/my/timeline/1');
+    router.push('/schedule/1');
   };
 
   return (

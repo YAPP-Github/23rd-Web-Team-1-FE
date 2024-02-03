@@ -1,6 +1,5 @@
 import { ContactDataRes } from '@__server__/mocks/contact';
 import Contact from '@app/my/contact/Contact';
-import { MyHeader } from '@features/Header';
 import { ky } from '@linker/ky';
 
 export default async function ContactPage() {
@@ -8,7 +7,6 @@ export default async function ContactPage() {
 
   return (
     <div>
-      <MyHeader />
       <Contact contactData={contactData} />
     </div>
   );

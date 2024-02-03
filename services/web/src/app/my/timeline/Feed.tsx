@@ -22,7 +22,7 @@ const Feed = ({ timelineItems }: FeedProps) => {
   const [prevYear, setPrevYear] = useState<TimelineItemProps[]>();
   const [nextYear, setNextYear] = useState<TimelineItemProps[]>();
   const handleItemClick = (id: number) => {
-    router.push(`/my/timeline/${id}`);
+    router.push(`/schedule/${id}`);
   };
 
   // 받아온 데이터들 중 다른 연도가 있는지

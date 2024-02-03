@@ -1,12 +1,12 @@
 import { colors } from '@linker/styles';
-import { style } from '@vanilla-extract/css';
+import { style, styleVariants } from '@vanilla-extract/css';
 
-export const timelineDetailWrapper = style({
+export const scheduleWrapper = style({
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'column',
 });
-export const timelineDetailHeaderWrapper = style({
+export const scheduleHeaderWrapper = style({
   display: 'flex',
   width: '100%',
   justifyContent: 'space-between',
@@ -17,13 +17,13 @@ export const timelineDetailHeaderWrapper = style({
   height: 'auto',
   backgroundColor: `${colors.white}`,
 });
-export const timelineDetailHeaderIconWrapper = style({
+export const scheduleHeaderIconWrapper = style({
   display: 'flex',
   flexDirection: 'row',
   gap: '1.2rem',
 });
 
-export const timelineDetailTitleContainer = style({
+export const scheduleTitleContainer = style({
   display: 'flex',
   flexDirection: 'column',
   paddingTop: '1.2rem',
@@ -32,45 +32,50 @@ export const timelineDetailTitleContainer = style({
   height: 'auto',
   paddingLeft: '2rem',
   paddingRight: '1.6rem',
-  backgroundColor: `${colors.white}`,
+  backgroundColor: colors.white,
   paddingBottom: '2rem',
   marginBottom: '1.6rem',
 });
-export const timelineDetailTitleWrapper = style({
+export const scheduleTitleWrapper = style({
   display: 'flex',
   flexDirection: 'row',
   gap: '0.8rem',
   alignItems: 'flex-start',
 });
-export const timelineColorDivider = style({
+export const scheduleColorDivider = style({
   borderRadius: '0.8rem',
   width: '0.5rem',
   height: '3.2rem',
 });
-export const timelineDetailTitleTimeWrapper = style({
+export const scheduleTitleTimeWrapper = style({
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
   gap: '0.4rem',
 });
-export const timelineDetailCalendarWrapper = style({
+export const scheduleCalendarWrapper = style({
   marginBottom: '1.2rem',
 });
-export const timelineDetailCalendarDropDownElipse = style({
+export const scheduleCalendarDropDownElipse = style({
   width: '1.2rem',
   height: '1.2rem',
   borderRadius: '50%',
 });
-export const timelineDetailCalendarDropDownWrapper = style({
+export const calendarElipseColor = styleVariants({
+  company: { backgroundColor: `${colors.green}` },
+  personal: { backgroundColor: `${colors.purple}` },
+  birthday: { backgroundColor: `${colors.lightBlue}` },
+});
+export const scheduleCalendarDropDownWrapper = style({
   display: 'flex',
   flexDirection: 'row',
   gap: '0.8rem',
   alignItems: 'center',
 });
-export const timelineDetailInvitationWrapper = style({
+export const scheduleInvitationWrapper = style({
   marginBottom: '1.2rem',
 });
-export const timelineDetailNoteWrapper = style({
+export const scheduleNoteWrapper = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '1.2rem',

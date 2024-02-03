@@ -33,6 +33,13 @@ export const feedHandlers = [
   http.get(`${MOCK_API_URL}/v1/schedules/upcoming/recommendation`, () => {
     return HttpResponse.json({ data: conversationRecommendation }, { status: 200 });
   }),
+  http.get(`${MOCK_API_URL}/v1/schedules/:scheduleId`, ({ params }) => {
+    const { scheduleId } = params;
+
+    console.log('scheduleId', scheduleId);
+
+    return HttpResponse.json({ data: scheduleDetail }, { status: 200 });
+  }),
 ];
 
 const my = {
@@ -124,4 +131,15 @@ const conversationRecommendation = {
       ],
     },
   ],
+};
+
+const scheduleDetail = {
+  scheduleId: 1,
+  title: 'Yapp Design Study',
+  profileImgUrl: 'https://static.im-linker.com/profile1.png',
+  startDateTime: '2024-01-15T13:12:42.936Z',
+  endDateTime: '2024-01-16T13:12:42.936Z',
+  hex: '#58DB67',
+  member: ['이지우'],
+  memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
 };
