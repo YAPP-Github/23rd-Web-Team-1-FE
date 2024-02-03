@@ -36,7 +36,7 @@ const semantic = {
 
 const gradation = {
   gradationBlue: 'linear-gradient(to right, #713EFF, #0989FF)',
-
+  gradationPurple: 'linear-gradient(to right, #7559EC, #4E7EEA)',
   gradationMagenta: 'linear-gradient(to right, #FB7A93, #FF586C);',
 };
 

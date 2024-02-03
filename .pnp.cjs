@@ -16198,10 +16198,36 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:11.0.3", {\
+        "packageLocation": "./.yarn/cache/framer-motion-npm-11.0.3-b536c483a1-f1aaf7da81.zip/node_modules/framer-motion/",\
+        "packageDependencies": [\
+          ["framer-motion", "npm:11.0.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.18.0", {\
         "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-f6bb42c2e1/0/cache/framer-motion-npm-10.18.0-5bde07d9ec-8dc61e16af.zip/node_modules/framer-motion/",\
         "packageDependencies": [\
           ["framer-motion", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:10.18.0"],\
+          ["@emotion/is-prop-valid", "npm:0.8.8"],\
+          ["@types/react", "npm:18.2.48"],\
+          ["@types/react-dom", "npm:18.2.18"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:d72c6c392885d2d34567eb6bd639c1d1b838b5c3eef4445da1abe8b701ea841ba4cc17cf6c01baea73320d663c6c4a7a21c9e20661c3685c116a5c0a4a6d29ba#npm:18.2.0"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:11.0.3", {\
+        "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-125a4091e8/0/cache/framer-motion-npm-11.0.3-b536c483a1-f1aaf7da81.zip/node_modules/framer-motion/",\
+        "packageDependencies": [\
+          ["framer-motion", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:11.0.3"],\
           ["@emotion/is-prop-valid", "npm:0.8.8"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", "npm:18.2.18"],\
@@ -25441,6 +25467,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.56.0"],\
           ["eslint-config-next", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:14.0.3"],\
           ["express", "npm:4.18.2"],\
+          ["framer-motion", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:11.0.3"],\
           ["jest", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:29.7.0"],\
           ["jest-environment-jsdom", "virtual:78f167a36b7b2d7fc6e8f018ffa2adf23c9a1a0463837f1cae2b120956b694e914796f5b4afca008a2f2ec5e5f11d46c4247ea671d7cd1203ed6ab488157bf21#npm:29.7.0"],\
           ["jest-environment-node", "npm:29.7.0"],\
