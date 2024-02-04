@@ -24,7 +24,7 @@ export default function Contact({ contactData }: ContactProps) {
           <SearchInput placeholder="연락처 검색하기" setQuery={setQuery} query={query} />
         </form>
       </article>
-      <div>{query ? <div></div> : <ContactDefault contactData={contactData.contacts} />}</div>
+      <div>{query === '' ? <></> : <ContactDefault contactData={contactData.contacts} />}</div>
     </section>
   );
 }

@@ -12,20 +12,16 @@ export default async function SchedulePage({
   const scheduleData = await getSchedule(parseInt(params.id));
 
   return (
-    <>
-      {scheduleData && (
-        <Schedule
-          scheduleId={scheduleData.scheduleId}
-          profileImgUrl={scheduleData.profileImgUrl}
-          title={scheduleData.title}
-          startDateTime={scheduleData.startDateTime}
-          endDateTime={scheduleData.endDateTime}
-          member={scheduleData.member}
-          memo={scheduleData.memo}
-          hex={scheduleData.hex}
-        />
-      )}
-    </>
+    <Schedule
+      scheduleId={scheduleData.scheduleId}
+      profileImgUrl={scheduleData.profileImgUrl}
+      title={scheduleData.title}
+      startDateTime={scheduleData.startDateTime}
+      endDateTime={scheduleData.endDateTime}
+      member={scheduleData.member}
+      memo={scheduleData.memo}
+      hex={scheduleData.hex}
+    />
   );
 }
 

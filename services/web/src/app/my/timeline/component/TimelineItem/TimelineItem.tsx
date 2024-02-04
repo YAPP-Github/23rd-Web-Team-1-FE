@@ -68,7 +68,7 @@ function TimelineItem({
                 </Txt>
               </div>
 
-              {member && member.length > 0 && (
+              {member !== null && member.length > 0 && (
                 <div className={timelineRowWrapper}>
                   <Icon name="user-gray" size={28} />
                   <Txt typography="p3" color={colors.gray700} fontWeight="regular">
