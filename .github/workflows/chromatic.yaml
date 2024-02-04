@@ -7,11 +7,6 @@ on:
     paths:
       - '**.stories.tsx'
     types: [opened, edited, reopened]
-  push:
-    branches:
-      - develop
-    paths:
-      - '**.stories.tsx'
 
 jobs:
   chromatic:

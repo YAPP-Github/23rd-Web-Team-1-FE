@@ -16,18 +16,22 @@ interface Props extends Omit<HTMLAttributes<HTMLButtonElement>, 'type'> {
 }
 
 const Button = forwardRef<HTMLButtonElement, Props>(
-  ({
-    variant = 'primary',
-    size = 'medium',
-    disabled = false,
-    loading = false,
-    rightAddon,
-    className,
-    children,
-    ...props
-  }: Props) => {
+  (
+    {
+      variant = 'primary',
+      size = 'medium',
+      disabled = false,
+      loading = false,
+      rightAddon,
+      className,
+      children,
+      ...props
+    }: Props,
+    ref,
+  ) => {
     return (
       <button
+        ref={ref}
         type="button"
         className={clsx(baseStyle({ variant, size }), typography({ type: 'b1' }), className)}
         disabled={loading || disabled}

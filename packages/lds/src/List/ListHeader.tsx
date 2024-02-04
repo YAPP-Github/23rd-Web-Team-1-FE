@@ -4,7 +4,7 @@ import { FontWeight } from '@linker/styles/types';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
 
-import { headerContainer, headerTitle, iconWrapper } from './ListHeader.css';
+import { descriptipon, headerContainer, headerTitle, iconWrapper } from './ListHeader.css';
 import { Txt } from '../Txt';
 
 interface Props {
@@ -41,7 +41,13 @@ const ListHeader = ({
             {title}
           </Txt>
 
-          <Txt as="p" typography="p3" color={colors.gray950}>
+          <Txt
+            as="p"
+            typography="p3"
+            fontWeight="regular"
+            color={colors.gray700}
+            className={descriptipon}
+          >
             {description}
           </Txt>
         </div>

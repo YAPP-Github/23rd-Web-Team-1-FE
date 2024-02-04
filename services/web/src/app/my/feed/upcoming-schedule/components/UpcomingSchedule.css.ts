@@ -10,3 +10,7 @@ export const listItem = style({
     },
   },
 });
+
+export const listHeader = style({
+  paddingBottom: '0.2rem',
+});

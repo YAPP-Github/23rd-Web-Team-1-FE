@@ -1,6 +1,5 @@
 import { ky } from '@linker/ky';
-import { List, Carousel, CarouselItem } from '@linker/lds';
-import Image from 'next/image';
+import { List, Carousel, CarouselItem, Icon } from '@linker/lds';
 import Link from 'next/link';
 
 import { getTokens } from '@utils/token/server';
@@ -47,25 +46,20 @@ async function Recommendation() {
 
   return (
     <List className={wrapper}>
-      <div className={header}>
-        {/* @todo 일정상세페이지 href 추가필요 */}
-        <Link href="">
-          <List.Header
-            title="대화 주제 추천 받기"
-            typograyphy="h7"
-            rightAddon={
-              <button type="button">
-                <Image
-                  src="https://static.im-linker.com/right-arrow-mono.png"
-                  alt=""
-                  width={28}
-                  height={28}
-                />
-              </button>
-            }
-          />
-        </Link>
-      </div>
+      {/* @todo 일정상세페이지 href 추가필요 */}
+      <Link href="">
+        <List.Header
+          title="대화 주제 추천 받기"
+          className={header}
+          typograyphy="h7"
+          rightAddon={
+            <button type="button">
+              <Icon name="next-gray" size={24} />
+            </button>
+          }
+        />
+      </Link>
+
       <div className={schedule}>
         <Schedule
           title={title}

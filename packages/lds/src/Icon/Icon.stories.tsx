@@ -134,6 +134,16 @@ export const Template: Story = {
             <Icon name="pencil-fill" />
             <Txt typography="p1">pencil-fill</Txt>
           </div>
+
+          <div className={iconWrapper}>
+            <Icon name="pencil-fill-blue" />
+            <Txt typography="p1">pencil-fill-blue</Txt>
+          </div>
+
+          <div className={iconWrapper}>
+            <Icon name="question-fill-purple" />
+            <Txt typography="p1">question-fill-purple</Txt>
+          </div>
         </div>
       </>
     );
