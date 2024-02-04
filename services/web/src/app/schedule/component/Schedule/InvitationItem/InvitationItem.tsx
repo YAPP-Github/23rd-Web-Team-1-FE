@@ -11,21 +11,21 @@ import {
   invitaionDivider,
 } from './InvitationItem.css';
 
-export const InviationItem = () => {
+interface InvitationItemProps {
+  profileImg: string;
+  name: string;
+}
+
+export const InvitionItem = ({ profileImg, name }: InvitationItemProps) => {
   return (
     <div className={invitationContainer}>
       <div className={invitationWrapper}>
         <div className={invitaionProfileWrppaer}>
           <div className={invitaionProfileImgWrppaer}>
-            <Image
-              src={'https://static.im-linker.com/images/profile-sample.png'}
-              width={28}
-              height={28}
-              alt={'profileImg'}
-            />
+            <Image src={profileImg} width={28} height={28} alt={'profileImg'} />
           </div>
           <Txt typography="p2" color={colors.black} fontWeight="medium">
-            이지우
+            {name}
           </Txt>
         </div>
         <button type="button">

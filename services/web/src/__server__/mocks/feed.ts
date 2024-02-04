@@ -13,7 +13,7 @@ export interface TimelineItemProps {
   startDateTime: string;
   endDateTime: string;
   hex: string;
-  member: string | string[] | null;
+  member: MemberProps[] | null;
   memo: string | null;
 }
 
@@ -25,8 +25,8 @@ export const feedHandlers = [
   http.get(`${MOCK_API_URL}/v1/schedules/near-term`, () => {
     return HttpResponse.json({ data: upcomingSchedules }, { status: 200 });
   }),
-
-  http.get(`${MOCK_API_URL}/v1/schedules/near-term/test`, () => {
+  // test2 인 이유는 또 msw 반영이 안돼서 입니다!
+  http.get(`${MOCK_API_URL}/v1/schedules/near-term/test2`, () => {
     return HttpResponse.json({ data: upcomingSchedules }, { status: 200 });
   }),
 
@@ -34,10 +34,6 @@ export const feedHandlers = [
     return HttpResponse.json({ data: conversationRecommendation }, { status: 200 });
   }),
   http.get(`${MOCK_API_URL}/v1/schedules/:scheduleId`, ({ params }) => {
-    const { scheduleId } = params;
-
-    console.log('scheduleId', scheduleId);
-
     return HttpResponse.json({ data: scheduleDetail }, { status: 200 });
   }),
 ];
@@ -72,7 +68,13 @@ const upcomingSchedules: TimelineRes = {
       startDateTime: '2023-12-28T13:12:42.936Z',
       endDateTime: '2023-12-30T13:12:42.936Z',
       hex: '#58DB67',
-      member: ['이지우'],
+      member: [
+        {
+          memberId: 0,
+          name: '이지우',
+          profileImgUrl: 'https://static.im-linker.com/profile1.pn',
+        },
+      ],
       memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
     },
     {
@@ -92,7 +94,18 @@ const upcomingSchedules: TimelineRes = {
       startDateTime: '2024-01-13T13:12:42.936Z',
       endDateTime: '2024-01-14T13:12:42.936Z',
       hex: '#FF70B0',
-      member: ['이지우', '이지우'],
+      member: [
+        {
+          memberId: 0,
+          name: '이지우',
+          profileImgUrl: 'https://static.im-linker.com/profile1.pn',
+        },
+        {
+          memberId: 0,
+          name: '이지우',
+          profileImgUrl: 'https://static.im-linker.com/profile1.pn',
+        },
+      ],
       memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
     },
     {
@@ -102,7 +115,13 @@ const upcomingSchedules: TimelineRes = {
       startDateTime: '2024-01-15T13:12:42.936Z',
       endDateTime: '2024-01-16T13:12:42.936Z',
       hex: '#58DB67',
-      member: ['이지우'],
+      member: [
+        {
+          memberId: 0,
+          name: '이지우',
+          profileImgUrl: 'https://static.im-linker.com/profile1.pn',
+        },
+      ],
       memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
     },
   ],
@@ -133,13 +152,41 @@ const conversationRecommendation = {
   ],
 };
 
-const scheduleDetail = {
+export interface MemberProps {
+  memberId: number;
+  name: string;
+  profileImgUrl: string;
+}
+export interface ScheduleDetailProps {
+  scheduleId: 1;
+  title: string;
+  profileImgUrl: string;
+  startDateTime: string;
+  endDateTime: string;
+  hex: string;
+  member: MemberProps[];
+  memo: string;
+}
+const scheduleDetail: ScheduleDetailProps = {
   scheduleId: 1,
   title: 'Yapp Design Study',
   profileImgUrl: 'https://static.im-linker.com/profile1.png',
   startDateTime: '2024-01-15T13:12:42.936Z',
   endDateTime: '2024-01-16T13:12:42.936Z',
   hex: '#58DB67',
-  member: ['이지우'],
+  member: [
+    {
+      memberId: 0,
+      name: '이지우',
+      profileImgUrl:
+        'https://postfiles.pstatic.net/MjAyMjA5MTdfMTE1/MDAxNjYzMzc3MDc1MTA2.bToArUww9E15OT_Mmt5mz7xAkuK98KGBbeI_dsJeaDAg.WJAhfo5kHehNQKWLEWKURBlZ7m_GZVZ9hoCBM2b_lL0g.JPEG.drusty97/IMG_0339.jpg?type=w966',
+    },
+    {
+      memberId: 1,
+      name: '이지안',
+      profileImgUrl:
+        'https://postfiles.pstatic.net/MjAyMjA5MTdfMTE1/MDAxNjYzMzc3MDc1MTA2.bToArUww9E15OT_Mmt5mz7xAkuK98KGBbeI_dsJeaDAg.WJAhfo5kHehNQKWLEWKURBlZ7m_GZVZ9hoCBM2b_lL0g.JPEG.drusty97/IMG_0339.jpg?type=w966',
+    },
+  ],
   memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
 };

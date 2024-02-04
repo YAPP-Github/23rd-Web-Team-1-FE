@@ -46,7 +46,7 @@ export const typography = recipe({
       },
       p1: {
         fontSize: font.size16,
-        fontWeight: font.medium,
+        fontWeight: font.regular,
         lineHeight: font.lineHeight24,
       },
       p2: {

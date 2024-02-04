@@ -10,7 +10,7 @@ export default async function TimelinePage() {
 }
 
 const getTimeline = () => {
-  const response = ky.get<TimelineRes>('/v1/schedules/near-term/test');
+  const response = ky.get<TimelineRes>('/v1/schedules/near-term/test2');
 
   return response;
 };

@@ -47,6 +47,10 @@ export const scheduleColorDivider = style({
   width: '0.5rem',
   height: '3.2rem',
 });
+export const scheduleTitleTimeColWrapper = style({
+  display: 'flex',
+  flexDirection: 'column',
+});
 export const scheduleTitleTimeWrapper = style({
   display: 'flex',
   flexDirection: 'row',

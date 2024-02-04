@@ -1,13 +1,17 @@
 'use client';
 
+import { MemberProps } from '@__server__/mocks/feed';
 import { List } from '@linker/lds';
 import { Icon } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import clsx from 'clsx';
+import { format, getHours, getMinutes } from 'date-fns';
+import { ko } from 'date-fns/locale';
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
-import { InviationItem } from './InvitationItem/InvitationItem';
+import { InvitionItem } from './InvitationItem/InvitationItem';
 import {
   scheduleHeaderIconWrapper,
   scheduleHeaderWrapper,
@@ -22,10 +26,45 @@ import {
   scheduleNoteWrapper,
   scheduleCalendarDropDownElipse,
   calendarElipseColor,
+  scheduleTitleTimeColWrapper,
 } from './Schedule.css';
 
-export const Schedule = () => {
+interface ScheduleProps {
+  scheduleId: number;
+  title: string;
+  profileImgUrl: string | null;
+  startDateTime: string;
+  endDateTime: string;
+  hex: string;
+  member: MemberProps[] | null;
+  memo: string | null;
+}
+
+export const Schedule = ({
+  title,
+  profileImgUrl,
+  startDateTime,
+  endDateTime,
+  hex,
+  member,
+  memo,
+}: ScheduleProps) => {
   const router = useRouter();
+  const [startTime, setStartTime] = useState('');
+  const [endTime, setEndTime] = useState('');
+
+  useEffect(() => {
+    if (getHours(startDateTime) >= 12) {
+      setStartTime(`오후 ${getHours(startDateTime)}시 ${getMinutes(startDateTime)}분`);
+    } else {
+      setStartTime(`오전 ${getHours(startDateTime)}시 ${getMinutes(startDateTime)}분`);
+    }
+    if (getHours(endDateTime) >= 12) {
+      setEndTime(`오후 ${getHours(endDateTime)}시 ${getMinutes(endDateTime)}분`);
+    } else {
+      setEndTime(`오전 ${getHours(endDateTime)}시 ${getMinutes(endDateTime)}분`);
+    }
+  }, []);
 
   const handleCloseClick = () => {
     router.push(`/my/timeline`);
@@ -54,19 +93,33 @@ export const Schedule = () => {
       <article className={scheduleTitleContainer}>
         <div className={scheduleTitleWrapper}>
           <div className={scheduleColorDivider} style={{ backgroundColor: '#58DB67 ' }}></div>
-          <Txt typography="h5">
-            이지우 커피챗 진행이지우 커피챗 진행이지우 커피챗 진행이지우 커피챗 진행이지우 커
-            🥹🥹✨✨
-          </Txt>
+          <Txt typography="h5">{title}</Txt>
         </div>
-        <div className={scheduleTitleTimeWrapper}>
-          <Txt typography="p1" fontWeight="regular">
-            2024. 12. 31. 목요일
-          </Txt>
-          <Icon name="dot" size={2.67} />
-          <Txt typography="p1" fontWeight="regular">
-            오후 5시 - 10시
-          </Txt>
+        <div className={scheduleTitleTimeColWrapper}>
+          <div className={scheduleTitleTimeWrapper}>
+            <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
+              {format(startDateTime, 'yyyy. MM. dd')}
+            </Txt>
+            <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
+              {format(new Date(startDateTime), 'EEEE', { locale: ko })}
+            </Txt>
+            <Icon name="dot" size={2.67} />
+            <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
+              {startTime}
+            </Txt>
+          </div>
+          <div className={scheduleTitleTimeWrapper}>
+            <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
+              {format(endDateTime, 'yyyy. MM. dd')}
+            </Txt>
+            <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
+              {format(new Date(endDateTime), 'EEEE', { locale: ko })}
+            </Txt>
+            <Icon name="dot" size={2.67} />
+            <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
+              {endTime}
+            </Txt>
+          </div>
         </div>
       </article>
 
@@ -98,9 +151,12 @@ export const Schedule = () => {
           color={`${colors.gray700}`}
           typograyphy="p1"
         />
-        <InviationItem />
-        <InviationItem />
-        <InviationItem />
+        {member &&
+          member.map((item) => (
+            <div key={item.memberId}>
+              <InvitionItem profileImg={item.profileImgUrl} name={item.name} />
+            </div>
+          ))}
       </List>
       <List className={scheduleNoteWrapper}>
         <List.Header
@@ -116,15 +172,7 @@ export const Schedule = () => {
         />
         <div style={{ WebkitLineClamp: '8' }}>
           <Txt typography="p1" fontWeight="regular" color={colors.black}>
-            2020년 8월 3일 공식 출범한 토스페이먼츠는 대한민국 전자결제 시장을 새롭게 바꿔나가는
-            것을 목표로 합니다. 온라인과 모바일 커머스 시장의 확대에 따라 일상 생활에서 뗄 수 없는
-            결제 서비스, 토스페이먼츠가 기술 및 비즈니스 모델 혁신을 토스페이먼츠가 기술 및 비즈니스
-            모델 혁신을 토스페이먼츠가 기술 및 비즈니스 모델 혁신을토스페이먼츠가 기술 및 비즈니스
-            모델 혁신을토스페2020년 8월 3일 공식 출범한 토스페이먼츠는 대한민국 전자결제 시장을
-            새롭게 바꿔나가는 것을 목표로 합니다. 온라인과 모바일 커머스 시장의 확대에 따라 일상
-            생활에서 뗄 수 없는 결제 서비스, 토스페이먼츠가 기술 및 비즈니스 모델 혁신을
-            토스페이먼츠가 기술 및 비즈니스 모델 혁신을 토스페이먼츠가 기술 및 비즈니스 모델
-            혁신을토스페이먼츠가 기술 및 비즈니스 모델 혁신을토스페
+            {memo}
           </Txt>
         </div>
       </List>
