@@ -4,7 +4,7 @@ import { globalStyle, style } from '@vanilla-extract/css';
 export const profileWrapper = style({
   display: 'flex',
   alignItems: 'center',
-  padding: '2rem',
+  padding: '0 2rem',
 });
 
 export const profileContainer = style({
