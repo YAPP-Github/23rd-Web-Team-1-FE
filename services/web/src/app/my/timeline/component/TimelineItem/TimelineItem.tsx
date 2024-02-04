@@ -26,9 +26,9 @@ function TimelineItem({
   endDateTime,
   scheduleId,
   member,
-  hex,
+  color,
   profileImgUrl,
-  memo,
+  description,
 }: TimelineItemProps) {
   const [time, setTime] = useState('');
 
@@ -89,15 +89,15 @@ function TimelineItem({
               <Icon name="more-gray" size={28} />
             </button>
           }
-          leftAddon={<div className={timelineColorDivider} style={{ backgroundColor: hex }} />}
+          leftAddon={<div className={timelineColorDivider} style={{ backgroundColor: color }} />}
         />
 
-        {memo && (
+        {description && (
           <div>
             <div className={timelineItemDivider}></div>
             <section className={timelineItemMemoWrapper}>
               <Txt typography="p2" color={colors.gray900} fontWeight="regular">
-                {memo}
+                {description}
               </Txt>
             </section>
           </div>

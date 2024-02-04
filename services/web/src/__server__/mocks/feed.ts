@@ -12,9 +12,9 @@ export interface TimelineItemProps {
   profileImgUrl: string | null;
   startDateTime: string;
   endDateTime: string;
-  hex: string;
+  color: string;
   member: MemberProps[] | null;
-  memo: string | null;
+  description: string | null;
 }
 
 export const feedHandlers = [
@@ -35,6 +35,12 @@ export const feedHandlers = [
   }),
   http.get(`${MOCK_API_URL}/v1/schedules/:scheduleId`, ({ params }) => {
     return HttpResponse.json({ data: scheduleDetail }, { status: 200 });
+  }),
+  http.get(`${MOCK_API_URL}/v1/schedules/search`, ({ request }) => {
+    return HttpResponse.json({ data: upcomingSchedules }, { status: 200 });
+  }),
+  http.get(`${MOCK_API_URL}/v1/schedules/search/test`, ({ request }) => {
+    return HttpResponse.json({ data: upcomingSchedules }, { status: 200 });
   }),
 ];
 
@@ -67,7 +73,7 @@ const upcomingSchedules: TimelineRes = {
       profileImgUrl: 'https://static.im-linker.com/profile1.png',
       startDateTime: '2023-12-28T13:12:42.936Z',
       endDateTime: '2023-12-30T13:12:42.936Z',
-      hex: '#58DB67',
+      color: '#58DB67',
       member: [
         {
           memberId: 0,
@@ -75,7 +81,8 @@ const upcomingSchedules: TimelineRes = {
           profileImgUrl: 'https://static.im-linker.com/profile1.pn',
         },
       ],
-      memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
+      description:
+        '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
     },
     {
       scheduleId: 2,
@@ -83,9 +90,9 @@ const upcomingSchedules: TimelineRes = {
       profileImgUrl: 'https://static.im-linker.com/profile2.png',
       startDateTime: '2024-01-11T13:12:42.936Z',
       endDateTime: '2024-01-12T13:12:42.936Z',
-      hex: '#26D1D1',
+      color: '#26D1D1',
       member: null,
-      memo: null,
+      description: null,
     },
     {
       scheduleId: 3,
@@ -93,7 +100,7 @@ const upcomingSchedules: TimelineRes = {
       profileImgUrl: null,
       startDateTime: '2024-01-13T13:12:42.936Z',
       endDateTime: '2024-01-14T13:12:42.936Z',
-      hex: '#FF70B0',
+      color: '#FF70B0',
       member: [
         {
           memberId: 0,
@@ -106,7 +113,8 @@ const upcomingSchedules: TimelineRes = {
           profileImgUrl: 'https://static.im-linker.com/profile1.pn',
         },
       ],
-      memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
+      description:
+        '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
     },
     {
       scheduleId: 4,
@@ -114,7 +122,7 @@ const upcomingSchedules: TimelineRes = {
       profileImgUrl: 'https://static.im-linker.com/profile1.png',
       startDateTime: '2024-01-15T13:12:42.936Z',
       endDateTime: '2024-01-16T13:12:42.936Z',
-      hex: '#58DB67',
+      color: '#58DB67',
       member: [
         {
           memberId: 0,
@@ -122,7 +130,8 @@ const upcomingSchedules: TimelineRes = {
           profileImgUrl: 'https://static.im-linker.com/profile1.pn',
         },
       ],
-      memo: '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
+      description:
+        '선생님이 너무 친절하시고 프라이빗한 공간이라 친구와 함께 얘기하면서 즐겁게 체험즐겁게 체...',
     },
   ],
 };

@@ -7,14 +7,14 @@ import { format } from 'date-fns';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-import { timelineItemWrapper, timelineMonthWrapper } from './Feed.css';
-import TimelineItem from './component/TimelineItem/TimelineItem';
+import { timelineItemWrapper, timelineMonthWrapper } from './TimelineDefault.css';
+import TimelineItem from '../TimelineItem/TimelineItem';
 
 interface FeedProps {
   timelineItems: TimelineRes;
 }
 
-const Feed = ({ timelineItems }: FeedProps) => {
+const TimelineDefault = ({ timelineItems }: FeedProps) => {
   const router = useRouter();
   const [date, setDate] = useState(new Date());
   const [selectDate, setSelectDate] = useState(false);
@@ -24,6 +24,14 @@ const Feed = ({ timelineItems }: FeedProps) => {
   const handleItemClick = (id: number) => {
     router.push(`/schedule/${id}`);
   };
+
+  useEffect(() => {
+    if (selectDate === true) {
+      router.push(
+        `/my/timeline/search?from=${`${format(date, 'yyyy-MM-dd')} 00:00:00`}&to=${`${format(date, 'yyyy-MM-dd')} 11:59:59`}&limit=32`,
+      );
+    }
+  }, [selectDate]);
 
   // 받아온 데이터들 중 다른 연도가 있는지
   // 연도가 하나라도 다른게 판단이 되면 diffYear가 true가됨
@@ -56,32 +64,6 @@ const Feed = ({ timelineItems }: FeedProps) => {
         withModeChange
       />
       <Spacing size={20} />
-      {/* 특정 날짜를 선택했을 경우 */}
-      {selectDate && (
-        <div>
-          <section className={timelineMonthWrapper}>
-            <Txt typography="h7" fontWeight="bold" color={colors.black}>
-              {format(date, 'M월')}
-            </Txt>
-          </section>
-          <section className={timelineItemWrapper}>
-            {timelineItems.schedules.map((item) => (
-              <button onClick={() => handleItemClick(item.scheduleId)} key={item.scheduleId}>
-                <TimelineItem
-                  scheduleId={item.scheduleId}
-                  profileImgUrl={item.profileImgUrl}
-                  title={item.title}
-                  startDateTime={item.startDateTime}
-                  endDateTime={item.endDateTime}
-                  member={item.member}
-                  hex={item.hex}
-                  memo={item.memo}
-                />
-              </button>
-            ))}
-          </section>
-        </div>
-      )}
 
       {/*특정 날짜를 선택하지 않은 경우 */}
 
@@ -103,15 +85,15 @@ const Feed = ({ timelineItems }: FeedProps) => {
                   startDateTime={item.startDateTime}
                   endDateTime={item.endDateTime}
                   member={item.member}
-                  hex={item.hex}
-                  memo={item.memo}
+                  color={item.color}
+                  description={item.description}
                 />
               </button>
             ))}
           </section>
           <section className={timelineMonthWrapper}>
             <Txt typography="h7" fontWeight="bold" color={colors.black}>
-              {format(new Date(), 'yyyy년 M월')}
+              {format(new Date(nextYear[0].startDateTime), 'yyyy년 M월')}
             </Txt>
           </section>
           <section className={timelineItemWrapper}>
@@ -124,8 +106,8 @@ const Feed = ({ timelineItems }: FeedProps) => {
                   startDateTime={item.startDateTime}
                   endDateTime={item.endDateTime}
                   member={item.member}
-                  hex={item.hex}
-                  memo={item.memo}
+                  color={item.color}
+                  description={item.description}
                 />
               </button>
             ))}
@@ -150,8 +132,8 @@ const Feed = ({ timelineItems }: FeedProps) => {
                   startDateTime={item.startDateTime}
                   endDateTime={item.endDateTime}
                   member={item.member}
-                  hex={item.hex}
-                  memo={item.memo}
+                  color={item.color}
+                  description={item.description}
                 />
               </button>
             ))}
@@ -162,4 +144,4 @@ const Feed = ({ timelineItems }: FeedProps) => {
   );
 };
 
-export default Feed;
+export default TimelineDefault;

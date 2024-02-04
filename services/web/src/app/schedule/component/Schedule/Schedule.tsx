@@ -35,9 +35,9 @@ interface ScheduleProps {
   profileImgUrl: string | null;
   startDateTime: string;
   endDateTime: string;
-  hex: string;
+  color: string;
   member: MemberProps[] | null;
-  memo: string | null;
+  description: string | null;
 }
 
 export const Schedule = ({
@@ -45,9 +45,9 @@ export const Schedule = ({
   profileImgUrl,
   startDateTime,
   endDateTime,
-  hex,
+  color,
   member,
-  memo,
+  description,
 }: ScheduleProps) => {
   const router = useRouter();
   const [startTime, setStartTime] = useState('');
@@ -172,7 +172,7 @@ export const Schedule = ({
         />
         <div style={{ WebkitLineClamp: '8' }}>
           <Txt typography="p1" fontWeight="regular" color={colors.black}>
-            {memo}
+            {description}
           </Txt>
         </div>
       </List>

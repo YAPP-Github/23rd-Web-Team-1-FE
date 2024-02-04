@@ -19,8 +19,8 @@ export default async function SchedulePage({
       startDateTime={scheduleData.startDateTime}
       endDateTime={scheduleData.endDateTime}
       member={scheduleData.member}
-      memo={scheduleData.memo}
-      hex={scheduleData.hex}
+      color={scheduleData.color}
+      description={scheduleData.description}
     />
   );
 }
