@@ -1,8 +1,9 @@
 'use client';
 
-import { useMyContext } from '@app/my/providers';
-import { Button, Icon, Modal, Profile, Txt } from '@linker/lds';
+import { Button, Icon, Modal, Profile, Skeleton, Txt } from '@linker/lds';
+import { useIsClient } from '@linker/react';
 import { colors } from '@linker/styles';
+import { useMyContext } from '@providers/MyProviders';
 import clsx from 'clsx';
 import { useRouter } from 'next/navigation';
 
@@ -14,6 +15,11 @@ import {
   loginModal,
   profileWrapper,
   profileInfo,
+  profileImageSkeleton,
+  profileNameSkeleton,
+  profileInfoSkeleton,
+  profileContainerSkeleton,
+  profileContentSkeleton,
 } from './MyProfile.css';
 
 interface ProfileProps {
@@ -22,6 +28,7 @@ interface ProfileProps {
 
 function MyProfile({ isMinimize }: ProfileProps) {
   const { myInfo, isUser } = useMyContext();
+  const isClient = useIsClient();
 
   const router = useRouter();
 
@@ -32,6 +39,10 @@ function MyProfile({ isMinimize }: ProfileProps) {
 
     router.replace(`${process.env.NEXT_PUBLIC_KAKAO_LOGIN_URL}`);
   };
+
+  if (!isClient) {
+    return <MyProfile.Skeleton />;
+  }
 
   return (
     <section className={clsx(profileWrapper, isMinimize && 'minimize')}>
@@ -94,3 +105,21 @@ function MyProfile({ isMinimize }: ProfileProps) {
 }
 
 export default MyProfile;
+
+MyProfile.Skeleton = () => {
+  return (
+    <section className={profileWrapper}>
+      <div className={profileContainerSkeleton}>
+        <Skeleton className={profileImageSkeleton} />
+
+        <div className={profileContentSkeleton}>
+          <div className={profileName}>
+            <Skeleton className={profileNameSkeleton} />
+          </div>
+
+          <Skeleton className={profileInfoSkeleton} />
+        </div>
+      </div>
+    </section>
+  );
+};

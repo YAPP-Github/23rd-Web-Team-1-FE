@@ -1,6 +1,5 @@
 'use client';
 
-import { useMyContext } from '@app/my/providers';
 import { Icon, List, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { motion } from 'framer-motion';
@@ -9,9 +8,7 @@ import { useRouter } from 'next/navigation';
 
 import { bannerContainer, contentWrapper, imageWrapper, text } from './ContactBanner.css';
 
-function ContactBanner() {
-  const { isUser } = useMyContext();
-
+function ContactBanner({ hasToken }: { hasToken: boolean }) {
   const router = useRouter();
 
   const handleLoginClick = () => {
@@ -22,7 +19,7 @@ function ContactBanner() {
     router.replace(`${process.env.NEXT_PUBLIC_KAKAO_LOGIN_URL}`);
   };
 
-  if (isUser) {
+  if (hasToken) {
     return;
   }
 

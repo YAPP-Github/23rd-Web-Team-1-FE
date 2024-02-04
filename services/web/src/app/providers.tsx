@@ -1,6 +1,7 @@
 'use client';
 
 import { lightThemeVars, darkThemeVars } from '@linker/styles';
+import MyProviders from '@providers/MyProviders';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ThemeProvider } from 'next-themes';
@@ -48,7 +49,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           dark: darkThemeVars,
         }}
       >
-        {children}
+        <MyProviders>{children}</MyProviders>
       </ThemeProvider>
     </QueryClientProvider>
   );

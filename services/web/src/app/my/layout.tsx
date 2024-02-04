@@ -1,27 +1,10 @@
-import { MyInfo } from '@/types/myInfo';
-import { ky } from '@linker/ky';
+import { MyHeader } from '@features/Header';
 import { Button, Layout, Icon } from '@linker/lds';
 
-import { getTokens } from '@utils/token/server';
-
-import MyProviders from './providers';
-
-const getMyInfo = () => {
-  if (getTokens()?.accessToken == null) {
-    return null;
-  }
-
-  const data = ky.get<MyInfo>('/v1/my');
-
-  return data;
-};
-
-async function MyLayout({ children }: { children: React.ReactNode }) {
-  const myInfo = await getMyInfo();
-  const isUser = myInfo != null && getTokens()?.accessToken != null;
-
+function MyLayout({ children }: { children: React.ReactNode }) {
   return (
-    <MyProviders myInfo={myInfo} isUser={isUser}>
+    <>
+      <MyHeader />
       <Layout>
         {children}
 
@@ -29,7 +12,7 @@ async function MyLayout({ children }: { children: React.ReactNode }) {
           <Icon name="plus-white" size={42} />
         </Button.FAB>
       </Layout>
-    </MyProviders>
+    </>
   );
 }
 
