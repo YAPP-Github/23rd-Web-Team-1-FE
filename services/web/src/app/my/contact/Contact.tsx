@@ -1,6 +1,6 @@
 'use client';
 
-import { ContactData } from '@__server__/mocks/contact';
+import { ContactData, ContactDataRes } from '@__server__/mocks/contact';
 import { SearchInput } from '@linker/lds';
 import { useState } from 'react';
 
@@ -8,7 +8,7 @@ import { wrapper, searchInputWrapper } from './Contact.css';
 import ContactDefault from './component/ContactDefault/ContactDefault';
 
 interface ContactProps {
-  contactData: ContactData[];
+  contactData: ContactDataRes;
   contactSearchData?: ContactData[];
 }
 
@@ -24,7 +24,7 @@ export default function Contact({ contactData }: ContactProps) {
           <SearchInput placeholder="연락처 검색하기" setQuery={setQuery} query={query} />
         </form>
       </article>
-      <div>{query ? <div></div> : <ContactDefault contactData={contactData} />}</div>
+      <div>{query === '' ? <></> : <ContactDefault contactData={contactData.contacts} />}</div>
     </section>
   );
 }

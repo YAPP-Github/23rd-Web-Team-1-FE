@@ -51,6 +51,7 @@ async function Recommendation() {
         <List.Header
           title="대화 주제 추천 받기"
           className={header}
+          typograyphy="h7"
           rightAddon={
             <button type="button">
               <Icon name="next-gray" size={24} />

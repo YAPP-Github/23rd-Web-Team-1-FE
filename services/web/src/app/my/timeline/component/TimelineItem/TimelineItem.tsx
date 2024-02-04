@@ -6,7 +6,6 @@ import { Spacing } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
-
 import { useEffect, useState } from 'react';
 
 import {
@@ -16,7 +15,6 @@ import {
   timelineRowWrapper,
   timelineItemDivider,
   timelineItemInfoWrapper,
-  timelineItmeInfoTextWrapper,
   timelineItemMemoWrapper,
   timelineColorDivider,
   timelineItemHeaderWrapper,
@@ -28,9 +26,9 @@ function TimelineItem({
   endDateTime,
   scheduleId,
   member,
-  hex,
+  color,
   profileImgUrl,
-  memo,
+  description,
 }: TimelineItemProps) {
   const [time, setTime] = useState('');
 
@@ -59,6 +57,8 @@ function TimelineItem({
       <List className={timelineItemInfoWrapper}>
         <List.Header
           title={title}
+          color={colors.black}
+          typograyphy="h7"
           description={
             <>
               <div className={timelineRowWrapper}>
@@ -68,11 +68,11 @@ function TimelineItem({
                 </Txt>
               </div>
 
-              {member && (
+              {member !== null && member.length > 0 && (
                 <div className={timelineRowWrapper}>
                   <Icon name="user-gray" size={28} />
                   <Txt typography="p3" color={colors.gray700} fontWeight="regular">
-                    {member[0]}
+                    {member[0].name}
                   </Txt>
                   {member.length >= 2 && (
                     <Txt typography="p3" color={colors.gray500} fontWeight="regular">
@@ -89,15 +89,15 @@ function TimelineItem({
               <Icon name="more-gray" size={28} />
             </button>
           }
-          leftAddon={<div className={timelineColorDivider} style={{ backgroundColor: hex }} />}
+          leftAddon={<div className={timelineColorDivider} style={{ backgroundColor: color }} />}
         />
 
-        {memo && (
+        {description && (
           <div>
             <div className={timelineItemDivider}></div>
             <section className={timelineItemMemoWrapper}>
               <Txt typography="p2" color={colors.gray900} fontWeight="regular">
-                {memo}
+                {description}
               </Txt>
             </section>
           </div>

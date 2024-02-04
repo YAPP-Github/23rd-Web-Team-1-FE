@@ -25,7 +25,7 @@ async function PreviousSchedule() {
 
   return (
     <List className={wrapper}>
-      <List.Header className={header} title="지난 일정을 노트로 기록해보세요!" />
+      <List.Header className={header} title="지난 일정을 노트로 기록해보세요!" typograyphy="h7" />
       <HorizonScroller className={scheduleList}>
         {previousSchedules.schedules.map(({ scheduleId, title, endDateTime }) => (
           <ScheduleCard key={scheduleId} title={title} endDateTime={endDateTime} />
