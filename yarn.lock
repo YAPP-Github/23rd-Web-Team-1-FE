@@ -2635,9 +2635,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@linker/ky@workspace:packages/ky"
   dependencies:
+    "@types/js-cookie": "npm:^3"
     "@types/node": "npm:^20.10.0"
     "@types/react": "npm:^18.2.38"
     "@types/react-dom": "npm:^18.2.17"
+    js-cookie: "npm:^3.0.5"
     ky: "npm:^1.1.3"
     next: "npm:^14.1.0"
     react: "npm:^18.2.0"

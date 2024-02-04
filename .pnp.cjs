@@ -5600,10 +5600,12 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@linker-ky-virtual-ea949664c1/1/packages/ky/",\
         "packageDependencies": [\
           ["@linker/ky", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#workspace:packages/ky"],\
+          ["@types/js-cookie", "npm:3.0.6"],\
           ["@types/next", null],\
           ["@types/node", "npm:20.11.8"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", "npm:18.2.18"],\
+          ["js-cookie", "npm:3.0.5"],\
           ["ky", "npm:1.2.0"],\
           ["next", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:14.0.3"],\
           ["react", "npm:18.2.0"],\
@@ -5624,9 +5626,11 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/ky/",\
         "packageDependencies": [\
           ["@linker/ky", "workspace:packages/ky"],\
+          ["@types/js-cookie", "npm:3.0.6"],\
           ["@types/node", "npm:20.11.8"],\
           ["@types/react", "npm:18.2.48"],\
           ["@types/react-dom", "npm:18.2.18"],\
+          ["js-cookie", "npm:3.0.5"],\
           ["ky", "npm:1.2.0"],\
           ["next", "virtual:d72c6c392885d2d34567eb6bd639c1d1b838b5c3eef4445da1abe8b701ea841ba4cc17cf6c01baea73320d663c6c4a7a21c9e20661c3685c116a5c0a4a6d29ba#npm:14.1.0"],\
           ["react", "npm:18.2.0"],\
