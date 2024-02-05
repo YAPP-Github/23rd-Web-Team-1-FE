@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 
 import { bannerContainer, contentWrapper, imageWrapper, text } from './ContactBanner.css';
 
-function ContactBanner({ hasToken }: { hasToken: boolean }) {
+function ContactBanner() {
   const router = useRouter();
 
   const handleLoginClick = () => {
@@ -18,10 +18,6 @@ function ContactBanner({ hasToken }: { hasToken: boolean }) {
 
     router.replace(`${process.env.NEXT_PUBLIC_KAKAO_LOGIN_URL}`);
   };
-
-  if (hasToken) {
-    return;
-  }
 
   return (
     <motion.div

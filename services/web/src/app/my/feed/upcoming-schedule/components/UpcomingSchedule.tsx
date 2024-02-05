@@ -19,7 +19,7 @@ async function UpcomingSchedule() {
   const accessToken = getTokens().accessToken;
 
   if (accessToken == null) {
-    return <ContactBanner hasToken={accessToken != null} />;
+    return <ContactBanner />;
   }
 
   const { schedules } = await getUpcomingSchedule({ limit: 3 });
