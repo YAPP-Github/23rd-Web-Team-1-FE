@@ -1,5 +1,3 @@
-'use client';
-
 import { MyHeader } from '@features/Header';
 import { Button, Layout, Icon } from '@linker/lds';
 

@@ -8,7 +8,7 @@ import { Calendar as ReactCalendar, CalendarProps } from 'react-calendar';
 import { LooseValue, Value } from 'react-calendar/dist/cjs/shared/types';
 import 'react-calendar/dist/Calendar.css';
 
-import { calendar, dot, container, buttonWrapper } from './Calendar.css';
+import { calendar, container, buttonWrapper } from './Calendar.css';
 import { Icon } from '../Icon';
 
 interface Props extends Omit<CalendarProps, 'value' | 'onChange'> {

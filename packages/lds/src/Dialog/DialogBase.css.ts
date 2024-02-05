@@ -6,9 +6,10 @@ export const dialogOverlay = recipe({
     position: 'fixed',
     top: 0,
     left: 0,
+    zIndex: 'auto',
     width: '100vw',
     height: '100vh',
-    zIndex: 'auto',
+    minHeight: '100%',
   },
 
   variants: {

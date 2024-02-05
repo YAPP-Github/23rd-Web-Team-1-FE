@@ -18,21 +18,21 @@
     "preserveValueImports": false,
     "plugins": [
       {
-        "name": "next"
-      }
+        "name": "next",
+      },
     ],
     "baseUrl": ".",
     "paths": {
       "@*": ["./src/*"],
-      "@fonts": ["fonts/*"]
-    }
+      "@fonts": ["fonts/*"],
+    },
   },
   "include": [
     "next-env.d.ts",
     "./src/**/*.tsx",
     "./src/**/*.ts",
     "src/jest.config.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
 }
