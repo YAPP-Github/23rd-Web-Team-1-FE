@@ -1,35 +1,25 @@
-'use client';
+import { getMyInfoWithServer } from '@api/myInfo';
+import { Tabs } from '@linker/lds';
 
-import { Tabs, TabInfo } from '@linker/lds';
-import { clsx } from 'clsx';
-import { useRef } from 'react';
-
-import { minimizeStyle, header, headerContent } from './MyHeader.css';
+import { header, headerContent } from './MyHeader.css';
 import { Logo } from './components/Logo';
 import { MyProfile } from './components/MyProfile';
-import useMinimize from './hooks/useMinimize';
 
-const MINIMIZE_THRESHOLD = 150;
-const MAXIMIZE_THRESHOLD = 30;
+const TAB_ITEMS = [
+  { href: '/my/feed', text: '피드' },
+  { href: '/my/contact', text: '연락처' },
+  { href: '/my/timeline', text: '타임라인' },
+];
 
-function MyHeaderContent() {
-  const tabInfos = useRef<TabInfo[]>([
-    { href: '/my/feed', text: '피드', textSpan: null },
-    { href: '/my/contact', text: '연락처', textSpan: null },
-    { href: '/my/timeline', text: '타임라인', textSpan: null },
-  ]);
-
-  const isMinimize = useMinimize({
-    minimizeThreshold: MINIMIZE_THRESHOLD,
-    maximizeThreshold: MAXIMIZE_THRESHOLD,
-  });
+async function MyHeaderContent() {
+  const myInfo = await getMyInfoWithServer();
 
   return (
-    <header className={clsx(header, isMinimize && minimizeStyle)}>
+    <header className={header}>
       <div className={headerContent}>
-        {!isMinimize && <Logo />}
-        <MyProfile isMinimize={isMinimize} />
-        <Tabs tabInfos={tabInfos} />
+        <Logo />
+        <MyProfile isMinimize={true} myInfo={myInfo} />
+        <Tabs tabInfos={TAB_ITEMS} />
       </div>
     </header>
   );
