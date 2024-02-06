@@ -6,9 +6,9 @@ import { Logo } from './components/Logo';
 import { MyProfile } from './components/MyProfile';
 
 const TAB_ITEMS = [
-  { href: '/my/feed', text: '피드', textSpan: null },
-  { href: '/my/contact', text: '연락처', textSpan: null },
-  { href: '/my/timeline', text: '타임라인', textSpan: null },
+  { href: '/my/feed', text: '피드' },
+  { href: '/my/contact', text: '연락처' },
+  { href: '/my/timeline', text: '타임라인' },
 ];
 
 async function MyHeaderContent() {

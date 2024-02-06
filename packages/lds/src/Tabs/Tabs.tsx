@@ -9,7 +9,6 @@ import { tabs, tapList, tapItem, link, activeLink, bottomLine, activeLine } from
 export interface TabInfo {
   href: string;
   text: string;
-  textSpan: HTMLSpanElement | null;
 }
 
 interface TabsProps {
@@ -28,7 +27,7 @@ function Tabs({ tabInfos }: TabsProps) {
               href={tabInfo.href}
               className={clsx(link, pathname === tabInfo.href && activeLink)}
             >
-              <span ref={(ref) => (tabInfo.textSpan = ref)}>{tabInfo.text}</span>
+              <span>{tabInfo.text}</span>
             </Link>
           </li>
         ))}

@@ -15,8 +15,8 @@ function FriendHeaderContent() {
   const { id } = useParams();
 
   const TAB_ITEMS = [
-    { href: `/friend/${id}/subject`, text: '관심주제', textSpan: null },
-    { href: `/friend/${id}/timeline`, text: '타임라인', textSpan: null },
+    { href: `/friend/${id}/subject`, text: '관심주제' },
+    { href: `/friend/${id}/timeline`, text: '타임라인' },
   ];
 
   const isMinimize = useMinimize({
