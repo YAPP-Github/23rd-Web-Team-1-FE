@@ -1,15 +1,16 @@
 import { colors } from '@linker/styles';
-import { globalStyle, style } from '@vanilla-extract/css';
+import { style } from '@vanilla-extract/css';
 
 export const profileWrapper = style({
   display: 'flex',
   alignItems: 'center',
-  padding: '0 2rem',
+  maxWidth: '72rem',
+  margin: '0 auto',
 });
 
 export const profileContainer = style({
   display: 'flex',
-  padding: '1.6rem 2rem 2.4rem ',
+  padding: '1.6rem 2rem 2.4rem',
 });
 
 export const profileImage = style({
@@ -36,8 +37,4 @@ export const profileInfo = style({
 
 export const loginModal = style({
   height: '46rem',
-});
-
-globalStyle(`.minimize`, {
-  padding: '1.2rem 2rem',
 });

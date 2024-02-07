@@ -3,6 +3,7 @@ export * from './Calendar';
 export * from './Carousel';
 export * from './Chip';
 export * from './Dialog';
+export * from './Header';
 export * from './HorizonScroller';
 export * from './Icon';
 export * from './Layout';

@@ -3,7 +3,6 @@
 import { MyInfo } from '@/types/myInfo';
 import { Button, Icon, Modal, Profile, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
-import clsx from 'clsx';
 import { useRouter } from 'next/navigation';
 
 import {
@@ -17,11 +16,10 @@ import {
 } from './MyProfile.css';
 
 interface ProfileProps {
-  isMinimize: boolean;
   myInfo: MyInfo | null;
 }
 
-function MyProfile({ isMinimize, myInfo }: ProfileProps) {
+function MyProfile({ myInfo }: ProfileProps) {
   const router = useRouter();
 
   const handleLoginClick = () => {
@@ -33,7 +31,7 @@ function MyProfile({ isMinimize, myInfo }: ProfileProps) {
   };
 
   return (
-    <section className={clsx(profileWrapper, isMinimize && 'minimize')}>
+    <div className={profileWrapper}>
       {myInfo == null ? (
         <Modal>
           <Modal.Trigger>
@@ -88,7 +86,7 @@ function MyProfile({ isMinimize, myInfo }: ProfileProps) {
           </div>
         </div>
       )}
-    </section>
+    </div>
   );
 }
 
