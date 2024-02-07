@@ -1,10 +1,11 @@
 import { colors } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
 
+import { TAB_HEIGHT } from '../constants';
+
 export const tabs = style({
-  position: 'sticky',
-  top: 0,
-  width: '100%',
+  maxWidth: '72rem',
+  margin: '0 auto',
 });
 
 export const tapList = style({
@@ -24,7 +25,7 @@ export const link = style({
   justifyContent: 'center',
   alignItems: 'center',
   width: '94px',
-  height: '48px',
+  height: TAB_HEIGHT,
   fontSize: '1.6rem',
   color: 'rgba(255, 255, 255, 0.3)',
   fontWeight: 'bold',
