@@ -1,4 +1,4 @@
-import { MyHeader } from '@features/Header';
+import { MyHeader } from '@features/my';
 import { Button, Layout, Icon } from '@linker/lds';
 
 function MyLayout({ children }: { children: React.ReactNode }) {
