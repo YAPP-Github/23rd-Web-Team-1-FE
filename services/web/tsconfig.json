@@ -24,7 +24,11 @@
     "baseUrl": ".",
     "paths": {
       "@*": ["./src/*"],
-      "@fonts": ["fonts/*"],
+      "@components": ["./src/components/*"],
+      "@features": ["./src/features/*"],
+      "@fonts": ["./src/fonts/*"],
+      "@types": ["./src/types/*"],
+      "@utils": ["./src/utils/*"],
     },
   },
   "include": [
