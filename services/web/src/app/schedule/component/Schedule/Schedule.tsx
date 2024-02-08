@@ -153,6 +153,7 @@ export const Schedule = ({
                     <Button.Floating floatingType="SCHEDULE">
                       <Button.Floating.Item
                         text="개인일정"
+                        onClick={handleCalendarToggleClick}
                         rightAddon={
                           <div
                             className={clsx(
