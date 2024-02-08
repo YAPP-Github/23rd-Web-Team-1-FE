@@ -19,6 +19,9 @@ export const profile = recipe({
       xLarge: {
         borderRadius: '2.4rem',
       },
+      xxLarge: {
+        borderRadius: '2.4rem',
+      },
     },
   },
 

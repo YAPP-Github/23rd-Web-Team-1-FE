@@ -6,6 +6,7 @@ import Image, { ImageProps } from 'next/image';
 import { profile } from './Profile.css';
 
 const PROFILE_SIZE = {
+  xxLarge: 90,
   xLarge: 64,
   large: 56,
   medium: 48,
