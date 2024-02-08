@@ -36,7 +36,7 @@ function MyProfile({ myInfo }: ProfileProps) {
         <Modal>
           <Modal.Trigger>
             <div className={profileContainer}>
-              <Profile className={profileImage} size="xLarge" />
+              <Profile className={profileImage} size="xLarge" priority />
 
               <div className={profileContent}>
                 <div className={profileName}>
@@ -63,7 +63,12 @@ function MyProfile({ myInfo }: ProfileProps) {
         </Modal>
       ) : (
         <div className={profileContainer}>
-          <Profile imageUrl={myInfo.profileImgUrl} className={profileImage} size="xLarge" />
+          <Profile
+            imageUrl={myInfo.profileImgUrl}
+            className={profileImage}
+            size="xLarge"
+            priority
+          />
           <div className={profileContent}>
             <div className={profileName}>
               <Txt typography="h5" fontWeight="extrabold" color={colors.white}>
