@@ -26,7 +26,9 @@ const FixedHeader = forwardRef<HTMLDivElement, HeaderProps>(
         ref={ref}
         aria-hidden
         className={clsx(container, className)}
-        style={assignInlineVars(displayVar, { display: isScrolling ? 'block' : 'none' })}
+        style={assignInlineVars(displayVar, {
+          display: isScrolling || MINIMIZE_SCROLL < window.scrollY ? 'block' : 'none',
+        })}
       >
         <Header leftAddon={leftAddon} className={headerContainer} />
 
