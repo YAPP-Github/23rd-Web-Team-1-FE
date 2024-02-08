@@ -19,7 +19,7 @@ const MINIMIZE_SCROLL = HEADER_HEIGHT_NUMBER + TAB_HEIGHT_NUMBER + 15;
 
 const FixedHeader = forwardRef<HTMLDivElement, HeaderProps>(
   ({ children, leftAddon, className }: HeaderProps, ref) => {
-    const isScrolling = useIsScrollOver(MINIMIZE_SCROLL);
+    const isScrollOver = useIsScrollOver(MINIMIZE_SCROLL);
 
     return (
       <div
@@ -27,7 +27,7 @@ const FixedHeader = forwardRef<HTMLDivElement, HeaderProps>(
         aria-hidden
         className={clsx(container, className)}
         style={assignInlineVars(displayVar, {
-          display: isScrolling || MINIMIZE_SCROLL < window.scrollY ? 'block' : 'none',
+          display: isScrollOver ? 'block' : 'none',
         })}
       >
         <Header leftAddon={leftAddon} className={headerContainer} />
