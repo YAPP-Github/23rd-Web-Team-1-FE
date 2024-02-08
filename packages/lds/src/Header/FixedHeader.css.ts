@@ -1,19 +1,19 @@
-import { colors } from '@linker/styles';
 import { createThemeContract, style } from '@vanilla-extract/css';
 
 import { HEADER_Z_INDEX } from '../constants';
 
-export const displayVar = createThemeContract({
+export const styleVar = createThemeContract({
   display: null,
+  background: null,
 });
 
 export const container = style({
   position: 'fixed',
   top: 0,
   zIndex: HEADER_Z_INDEX,
-  display: `${displayVar.display}`,
+  display: `${styleVar.display}`,
   width: '100%',
-  background: colors.gradationBlue,
+  background: `${styleVar.background}`,
 });
 
 export const headerContainer = style({

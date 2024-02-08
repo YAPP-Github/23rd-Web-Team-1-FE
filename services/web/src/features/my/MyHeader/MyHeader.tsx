@@ -27,7 +27,15 @@ async function MyHeader() {
       <MyProfile myInfo={myInfo} />
       <Tabs tabInfos={TAB_ITEMS} />
 
-      <HeaderFixed leftAddon={<MyProfileCard myInfo={myInfo} />}>
+      <HeaderFixed
+        leftAddon={<MyProfileCard myInfo={myInfo} />}
+        rightAddon={
+          <>
+            <Icon name="share-white" />
+            <Icon name="list-white" />
+          </>
+        }
+      >
         <Tabs tabInfos={TAB_ITEMS} />
       </HeaderFixed>
     </div>
