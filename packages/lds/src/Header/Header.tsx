@@ -9,10 +9,11 @@ import { headerContainer, rightItem } from './Header.css';
 
 interface Props {
   leftAddon?: React.ReactNode;
+  rightAddon?: React.ReactNode;
   className?: string;
 }
 
-const Header = ({ leftAddon, className }: Props) => {
+const Header = ({ leftAddon, rightAddon, className }: Props) => {
   return (
     <header className={clsx(headerContainer, className)}>
       {leftAddon ? (
@@ -22,10 +23,8 @@ const Header = ({ leftAddon, className }: Props) => {
           <Icon name="logo" size={72} height={24} />
         </Link>
       )}
-      <div className={rightItem}>
-        <Icon name="share-white" />
-        <Icon name="list-white" />
-      </div>
+
+      <div className={rightItem}>{rightAddon}</div>
     </header>
   );
 };

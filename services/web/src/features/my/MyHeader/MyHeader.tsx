@@ -1,5 +1,5 @@
 import { getMyInfoWithServer } from '@api/myInfo';
-import { Header, HeaderFixed, Tabs } from '@linker/lds';
+import { Header, HeaderFixed, Icon, Tabs } from '@linker/lds';
 
 import { myHeaderContainer } from './MyHeader.css';
 import MyProfile from './MyProfile';
@@ -16,7 +16,14 @@ async function MyHeader() {
 
   return (
     <div className={myHeaderContainer}>
-      <Header />
+      <Header
+        rightAddon={
+          <>
+            <Icon name="share-white" />
+            <Icon name="list-white" />
+          </>
+        }
+      />
       <MyProfile myInfo={myInfo} />
       <Tabs tabInfos={TAB_ITEMS} />
 
