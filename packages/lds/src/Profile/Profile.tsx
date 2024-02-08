@@ -31,7 +31,6 @@ const Profile = ({ imageUrl, alt = '', className, size = 'large', ...props }: Pr
       alt={alt === '' ? '기본 프로필 이미지' : alt}
       width={PROFILE_SIZE[size]}
       height={PROFILE_SIZE[size]}
-      placeholder="blur"
       className={clsx(profile({ size }), className)}
       {...props}
     />
