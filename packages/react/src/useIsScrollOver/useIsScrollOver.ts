@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 
-const useIsScrolling = (y = 0) => {
-  const [isScrolling, setIsScrolling] = useState(false);
+const useIsScrollOver = (y = 0) => {
+  const [isScrollOver, setIsScrollOver] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (y < window.scrollY) {
-        setIsScrolling(true);
+        setIsScrollOver(true);
 
         return;
       }
 
-      setIsScrolling(false);
+      setIsScrollOver(false);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -21,7 +21,7 @@ const useIsScrolling = (y = 0) => {
     };
   }, [y]);
 
-  return isScrolling;
+  return isScrollOver;
 };
 
-export default useIsScrolling;
+export default useIsScrollOver;

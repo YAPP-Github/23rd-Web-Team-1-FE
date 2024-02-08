@@ -1,6 +1,6 @@
 'use client';
 
-import { useIsScrolling } from '@linker/react';
+import { useIsScrollOver } from '@linker/react';
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 import clsx from 'clsx';
 import { ReactNode, forwardRef } from 'react';
@@ -19,7 +19,7 @@ const MINIMIZE_SCROLL = HEADER_HEIGHT_NUMBER + TAB_HEIGHT_NUMBER + 15;
 
 const FixedHeader = forwardRef<HTMLDivElement, HeaderProps>(
   ({ children, leftAddon, className }: HeaderProps, ref) => {
-    const isScrolling = useIsScrolling(MINIMIZE_SCROLL);
+    const isScrolling = useIsScrollOver(MINIMIZE_SCROLL);
 
     return (
       <div
