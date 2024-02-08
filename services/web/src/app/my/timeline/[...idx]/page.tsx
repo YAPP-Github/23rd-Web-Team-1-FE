@@ -25,7 +25,7 @@ export default async function TimelineSearchPage({
 
 const getScheduleByDay = async (from: string, to: string, limit: number) => {
   const response = await ky.get<TimelineRes>(
-    `/v1/schedules/search/test?from=:${from}&to=:${to}&limit=:${limit}`,
+    `/v1/schedules/search?from=${from}&to=${to}&limit=${limit}`,
   );
 
   return response;

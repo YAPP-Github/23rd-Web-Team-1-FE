@@ -39,9 +39,6 @@ export const feedHandlers = [
   http.get(`${MOCK_API_URL}/v1/schedules/search`, ({ request }) => {
     return HttpResponse.json({ data: upcomingSchedules }, { status: 200 });
   }),
-  http.get(`${MOCK_API_URL}/v1/schedules/search/test`, ({ request }) => {
-    return HttpResponse.json({ data: upcomingSchedules }, { status: 200 });
-  }),
 ];
 
 const my = {

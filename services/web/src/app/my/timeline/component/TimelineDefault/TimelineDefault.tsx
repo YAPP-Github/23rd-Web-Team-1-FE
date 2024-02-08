@@ -21,9 +21,6 @@ const TimelineDefault = ({ timelineItems }: FeedProps) => {
   const startDateYear = format(timelineItems.schedules[0].startDateTime, 'yyyy');
   const [prevYear, setPrevYear] = useState<TimelineItemProps[]>();
   const [nextYear, setNextYear] = useState<TimelineItemProps[]>();
-  const handleItemClick = (id: number) => {
-    router.push(`/schedule/${id}`);
-  };
 
   useEffect(() => {
     if (selectDate === true) {
@@ -77,7 +74,7 @@ const TimelineDefault = ({ timelineItems }: FeedProps) => {
           </section>
           <section className={timelineItemWrapper}>
             {prevYear.map((item) => (
-              <button onClick={() => handleItemClick(item.scheduleId)} key={item.scheduleId}>
+              <button key={item.scheduleId}>
                 <TimelineItem
                   scheduleId={item.scheduleId}
                   profileImgUrl={item.profileImgUrl}
@@ -98,7 +95,7 @@ const TimelineDefault = ({ timelineItems }: FeedProps) => {
           </section>
           <section className={timelineItemWrapper}>
             {nextYear.map((item) => (
-              <button key={item.scheduleId} onClick={() => handleItemClick(item.scheduleId)}>
+              <button key={item.scheduleId}>
                 <TimelineItem
                   scheduleId={item.scheduleId}
                   profileImgUrl={item.profileImgUrl}
@@ -124,7 +121,7 @@ const TimelineDefault = ({ timelineItems }: FeedProps) => {
           </section>
           <section className={timelineItemWrapper}>
             {timelineItems.schedules.map((item) => (
-              <button key={item.scheduleId} onClick={() => handleItemClick(item.scheduleId)}>
+              <button key={item.scheduleId}>
                 <TimelineItem
                   scheduleId={item.scheduleId}
                   profileImgUrl={item.profileImgUrl}

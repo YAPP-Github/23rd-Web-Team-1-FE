@@ -4,6 +4,7 @@ import { HTMLAttributes, ReactNode, forwardRef } from 'react';
 
 import { baseStyle, rightAddonItem } from './Button.css';
 import { FAB } from './FAB/';
+import { Floating } from './Floating';
 import { KakaoLogin } from './KakaoLogin';
 
 interface Props extends Omit<HTMLAttributes<HTMLButtonElement>, 'type'> {
@@ -54,4 +55,4 @@ const Button = forwardRef<HTMLButtonElement, Props>(
   },
 );
 
-export default Object.assign(Button, { FAB, KakaoLogin });
+export default Object.assign(Button, { FAB, KakaoLogin, Floating });

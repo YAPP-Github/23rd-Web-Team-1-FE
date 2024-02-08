@@ -19,10 +19,6 @@ const TimelineSearch = ({ timelineItems }: FeedProps) => {
   const [date, setDate] = useState(new Date());
   const [selectDate, setSelectDate] = useState(false);
 
-  const handleItemClick = (id: number) => {
-    router.push(`/schedule/${id}`);
-  };
-
   useEffect(() => {
     if (selectDate === true) {
       router.push(
@@ -52,7 +48,7 @@ const TimelineSearch = ({ timelineItems }: FeedProps) => {
           </section>
           <section className={timelineItemWrapper}>
             {timelineItems.schedules.map((item) => (
-              <button onClick={() => handleItemClick(item.scheduleId)} key={item.scheduleId}>
+              <button key={item.scheduleId}>
                 <TimelineItem
                   scheduleId={item.scheduleId}
                   profileImgUrl={item.profileImgUrl}

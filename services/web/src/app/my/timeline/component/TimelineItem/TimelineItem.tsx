@@ -3,9 +3,11 @@ import { TimelineItemProps } from '@__server__/mocks/feed';
 import { Icon, List } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { Spacing } from '@linker/lds';
+import { Button } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 import {
@@ -18,6 +20,7 @@ import {
   timelineItemMemoWrapper,
   timelineColorDivider,
   timelineItemHeaderWrapper,
+  floatingDivider,
 } from './TimelineItem.css';
 
 function TimelineItem({
@@ -30,7 +33,15 @@ function TimelineItem({
   profileImgUrl,
   description,
 }: TimelineItemProps) {
+  const router = useRouter();
   const [time, setTime] = useState('');
+  const [kebabClick, setKebabClick] = useState(false);
+  const handleKebabClick = () => {
+    setKebabClick((prev) => !prev);
+  };
+  const handleItemClick = (id: number) => {
+    router.push(`/schedule/${id}`);
+  };
 
   useEffect(() => {
     if (parseInt(format(startDateTime, 'HH')) >= 12) {
@@ -56,7 +67,13 @@ function TimelineItem({
 
       <List className={timelineItemInfoWrapper}>
         <List.Header
-          title={title}
+          title={
+            <button onClick={() => handleItemClick(scheduleId)}>
+              <Txt typography="p1" color={colors.black} fontWeight="bold">
+                {title}
+              </Txt>
+            </button>
+          }
           color={colors.black}
           typograyphy="h7"
           description={
@@ -68,7 +85,7 @@ function TimelineItem({
                 </Txt>
               </div>
 
-              {member !== null && member.length > 0 && (
+              {/* {member !== null && member.length > 0 && (
                 <div className={timelineRowWrapper}>
                   <Icon name="user-gray" size={28} />
                   <Txt typography="p3" color={colors.gray700} fontWeight="regular">
@@ -80,14 +97,29 @@ function TimelineItem({
                     </Txt>
                   )}
                 </div>
-              )}
+              )} */}
             </>
           }
           className={timelineItemHeaderWrapper}
           rightAddon={
-            <button type="button">
-              <Icon name="more-gray" size={28} />
-            </button>
+            <div>
+              <button type="button" onClick={handleKebabClick}>
+                <Icon name="more-gray" size={28} />
+              </button>
+              {kebabClick && (
+                <Button.Floating>
+                  <Button.Floating.Item
+                    text="수정하기"
+                    rightAddon={<Icon name="pencil" size={16} />}
+                  ></Button.Floating.Item>
+                  <div className={floatingDivider}></div>
+                  <Button.Floating.Item
+                    text="삭제하기"
+                    rightAddon={<Icon name="delete" size={16} />}
+                  ></Button.Floating.Item>
+                </Button.Floating>
+              )}
+            </div>
           }
           leftAddon={<div className={timelineColorDivider} style={{ backgroundColor: color }} />}
         />
