@@ -1,0 +1,1 @@
+export { FriendHeader } from './FriendHeader';
