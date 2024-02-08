@@ -21,6 +21,7 @@ const TimelineDefault = ({ timelineItems }: FeedProps) => {
   const startDateYear = format(timelineItems.schedules[0].startDateTime, 'yyyy');
   const [prevYear, setPrevYear] = useState<TimelineItemProps[]>();
   const [nextYear, setNextYear] = useState<TimelineItemProps[]>();
+  const [floatingClick, setFloatingClick] = useState('');
 
   useEffect(() => {
     if (selectDate === true) {
@@ -84,6 +85,8 @@ const TimelineDefault = ({ timelineItems }: FeedProps) => {
                   member={item.member}
                   color={item.color}
                   description={item.description}
+                  floatingClick={floatingClick}
+                  setFloatingClick={setFloatingClick}
                 />
               </button>
             ))}
@@ -105,6 +108,8 @@ const TimelineDefault = ({ timelineItems }: FeedProps) => {
                   member={item.member}
                   color={item.color}
                   description={item.description}
+                  floatingClick={floatingClick}
+                  setFloatingClick={setFloatingClick}
                 />
               </button>
             ))}
@@ -131,6 +136,8 @@ const TimelineDefault = ({ timelineItems }: FeedProps) => {
                   member={item.member}
                   color={item.color}
                   description={item.description}
+                  floatingClick={floatingClick}
+                  setFloatingClick={setFloatingClick}
                 />
               </button>
             ))}

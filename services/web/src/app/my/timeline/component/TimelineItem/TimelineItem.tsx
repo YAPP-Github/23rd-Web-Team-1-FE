@@ -23,6 +23,11 @@ import {
   floatingDivider,
 } from './TimelineItem.css';
 
+interface FloatingProps {
+  floatingClick: string;
+  setFloatingClick: React.Dispatch<React.SetStateAction<string>>;
+}
+
 function TimelineItem({
   title,
   startDateTime,
@@ -32,13 +37,18 @@ function TimelineItem({
   color,
   profileImgUrl,
   description,
-}: TimelineItemProps) {
+  floatingClick,
+  setFloatingClick,
+}: TimelineItemProps & FloatingProps) {
   const router = useRouter();
   const [time, setTime] = useState('');
   const [kebabClick, setKebabClick] = useState(false);
+
   const handleKebabClick = () => {
     setKebabClick((prev) => !prev);
+    setFloatingClick(title);
   };
+
   const handleItemClick = (id: number) => {
     router.push(`/schedule/${id}`);
   };
@@ -106,7 +116,7 @@ function TimelineItem({
               <button type="button" onClick={handleKebabClick}>
                 <Icon name="more-gray" size={28} />
               </button>
-              {kebabClick && (
+              {floatingClick === title && kebabClick ? (
                 <Button.Floating>
                   <Button.Floating.Item
                     text="수정하기"
@@ -118,7 +128,7 @@ function TimelineItem({
                     rightAddon={<Icon name="delete" size={16} />}
                   ></Button.Floating.Item>
                 </Button.Floating>
-              )}
+              ) : null}
             </div>
           }
           leftAddon={<div className={timelineColorDivider} style={{ backgroundColor: color }} />}
