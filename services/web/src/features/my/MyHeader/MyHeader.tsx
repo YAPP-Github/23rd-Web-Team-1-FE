@@ -1,4 +1,4 @@
-import { getMyInfoWithServer } from '@api/myInfo';
+import { getMyInfo } from '@api/myInfo';
 import { Header, HeaderFixed, Icon, Tabs } from '@linker/lds';
 
 import { myHeaderContainer } from './MyHeader.css';
@@ -12,7 +12,7 @@ const TAB_ITEMS = [
 ];
 
 async function MyHeader() {
-  const myInfo = await getMyInfoWithServer();
+  const myInfo = await getMyInfo();
 
   return (
     <div className={myHeaderContainer}>
