@@ -84,3 +84,8 @@ export const scheduleNoteWrapper = style({
   flexDirection: 'column',
   gap: '1.2rem',
 });
+export const floatingDivider = style({
+  width: '100%',
+  height: '0.1rem',
+  background: `${colors.gray200}`,
+});

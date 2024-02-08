@@ -53,6 +53,9 @@ function TimelineItem({
     router.push(`/schedule/${id}`);
   };
 
+  const handleEditClick = () => {};
+  const handleDeleteClick = () => {};
+
   useEffect(() => {
     if (parseInt(format(startDateTime, 'HH')) >= 12) {
       setTime(`오후 ${format(startDateTime, 'HH:mm')} - ${format(endDateTime, 'HH:mm')}`);
@@ -117,14 +120,16 @@ function TimelineItem({
                 <Icon name="more-gray" size={28} />
               </button>
               {floatingClick === title && kebabClick ? (
-                <Button.Floating>
+                <Button.Floating floatingType="TIMELINE">
                   <Button.Floating.Item
                     text="수정하기"
+                    onClick={handleEditClick}
                     rightAddon={<Icon name="pencil" size={16} />}
                   ></Button.Floating.Item>
                   <div className={floatingDivider}></div>
                   <Button.Floating.Item
                     text="삭제하기"
+                    onClick={handleDeleteClick}
                     rightAddon={<Icon name="delete" size={16} />}
                   ></Button.Floating.Item>
                 </Button.Floating>

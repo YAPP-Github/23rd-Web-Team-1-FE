@@ -8,6 +8,7 @@ import { Txt } from '../../Txt';
 interface Props extends Omit<HTMLAttributes<HTMLButtonElement>, 'type'> {
   text: string;
   rightAddon: ReactNode;
+  onClick: () => void;
 }
 // 플로팅 버튼의 두가지 종류 -> 오른쪽이 아이콘, 오른쪽이 원
 

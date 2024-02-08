@@ -4,6 +4,7 @@ import { MemberProps } from '@__server__/mocks/feed';
 import { List } from '@linker/lds';
 import { Icon } from '@linker/lds';
 import { Txt } from '@linker/lds';
+import { Button } from '@linker/lds';
 import { colors } from '@linker/styles';
 import clsx from 'clsx';
 import { format, getHours, getMinutes } from 'date-fns';
@@ -27,6 +28,7 @@ import {
   scheduleCalendarDropDownElipse,
   calendarElipseColor,
   scheduleTitleTimeColWrapper,
+  floatingDivider,
 } from './Schedule.css';
 
 interface ScheduleProps {
@@ -39,7 +41,7 @@ interface ScheduleProps {
   member: MemberProps[] | null;
   description: string | null;
 }
-
+// eslint-disable-next-line max-lines-per-function
 export const Schedule = ({
   title,
   profileImgUrl,
@@ -52,6 +54,10 @@ export const Schedule = ({
   const router = useRouter();
   const [startTime, setStartTime] = useState('');
   const [endTime, setEndTime] = useState('');
+  const [floatingClick, setFloatingClick] = useState(false);
+  const handleFloatingClick = () => {
+    setFloatingClick((prev) => !prev);
+  };
 
   useEffect(() => {
     if (getHours(startDateTime) >= 12) {
@@ -74,6 +80,7 @@ export const Schedule = ({
   const handleNoteClick = () => {
     router.push('/schedule/1/note');
   };
+  const handleCalendarToggleClick = () => {};
 
   return (
     <section className={scheduleWrapper}>
@@ -96,7 +103,7 @@ export const Schedule = ({
           <Txt typography="h5">{title}</Txt>
         </div>
         <div className={scheduleTitleTimeColWrapper}>
-          <div className={scheduleTitleTimeWrapper}>
+          {/* <div className={scheduleTitleTimeWrapper}>
             <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
               {format(startDateTime, 'yyyy. MM. dd')}
             </Txt>
@@ -107,8 +114,8 @@ export const Schedule = ({
             <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
               {startTime}
             </Txt>
-          </div>
-          <div className={scheduleTitleTimeWrapper}>
+          </div> */}
+          {/* <div className={scheduleTitleTimeWrapper}>
             <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
               {format(endDateTime, 'yyyy. MM. dd')}
             </Txt>
@@ -119,7 +126,7 @@ export const Schedule = ({
             <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
               {endTime}
             </Txt>
-          </div>
+          </div> */}
         </div>
       </article>
 
@@ -138,7 +145,39 @@ export const Schedule = ({
                 <Txt typography="p1" fontWeight="medium">
                   직장
                 </Txt>
-                <Icon name="down" size={20} />
+                <button onClick={handleFloatingClick}>
+                  <Icon name="down" size={20} />
+                </button>
+                {floatingClick ? (
+                  <div>
+                    <Button.Floating floatingType="SCHEDULE">
+                      <Button.Floating.Item
+                        text="개인일정"
+                        rightAddon={
+                          <div
+                            className={clsx(
+                              scheduleCalendarDropDownElipse,
+                              calendarElipseColor.personal,
+                            )}
+                          ></div>
+                        }
+                      ></Button.Floating.Item>
+                      <div className={floatingDivider}></div>
+                      <Button.Floating.Item
+                        text="생일"
+                        onClick={handleCalendarToggleClick}
+                        rightAddon={
+                          <div
+                            className={clsx(
+                              scheduleCalendarDropDownElipse,
+                              calendarElipseColor.birthday,
+                            )}
+                          ></div>
+                        }
+                      ></Button.Floating.Item>
+                    </Button.Floating>
+                  </div>
+                ) : null}
               </div>
             </button>
           }
