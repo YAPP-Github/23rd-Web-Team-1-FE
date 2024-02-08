@@ -16,7 +16,7 @@ const PROFILE_SIZE = {
 type ProfileSize = keyof typeof PROFILE_SIZE;
 
 interface Props extends Omit<ImageProps, 'src' | 'alt'> {
-  imageUrl?: string;
+  imageUrl?: string | null;
   alt?: string;
   className?: string;
   size?: ProfileSize;
