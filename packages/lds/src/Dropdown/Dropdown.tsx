@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 
 import DropdownItem from './DropdownItem';
 
-interface BaseProps extends Omit<HTMLAttributes<HTMLButtonElement>, 'type'> {
+interface BaseProps extends HTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   className?: string;
 }
