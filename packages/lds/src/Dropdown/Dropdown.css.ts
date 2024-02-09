@@ -25,7 +25,7 @@ export const scheduleContainer = style({
   right: '0.2rem',
   display: 'inline-block',
   borderRadius: '1.6rem',
-  background: colors.white,
+  background: colors.gray000,
   zIndex: '10',
   bottom: '-10rem',
 });
