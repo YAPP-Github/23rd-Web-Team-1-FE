@@ -18,7 +18,7 @@ const TimelineSearch = ({ timelineItems }: FeedProps) => {
   const router = useRouter();
   const [date, setDate] = useState(new Date());
   const [selectDate, setSelectDate] = useState(false);
-  const [floatingClick, setFloatingClick] = useState('');
+  const [dropdownClick, setDropdownClick] = useState('');
 
   useEffect(() => {
     if (selectDate === true) {
@@ -59,8 +59,8 @@ const TimelineSearch = ({ timelineItems }: FeedProps) => {
                   member={item.member}
                   color={item.color}
                   description={item.description}
-                  floatingClick={floatingClick}
-                  setFloatingClick={setFloatingClick}
+                  dropdownClick={dropdownClick}
+                  setDropdownClick={setDropdownClick}
                 />
               </button>
             ))}

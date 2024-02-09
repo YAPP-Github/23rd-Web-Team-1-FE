@@ -4,7 +4,7 @@ import { MemberProps } from '@__server__/mocks/feed';
 import { List } from '@linker/lds';
 import { Icon } from '@linker/lds';
 import { Txt } from '@linker/lds';
-import { Button } from '@linker/lds';
+import { Dropdown } from '@linker/lds';
 import { colors } from '@linker/styles';
 import clsx from 'clsx';
 import { format, getHours, getMinutes } from 'date-fns';
@@ -28,7 +28,8 @@ import {
   scheduleCalendarDropDownElipse,
   calendarElipseColor,
   scheduleTitleTimeColWrapper,
-  floatingDivider,
+  dropdownContainer,
+  dropdownDivider,
 } from './Schedule.css';
 
 interface ScheduleProps {
@@ -54,9 +55,9 @@ export const Schedule = ({
   const router = useRouter();
   const [startTime, setStartTime] = useState('');
   const [endTime, setEndTime] = useState('');
-  const [floatingClick, setFloatingClick] = useState(false);
-  const handleFloatingClick = () => {
-    setFloatingClick((prev) => !prev);
+  const [dropdownClick, setDropdownClick] = useState(false);
+  const handleDropdownClick = () => {
+    setDropdownClick((prev) => !prev);
   };
 
   useEffect(() => {
@@ -145,13 +146,13 @@ export const Schedule = ({
                 <Txt typography="p1" fontWeight="medium">
                   직장
                 </Txt>
-                <button onClick={handleFloatingClick}>
+                <button onClick={handleDropdownClick}>
                   <Icon name="down" size={20} />
                 </button>
-                {floatingClick ? (
+                {dropdownClick ? (
                   <div>
-                    <Button.Floating floatingType="SCHEDULE">
-                      <Button.Floating.Item
+                    <Dropdown className={dropdownContainer}>
+                      <Dropdown.Item
                         text="개인일정"
                         onClick={handleCalendarToggleClick}
                         rightAddon={
@@ -162,9 +163,9 @@ export const Schedule = ({
                             )}
                           ></div>
                         }
-                      ></Button.Floating.Item>
-                      <div className={floatingDivider}></div>
-                      <Button.Floating.Item
+                      ></Dropdown.Item>
+                      <div className={dropdownDivider}></div>
+                      <Dropdown.Item
                         text="생일"
                         onClick={handleCalendarToggleClick}
                         rightAddon={
@@ -175,8 +176,8 @@ export const Schedule = ({
                             )}
                           ></div>
                         }
-                      ></Button.Floating.Item>
-                    </Button.Floating>
+                      ></Dropdown.Item>
+                    </Dropdown>
                   </div>
                 ) : null}
               </div>

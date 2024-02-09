@@ -3,7 +3,7 @@ import { TimelineItemProps } from '@__server__/mocks/feed';
 import { Icon, List } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { Spacing } from '@linker/lds';
-import { Button } from '@linker/lds';
+import { Dropdown } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
@@ -20,12 +20,13 @@ import {
   timelineItemMemoWrapper,
   timelineColorDivider,
   timelineItemHeaderWrapper,
-  floatingDivider,
+  dropdownContainer,
+  dropdownDivider,
 } from './TimelineItem.css';
 
-interface FloatingProps {
-  floatingClick: string;
-  setFloatingClick: React.Dispatch<React.SetStateAction<string>>;
+interface DropdownProps {
+  dropdownClick: string;
+  setDropdownClick: React.Dispatch<React.SetStateAction<string>>;
 }
 
 function TimelineItem({
@@ -37,16 +38,16 @@ function TimelineItem({
   color,
   profileImgUrl,
   description,
-  floatingClick,
-  setFloatingClick,
-}: TimelineItemProps & FloatingProps) {
+  dropdownClick,
+  setDropdownClick,
+}: TimelineItemProps & DropdownProps) {
   const router = useRouter();
   const [time, setTime] = useState('');
-  const [kebabClick, setKebabClick] = useState(false);
+  const [isOpenDropdown, setIsOpenDropdown] = useState(false);
 
-  const handleKebabClick = () => {
-    setKebabClick((prev) => !prev);
-    setFloatingClick(title);
+  const handleDropdownClick = () => {
+    setIsOpenDropdown((prev) => !prev);
+    setDropdownClick(title);
   };
 
   const handleItemClick = (id: number) => {
@@ -116,23 +117,23 @@ function TimelineItem({
           className={timelineItemHeaderWrapper}
           rightAddon={
             <div>
-              <button type="button" onClick={handleKebabClick}>
+              <button type="button" onClick={handleDropdownClick}>
                 <Icon name="more-gray" size={28} />
               </button>
-              {floatingClick === title && kebabClick ? (
-                <Button.Floating floatingType="TIMELINE">
-                  <Button.Floating.Item
+              {dropdownClick === title && isOpenDropdown ? (
+                <Dropdown className={dropdownContainer}>
+                  <Dropdown.Item
                     text="수정하기"
                     onClick={handleEditClick}
                     rightAddon={<Icon name="pencil" size={16} />}
-                  ></Button.Floating.Item>
-                  <div className={floatingDivider}></div>
-                  <Button.Floating.Item
+                  ></Dropdown.Item>
+                  <div className={dropdownDivider}></div>
+                  <Dropdown.Item
                     text="삭제하기"
                     onClick={handleDeleteClick}
                     rightAddon={<Icon name="delete" size={16} />}
-                  ></Button.Floating.Item>
-                </Button.Floating>
+                  ></Dropdown.Item>
+                </Dropdown>
               ) : null}
             </div>
           }
