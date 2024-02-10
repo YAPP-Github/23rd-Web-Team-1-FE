@@ -8,6 +8,7 @@ export * from './HorizonScroller';
 export * from './Icon';
 export * from './Layout';
 export * from './List';
+export * from './Logo';
 export * from './Modal';
 export * from './Profile';
 export * from './SearchInput';

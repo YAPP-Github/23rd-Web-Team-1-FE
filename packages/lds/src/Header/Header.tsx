@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 
-import { Icon } from '@linker/lds';
+import { Logo } from '@linker/lds';
 
 import { headerContainer, rightItem } from './Header.css';
 
@@ -20,7 +20,7 @@ const Header = ({ leftAddon, rightAddon, className }: Props) => {
         <>{leftAddon}</>
       ) : (
         <Link href="/my/feed">
-          <Icon name="logo" size={72} height={24} />
+          <Logo />
         </Link>
       )}
 
