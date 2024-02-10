@@ -4,6 +4,7 @@ const Logo = () => {
   return (
     <Image
       src="https://static.im-linker.com/icons/logo.svg"
+      blurDataURL="https://static.im-linker.com/icons/logo.svg"
       alt="Linker ogo"
       width={72}
       height={24}
