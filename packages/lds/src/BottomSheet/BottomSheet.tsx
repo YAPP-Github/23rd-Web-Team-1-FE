@@ -1,7 +1,7 @@
 'use client';
 
 import clsx from 'clsx';
-import { ReactNode, useState } from 'react';
+import { ReactNode, useCallback, useState } from 'react';
 import { useSpring, a, config } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 
@@ -24,13 +24,18 @@ const BottomSheet = ({ className, children, height }: Props) => {
     set({ y: 0, immediate: false, config: canceled ? config.wobbly : config.stiff });
   };
 
-  const handleClose = (velocity = 0) => {
-    set({ y: height, immediate: false, config: { ...config.stiff, velocity } });
+  const handleClose = useCallback(
+    (velocity = 0) => {
+      set({ y: height, immediate: false, config: { ...config.stiff, velocity } });
 
-    setTimeout(() => {
-      setIsOpen(false);
-    }, 200);
-  };
+      const timer = setTimeout(() => {
+        setIsOpen(false);
+      }, 200);
+
+      return () => clearTimeout(timer);
+    },
+    [height, set],
+  );
 
   const bind = useDrag(
     ({ last, vxvy: [, vy], movement: [, my], cancel, canceled }) => {
