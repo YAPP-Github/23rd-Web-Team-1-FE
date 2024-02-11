@@ -114,6 +114,16 @@ export const Template: Story = {
             <Icon name="user" />
             <Txt typography="p1">user</Txt>
           </div>
+
+          <div className={iconWrapper}>
+            <Icon name="share-white" />
+            <Txt typography="p1">share-white</Txt>
+          </div>
+
+          <div className={iconWrapper}>
+            <Icon name="list-white" />
+            <Txt typography="p1">list-white</Txt>
+          </div>
         </div>
 
         <br />
@@ -143,6 +153,11 @@ export const Template: Story = {
           <div className={iconWrapper}>
             <Icon name="question-fill-purple" />
             <Txt typography="p1">question-fill-purple</Txt>
+          </div>
+
+          <div className={iconWrapper}>
+            <Icon name="logo" />
+            <Txt typography="p1">logo</Txt>
           </div>
         </div>
       </>

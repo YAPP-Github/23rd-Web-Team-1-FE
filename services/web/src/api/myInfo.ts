@@ -3,7 +3,7 @@ import { ky } from '@linker/ky';
 
 import { getTokens } from '@utils/token/server';
 
-export const getMyInfoWithServer = () => {
+export const getMyInfo = () => {
   if (getTokens().accessToken == null) {
     return null;
   }

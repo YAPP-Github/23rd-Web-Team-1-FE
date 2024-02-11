@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const dehydratedState = dehydrate(queryClient);
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={pretendard.className}>
         <Providers>
           <HydrationBoundary state={dehydratedState}>{children}</HydrationBoundary>

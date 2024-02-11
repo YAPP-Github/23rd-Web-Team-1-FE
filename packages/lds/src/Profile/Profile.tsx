@@ -6,6 +6,7 @@ import Image, { ImageProps } from 'next/image';
 import { profile } from './Profile.css';
 
 const PROFILE_SIZE = {
+  xxLarge: 90,
   xLarge: 64,
   large: 56,
   medium: 48,
@@ -15,7 +16,7 @@ const PROFILE_SIZE = {
 type ProfileSize = keyof typeof PROFILE_SIZE;
 
 interface Props extends Omit<ImageProps, 'src' | 'alt'> {
-  imageUrl?: string;
+  imageUrl?: string | null;
   alt?: string;
   className?: string;
   size?: ProfileSize;
@@ -31,8 +32,7 @@ const Profile = ({ imageUrl, alt = '', className, size = 'large', ...props }: Pr
       alt={alt === '' ? '기본 프로필 이미지' : alt}
       width={PROFILE_SIZE[size]}
       height={PROFILE_SIZE[size]}
-      placeholder="blur"
-      className={clsx(profile, className)}
+      className={clsx(profile({ size }), className)}
       {...props}
     />
   );

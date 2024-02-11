@@ -3,7 +3,6 @@
 import { MyInfo } from '@/types/myInfo';
 import { Button, Icon, Modal, Profile, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
-import clsx from 'clsx';
 import { useRouter } from 'next/navigation';
 
 import {
@@ -17,11 +16,10 @@ import {
 } from './MyProfile.css';
 
 interface ProfileProps {
-  isMinimize: boolean;
   myInfo: MyInfo | null;
 }
 
-function MyProfile({ isMinimize, myInfo }: ProfileProps) {
+function MyProfile({ myInfo }: ProfileProps) {
   const router = useRouter();
 
   const handleLoginClick = () => {
@@ -33,12 +31,12 @@ function MyProfile({ isMinimize, myInfo }: ProfileProps) {
   };
 
   return (
-    <section className={clsx(profileWrapper, isMinimize && 'minimize')}>
+    <div className={profileWrapper}>
       {myInfo == null ? (
         <Modal>
           <Modal.Trigger>
             <div className={profileContainer}>
-              <Profile className={profileImage} size="xLarge" />
+              <Profile className={profileImage} size="xLarge" priority />
 
               <div className={profileContent}>
                 <div className={profileName}>
@@ -65,7 +63,12 @@ function MyProfile({ isMinimize, myInfo }: ProfileProps) {
         </Modal>
       ) : (
         <div className={profileContainer}>
-          <Profile imageUrl={myInfo.profileImgUrl} className={profileImage} size="xLarge" />
+          <Profile
+            imageUrl={myInfo.profileImgUrl}
+            className={profileImage}
+            size="xLarge"
+            priority
+          />
           <div className={profileContent}>
             <div className={profileName}>
               <Txt typography="h5" fontWeight="extrabold" color={colors.white}>
@@ -88,7 +91,7 @@ function MyProfile({ isMinimize, myInfo }: ProfileProps) {
           </div>
         </div>
       )}
-    </section>
+    </div>
   );
 }
 

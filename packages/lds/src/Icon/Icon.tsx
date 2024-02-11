@@ -2,7 +2,7 @@ import Image, { ImageProps } from 'next/image';
 
 const bucket = 'https://static.im-linker.com';
 
-interface Props extends Omit<ImageProps, 'src' | 'alt' | 'width' | 'height'> {
+interface Props extends Omit<ImageProps, 'src' | 'alt' | 'width'> {
   name: string;
   size?: number;
 }
