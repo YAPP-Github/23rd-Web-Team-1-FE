@@ -43,17 +43,22 @@ export const buttonText = style({
 
 export const dialog = style({
   position: 'fixed',
-  left: 0,
   right: 0,
   bottom: 0,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-end',
   gap: 12,
-  maxWidth: '68rem',
+  maxWidth: '8.8rem',
   width: '100%',
   margin: '0 auto',
   padding: '1.6rem 2rem 7.2rem 2rem',
+
+  '@media': {
+    'screen and (min-width: 680px)': {
+      right: 'calc((100% - 68rem) / 2)',
+    },
+  },
 });
 
 export const linkButton = style({

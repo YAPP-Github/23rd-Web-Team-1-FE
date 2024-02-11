@@ -24,6 +24,7 @@ export type OverlayTheme = 'dark' | 'transparent';
 interface Props {
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
   motionVariants?: MotionVariants;
   open: boolean;
   overlayTheme?: OverlayTheme;
@@ -34,6 +35,7 @@ interface Props {
 const DialogBase = ({
   children,
   className,
+  style,
   open,
   overlayTheme,
   motionVariants,
@@ -54,19 +56,19 @@ const DialogBase = ({
               open={open}
               onClose={onOpenChange}
               className={dialogOverlay({ overlayTheme })}
+            />
+            <motion.div
+              role="dialog"
+              key={`dialog-content-${id}`}
+              initial="close"
+              animate={open ? 'open' : 'close'}
+              variants={motionVariants ?? baseMotionVariants}
+              transition={baseTransition}
+              className={className}
+              style={style}
             >
-              <motion.div
-                role="dialog"
-                key={`dialog-content-${id}`}
-                initial="close"
-                animate={open ? 'open' : 'close'}
-                variants={motionVariants ?? baseMotionVariants}
-                transition={baseTransition}
-                className={className}
-              >
-                {children}
-              </motion.div>
-            </DialogOverlay>
+              {children}
+            </motion.div>
           </AnimatePresence>
         </DialogPortal>
       )}
@@ -90,7 +92,7 @@ interface DialogOverlayProps {
   open?: boolean;
   onClose?: MouseEventHandler<HTMLDivElement>;
   className: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const DialogOverlay = ({ open, onClose, className, children }: DialogOverlayProps) => {
