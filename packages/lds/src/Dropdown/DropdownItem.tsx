@@ -11,6 +11,7 @@ interface Props extends Omit<HTMLAttributes<HTMLButtonElement>, 'type'> {
   onClick: () => void;
 }
 
+// 클릭된 상태, 클릭 이벤트 함수 내장하기!
 const DropdownItem = ({ text, rightAddon }: Props) => {
   return (
     <div className={container}>

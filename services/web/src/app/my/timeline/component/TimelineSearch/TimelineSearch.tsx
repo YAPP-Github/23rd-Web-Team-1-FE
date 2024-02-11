@@ -1,5 +1,5 @@
 'use client';
-import { TimelineRes } from '@__server__/mocks/feed';
+
 import { Calendar, Spacing } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
@@ -8,17 +8,14 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 import { timelineItemWrapper, timelineMonthWrapper } from './TimelineSearch.css';
+import { TimelineRes } from '../../types/schedule';
 import TimelineItem from '../TimelineItem/TimelineItem';
 
-interface FeedProps {
-  timelineItems: TimelineRes;
-}
-
-const TimelineSearch = ({ timelineItems }: FeedProps) => {
+const TimelineSearch = ({ schedules }: TimelineRes) => {
   const router = useRouter();
   const [date, setDate] = useState(new Date());
   const [selectDate, setSelectDate] = useState(false);
-  const [dropdownClick, setDropdownClick] = useState('');
+  const [dropdownClick, setDropdownClick] = useState(-1);
 
   useEffect(() => {
     if (selectDate === true) {
@@ -48,7 +45,7 @@ const TimelineSearch = ({ timelineItems }: FeedProps) => {
             </Txt>
           </section>
           <section className={timelineItemWrapper}>
-            {timelineItems.schedules.map((item) => (
+            {schedules.map((item) => (
               <button key={item.scheduleId}>
                 <TimelineItem
                   scheduleId={item.scheduleId}
@@ -56,7 +53,7 @@ const TimelineSearch = ({ timelineItems }: FeedProps) => {
                   title={item.title}
                   startDateTime={item.startDateTime}
                   endDateTime={item.endDateTime}
-                  member={item.member}
+                  contacts={item.contacts}
                   color={item.color}
                   description={item.description}
                   dropdownClick={dropdownClick}

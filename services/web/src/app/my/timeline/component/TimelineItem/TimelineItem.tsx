@@ -1,5 +1,4 @@
 'use client';
-import { TimelineItemProps } from '@__server__/mocks/feed';
 import { Icon, List } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { Spacing } from '@linker/lds';
@@ -23,10 +22,11 @@ import {
   dropdownContainer,
   dropdownDivider,
 } from './TimelineItem.css';
+import { TimelineItemProps } from '../../types/schedule';
 
 interface DropdownProps {
-  dropdownClick: string;
-  setDropdownClick: React.Dispatch<React.SetStateAction<string>>;
+  dropdownClick: number;
+  setDropdownClick: React.Dispatch<React.SetStateAction<number>>;
 }
 
 function TimelineItem({
@@ -34,7 +34,7 @@ function TimelineItem({
   startDateTime,
   endDateTime,
   scheduleId,
-  member,
+  contacts,
   color,
   profileImgUrl,
   description,
@@ -43,11 +43,11 @@ function TimelineItem({
 }: TimelineItemProps & DropdownProps) {
   const router = useRouter();
   const [time, setTime] = useState('');
-  const [isOpenDropdown, setIsOpenDropdown] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleDropdownClick = () => {
-    setIsOpenDropdown((prev) => !prev);
-    setDropdownClick(title);
+    setIsDropdownOpen((prev) => !prev);
+    setDropdownClick(scheduleId);
   };
 
   const handleItemClick = (id: number) => {
@@ -58,10 +58,16 @@ function TimelineItem({
   const handleDeleteClick = () => {};
 
   useEffect(() => {
+    if (dropdownClick === scheduleId) {
+      setIsDropdownOpen(true);
+    }
+  }, [dropdownClick, title]);
+
+  useEffect(() => {
     if (parseInt(format(startDateTime, 'HH')) >= 12) {
-      setTime(`오후 ${format(startDateTime, 'HH:mm')} - ${format(endDateTime, 'HH:mm')}`);
+      // setTime(`오후 ${format(startDateTime, 'HH:mm')} - ${format(endDateTime, 'HH:mm')}`);
     } else {
-      setTime(`오전 ${format(startDateTime, 'HH:mm')} - ${format(endDateTime, 'HH:mm')}`);
+      // setTime(`오전 ${format(startDateTime, 'HH:mm')} - ${format(endDateTime, 'HH:mm')}`);
     }
   }, [startDateTime, endDateTime]);
 
@@ -120,7 +126,7 @@ function TimelineItem({
               <button type="button" onClick={handleDropdownClick}>
                 <Icon name="more-gray" size={28} />
               </button>
-              {dropdownClick === title && isOpenDropdown ? (
+              {dropdownClick === scheduleId && isDropdownOpen && (
                 <Dropdown className={dropdownContainer}>
                   <Dropdown.Item
                     text="수정하기"
@@ -134,7 +140,7 @@ function TimelineItem({
                     rightAddon={<Icon name="delete" size={16} />}
                   ></Dropdown.Item>
                 </Dropdown>
-              ) : null}
+              )}
             </div>
           }
           leftAddon={<div className={timelineColorDivider} style={{ backgroundColor: color }} />}

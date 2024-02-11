@@ -1,12 +1,12 @@
-import { TimelineRes } from '@__server__/mocks/feed';
 import { ky } from '@linker/ky';
 
 import TimelineDefault from './component/TimelineDefault/TimelineDefault';
+import { TimelineRes } from './types/schedule';
 
 export default async function TimelinePage() {
-  const timelineItemsData = await getTimeline();
+  const timelineData = await getTimeline();
 
-  return <TimelineDefault timelineItems={timelineItemsData} />;
+  return <TimelineDefault schedules={timelineData.schedules} />;
 }
 
 const getTimeline = () => {

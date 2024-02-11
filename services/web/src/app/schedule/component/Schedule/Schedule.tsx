@@ -5,6 +5,7 @@ import { List } from '@linker/lds';
 import { Icon } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { Dropdown } from '@linker/lds';
+import { useDropdownContext } from '@linker/lds/src/Dropdown/context';
 import { colors } from '@linker/styles';
 import clsx from 'clsx';
 import { format, getHours, getMinutes } from 'date-fns';
@@ -55,9 +56,9 @@ export const Schedule = ({
   const router = useRouter();
   const [startTime, setStartTime] = useState('');
   const [endTime, setEndTime] = useState('');
-  const [dropdownClick, setDropdownClick] = useState(false);
-  const handleDropdownClick = () => {
-    setDropdownClick((prev) => !prev);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const handleDropdownOpen = () => {
+    setIsDropdownOpen((prev) => !prev);
   };
 
   useEffect(() => {
@@ -146,40 +147,38 @@ export const Schedule = ({
                 <Txt typography="p1" fontWeight="medium">
                   직장
                 </Txt>
-                <button onClick={handleDropdownClick}>
+                <button onClick={handleDropdownOpen}>
                   <Icon name="down" size={20} />
                 </button>
-                {dropdownClick ? (
-                  <div>
-                    <Dropdown className={dropdownContainer}>
-                      <Dropdown.Item
-                        text="개인일정"
-                        onClick={handleCalendarToggleClick}
-                        rightAddon={
-                          <div
-                            className={clsx(
-                              scheduleCalendarDropDownElipse,
-                              calendarElipseColor.personal,
-                            )}
-                          ></div>
-                        }
-                      ></Dropdown.Item>
-                      <div className={dropdownDivider}></div>
-                      <Dropdown.Item
-                        text="생일"
-                        onClick={handleCalendarToggleClick}
-                        rightAddon={
-                          <div
-                            className={clsx(
-                              scheduleCalendarDropDownElipse,
-                              calendarElipseColor.birthday,
-                            )}
-                          ></div>
-                        }
-                      ></Dropdown.Item>
-                    </Dropdown>
-                  </div>
-                ) : null}
+                {isDropdownOpen && (
+                  <Dropdown className={dropdownContainer}>
+                    <Dropdown.Item
+                      text="개인일정"
+                      onClick={handleCalendarToggleClick}
+                      rightAddon={
+                        <div
+                          className={clsx(
+                            scheduleCalendarDropDownElipse,
+                            calendarElipseColor.personal,
+                          )}
+                        ></div>
+                      }
+                    ></Dropdown.Item>
+                    <div className={dropdownDivider}></div>
+                    <Dropdown.Item
+                      text="생일"
+                      onClick={handleCalendarToggleClick}
+                      rightAddon={
+                        <div
+                          className={clsx(
+                            scheduleCalendarDropDownElipse,
+                            calendarElipseColor.birthday,
+                          )}
+                        ></div>
+                      }
+                    ></Dropdown.Item>
+                  </Dropdown>
+                )}
               </div>
             </button>
           }

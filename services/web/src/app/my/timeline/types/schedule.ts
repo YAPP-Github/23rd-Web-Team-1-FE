@@ -1,13 +1,19 @@
 export interface TimelineRes {
   schedules: TimelineItemProps[];
 }
+
+export interface ContactsProps {
+  contactId: number;
+  name: string;
+  profileImgUrl: string;
+}
 export interface TimelineItemProps {
   scheduleId: number;
   title: string;
   profileImgUrl: string | null;
   startDateTime: string;
   endDateTime: string;
-  hex: string;
-  member: string | string[] | null;
-  memo: string | null;
+  color: string;
+  contacts: ContactsProps[] | null;
+  description: string | null;
 }

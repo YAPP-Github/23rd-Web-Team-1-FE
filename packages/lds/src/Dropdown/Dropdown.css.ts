@@ -23,9 +23,22 @@ export const scheduleContainer = style({
   boxShadow: '0px 0px 6px 0px #0000001A',
   position: 'absolute',
   right: '0.2rem',
-  display: 'inline-block',
+  display: 'flex',
+  flexDirection: 'column',
   borderRadius: '1.6rem',
   background: colors.gray000,
   zIndex: '10',
   bottom: '-10rem',
+});
+
+export const dropdownItemContainer = style({
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  padding: '1.4rem',
+});
+
+export const dropdownTrigger = style({
+  width: '100%',
 });
