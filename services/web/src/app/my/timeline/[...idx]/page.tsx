@@ -1,7 +1,7 @@
-import { TimelineRes } from '@__server__/mocks/feed';
 import { ky } from '@linker/ky';
 
 import TimelineSearch from '../component/TimelineSearch/TimelineSearch';
+import { TimelineRes } from '../types/schedule';
 
 export type SearchParamsProps = {
   from: string;
@@ -20,7 +20,7 @@ export default async function TimelineSearchPage({
     searchParams.limit,
   );
 
-  return <TimelineSearch timelineItems={timelineSearchData} />;
+  return <TimelineSearch schedules={timelineSearchData.schedules} />;
 }
 
 const getScheduleByDay = async (from: string, to: string, limit: number) => {
