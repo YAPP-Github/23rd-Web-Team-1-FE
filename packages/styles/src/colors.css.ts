@@ -44,7 +44,7 @@ const baseColors = {
   white: '#ffffff',
   black: '#000000',
   background: '#f1f3f5',
-  overay: 'rgba(0, 0, 0, 0.6)',
+  overlay: 'rgba(0, 0, 0, 0.6)',
   kakao: '#F8DF02',
   kakaoText: '#391B1B',
   ...primary,
