@@ -14,6 +14,7 @@ export const decorators = [
       >
         <Story />
       </ThemeProvider>
+      <div id="portal" />
     </>
   ),
 ];
