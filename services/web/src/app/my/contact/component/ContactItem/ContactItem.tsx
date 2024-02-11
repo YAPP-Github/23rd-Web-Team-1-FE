@@ -9,14 +9,9 @@ import {
   careerTextWrapper,
   imageWrapper,
 } from './ContactItem.css';
+import { ContactData } from '../../types/contact';
 
-interface ContactItemProps {
-  name: string;
-  job: string;
-  association: string;
-  profileImgUrl: string;
-}
-function ContactItem({ name, job, association, profileImgUrl }: ContactItemProps) {
+function ContactItem({ name, profileImgUrl, careers, school, association }: ContactData) {
   return (
     <div className={clsx(contactItemWrapper)}>
       <div className={clsx(textWrapper)}>
@@ -25,13 +20,13 @@ function ContactItem({ name, job, association, profileImgUrl }: ContactItemProps
         </Txt>
         <div className={clsx(careerTextWrapper)}>
           <Txt typography="p4" color={colors.gray700}>
-            {job}
+            {careers}
           </Txt>
           <Txt typography="p4" color={colors.gray700}>
             .
           </Txt>
           <Txt typography="p4" color={colors.gray700}>
-            {association}
+            {association ?? school}
           </Txt>
         </div>
       </div>
