@@ -12,6 +12,7 @@ import {
   searchWrapper,
   nullSearchItemWrapper,
   subtractItemWrapper,
+  textWrapper,
 } from './ContactSearch.css';
 import { ContactDataRes } from '../../../my/contact/types/contact';
 
@@ -22,11 +23,10 @@ export default function ContactSearch({ contacts }: ContactDataRes) {
     <section className={container}>
       <header className={header}>
         <SearchInput placeholder="연락처 검색하기" query={query} setQuery={setQuery} />
-        <button>
-          <Txt typography="p2" fontWeight="regular" color={colors.black}>
-            취소
-          </Txt>
-        </button>
+
+        <Txt typography="p2" fontWeight="regular" color={colors.black} className={textWrapper}>
+          취소
+        </Txt>
       </header>
       <section className={searchWrapper}>
         {contacts.length === 0 ? (
