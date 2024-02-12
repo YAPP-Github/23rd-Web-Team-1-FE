@@ -23,3 +23,7 @@ export const modalBottom = style({
   bottom: '2rem',
   width: '28rem',
 });
+
+export const bottomSpacing = style({
+  visibility: 'hidden',
+});
