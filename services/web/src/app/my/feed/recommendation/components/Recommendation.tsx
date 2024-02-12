@@ -28,9 +28,10 @@ interface RecommendationDTO {
   startDateTime: string;
   endDateTime: string;
   recommendations: NewsDTO[];
+  participantsSummary: string;
 }
 
-const getRecommendation = () => {
+export const getRecommendation = () => {
   return ky.get<RecommendationDTO>('/v1/schedules/upcoming/recommendation');
 };
 
@@ -46,8 +47,7 @@ async function Recommendation() {
 
   return (
     <List className={wrapper}>
-      {/* @todo 일정상세페이지 href 추가필요 */}
-      <Link href="">
+      <Link href={'/recommendation'}>
         <List.Header
           title="대화 주제 추천 받기"
           className={header}
