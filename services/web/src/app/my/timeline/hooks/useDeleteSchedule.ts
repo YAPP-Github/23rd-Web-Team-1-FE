@@ -1,3 +1,4 @@
+'use server';
 import { ky } from '@linker/ky';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 

@@ -2,6 +2,7 @@
 
 import { typography } from '@linker/styles';
 import clsx from 'clsx';
+import { useRouter } from 'next/navigation';
 import { HTMLAttributes, useEffect, useRef } from 'react';
 import { Controller, useForm, useWatch } from 'react-hook-form';
 import { useDebounce } from 'use-debounce';
@@ -31,7 +32,7 @@ const SearchInput = ({ children, className, placeholder, setQuery, query }: Prop
   }, [watchQuery]);
 
   return (
-    <nav className={searchInputContainer}>
+    <button className={searchInputContainer}>
       <Icon name="search" size={24} />
 
       <Controller
@@ -48,7 +49,7 @@ const SearchInput = ({ children, className, placeholder, setQuery, query }: Prop
           />
         )}
       />
-    </nav>
+    </button>
   );
 };
 

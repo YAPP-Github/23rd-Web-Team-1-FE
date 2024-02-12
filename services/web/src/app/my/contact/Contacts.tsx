@@ -1,13 +1,14 @@
 'use client';
 
 import { SearchInput } from '@linker/lds';
-import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
 import { wrapper, searchInputWrapper } from './Contact.css';
 import ContactDefault from './component/ContactDefault/ContactDefault';
 import { ContactDataRes } from './types/contact';
 
-export default function Contact({ contacts }: ContactDataRes) {
+export default function Contacts({ contacts }: ContactDataRes) {
   const [query, setQuery] = useState('');
 
   const onSubmit = () => {};
@@ -19,7 +20,7 @@ export default function Contact({ contacts }: ContactDataRes) {
           <SearchInput placeholder="연락처 검색하기" setQuery={setQuery} query={query} />
         </form>
       </article>
-      <div>{query === '' ? <></> : <ContactDefault contacts={contacts} />}</div>
+      <ContactDefault contacts={contacts} />
     </section>
   );
 }

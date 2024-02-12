@@ -1,6 +1,6 @@
-import Contact from '@app/my/contact/Contact';
 import { ky } from '@linker/ky';
 
+import Contacts from './Contacts';
 import { ContactDataRes } from './types/contact';
 
 export default async function ContactPage() {
@@ -8,7 +8,7 @@ export default async function ContactPage() {
 
   return (
     <div>
-      <Contact contacts={contactData} />
+      <Contacts contacts={contactData} />
     </div>
   );
 }

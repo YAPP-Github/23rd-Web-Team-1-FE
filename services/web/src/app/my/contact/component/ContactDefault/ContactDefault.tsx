@@ -38,7 +38,7 @@ export default function ContactDefault({ contacts }: ContactDataRes) {
             <Icon name="down" size={24} />
           ) : (
             /* @todo 이후 아이콘 나오면 수정 예정 */
-            '＾'
+            <Icon name="up" size={24} />
           )}
         </button>
       </article>

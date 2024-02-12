@@ -20,12 +20,6 @@ function ContactItem({ name, profileImgUrl, careers, school, association }: Cont
         </Txt>
         <div className={clsx(careerTextWrapper)}>
           <Txt typography="p4" color={colors.gray700}>
-            {careers}
-          </Txt>
-          <Txt typography="p4" color={colors.gray700}>
-            .
-          </Txt>
-          <Txt typography="p4" color={colors.gray700}>
             {association ?? school}
           </Txt>
         </div>

@@ -62,7 +62,6 @@ function TimelineItem({
     /* @todo : 수정하기 화면으로 이동 */
   };
   const handleDeleteClick = () => {
-    console.log('삭제하기 클릭');
     deleteDataQuery.mutate(scheduleId);
   };
 
