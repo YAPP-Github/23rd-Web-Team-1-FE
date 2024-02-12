@@ -11,10 +11,9 @@ import { DialogBase } from '../Dialog';
 
 interface Props extends Omit<BottomSheetContext, 'open'> {
   children: ReactNode;
-  className?: string;
 }
 
-const BottomSheet = ({ className, children, height }: Props) => {
+const BottomSheet = ({ children, height }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [{ y }, set] = useSpring(() => ({ y: height }));
