@@ -1,6 +1,8 @@
 import { colors } from '@linker/styles';
 import { createThemeContract, style } from '@vanilla-extract/css';
 
+import { FAB_Z_INDEX } from '../../constants';
+
 export const container = style({
   position: 'fixed',
   right: 0,
@@ -45,6 +47,7 @@ export const dialog = style({
   position: 'fixed',
   right: 0,
   bottom: 0,
+  zIndex: FAB_Z_INDEX,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-end',
