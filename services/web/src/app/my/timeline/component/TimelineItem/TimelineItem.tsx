@@ -1,4 +1,5 @@
 'use client';
+
 import { Icon, List } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { Spacing } from '@linker/lds';
@@ -22,6 +23,7 @@ import {
   dropdownContainer,
   dropdownDivider,
 } from './TimelineItem.css';
+import { useDeleteSchedule } from '../../hooks/useDeleteSchedule';
 import { TimelineItemProps } from '../../types/schedule';
 
 interface DropdownProps {
@@ -36,7 +38,6 @@ function TimelineItem({
   scheduleId,
   contacts,
   color,
-  profileImgUrl,
   description,
   dropdownClick,
   setDropdownClick,
@@ -44,8 +45,11 @@ function TimelineItem({
   const router = useRouter();
   const [time, setTime] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const deleteDataQuery = useDeleteSchedule();
 
-  const handleDropdownClick = () => {
+  const handleDropdownClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+
     setIsDropdownOpen((prev) => !prev);
     setDropdownClick(scheduleId);
   };
@@ -54,8 +58,13 @@ function TimelineItem({
     router.push(`/schedule/${id}`);
   };
 
-  const handleEditClick = () => {};
-  const handleDeleteClick = () => {};
+  const handleEditClick = () => {
+    /* @todo : 수정하기 화면으로 이동 */
+  };
+  const handleDeleteClick = () => {
+    console.log('삭제하기 클릭');
+    deleteDataQuery.mutate(scheduleId);
+  };
 
   useEffect(() => {
     if (dropdownClick === scheduleId) {
@@ -105,19 +114,19 @@ function TimelineItem({
                 </Txt>
               </div>
 
-              {/* {member !== null && member.length > 0 && (
+              {contacts && contacts.length > 0 && (
                 <div className={timelineRowWrapper}>
                   <Icon name="user-gray" size={28} />
                   <Txt typography="p3" color={colors.gray700} fontWeight="regular">
-                    {member[0].name}
+                    {contacts[0].name}
                   </Txt>
-                  {member.length >= 2 && (
+                  {contacts.length >= 2 && (
                     <Txt typography="p3" color={colors.gray500} fontWeight="regular">
-                      {`외 ${member.length - 1}명`}
+                      {`외 ${contacts.length}명`}
                     </Txt>
                   )}
                 </div>
-              )} */}
+              )}
             </>
           }
           className={timelineItemHeaderWrapper}

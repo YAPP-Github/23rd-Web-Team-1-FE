@@ -101,3 +101,15 @@ export const dropdownContainer = style({
   zIndex: '10',
   bottom: '-10rem',
 });
+
+export const deleteDropdownContainer = style({
+  width: '16rem',
+  border: `1px solid ${colors.gray200}`,
+  boxShadow: '0px 0px 6px 0px #0000001A',
+  position: 'absolute',
+  right: '0.2rem',
+  display: 'inline-block',
+  borderRadius: '1.6rem',
+  background: colors.white,
+  zIndex: '10',
+});

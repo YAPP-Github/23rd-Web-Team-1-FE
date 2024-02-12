@@ -18,7 +18,7 @@ const Dropdown = ({ children, className }: Props) => {
 
   return (
     <DropdownProvider dropdownOpen={isOpen} onOpenChange={() => setIsOpen((prev) => !prev)}>
-      <div className={className}>{children}</div>
+      <button className={className}>{children}</button>
     </DropdownProvider>
   );
 };

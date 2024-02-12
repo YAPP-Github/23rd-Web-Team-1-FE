@@ -5,7 +5,6 @@ import { List } from '@linker/lds';
 import { Icon } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { Dropdown } from '@linker/lds';
-import { useDropdownContext } from '@linker/lds/src/Dropdown/context';
 import { colors } from '@linker/styles';
 import clsx from 'clsx';
 import { format, getHours, getMinutes } from 'date-fns';
@@ -31,6 +30,7 @@ import {
   scheduleTitleTimeColWrapper,
   dropdownContainer,
   dropdownDivider,
+  deleteDropdownContainer,
 } from './Schedule.css';
 
 interface ScheduleProps {
@@ -45,6 +45,7 @@ interface ScheduleProps {
 }
 // eslint-disable-next-line max-lines-per-function
 export const Schedule = ({
+  scheduleId,
   title,
   profileImgUrl,
   startDateTime,
@@ -57,6 +58,7 @@ export const Schedule = ({
   const [startTime, setStartTime] = useState('');
   const [endTime, setEndTime] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDeleteDropdownOpen, setIsDeletDropdownOpen] = useState(false);
   const handleDropdownOpen = () => {
     setIsDropdownOpen((prev) => !prev);
   };
@@ -78,11 +80,14 @@ export const Schedule = ({
     router.push(`/my/timeline`);
   };
   const handleEditClick = () => {};
-  const handleMoreClick = () => {};
+  const handleMoreClick = () => {
+    setIsDeletDropdownOpen((prev) => !prev);
+  };
   const handleNoteClick = () => {
     router.push('/schedule/1/note');
   };
   const handleCalendarToggleClick = () => {};
+  const handleDeleteClick = async () => {};
 
   return (
     <section className={scheduleWrapper}>
@@ -96,6 +101,15 @@ export const Schedule = ({
           </button>
           <button onClick={handleMoreClick}>
             <Icon name="more" size={32} />
+            {isDeleteDropdownOpen && (
+              <Dropdown className={deleteDropdownContainer}>
+                <Dropdown.Item
+                  text="삭제하기"
+                  onClick={handleDeleteClick}
+                  rightAddon={<Icon name="delete" size={16} />}
+                ></Dropdown.Item>
+              </Dropdown>
+            )}
           </button>
         </div>
       </header>
@@ -105,7 +119,7 @@ export const Schedule = ({
           <Txt typography="h5">{title}</Txt>
         </div>
         <div className={scheduleTitleTimeColWrapper}>
-          {/* <div className={scheduleTitleTimeWrapper}>
+          <div className={scheduleTitleTimeWrapper}>
             <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
               {format(startDateTime, 'yyyy. MM. dd')}
             </Txt>
@@ -116,7 +130,7 @@ export const Schedule = ({
             <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
               {startTime}
             </Txt>
-          </div> */}
+          </div>
           {/* <div className={scheduleTitleTimeWrapper}>
             <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
               {format(endDateTime, 'yyyy. MM. dd')}

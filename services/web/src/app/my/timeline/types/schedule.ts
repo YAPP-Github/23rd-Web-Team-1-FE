@@ -1,6 +1,12 @@
 export interface TimelineRes {
   schedules: TimelineItemProps[];
 }
+export interface DeleteScheduleRes {
+  responseType: string | null;
+  data: string | null;
+  error: null;
+  debug: null;
+}
 
 export interface ContactsProps {
   contactId: number;

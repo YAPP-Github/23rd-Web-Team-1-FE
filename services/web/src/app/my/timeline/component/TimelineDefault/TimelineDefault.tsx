@@ -37,7 +37,7 @@ const TimelineDefault = ({ schedules }: TimelineRes) => {
   });
   // 연도가 다른 원소의 첫번째 인덱스를 리턴
   const diffIdx = schedules.findIndex((item, index) => {
-    return format(item.startDateTime, 'yyyy') !== startDateYear;
+    return format(item.startDateTime, 'yyyy').toString() !== startDateYear.toString();
   });
 
   useEffect(() => {
@@ -63,7 +63,7 @@ const TimelineDefault = ({ schedules }: TimelineRes) => {
       {/*특정 날짜를 선택하지 않은 경우 */}
 
       {/*연도가 다른 경우 */}
-      {!selectDate && hasDifferentYear && prevYear && nextYear && (
+      {!selectDate && hasDifferentYear === false && prevYear && nextYear && (
         <div>
           <section className={timelineMonthWrapper}>
             <Txt typography="h7" fontWeight="bold" color={colors.black}>
@@ -114,7 +114,7 @@ const TimelineDefault = ({ schedules }: TimelineRes) => {
         </div>
       )}
       {/*연도가 다르지 않은 경우 */}
-      {!selectDate && hasDifferentYear === false && (
+      {!selectDate && hasDifferentYear === true && (
         <div>
           <section className={timelineMonthWrapper}>
             <Txt typography="h7" fontWeight="bold" color={colors.black}>
