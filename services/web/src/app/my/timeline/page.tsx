@@ -1,16 +1,9 @@
-import { TimelineRes } from '@__server__/mocks/feed';
-import { ky } from '@linker/ky';
-
+'use client';
 import TimelineDefault from './component/TimelineDefault/TimelineDefault';
+import { useGetNearSchedule } from './hooks/useGetNearSchedule';
 
-export default async function TimelinePage() {
-  const timelineItemsData = await getTimeline();
+export default function TimelinePage() {
+  const { data } = useGetNearSchedule();
 
-  return <TimelineDefault timelineItems={timelineItemsData} />;
+  return <>{data && <TimelineDefault schedules={data.schedules} />}</>;
 }
-
-const getTimeline = () => {
-  const response = ky.get<TimelineRes>('/v1/schedules/near-term/test2');
-
-  return response;
-};

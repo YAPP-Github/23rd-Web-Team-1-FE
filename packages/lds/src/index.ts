@@ -17,3 +17,4 @@ export * from './Skeleton';
 export * from './Spacing';
 export * from './Tabs';
 export * from './Txt';
+export * from './Dropdown';

@@ -1,5 +1,5 @@
 'use client';
-import { TimelineRes, TimelineItemProps } from '@__server__/mocks/feed';
+
 import { Calendar, Spacing } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
@@ -8,22 +8,17 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 import { timelineItemWrapper, timelineMonthWrapper } from './TimelineDefault.css';
+import { TimelineItemProps, GetTimelineRes } from '../../types/schedule';
 import TimelineItem from '../TimelineItem/TimelineItem';
 
-interface FeedProps {
-  timelineItems: TimelineRes;
-}
-
-const TimelineDefault = ({ timelineItems }: FeedProps) => {
+const TimelineDefault = ({ schedules }: GetTimelineRes) => {
   const router = useRouter();
   const [date, setDate] = useState(new Date());
   const [selectDate, setSelectDate] = useState(false);
-  const startDateYear = format(timelineItems.schedules[0].startDateTime, 'yyyy');
+  const startDateYear = format(schedules[0].startDateTime, 'yyyy');
   const [prevYear, setPrevYear] = useState<TimelineItemProps[]>();
   const [nextYear, setNextYear] = useState<TimelineItemProps[]>();
-  const handleItemClick = (id: number) => {
-    router.push(`/schedule/${id}`);
-  };
+  const [dropdownClick, setDropdownClick] = useState(-1);
 
   useEffect(() => {
     if (selectDate === true) {
@@ -35,23 +30,23 @@ const TimelineDefault = ({ timelineItems }: FeedProps) => {
 
   // 받아온 데이터들 중 다른 연도가 있는지
   // 연도가 하나라도 다른게 판단이 되면 diffYear가 true가됨
-  const hasDifferentYear = timelineItems.schedules.some((item) => {
+  const hasDifferentYear = schedules.some((item) => {
     const formattedYear = format(item.startDateTime, 'yyyy');
 
     return formattedYear === startDateYear;
   });
   // 연도가 다른 원소의 첫번째 인덱스를 리턴
-  const diffIdx = timelineItems.schedules.findIndex((item, index) => {
-    return format(item.startDateTime, 'yyyy') !== startDateYear;
+  const diffIdx = schedules.findIndex((item, index) => {
+    return format(item.startDateTime, 'yyyy').toString() !== startDateYear.toString();
   });
 
   useEffect(() => {
     // prevYear에는 0부터 diffIdx-1까지의 원소 저장
-    setPrevYear(timelineItems.schedules.slice(0, diffIdx));
+    setPrevYear(schedules.slice(0, diffIdx));
 
     // nextYear에는 diffIdx부터 끝까지의 원소 저장
-    setNextYear(timelineItems.schedules.slice(diffIdx));
-  }, [diffIdx, hasDifferentYear, timelineItems.schedules]);
+    setNextYear(schedules.slice(diffIdx));
+  }, [diffIdx, hasDifferentYear, schedules]);
 
   return (
     <>
@@ -68,7 +63,7 @@ const TimelineDefault = ({ timelineItems }: FeedProps) => {
       {/*특정 날짜를 선택하지 않은 경우 */}
 
       {/*연도가 다른 경우 */}
-      {!selectDate && hasDifferentYear && prevYear && nextYear && (
+      {!selectDate && hasDifferentYear === false && prevYear && nextYear && (
         <div>
           <section className={timelineMonthWrapper}>
             <Txt typography="h7" fontWeight="bold" color={colors.black}>
@@ -77,16 +72,18 @@ const TimelineDefault = ({ timelineItems }: FeedProps) => {
           </section>
           <section className={timelineItemWrapper}>
             {prevYear.map((item) => (
-              <button onClick={() => handleItemClick(item.scheduleId)} key={item.scheduleId}>
+              <button key={item.scheduleId}>
                 <TimelineItem
                   scheduleId={item.scheduleId}
                   profileImgUrl={item.profileImgUrl}
                   title={item.title}
                   startDateTime={item.startDateTime}
                   endDateTime={item.endDateTime}
-                  member={item.member}
+                  contacts={item.contacts}
                   color={item.color}
                   description={item.description}
+                  dropdownClick={dropdownClick}
+                  setDropdownClick={setDropdownClick}
                 />
               </button>
             ))}
@@ -98,16 +95,18 @@ const TimelineDefault = ({ timelineItems }: FeedProps) => {
           </section>
           <section className={timelineItemWrapper}>
             {nextYear.map((item) => (
-              <button key={item.scheduleId} onClick={() => handleItemClick(item.scheduleId)}>
+              <button key={item.scheduleId}>
                 <TimelineItem
                   scheduleId={item.scheduleId}
                   profileImgUrl={item.profileImgUrl}
                   title={item.title}
                   startDateTime={item.startDateTime}
                   endDateTime={item.endDateTime}
-                  member={item.member}
+                  contacts={item.contacts}
                   color={item.color}
                   description={item.description}
+                  dropdownClick={dropdownClick}
+                  setDropdownClick={setDropdownClick}
                 />
               </button>
             ))}
@@ -115,7 +114,7 @@ const TimelineDefault = ({ timelineItems }: FeedProps) => {
         </div>
       )}
       {/*연도가 다르지 않은 경우 */}
-      {!selectDate && hasDifferentYear === false && (
+      {!selectDate && hasDifferentYear === true && (
         <div>
           <section className={timelineMonthWrapper}>
             <Txt typography="h7" fontWeight="bold" color={colors.black}>
@@ -123,17 +122,19 @@ const TimelineDefault = ({ timelineItems }: FeedProps) => {
             </Txt>
           </section>
           <section className={timelineItemWrapper}>
-            {timelineItems.schedules.map((item) => (
-              <button key={item.scheduleId} onClick={() => handleItemClick(item.scheduleId)}>
+            {schedules.map((item) => (
+              <button key={item.scheduleId}>
                 <TimelineItem
                   scheduleId={item.scheduleId}
                   profileImgUrl={item.profileImgUrl}
                   title={item.title}
                   startDateTime={item.startDateTime}
                   endDateTime={item.endDateTime}
-                  member={item.member}
+                  contacts={item.contacts}
                   color={item.color}
                   description={item.description}
+                  dropdownClick={dropdownClick}
+                  setDropdownClick={setDropdownClick}
                 />
               </button>
             ))}

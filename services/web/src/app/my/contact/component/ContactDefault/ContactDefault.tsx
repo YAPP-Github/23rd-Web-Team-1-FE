@@ -1,14 +1,10 @@
 'use client';
 
-import { ContactData } from '@__server__/mocks/contact';
 import { Icon, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { clsx } from 'clsx';
 import { useState } from 'react';
 
-interface ContactProps {
-  contactData: ContactData[];
-}
 import {
   profileWrapper,
   totalCountWrapper,
@@ -16,9 +12,10 @@ import {
   favoritesWrapper,
   favoriteDropDown,
 } from './ContactDefault.css';
+import { ContactDataRes } from '../../types/contact';
 import ContactItem from '../ContactItem/ContactItem';
 
-export default function ContactDefault({ contactData }: ContactProps) {
+export default function ContactDefault({ contacts }: ContactDataRes) {
   const [isClickFavorites, setIsClickFavorites] = useState(true);
 
   const onFavoriteClick = () => {
@@ -41,18 +38,20 @@ export default function ContactDefault({ contactData }: ContactProps) {
             <Icon name="down" size={24} />
           ) : (
             /* @todo 이후 아이콘 나오면 수정 예정 */
-            '＾'
+            <Icon name="up" size={24} />
           )}
         </button>
       </article>
       <article className={profileWrapper}>
         {isClickFavorites &&
-          contactData.map((item) => (
+          contacts.map((item) => (
             <ContactItem
               key={item.id}
               name={item.name}
-              job={item.job}
-              association={item.association}
+              school={item.school}
+              careers={item.careers}
+              id={item.id}
+              interests={item.interests}
               profileImgUrl={item.profileImgUrl}
             />
           ))}

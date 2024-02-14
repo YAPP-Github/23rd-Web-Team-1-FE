@@ -84,3 +84,33 @@ export const scheduleNoteWrapper = style({
   flexDirection: 'column',
   gap: '1.2rem',
 });
+export const dropdownDivider = style({
+  width: '100%',
+  height: '0.1rem',
+  background: `${colors.gray200}`,
+});
+export const dropdownContainer = style({
+  width: '16rem',
+  border: `1px solid ${colors.gray200}`,
+  boxShadow: '0px 0px 6px 0px #0000001A',
+  position: 'absolute',
+  right: '0.2rem',
+  display: 'inline-block',
+  borderRadius: '1.6rem',
+  background: colors.white,
+  zIndex: '10',
+  bottom: '-10rem',
+});
+
+export const deleteDropdownContainer = style({
+  width: '16rem',
+  border: `1px solid ${colors.gray200}`,
+  boxShadow: '0px 0px 6px 0px #0000001A',
+  position: 'absolute',
+  right: '0.2rem',
+  bottom: '40rem',
+  display: 'inline-block',
+  borderRadius: '1.6rem',
+  background: colors.white,
+  zIndex: '10',
+});

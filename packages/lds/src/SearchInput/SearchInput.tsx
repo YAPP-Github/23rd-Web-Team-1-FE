@@ -17,23 +17,26 @@ interface Props extends HTMLAttributes<HTMLInputElement> {
   setQuery: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const SearchInput = ({ children, className, placeholder, setQuery, query }: Props) => {
+const SearchInput = ({ children, className, placeholder, query, setQuery }: Props) => {
   const { register, control } = useForm();
+
   const watchQuery = useWatch({
     name: 'search',
     control,
   });
-  const [value] = useDebounce(watchQuery, 1000);
+  const [value] = useDebounce(watchQuery, 100);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setQuery(value);
-  }, [watchQuery]);
+  }, [watchQuery, setQuery]);
+  // if (query === '') {
+  //   setQuery(input);
+  // }
 
   return (
-    <nav className={searchInputContainer}>
+    <button className={searchInputContainer}>
       <Icon name="search" size={24} />
-
       <Controller
         control={control}
         name="search"
@@ -44,11 +47,13 @@ const SearchInput = ({ children, className, placeholder, setQuery, query }: Prop
             className={clsx(searchInput, typography({ type: 'p2' }))}
             placeholder={placeholder}
             ref={inputRef}
-            onChange={(e) => field.onChange(e.target.value)}
+            onChange={(e) => {
+              field.onChange(e.target.value);
+            }}
           />
         )}
       />
-    </nav>
+    </button>
   );
 };
 
