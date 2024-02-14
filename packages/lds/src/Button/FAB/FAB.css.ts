@@ -1,6 +1,8 @@
 import { colors } from '@linker/styles';
 import { createThemeContract, style } from '@vanilla-extract/css';
 
+import { FAB_Z_INDEX } from '../../constants';
+
 export const container = style({
   position: 'fixed',
   right: 0,
@@ -43,17 +45,23 @@ export const buttonText = style({
 
 export const dialog = style({
   position: 'fixed',
-  left: 0,
   right: 0,
   bottom: 0,
+  zIndex: FAB_Z_INDEX,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-end',
   gap: 12,
-  maxWidth: '68rem',
+  maxWidth: '8.8rem',
   width: '100%',
   margin: '0 auto',
   padding: '1.6rem 2rem 7.2rem 2rem',
+
+  '@media': {
+    'screen and (min-width: 680px)': {
+      right: 'calc((100% - 68rem) / 2)',
+    },
+  },
 });
 
 export const linkButton = style({

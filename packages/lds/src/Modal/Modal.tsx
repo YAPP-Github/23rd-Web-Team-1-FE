@@ -3,10 +3,11 @@
 import clsx from 'clsx';
 import { useState, ReactNode } from 'react';
 
-import { modalBottom, modalContent } from './Modal.css';
+import { bottomSpacing, modalBottom, modalContent } from './Modal.css';
 import { ModalProvider, useModalContext } from './context';
 import { DialogBase } from '../Dialog';
 import { OverlayTheme } from '../Dialog/DialogBase';
+import { Spacing } from '../Spacing';
 
 interface Props {
   children: ReactNode;
@@ -70,5 +71,10 @@ interface BottomProps {
 }
 
 function ModalBottom({ children, className }: BottomProps) {
-  return <div className={clsx(modalBottom, className)}>{children}</div>;
+  return (
+    <>
+      <Spacing size={52} className={bottomSpacing} />
+      <div className={clsx(modalBottom, className)}>{children}</div>
+    </>
+  );
 }

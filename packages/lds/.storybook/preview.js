@@ -13,6 +13,7 @@ export const decorators = [
         }}
       >
         <Story />
+        <div id="portal" />
       </ThemeProvider>
     </>
   ),

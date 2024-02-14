@@ -17,7 +17,7 @@ export const dialogOverlay = recipe({
   variants: {
     overlayTheme: {
       dark: {
-        backgroundColor: `${colors.overay}`,
+        backgroundColor: `${colors.overlay}`,
       },
       transparent: {
         backgroundColor: 'transparent',

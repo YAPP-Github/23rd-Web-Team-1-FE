@@ -18,6 +18,7 @@ import {
 import { DialogBase } from '../../Dialog';
 import { Icon } from '../../Icon';
 import { Txt } from '../../Txt';
+import { FAB_Z_INDEX } from '../../constants';
 
 type ButtonType = 'extand' | 'default';
 
@@ -44,13 +45,11 @@ const FAB = ({ children, className, type = 'extand', onClick, ...props }: Props)
   const [isVisible, setIsVisible] = useState(false);
 
   const handleButtonClick = (event: MouseEvent<HTMLButtonElement>) => {
-    onClick?.(event);
-
-    if (fabType === 'extand') {
+    if (fabType === 'default') {
       return;
     }
 
-    setIsVisible((prev) => !prev);
+    onClick?.(event);
   };
 
   useEffect(() => {
@@ -73,6 +72,7 @@ const FAB = ({ children, className, type = 'extand', onClick, ...props }: Props)
     <>
       <motion.div
         className={container}
+        style={{ zIndex: isVisible ? `${FAB_Z_INDEX + 1}` : '' }}
         initial={{
           width: type === 'default' ? '8.8rem' : '100%',
         }}
@@ -80,6 +80,13 @@ const FAB = ({ children, className, type = 'extand', onClick, ...props }: Props)
           width: '8.8rem',
         }}
         transition={{ duration: 0.3, delay: 10 }}
+        onClick={() => {
+          if (fabType === 'extand') {
+            return;
+          }
+
+          setIsVisible((prev) => !prev);
+        }}
       >
         <div className={innerContariner}>
           <button
