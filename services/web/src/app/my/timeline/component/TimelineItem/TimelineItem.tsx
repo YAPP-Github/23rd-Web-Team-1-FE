@@ -73,9 +73,9 @@ function TimelineItem({
 
   useEffect(() => {
     if (parseInt(format(startDateTime, 'HH')) >= 12) {
-      // setTime(`오후 ${format(startDateTime, 'HH:mm')} - ${format(endDateTime, 'HH:mm')}`);
+      setTime(`오후 ${format(startDateTime, 'HH:mm')} - ${format(endDateTime, 'HH:mm')}`);
     } else {
-      // setTime(`오전 ${format(startDateTime, 'HH:mm')} - ${format(endDateTime, 'HH:mm')}`);
+      setTime(`오전 ${format(startDateTime, 'HH:mm')} - ${format(endDateTime, 'HH:mm')}`);
     }
   }, [startDateTime, endDateTime]);
 

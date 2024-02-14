@@ -1,7 +1,7 @@
-import { ky } from '@linker/ky';
+'use client';
 
 import TimelineSearch from '../component/TimelineSearch/TimelineSearch';
-import { TimelineRes } from '../types/schedule';
+import { useGetSearchSchedule } from '../hooks/useGetSearchSchedule';
 
 export type SearchParamsProps = {
   from: string;
@@ -9,24 +9,8 @@ export type SearchParamsProps = {
   limit: number;
 };
 
-export default async function TimelineSearchPage({
-  searchParams,
-}: {
-  searchParams: SearchParamsProps; // 수정된 부분
-}) {
-  const timelineSearchData = await getScheduleByDay(
-    searchParams.from,
-    searchParams.to,
-    searchParams.limit,
-  );
+export default function TimelineSearchPage({ searchParams }: { searchParams: SearchParamsProps }) {
+  const { data } = useGetSearchSchedule(searchParams.from, searchParams.to, searchParams.limit);
 
-  return <TimelineSearch schedules={timelineSearchData.schedules} />;
+  return <>{data && <TimelineSearch schedules={data?.schedules} />}</>;
 }
-
-const getScheduleByDay = async (from: string, to: string, limit: number) => {
-  const response = await ky.get<TimelineRes>(
-    `/v1/schedules/search?from=${from}&to=${to}&limit=${limit}`,
-  );
-
-  return response;
-};

@@ -1,4 +1,4 @@
-export interface TimelineRes {
+export interface GetTimelineRes {
   schedules: TimelineItemProps[];
 }
 export interface DeleteScheduleRes {
@@ -16,7 +16,7 @@ export interface ContactsProps {
 export interface TimelineItemProps {
   scheduleId: number;
   title: string;
-  profileImgUrl: string | null;
+  profileImgUrl: string;
   startDateTime: string;
   endDateTime: string;
   color: string;

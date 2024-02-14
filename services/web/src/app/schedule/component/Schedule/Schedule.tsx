@@ -1,6 +1,6 @@
 'use client';
 
-import { MemberProps } from '@__server__/mocks/feed';
+import { ContactsProps } from '@app/my/timeline/types/schedule';
 import { List } from '@linker/lds';
 import { Icon } from '@linker/lds';
 import { Txt } from '@linker/lds';
@@ -40,7 +40,7 @@ interface ScheduleProps {
   startDateTime: string;
   endDateTime: string;
   color: string;
-  member: MemberProps[] | null;
+  contacts: ContactsProps[] | null;
   description: string | null;
 }
 // eslint-disable-next-line max-lines-per-function
@@ -51,7 +51,7 @@ export const Schedule = ({
   startDateTime,
   endDateTime,
   color,
-  member,
+  contacts,
   description,
 }: ScheduleProps) => {
   const router = useRouter();
@@ -131,7 +131,7 @@ export const Schedule = ({
               {startTime}
             </Txt>
           </div>
-          {/* <div className={scheduleTitleTimeWrapper}>
+          <div className={scheduleTitleTimeWrapper}>
             <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
               {format(endDateTime, 'yyyy. MM. dd')}
             </Txt>
@@ -142,7 +142,7 @@ export const Schedule = ({
             <Txt typography="p1" fontWeight="regular" color={colors.gray950}>
               {endTime}
             </Txt>
-          </div> */}
+          </div>
         </div>
       </article>
 
@@ -205,9 +205,9 @@ export const Schedule = ({
           color={`${colors.gray700}`}
           typograyphy="p1"
         />
-        {member &&
-          member.map((item) => (
-            <div key={item.memberId}>
+        {contacts &&
+          contacts.map((item) => (
+            <div key={item.contactId}>
               <InvitionItem profileImg={item.profileImgUrl} name={item.name} />
             </div>
           ))}

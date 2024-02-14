@@ -8,10 +8,10 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 import { timelineItemWrapper, timelineMonthWrapper } from './TimelineDefault.css';
-import { TimelineItemProps, TimelineRes } from '../../types/schedule';
+import { TimelineItemProps, GetTimelineRes } from '../../types/schedule';
 import TimelineItem from '../TimelineItem/TimelineItem';
 
-const TimelineDefault = ({ schedules }: TimelineRes) => {
+const TimelineDefault = ({ schedules }: GetTimelineRes) => {
   const router = useRouter();
   const [date, setDate] = useState(new Date());
   const [selectDate, setSelectDate] = useState(false);

@@ -1,18 +1,20 @@
-'use server';
-import { ky } from '@linker/ky';
+'use client';
+import { kyClient } from '@linker/ky';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 const deleteSchedule = (scheduleId: number) => {
-  return ky.delete(`/v1/schedules/${scheduleId}`);
+  return kyClient.delete(`/v1/schedules/${scheduleId}`);
 };
 
-export const useDeleteSchedule = () => {
+const useDeleteSchedule = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
     mutationFn: (scheduleId: number) => deleteSchedule(scheduleId),
     onSuccess: (_, scheduleId: number) => {
-      queryClient.invalidateQueries({ queryKey: ['schedule', scheduleId] });
+      queryClient.invalidateQueries({ queryKey: ['schedule'] });
     },
   });
 };
+
+export { useDeleteSchedule, deleteSchedule };
