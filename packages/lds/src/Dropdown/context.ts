@@ -1,12 +1,12 @@
 import { createContext } from '@linker/react';
 
 interface DropdownContext {
-  dropdownOpen: boolean;
+  isOpen: boolean;
   onOpenChange?: () => void;
 }
 
 const context = {
-  dropdownOpen: false,
+  isOpen: false,
   onOpenChange: undefined,
 };
 

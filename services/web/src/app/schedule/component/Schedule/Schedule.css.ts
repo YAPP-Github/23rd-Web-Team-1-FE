@@ -108,6 +108,7 @@ export const deleteDropdownContainer = style({
   boxShadow: '0px 0px 6px 0px #0000001A',
   position: 'absolute',
   right: '0.2rem',
+  bottom: '40rem',
   display: 'inline-block',
   borderRadius: '1.6rem',
   background: colors.white,

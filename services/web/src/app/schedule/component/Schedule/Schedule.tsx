@@ -1,5 +1,6 @@
 'use client';
 
+import { useDeleteSchedule } from '@app/my/timeline/hooks/useDeleteSchedule';
 import { ContactsProps } from '@app/my/timeline/types/schedule';
 import { List } from '@linker/lds';
 import { Icon } from '@linker/lds';
@@ -57,11 +58,7 @@ export const Schedule = ({
   const router = useRouter();
   const [startTime, setStartTime] = useState('');
   const [endTime, setEndTime] = useState('');
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isDeleteDropdownOpen, setIsDeletDropdownOpen] = useState(false);
-  const handleDropdownOpen = () => {
-    setIsDropdownOpen((prev) => !prev);
-  };
+  const deleteDataQuery = useDeleteSchedule();
 
   useEffect(() => {
     if (getHours(startDateTime) >= 12) {
@@ -80,14 +77,16 @@ export const Schedule = ({
     router.push(`/my/timeline`);
   };
   const handleEditClick = () => {};
-  const handleMoreClick = () => {
-    setIsDeletDropdownOpen((prev) => !prev);
-  };
+
   const handleNoteClick = () => {
     router.push('/schedule/1/note');
   };
   const handleCalendarToggleClick = () => {};
-  const handleDeleteClick = async () => {};
+  const handleDeleteClick = () => {
+    deleteDataQuery.mutate(scheduleId);
+
+    router.push('/my/timeline');
+  };
 
   return (
     <section className={scheduleWrapper}>
@@ -99,18 +98,18 @@ export const Schedule = ({
           <button onClick={handleEditClick}>
             <Icon name="pencil" size={28} />
           </button>
-          <button onClick={handleMoreClick}>
-            <Icon name="more" size={32} />
-            {isDeleteDropdownOpen && (
-              <Dropdown className={deleteDropdownContainer}>
-                <Dropdown.Item
-                  text="삭제하기"
-                  onClick={handleDeleteClick}
-                  rightAddon={<Icon name="delete" size={16} />}
-                ></Dropdown.Item>
-              </Dropdown>
-            )}
-          </button>
+          <Dropdown>
+            <Dropdown.Trigger>
+              <Icon name="more" size={32} />
+            </Dropdown.Trigger>
+            <Dropdown.Content className={deleteDropdownContainer}>
+              <Dropdown.Item
+                text="삭제하기"
+                onClick={handleDeleteClick}
+                rightAddon={<Icon name="delete" size={16} />}
+              ></Dropdown.Item>
+            </Dropdown.Content>
+          </Dropdown>
         </div>
       </header>
       <article className={scheduleTitleContainer}>
@@ -161,11 +160,12 @@ export const Schedule = ({
                 <Txt typography="p1" fontWeight="medium">
                   직장
                 </Txt>
-                <button onClick={handleDropdownOpen}>
-                  <Icon name="down" size={20} />
-                </button>
-                {isDropdownOpen && (
-                  <Dropdown className={dropdownContainer}>
+
+                <Dropdown>
+                  <Dropdown.Trigger>
+                    <Icon name="down" size={20} />
+                  </Dropdown.Trigger>
+                  <Dropdown.Content className={dropdownContainer}>
                     <Dropdown.Item
                       text="개인일정"
                       onClick={handleCalendarToggleClick}
@@ -191,8 +191,8 @@ export const Schedule = ({
                         ></div>
                       }
                     ></Dropdown.Item>
-                  </Dropdown>
-                )}
+                  </Dropdown.Content>
+                </Dropdown>
               </div>
             </button>
           }

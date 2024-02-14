@@ -44,15 +44,7 @@ function TimelineItem({
 }: TimelineItemProps & DropdownProps) {
   const router = useRouter();
   const [time, setTime] = useState('');
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const deleteDataQuery = useDeleteSchedule();
-
-  const handleDropdownClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.stopPropagation();
-
-    setIsDropdownOpen((prev) => !prev);
-    setDropdownClick(scheduleId);
-  };
 
   const handleItemClick = (id: number) => {
     router.push(`/schedule/${id}`);
@@ -64,12 +56,6 @@ function TimelineItem({
   const handleDeleteClick = () => {
     deleteDataQuery.mutate(scheduleId);
   };
-
-  useEffect(() => {
-    if (dropdownClick === scheduleId) {
-      setIsDropdownOpen(true);
-    }
-  }, [dropdownClick, title]);
 
   useEffect(() => {
     if (parseInt(format(startDateTime, 'HH')) >= 12) {
@@ -131,11 +117,11 @@ function TimelineItem({
           className={timelineItemHeaderWrapper}
           rightAddon={
             <div>
-              <button type="button" onClick={handleDropdownClick}>
-                <Icon name="more-gray" size={28} />
-              </button>
-              {dropdownClick === scheduleId && isDropdownOpen && (
-                <Dropdown className={dropdownContainer}>
+              <Dropdown>
+                <Dropdown.Trigger>
+                  <Icon name="more-gray" size={28} />
+                </Dropdown.Trigger>
+                <Dropdown.Content className={dropdownContainer}>
                   <Dropdown.Item
                     text="수정하기"
                     onClick={handleEditClick}
@@ -147,8 +133,8 @@ function TimelineItem({
                     onClick={handleDeleteClick}
                     rightAddon={<Icon name="delete" size={16} />}
                   ></Dropdown.Item>
-                </Dropdown>
-              )}
+                </Dropdown.Content>
+              </Dropdown>
             </div>
           }
           leftAddon={<div className={timelineColorDivider} style={{ backgroundColor: color }} />}

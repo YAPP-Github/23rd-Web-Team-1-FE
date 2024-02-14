@@ -17,20 +17,30 @@ const Dropdown = ({ children, className }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <DropdownProvider dropdownOpen={isOpen} onOpenChange={() => setIsOpen((prev) => !prev)}>
+    <DropdownProvider isOpen={isOpen} onOpenChange={() => setIsOpen((prev) => !prev)}>
       <button className={className}>{children}</button>
     </DropdownProvider>
   );
 };
 
-export default Object.assign(Dropdown, { Item: DropdownItem, Trigger: DropdownTrigger });
+export default Object.assign(Dropdown, {
+  Item: DropdownItem,
+  Trigger: DropdownTrigger,
+  Content: DropdownContent,
+});
 
 function DropdownTrigger({ children }: Props) {
-  const { onOpenChange } = useDropdownContext('DropdownTrigger');
+  const { onOpenChange } = useDropdownContext('Dropdown-Trigger');
 
   return (
     <button type="button" onClick={onOpenChange} className={dropdownTrigger}>
       {children}
     </button>
   );
+}
+
+function DropdownContent({ children, className }: Props) {
+  const { isOpen } = useDropdownContext('Dropdow-Trigger');
+
+  return <>{isOpen && <button className={className}> {children}</button>}</>;
 }
