@@ -7,8 +7,6 @@ export default function TimelinePage() {
   const { data: prevData } = useGetNearSchedule('PREV');
   const { data: upcomingData } = useGetNearSchedule('UPCOMING');
 
-  console.log(prevData, upcomingData);
-
   return (
     <TimelineDefault
       prevSchedules={prevData.schedules}
