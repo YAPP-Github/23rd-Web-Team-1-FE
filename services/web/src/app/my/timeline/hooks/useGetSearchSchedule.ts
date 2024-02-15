@@ -14,9 +14,13 @@ const getSearchSchedule = (from: string, to: string, limit: number) => {
 
 const useGetSearchSchedule = (from: string, to: string, limit: number) => {
   return useSuspenseQuery<GetTimelineRes>({
-    queryKey: ['schedule', from, to, limit],
+    queryKey: useGetSearchSchedule.getKey(from, to, limit),
     queryFn: () => getSearchSchedule(from, to, limit),
   });
+};
+
+useGetSearchSchedule.getKey = (from: string, to: string, limit: number) => {
+  return ['schedule', from, to, limit];
 };
 
 export { useGetSearchSchedule, getSearchSchedule };
