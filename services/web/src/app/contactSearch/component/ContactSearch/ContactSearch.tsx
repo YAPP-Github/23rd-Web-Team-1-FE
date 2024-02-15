@@ -17,7 +17,7 @@ import {
   textWrapper,
 } from './ContactSearch.css';
 import { ContactDataRes } from '../../../my/contact/types/contact';
-import { queryAtom } from '../stores/stores';
+import { queryAtom } from '../../stores/stores';
 
 export default function ContactSearch({ contacts }: ContactDataRes) {
   const [query, setQuery] = useState('');

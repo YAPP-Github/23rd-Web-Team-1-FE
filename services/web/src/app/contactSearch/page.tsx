@@ -2,8 +2,8 @@
 import { useAtomValue } from 'jotai';
 
 import ContactSearch from './component/ContactSearch/ContactSearch';
-import { queryAtom } from './component/stores/stores';
 import { useGetContactSearch } from './hooks/useGetSearch';
+import { queryAtom } from './stores/stores';
 
 const ContactSearchPage = () => {
   const query = useAtomValue(queryAtom);

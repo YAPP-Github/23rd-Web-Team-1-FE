@@ -4,23 +4,22 @@ import { Calendar, Spacing } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { format } from 'date-fns';
-import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useSetAtom } from 'jotai';
+import { useState, useEffect } from 'react';
 
 import { timelineItemWrapper, timelineMonthWrapper } from './TimelineSearch.css';
+import { selectDateAtom } from '../../stores/store';
 import { GetTimelineRes } from '../../types/schedule';
 import TimelineItem from '../TimelineItem/TimelineItem';
 
 const TimelineSearch = ({ schedules }: GetTimelineRes) => {
-  const router = useRouter();
   const [date, setDate] = useState(new Date());
   const [dropdownClick, setDropdownClick] = useState(-1);
+  const setAtomDate = useSetAtom(selectDateAtom);
 
   useEffect(() => {
-    router.push(
-      `/my/timeline/search?from=${`${format(date, 'yyyy-MM-dd')} 00:00:00`}&to=${`${format(date, 'yyyy-MM-dd')} 11:59:59`}&limit=32`,
-    );
-  }, [date]);
+    setAtomDate(format(date, 'yyyy-MM-dd'));
+  }, [date, setAtomDate]);
 
   return (
     <>

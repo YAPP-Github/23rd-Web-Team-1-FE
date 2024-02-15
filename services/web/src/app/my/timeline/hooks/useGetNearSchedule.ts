@@ -4,20 +4,20 @@ import { useSuspenseQuery } from '@tanstack/react-query';
 
 import { GetTimelineRes } from '../types/schedule';
 
-const getNearTimeline = () => {
-  const res = kyClient.get<GetTimelineRes>('/v1/schedules/near-term?limit=32&type=UPCOMING');
+const getNearTimeline = (type: string) => {
+  const res = kyClient.get<GetTimelineRes>(`/v1/schedules/near-term?limit=32&type=${type}`);
 
   return res;
 };
 
-const useGetNearSchedule = () => {
+const useGetNearSchedule = (type: string) => {
   return useSuspenseQuery<GetTimelineRes>({
-    queryKey: useGetNearSchedule.getKey(),
-    queryFn: () => getNearTimeline(),
+    queryKey: useGetNearSchedule.getKey(type),
+    queryFn: () => getNearTimeline(type),
   });
 };
 
-useGetNearSchedule.getKey = () => {
+useGetNearSchedule.getKey = (type: string) => {
   return ['/api/v1/schedules/near-term'];
 };
 

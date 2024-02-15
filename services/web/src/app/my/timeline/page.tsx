@@ -1,9 +1,18 @@
 'use client';
+
 import TimelineDefault from './component/TimelineDefault/TimelineDefault';
 import { useGetNearSchedule } from './hooks/useGetNearSchedule';
 
 export default function TimelinePage() {
-  const { data } = useGetNearSchedule();
+  const { data: prevData } = useGetNearSchedule('PREV');
+  const { data: upcomingData } = useGetNearSchedule('UPCOMING');
 
-  return <TimelineDefault schedules={data.schedules} />;
+  console.log(prevData, upcomingData);
+
+  return (
+    <TimelineDefault
+      prevSchedules={prevData.schedules}
+      upcomingSchedules={upcomingData.schedules}
+    />
+  );
 }
