@@ -205,12 +205,13 @@ export const Schedule = ({
           color={`${colors.gray700}`}
           typograyphy="p1"
         />
-        {contacts &&
-          contacts.map((item) => (
-            <div key={item.contactId}>
-              <InvitionItem profileImg={item.profileImgUrl} name={item.name} />
-            </div>
-          ))}
+        {contacts != null
+          ? contacts.map((item) => (
+              <div key={item.contactId}>
+                <InvitionItem profileImg={item.profileImgUrl} name={item.name} />
+              </div>
+            ))
+          : null}
       </List>
       <List className={scheduleNoteWrapper}>
         <List.Header
