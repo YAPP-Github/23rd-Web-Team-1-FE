@@ -1,11 +1,11 @@
 'use client';
 
 import TimelineDefault from './component/TimelineDefault/TimelineDefault';
-import { useGetNearSchedule } from './hooks/useGetNearSchedule';
+import { useGetPrevSchedule, useGetUpComingSchedule } from './hooks/useGetNearSchedule';
 
 export default function TimelinePage() {
-  const { data: prevData } = useGetNearSchedule('PREV');
-  const { data: upcomingData } = useGetNearSchedule('UPCOMING');
+  const { data: prevData } = useGetPrevSchedule();
+  const { data: upcomingData } = useGetUpComingSchedule();
 
   return (
     <TimelineDefault

@@ -4,21 +4,32 @@ import { useSuspenseQuery } from '@tanstack/react-query';
 
 import { GetTimelineRes } from '../types/schedule';
 
-const getNearTimeline = (type: string) => {
-  const res = kyClient.get<GetTimelineRes>(`/v1/schedules/near-term?limit=32&type=${type}`);
+const getPrevTimeline = () => {
+  const res = kyClient.get<GetTimelineRes>(`/v1/schedules/near-term?limit=32&type=PREV`);
+
+  return res;
+};
+const getUpcomingTimeline = () => {
+  const res = kyClient.get<GetTimelineRes>(`/v1/schedules/near-term?limit=32&type=UPCOMING`);
 
   return res;
 };
 
-const useGetNearSchedule = (type: string) => {
+const useGetPrevSchedule = () => {
   return useSuspenseQuery<GetTimelineRes>({
-    queryKey: useGetNearSchedule.getKey(type),
-    queryFn: () => getNearTimeline(type),
+    queryKey: useGetPrevSchedule.getKey(),
+    queryFn: () => getPrevTimeline(),
+  });
+};
+const useGetUpComingSchedule = () => {
+  return useSuspenseQuery<GetTimelineRes>({
+    queryKey: useGetPrevSchedule.getKey(),
+    queryFn: () => getUpcomingTimeline(),
   });
 };
 
-useGetNearSchedule.getKey = (type: string) => {
+useGetPrevSchedule.getKey = () => {
   return ['/api/v1/schedules/near-term'];
 };
 
-export { useGetNearSchedule, getNearTimeline };
+export { useGetPrevSchedule, useGetUpComingSchedule };

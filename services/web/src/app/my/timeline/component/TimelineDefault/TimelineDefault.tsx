@@ -3,12 +3,13 @@
 import { Calendar, Spacing } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
-import { format } from 'date-fns';
+import { format, startOfMonth, endOfMonth } from 'date-fns';
 import { useSetAtom } from 'jotai';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState, useMemo } from 'react';
 
 import { timelineItemWrapper, timelineMonthWrapper } from './TimelineDefault.css';
+import { useGetSearchSchedule } from '../../hooks/useGetSearchSchedule';
 import { selectDateAtom } from '../../stores/store';
 import { TimelineItemProps } from '../../types/schedule';
 import TimelineItem from '../TimelineItem/TimelineItem';
@@ -20,17 +21,22 @@ interface TimelineDefaultProps {
 
 const TimelineDefault = ({ prevSchedules, upcomingSchedules }: TimelineDefaultProps) => {
   const router = useRouter();
-  const [date, setDate] = useState(new Date());
   const setAtomDate = useSetAtom(selectDateAtom);
   const concatSchedules = useMemo(() => {
     return [...prevSchedules, ...upcomingSchedules];
   }, [prevSchedules, upcomingSchedules]);
 
   const [selectDate, setSelectDate] = useState(false);
-  const startDateYear = format(prevSchedules[0].startDateTime, 'yyyy');
+  const [date, setDate] = useState(new Date());
   const [prevYear, setPrevYear] = useState<TimelineItemProps[]>();
   const [nextYear, setNextYear] = useState<TimelineItemProps[]>();
   const [dropdownClick, setDropdownClick] = useState(-1);
+  const [calendarDotData, setCalendarDotData] = useState<Array<Date | string>>([]);
+
+  const startDateYear = format(prevSchedules[0].startDateTime, 'yyyy');
+  const firstDayOfMonth = format(startOfMonth(date), 'yyyy-MM-dd 00:00:00');
+  const lastDayOfMonth = format(endOfMonth(date), 'yyyy-MM-dd 23:59:59');
+  const { data } = useGetSearchSchedule(firstDayOfMonth, lastDayOfMonth, 32);
 
   // 받아온 데이터들 중 다른 연도가 있는지
   // 연도가 하나라도 다른게 판단이 되면 diffYear가 true가됨
@@ -59,10 +65,17 @@ const TimelineDefault = ({ prevSchedules, upcomingSchedules }: TimelineDefaultPr
       router.push('/my/timeline/search');
     }
   }, [selectDate, router]);
+  useEffect(() => {
+    let tempData: Array<string | Date> = [];
+
+    tempData = [...tempData, ...data.schedules.map((item) => item.startDateTime)];
+    setCalendarDotData(tempData);
+  }, []);
 
   return (
     <>
       <Calendar
+        data={calendarDotData}
         value={date}
         onChange={(value) => {
           setSelectDate(true);

@@ -8,7 +8,7 @@ import { Calendar as ReactCalendar, CalendarProps } from 'react-calendar';
 import { LooseValue, Value } from 'react-calendar/dist/cjs/shared/types';
 import 'react-calendar/dist/Calendar.css';
 
-import { calendar, container, buttonWrapper } from './Calendar.css';
+import { calendar, container, buttonWrapper, dot } from './Calendar.css';
 import { Icon } from '../Icon';
 
 interface Props extends Omit<CalendarProps, 'value' | 'onChange'> {
@@ -17,10 +17,11 @@ interface Props extends Omit<CalendarProps, 'value' | 'onChange'> {
   className?: string;
   withModeChange?: boolean;
   onChange?: (date: Value, event: React.MouseEvent<HTMLButtonElement>) => void;
+  data: Array<Date | string>;
 }
 
 const Calendar = forwardRef<HTMLDivElement, Props>((props, ref) => {
-  const { value, mark, className, withModeChange, onChange, ...rest } = props;
+  const { value, mark, className, withModeChange, onChange, data, ...rest } = props;
 
   const [isWeekMode, setIsWeekMode] = useState(false);
 
@@ -41,7 +42,9 @@ const Calendar = forwardRef<HTMLDivElement, Props>((props, ref) => {
         ref={ref}
         value={value ?? new Date()}
         onChange={onChange}
-        tileContent={({ date }) => <TileContent date={date} mark={mark ?? [new Date()]} />}
+        tileContent={({ date }) => (
+          <TileContent date={date} mark={mark ?? [new Date()]} data={data} />
+        )}
         formatDay={(_, date) => format(date, 'dd')}
         locale="ko-KO"
         showNeighboringMonth={false}
@@ -72,10 +75,24 @@ const Calendar = forwardRef<HTMLDivElement, Props>((props, ref) => {
 
 export default Calendar;
 
-const TileContent = ({ date, mark }: { date: Date; mark?: Array<Date | string> }) => {
+const TileContent = ({
+  date,
+  mark,
+  data,
+}: {
+  date: Date;
+  mark?: Array<Date | string>;
+  data: Array<Date | string>;
+}) => {
   const html = [];
   const isMarked = mark?.find((x: Date | string) => {
     return format(x, 'yyyy-MM-dd') === format(date, 'yyyy-MM-dd');
+  });
+
+  data.forEach((item) => {
+    if (format(item, 'yyyy-MM-dd') === format(date, 'yyyy-MM-dd')) {
+      html.push(<div key={date.getDate()} className={dot}></div>);
+    }
   });
 
   if (isMarked) {

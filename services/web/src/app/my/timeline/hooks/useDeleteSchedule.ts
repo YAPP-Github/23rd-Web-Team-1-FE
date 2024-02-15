@@ -2,7 +2,7 @@
 import { kyClient } from '@linker/ky';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
-import { useGetNearSchedule } from './useGetNearSchedule';
+import { useGetPrevSchedule } from './useGetNearSchedule';
 
 const deleteSchedule = (scheduleId: number) => {
   return kyClient.delete(`/v1/schedules/${scheduleId}`);
@@ -14,7 +14,7 @@ const useDeleteSchedule = () => {
   return useMutation({
     mutationFn: (scheduleId: number) => deleteSchedule(scheduleId),
     onSuccess: (_, scheduleId: number) => {
-      queryClient.invalidateQueries({ queryKey: useGetNearSchedule.getKey() });
+      queryClient.invalidateQueries({ queryKey: useGetPrevSchedule.getKey() });
     },
   });
 };
