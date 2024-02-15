@@ -10,7 +10,7 @@ const getScheduleById = (scheduleId: number) => {
 
 const useGetSchedule = (id: number) => {
   return useSuspenseQuery<TimelineItemProps>({
-    queryKey: ['schedule', id],
+    queryKey: ['/api/v1/schedules', id],
     queryFn: () => getScheduleById(id),
   });
 };

@@ -12,7 +12,7 @@ const useDeleteSchedule = () => {
   return useMutation({
     mutationFn: (scheduleId: number) => deleteSchedule(scheduleId),
     onSuccess: (_, scheduleId: number) => {
-      queryClient.invalidateQueries({ queryKey: ['schedule'] });
+      queryClient.invalidateQueries({ queryKey: ['/api/v1/schedules/near-term'] });
     },
   });
 };

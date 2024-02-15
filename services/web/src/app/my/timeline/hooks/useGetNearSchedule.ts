@@ -12,7 +12,7 @@ const getNearTimeline = () => {
 
 const useGetNearSchedule = () => {
   return useSuspenseQuery<GetTimelineRes>({
-    queryKey: ['schedule'],
+    queryKey: ['/api/v1/schedules/near-term'],
     queryFn: () => getNearTimeline(),
   });
 };

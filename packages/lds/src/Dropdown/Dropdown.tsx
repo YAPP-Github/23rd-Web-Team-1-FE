@@ -9,15 +9,16 @@ import DropdownItem from './DropdownItem';
 import { DropdownProvider, useDropdownContext } from './context';
 
 interface Props extends HTMLAttributes<HTMLButtonElement> {
+  open?: boolean;
   children?: ReactNode;
   className?: string;
 }
 
-const Dropdown = ({ children, className }: Props) => {
+const Dropdown = ({ children, className, open }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <DropdownProvider isOpen={isOpen} onOpenChange={() => setIsOpen((prev) => !prev)}>
+    <DropdownProvider isOpen={open ?? isOpen} onOpenChange={() => setIsOpen((prev) => !prev)}>
       <button className={className}>{children}</button>
     </DropdownProvider>
   );
