@@ -1,28 +1,7 @@
-import { List } from '@linker/lds';
+import { FriendProfile } from './components/FriendProfile';
 
 function ProfilePage() {
-  return (
-    <div>
-      <List>test</List>
-      <List>test</List>
-      <List>test</List>
-      <List>test</List>
-      <List>test</List>
-      <List>test</List>
-      <List>test</List>
-      <List>test</List>
-
-      <List>test</List>
-      <List>test</List>
-      <List>test</List>
-      <List>test</List>
-      <List>test</List>
-      <List>test</List>
-      <List>test</List>
-      <List>test</List>
-      <List>test</List>
-    </div>
-  );
+  return <FriendProfile />;
 }
 
 export default ProfilePage;
