@@ -1,6 +1,6 @@
 'use client';
 import { kyClient } from '@linker/ky';
-import { useQuery } from '@tanstack/react-query';
+import { useSuspenseQuery } from '@tanstack/react-query';
 
 import { GetTimelineRes } from '../types/schedule';
 
@@ -11,7 +11,7 @@ const getNearTimeline = () => {
 };
 
 const useGetNearSchedule = () => {
-  return useQuery<GetTimelineRes>({
+  return useSuspenseQuery<GetTimelineRes>({
     queryKey: ['schedule'],
     queryFn: () => getNearTimeline(),
   });

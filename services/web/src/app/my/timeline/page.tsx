@@ -5,5 +5,5 @@ import { useGetNearSchedule } from './hooks/useGetNearSchedule';
 export default function TimelinePage() {
   const { data } = useGetNearSchedule();
 
-  return <>{data && <TimelineDefault schedules={data.schedules} />}</>;
+  return <TimelineDefault schedules={data.schedules} />;
 }

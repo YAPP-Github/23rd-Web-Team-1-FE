@@ -12,5 +12,5 @@ export type SearchParamsProps = {
 export default function TimelineSearchPage({ searchParams }: { searchParams: SearchParamsProps }) {
   const { data } = useGetSearchSchedule(searchParams.from, searchParams.to, searchParams.limit);
 
-  return <>{data && <TimelineSearch schedules={data?.schedules} />}</>;
+  return <TimelineSearch schedules={data?.schedules} />;
 }

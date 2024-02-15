@@ -1,6 +1,6 @@
 'use client';
 import { kyClient } from '@linker/ky';
-import { useQuery } from '@tanstack/react-query';
+import { useSuspenseQuery } from '@tanstack/react-query';
 
 import { TimelineItemProps } from '../types/schedule';
 
@@ -9,7 +9,7 @@ const getScheduleById = (scheduleId: number) => {
 };
 
 const useGetSchedule = (id: number) => {
-  return useQuery<TimelineItemProps>({
+  return useSuspenseQuery<TimelineItemProps>({
     queryKey: ['schedule', id],
     queryFn: () => getScheduleById(id),
   });
