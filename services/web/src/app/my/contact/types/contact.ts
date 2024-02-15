@@ -10,7 +10,6 @@ export interface ContactData {
   school?: string;
   careers?: string;
   description?: string;
-  association?: string;
   interests: InterestProps[];
 }
 
