@@ -66,9 +66,10 @@ export const scheduleCalendarDropDownElipse = style({
   borderRadius: '50%',
 });
 export const calendarElipseColor = styleVariants({
-  company: { backgroundColor: `${colors.green}` },
+  networking: { backgroundColor: `${colors.magenta}` },
   personal: { backgroundColor: `${colors.purple}` },
   birthday: { backgroundColor: `${colors.lightBlue}` },
+  friends: { backgroundColor: `${colors.orange}` },
 });
 export const scheduleCalendarDropDownWrapper = style({
   display: 'flex',
@@ -94,12 +95,12 @@ export const dropdownContainer = style({
   border: `1px solid ${colors.gray200}`,
   boxShadow: '0px 0px 6px 0px #0000001A',
   position: 'absolute',
-  right: '0.2rem',
+  right: '0rem',
   display: 'inline-block',
   borderRadius: '1.6rem',
   background: colors.white,
   zIndex: '10',
-  bottom: '-10rem',
+  bottom: '-20rem',
 });
 
 export const deleteDropdownContainer = style({

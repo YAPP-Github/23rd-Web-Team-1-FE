@@ -180,6 +180,32 @@ export const Schedule = ({
                     ></Dropdown.Item>
                     <div className={dropdownDivider}></div>
                     <Dropdown.Item
+                      text="네트워킹"
+                      onClick={handleCalendarToggleClick}
+                      rightAddon={
+                        <div
+                          className={clsx(
+                            scheduleCalendarDropDownElipse,
+                            calendarElipseColor.networking,
+                          )}
+                        ></div>
+                      }
+                    ></Dropdown.Item>
+                    <div className={dropdownDivider}></div>
+                    <Dropdown.Item
+                      text="친구"
+                      onClick={handleCalendarToggleClick}
+                      rightAddon={
+                        <div
+                          className={clsx(
+                            scheduleCalendarDropDownElipse,
+                            calendarElipseColor.friends,
+                          )}
+                        ></div>
+                      }
+                    ></Dropdown.Item>
+                    <div className={dropdownDivider}></div>
+                    <Dropdown.Item
                       text="생일"
                       onClick={handleCalendarToggleClick}
                       rightAddon={
