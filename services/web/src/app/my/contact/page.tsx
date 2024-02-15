@@ -5,10 +5,11 @@ import { ContactDataRes } from './types/contact';
 
 export default async function ContactPage() {
   const contactData = (await getContact()).contacts;
+  const bookmarkData = (await getContactBookMarks()).contacts;
 
   return (
     <div>
-      <Contact contacts={contactData} />
+      <Contact defaultContact={contactData} bookmarksContact={bookmarkData} />
     </div>
   );
 }
@@ -18,6 +19,11 @@ const getContact = () => {
   return response;
 };
 
+const getContactBookMarks = () => {
+  const response = ky.get<ContactDataRes>('/v1/contacts/bookmarks');
+
+  return response;
+};
 // const getContactSearch = (query: string) => {
 //   if (query) {
 //     return ky.get<ContactData[]>(`/v1/contacts/search?query=${query}`);

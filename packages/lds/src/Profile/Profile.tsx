@@ -10,6 +10,7 @@ const PROFILE_SIZE = {
   xLarge: 64,
   large: 56,
   medium: 48,
+  regular: 42,
   small: 36,
 };
 

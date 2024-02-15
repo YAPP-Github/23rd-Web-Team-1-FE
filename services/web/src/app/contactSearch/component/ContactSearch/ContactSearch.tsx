@@ -3,8 +3,10 @@
 import ContactItem from '@app/my/contact/component/ContactItem/ContactItem';
 import { SearchInput, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
+import { useSetAtom } from 'jotai';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 import {
   container,
@@ -15,18 +17,29 @@ import {
   textWrapper,
 } from './ContactSearch.css';
 import { ContactDataRes } from '../../../my/contact/types/contact';
+import { queryAtom } from '../stores/stores';
 
 export default function ContactSearch({ contacts }: ContactDataRes) {
   const [query, setQuery] = useState('');
+  const setQueryAtom = useSetAtom(queryAtom);
+  const router = useRouter();
+  const handleCancelClick = () => {
+    router.push('/my/contact');
+  };
+
+  useEffect(() => {
+    setQueryAtom(query);
+  }, [query]);
 
   return (
     <section className={container}>
       <header className={header}>
         <SearchInput placeholder="연락처 검색하기" query={query} setQuery={setQuery} />
-
-        <Txt typography="p2" fontWeight="regular" color={colors.black} className={textWrapper}>
-          취소
-        </Txt>
+        <button onClick={handleCancelClick}>
+          <Txt typography="p2" fontWeight="regular" color={colors.black} className={textWrapper}>
+            취소
+          </Txt>
+        </button>
       </header>
       <section className={searchWrapper}>
         {contacts.length === 0 ? (
@@ -53,7 +66,6 @@ export default function ContactSearch({ contacts }: ContactDataRes) {
                   profileImgUrl={item.profileImgUrl}
                   interests={item.interests}
                   school={item.school}
-                  association={item.association}
                 />
               </div>
             ))}

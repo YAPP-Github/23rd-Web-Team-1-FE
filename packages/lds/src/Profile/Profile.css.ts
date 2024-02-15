@@ -10,6 +10,9 @@ export const profile = recipe({
       small: {
         borderRadius: '1.2rem',
       },
+      regular: {
+        borderRadius: '1.6rem',
+      },
       medium: {
         borderRadius: '1.2rem',
       },
