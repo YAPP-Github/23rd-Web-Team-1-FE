@@ -2,7 +2,7 @@ export const recommendations = [
   {
     tag: {
       id: 0,
-      name: '전체주제',
+      name: '전체',
     },
     contents: [
       {
