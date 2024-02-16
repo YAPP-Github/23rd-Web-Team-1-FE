@@ -13,3 +13,7 @@ export const chipWrapper = style({
 export const chip = style({
   minWidth: 'fit-content',
 });
+
+export const newsListWrapper = style({
+  marginTop: '0.8rem',
+});

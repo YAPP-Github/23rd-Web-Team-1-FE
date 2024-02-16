@@ -6,7 +6,7 @@ import { HorizonScroller, Chip, List } from '@linker/lds';
 
 import NewsItem from './NewsItem';
 import type { News } from './NewsItem';
-import { wrapper, chipWrapper, chip } from './NewsList.css';
+import { wrapper, chipWrapper, chip, newsListWrapper } from './NewsList.css';
 
 interface Tag {
   id: number;
@@ -14,15 +14,16 @@ interface Tag {
 }
 
 interface NewsListProps {
-  newsList: Array<{
+  recommendations: Array<{
     tag: Tag;
     contents: News[];
   }>;
 }
 
-function NewsList({ newsList }: NewsListProps) {
-  const [selectedTag, setSelectedTag] = useState(newsList[0].tag.id);
-  const currentNews = newsList.find((news) => news.tag.id === selectedTag)?.contents ?? [];
+function NewsList({ recommendations }: NewsListProps) {
+  const [selectedTag, setSelectedTag] = useState(recommendations[0].tag.id);
+  const currentNewsList =
+    recommendations.find((recommendation) => recommendation.tag.id === selectedTag)?.contents ?? [];
 
   const handleClickTag = (tagId: number) => {
     setSelectedTag(tagId);
@@ -31,21 +32,25 @@ function NewsList({ newsList }: NewsListProps) {
   return (
     <List className={wrapper}>
       <HorizonScroller className={chipWrapper}>
-        {newsList.map((news) => (
+        {recommendations.map((recommendation) => (
           <Chip
-            key={news.tag.id}
+            key={recommendation.tag.id}
             className={chip}
-            selected={selectedTag === news.tag.id}
+            selected={selectedTag === recommendation.tag.id}
             onClick={(event) => {
               event.preventDefault();
-              handleClickTag(news.tag.id);
+              handleClickTag(recommendation.tag.id);
             }}
           >
-            {news.tag.name}
+            {recommendation.tag.name}
           </Chip>
         ))}
       </HorizonScroller>
-      <NewsItem news={currentNews} />
+      <ul className={newsListWrapper}>
+        {currentNewsList.map((news) => (
+          <NewsItem key={news.id} news={news} />
+        ))}
+      </ul>
     </List>
   );
 }

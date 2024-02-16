@@ -40,7 +40,7 @@ async function RecommendationPage() {
           </div>
         </div>
       </List>
-      <NewsList newsList={recommendations} />
+      <NewsList recommendations={recommendations} />
     </>
   );
 }

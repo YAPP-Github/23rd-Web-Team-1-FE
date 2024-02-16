@@ -1,10 +1,6 @@
 import { ellipsis } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
 
-export const newsWrapper = style({
-  marginTop: '0.8rem',
-});
-
 export const itemWrapper = style({
   display: 'flex',
   justifyContent: 'space-between',
