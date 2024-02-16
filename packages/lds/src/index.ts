@@ -8,6 +8,7 @@ export * from './Dialog';
 export * from './Header';
 export * from './HorizonScroller';
 export * from './Icon';
+export * from './InfiniteScroll';
 export * from './Layout';
 export * from './List';
 export * from './Logo';

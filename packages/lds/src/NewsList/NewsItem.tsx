@@ -4,13 +4,7 @@ import Image from 'next/image';
 import { Txt } from '@linker/lds';
 
 import { itemWrapper, newsInfo, newsTitle, newsImage } from './NewsItem.css';
-
-export interface News {
-  id: number;
-  title: string;
-  newsProvider: string;
-  thumbnailUrl: string;
-}
+import type { News } from './NewsList';
 
 interface NewsProps {
   news: News;
