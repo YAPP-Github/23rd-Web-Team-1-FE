@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback } from 'react';
 import { HorizonScroller, Chip, List, InfiniteScroll } from '@linker/lds';
 
 import NewsItem from './NewsItem';
@@ -17,13 +17,16 @@ export interface News {
   id: number;
   title: string;
   newsProvider: string;
+  newsUrl: string;
   thumbnailUrl: string;
 }
 
 interface NewsListProps {
   recommendations: Array<{
-    tag: Tag;
-    contents: News[];
+    tags: Tag[];
+    newsList: News[];
+    nextCursor: number | null;
+    hasNext: boolean;
   }>;
 }
 
@@ -42,87 +45,74 @@ function getNewsList(tagIds: number[], cursorId: number, limit = 20) {
   params.append('cursorId', cursorId.toString());
   params.append('limit', limit.toString());
 
-  return kyClient.get<
-    Array<{
-      tag: Tag;
-      contents: News[];
-      nextCursor: number;
-    }>
-  >('/v1/news', {
+  return kyClient.get<{
+    tags: Tag[];
+    newsList: News[];
+    nextCursor: number | null;
+    hasNext: boolean;
+  }>('/v1/news', {
     searchParams: params,
   });
 }
 
 function NewsList({ recommendations: recommendationsProp }: NewsListProps) {
   const [recommendations, setRecommendations] = useState(recommendationsProp);
-  const [selectedTagId, setSelectedTagId] = useState(recommendations[0].tag.id);
+  const [selectedTagsIndex, setSelectedTagsIndex] = useState(0);
 
-  const handleClickTag = (tagId: number) => {
-    setSelectedTagId(tagId);
+  const handleClickTag = (index: number) => {
+    setSelectedTagsIndex(index);
   };
 
-  const currentRecommendationIndex = useMemo(
-    () => recommendations.findIndex((recommendation) => recommendation.tag.id === selectedTagId),
-    [recommendations, selectedTagId],
-  );
-
-  const currentRecommendation = useMemo(() => {
-    const currentRecommendation = recommendations.find(
-      (recommendation) => recommendation.tag.id === selectedTagId,
-    );
-
-    return currentRecommendation;
-  }, [recommendations, selectedTagId]);
-
-  const currentNewsList = useMemo(
-    () => currentRecommendation?.contents ?? [],
-    [currentRecommendation],
-  );
-
   const handleLoadMore = useCallback(async () => {
-    const cursorId = currentNewsList[currentNewsList.length - 1].id;
+    const currentRecommendation = recommendations[selectedTagsIndex];
+    const currentNewsList = currentRecommendation.newsList;
+    const tagIds = currentRecommendation.tags.map((tag) => tag.id);
+    const cursorId = currentRecommendation.nextCursor;
+    const limit = Math.min(100 - currentNewsList.length, 20);
+
+    if (!cursorId || currentNewsList.length >= 100) {
+      return;
+    }
 
     try {
-      const result = await getNewsList([selectedTagId], cursorId);
-      const { tag, contents } = result[0];
-
+      const { newsList, nextCursor, hasNext } = await getNewsList(tagIds, cursorId, limit);
       const newRecommendation = {
-        tag,
-        contents: [...currentNewsList, ...contents],
+        ...currentRecommendation,
+        newsList: [...currentNewsList, ...newsList],
+        nextCursor,
+        hasNext,
       };
 
-      if (currentRecommendationIndex > 0) {
-        setRecommendations((prevRecommendations) => [
-          ...prevRecommendations.slice(0, currentRecommendationIndex),
-          newRecommendation,
-          ...prevRecommendations.slice(currentRecommendationIndex + 1),
-        ]);
-      }
+      setRecommendations((prevRecommendations) => [
+        ...prevRecommendations.slice(0, selectedTagsIndex),
+        newRecommendation,
+        ...prevRecommendations.slice(selectedTagsIndex + 1),
+      ]);
     } catch (_) {
       /** error handling */
     }
-  }, [currentNewsList, currentRecommendationIndex, selectedTagId]);
+  }, [recommendations, selectedTagsIndex]);
 
   return (
     <List className={wrapper}>
       <HorizonScroller className={chipWrapper}>
-        {recommendations.map((recommendation) => (
+        {recommendations.map((recommendation, index) => (
           <Chip
-            key={recommendation.tag.id}
+            key={index}
             className={chip}
-            selected={selectedTagId === recommendation.tag.id}
+            selected={selectedTagsIndex === index}
             onClick={(event) => {
               event.preventDefault();
-              handleClickTag(recommendation.tag.id);
+              handleClickTag(index);
             }}
           >
-            {recommendation.tag.name}
+            {recommendation.tags.length === 1 ? recommendation.tags[0].name : '전체'}
           </Chip>
         ))}
       </HorizonScroller>
       <ul className={newsListWrapper}>
         <InfiniteScroll onLoadMore={handleLoadMore}>
-          {currentNewsList.map((news) => (
+          {recommendations[selectedTagsIndex].newsList.map((news) => (
             <NewsItem key={news.id} news={news} />
           ))}
         </InfiniteScroll>
