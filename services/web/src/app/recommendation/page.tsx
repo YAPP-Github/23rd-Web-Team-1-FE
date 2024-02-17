@@ -1,5 +1,6 @@
 import { getRecommendation } from '@/app/my/feed/recommendation/components/Recommendation';
-import { List, Icon, BackHeader, Txt, NewsList } from '@linker/lds';
+import { NewsList } from '@features/news-list';
+import { List, Icon, BackHeader, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
