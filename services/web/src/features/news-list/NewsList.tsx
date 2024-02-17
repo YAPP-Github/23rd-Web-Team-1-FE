@@ -24,9 +24,11 @@ export interface News {
 interface NewsListProps {
   recommendations: Array<{
     tags: Tag[];
-    newsList: News[];
-    nextCursor: number | null;
-    hasNext: boolean;
+    newsList: {
+      data: News[];
+      nextCursor: number | null;
+      hasNext: boolean;
+    };
   }>;
 }
 
@@ -47,9 +49,11 @@ function getNewsList(tagIds: number[], cursorId: number, limit = 20) {
 
   return kyClient.get<{
     tags: Tag[];
-    newsList: News[];
-    nextCursor: number | null;
-    hasNext: boolean;
+    newsList: {
+      data: News[];
+      nextCursor: number | null;
+      hasNext: boolean;
+    };
   }>('/v1/news', {
     searchParams: params,
   });
@@ -65,9 +69,9 @@ function NewsList({ recommendations: recommendationsProp }: NewsListProps) {
 
   const handleLoadMore = useCallback(async () => {
     const currentRecommendation = recommendations[selectedTagsIndex];
-    const currentNewsList = currentRecommendation.newsList;
+    const currentNewsList = currentRecommendation.newsList.data;
     const tagIds = currentRecommendation.tags.map((tag) => tag.id);
-    const cursorId = currentRecommendation.nextCursor;
+    const cursorId = currentRecommendation.newsList.nextCursor;
     const limit = Math.min(100 - currentNewsList.length, 20);
 
     if (!cursorId || currentNewsList.length >= 100) {
@@ -75,12 +79,16 @@ function NewsList({ recommendations: recommendationsProp }: NewsListProps) {
     }
 
     try {
-      const { newsList, nextCursor, hasNext } = await getNewsList(tagIds, cursorId, limit);
+      const {
+        newsList: { nextCursor, hasNext, data },
+      } = await getNewsList(tagIds, cursorId, limit);
       const newRecommendation = {
         ...currentRecommendation,
-        newsList: [...currentNewsList, ...newsList],
-        nextCursor,
-        hasNext,
+        newsList: {
+          data: [...currentNewsList, ...data],
+          nextCursor,
+          hasNext,
+        },
       };
 
       setRecommendations((prevRecommendations) => [
@@ -112,7 +120,7 @@ function NewsList({ recommendations: recommendationsProp }: NewsListProps) {
       </HorizonScroller>
       <ul className={newsListWrapper}>
         <InfiniteScroll onLoadMore={handleLoadMore}>
-          {recommendations[selectedTagsIndex].newsList.map((news) => (
+          {recommendations[selectedTagsIndex].newsList.data.map((news) => (
             <NewsItem key={news.id} news={news} />
           ))}
         </InfiniteScroll>
