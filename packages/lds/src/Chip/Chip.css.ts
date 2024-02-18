@@ -13,6 +13,7 @@ export const colorVariant = style({
 export const chipContainer = recipe({
   base: {
     display: 'inline-flex',
+    alignItems: 'center',
     height: '3.6rem',
     padding: '0.8rem 1.4rem',
     borderRadius: '20px',
@@ -41,4 +42,8 @@ export const groupContainer = style({
   display: 'flex',
   gap: '0.8rem',
   width: 'max-content',
+});
+
+export const deleteButton = style({
+  marginLeft: '0.8rem',
 });
