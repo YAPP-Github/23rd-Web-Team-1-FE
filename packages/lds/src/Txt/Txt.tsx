@@ -19,7 +19,7 @@ export type Props<Element extends keyof JSX.IntrinsicElements = 'span'> = BasePr
   as?: Element;
 } & Omit<React.AllHTMLAttributes<Element>, 'as'>;
 
-interface TxtProps<T extends keyof JSX.IntrinsicElements = 'span'>
+export interface TxtProps<T extends keyof JSX.IntrinsicElements = 'span'>
   extends Omit<Props<T>, 'color'>,
     BaseProps {}
 
