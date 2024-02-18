@@ -1,11 +1,12 @@
 'use client';
 
+import { colors } from '@linker/styles';
 import clsx from 'clsx';
 import { ReactNode, useCallback, useState } from 'react';
 import { useSpring, a, config } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 
-import { content, handler } from './BottomSheet.css';
+import { buttonGroupWrapper, content, handler } from './BottomSheet.css';
 import { BottomSheetContext, BottomSheetProvider, useBottomSheetContext } from './context';
 import { DialogBase } from '../Dialog';
 
@@ -13,19 +14,29 @@ interface Props extends Omit<BottomSheetContext, 'open'> {
   children: ReactNode;
 }
 
-const BottomSheet = ({ children, height }: Props) => {
+const BottomSheet = ({ children, height = window.innerHeight - 56 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const [{ y }, set] = useSpring(() => ({ y: height }));
+  const [{ y }, x] = useSpring(() => ({ y: height }));
 
-  const handleOpen = ({ canceled }: { canceled: boolean }) => {
+  const handleOpen = ({ canceled = false }) => {
     setIsOpen(true);
-    set({ y: 0, immediate: false, config: canceled ? config.wobbly : config.stiff });
+
+    x.start({
+      y: 0,
+      immediate: false,
+      config: canceled
+        ? config.wobbly
+        : {
+            tension: 210,
+            friction: 26,
+          },
+    });
   };
 
   const handleClose = useCallback(
     (velocity = 0) => {
-      set({ y: height, immediate: false, config: { ...config.stiff, velocity } });
+      x.start({ y: height, immediate: false, config: { ...config.stiff, velocity } });
 
       const timer = setTimeout(() => {
         setIsOpen(false);
@@ -33,7 +44,7 @@ const BottomSheet = ({ children, height }: Props) => {
 
       return () => clearTimeout(timer);
     },
-    [height, set],
+    [height, x],
   );
 
   const bind = useDrag(
@@ -43,7 +54,7 @@ const BottomSheet = ({ children, height }: Props) => {
       if (last) {
         my > height * 0.5 || vy > 0.5 ? handleClose(vy) : handleOpen({ canceled });
       } else {
-        set({ y: my, immediate: true });
+        x.start({ y: my, immediate: true });
       }
     },
     { initial: () => [0, y.get()], filterTaps: true, bounds: { top: 0 }, rubberband: true },
@@ -59,6 +70,7 @@ const BottomSheet = ({ children, height }: Props) => {
       height={height}
       display={display}
       y={y}
+      x={x}
       bind={bind}
       onOpenChange={() => handleClose()}
       onExited={() => handleClose()}
@@ -72,17 +84,24 @@ const BottomSheet = ({ children, height }: Props) => {
 interface ContentProps {
   children: ReactNode;
   className?: string;
+  bgColor?: string;
 }
 
-const Content = ({ children, className }: ContentProps) => {
-  const { open, display, height, y, bind, onOpenChange } =
-    useBottomSheetContext('BottomSheetTrigger');
+const Content = ({ children, className, bgColor = colors.background }: ContentProps) => {
+  const {
+    open,
+    display,
+    height = window.innerHeight - 56,
+    y,
+    bind,
+    onOpenChange,
+  } = useBottomSheetContext('BottomSheetTrigger');
 
   return (
     <DialogBase open={open} onOpenChange={onOpenChange} onExited={onOpenChange}>
       <a.div
         {...bind?.()}
-        style={{ display, y, bottom: `calc(-100vh + ${height - 100}px)` }}
+        style={{ display, y, bottom: `calc(-100vh + ${height}px)`, backgroundColor: bgColor }}
         className={clsx(content, className)}
       >
         <div className={handler} />
@@ -92,17 +111,64 @@ const Content = ({ children, className }: ContentProps) => {
   );
 };
 
-const Trigger = ({ children }: { children: ReactNode }) => {
+interface TriggerProps {
+  children: ReactNode;
+  /** 클릭은 가능하지만 event가 동작하지 않도록 */
+  disabled?: boolean;
+}
+
+const Trigger = ({ children, disabled = false }: TriggerProps) => {
   const { onOpenBottomSheet } = useBottomSheetContext('BottomSheetTrigger');
 
+  const handleClick = () => {
+    if (disabled) {
+      return;
+    }
+
+    onOpenBottomSheet?.({ canceled: false });
+  };
+
   return (
-    <button type="button" onClick={onOpenBottomSheet}>
+    <div aria-hidden role="presentation" onClick={handleClick}>
       {children}
-    </button>
+    </div>
   );
+};
+
+interface CloseButtonProps {
+  children: ReactNode;
+  onClick?: () => void;
+}
+
+const CloseButton = ({ children, onClick }: CloseButtonProps) => {
+  const { onOpenChange } = useBottomSheetContext('BottomSheetTrigger');
+
+  return (
+    <div
+      role="presentation"
+      onClick={() => {
+        onOpenChange?.();
+        onClick?.();
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
+interface ButtonGroupProps {
+  children: ReactNode;
+  className?: string;
+  onClick?: () => void;
+}
+
+const ButtonGroup = ({ className, children }: ButtonGroupProps) => {
+  return <div className={clsx(buttonGroupWrapper, className)}>{children}</div>;
 };
 
 export default Object.assign(BottomSheet, {
   Content,
   Trigger,
+  CloseButton,
+  ButtonGroup,
 });
