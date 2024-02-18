@@ -2,7 +2,7 @@ import { recipe } from '@vanilla-extract/recipes';
 
 export const profile = recipe({
   base: {
-    objectFit: 'contain',
+    objectFit: 'cover',
   },
 
   variants: {
