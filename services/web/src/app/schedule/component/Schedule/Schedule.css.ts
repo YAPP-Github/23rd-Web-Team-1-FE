@@ -1,5 +1,6 @@
 import { colors } from '@linker/styles';
-import { style, styleVariants } from '@vanilla-extract/css';
+import { style } from '@vanilla-extract/css';
+import { recipe } from '@vanilla-extract/recipes';
 
 export const scheduleWrapper = style({
   display: 'flex',
@@ -60,16 +61,21 @@ export const scheduleTitleTimeWrapper = style({
 export const scheduleCalendarWrapper = style({
   marginBottom: '1.2rem',
 });
-export const scheduleCalendarDropDownElipse = style({
-  width: '1.2rem',
-  height: '1.2rem',
-  borderRadius: '50%',
-});
-export const calendarElipseColor = styleVariants({
-  networking: { backgroundColor: `${colors.magenta}` },
-  personal: { backgroundColor: `${colors.purple}` },
-  birthday: { backgroundColor: `${colors.lightBlue}` },
-  friends: { backgroundColor: `${colors.orange}` },
+export const scheduleCalendarDropDownElipse = recipe({
+  base: {
+    width: '1.2rem',
+    height: '1.2rem',
+    borderRadius: '50%',
+  },
+
+  variants: {
+    type: {
+      networking: { backgroundColor: `${colors.magenta}` },
+      personal: { backgroundColor: `${colors.purple}` },
+      birthday: { backgroundColor: `${colors.lightBlue}` },
+      friends: { backgroundColor: `${colors.orange}` },
+    },
+  },
 });
 export const scheduleCalendarDropDownWrapper = style({
   display: 'flex',

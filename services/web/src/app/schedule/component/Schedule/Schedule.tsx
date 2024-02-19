@@ -27,7 +27,6 @@ import {
   scheduleTitleTimeWrapper,
   scheduleNoteWrapper,
   scheduleCalendarDropDownElipse,
-  calendarElipseColor,
   scheduleTitleTimeColWrapper,
   dropdownContainer,
   dropdownDivider,
@@ -170,12 +169,7 @@ export const Schedule = ({
                       text="개인일정"
                       onClick={handleCalendarToggleClick}
                       rightAddon={
-                        <div
-                          className={clsx(
-                            scheduleCalendarDropDownElipse,
-                            calendarElipseColor.personal,
-                          )}
-                        ></div>
+                        <div className={scheduleCalendarDropDownElipse({ type: 'personal' })}></div>
                       }
                     ></Dropdown.Item>
                     <div className={dropdownDivider}></div>
@@ -184,10 +178,7 @@ export const Schedule = ({
                       onClick={handleCalendarToggleClick}
                       rightAddon={
                         <div
-                          className={clsx(
-                            scheduleCalendarDropDownElipse,
-                            calendarElipseColor.networking,
-                          )}
+                          className={scheduleCalendarDropDownElipse({ type: 'networking' })}
                         ></div>
                       }
                     ></Dropdown.Item>
@@ -196,12 +187,7 @@ export const Schedule = ({
                       text="친구"
                       onClick={handleCalendarToggleClick}
                       rightAddon={
-                        <div
-                          className={clsx(
-                            scheduleCalendarDropDownElipse,
-                            calendarElipseColor.friends,
-                          )}
-                        ></div>
+                        <div className={scheduleCalendarDropDownElipse({ type: 'friends' })}></div>
                       }
                     ></Dropdown.Item>
                     <div className={dropdownDivider}></div>
@@ -209,12 +195,7 @@ export const Schedule = ({
                       text="생일"
                       onClick={handleCalendarToggleClick}
                       rightAddon={
-                        <div
-                          className={clsx(
-                            scheduleCalendarDropDownElipse,
-                            calendarElipseColor.birthday,
-                          )}
-                        ></div>
+                        <div className={scheduleCalendarDropDownElipse({ type: 'birthday' })}></div>
                       }
                     ></Dropdown.Item>
                   </Dropdown.Content>
