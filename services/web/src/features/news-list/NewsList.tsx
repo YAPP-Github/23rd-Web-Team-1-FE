@@ -4,22 +4,13 @@ import { useState, useCallback } from 'react';
 import { HorizonScroller, Chip, List, InfiniteScroll } from '@linker/lds';
 
 import NewsItem from './NewsItem';
+
+import { News } from '@/types/news';
+import { Tag } from '@/types/tag';
+
 import { wrapper, chipWrapper, chip, newsListWrapper } from './NewsList.css';
 
 import { kyClient } from '/Users/yoon/Desktop/23rd-Web-Team-1-FE/packages/ky';
-
-interface Tag {
-  id: number;
-  name: string;
-}
-
-export interface News {
-  id: number;
-  title: string;
-  newsProvider: string;
-  newsUrl: string;
-  thumbnailUrl: string;
-}
 
 interface NewsListProps {
   recommendations: Array<{
