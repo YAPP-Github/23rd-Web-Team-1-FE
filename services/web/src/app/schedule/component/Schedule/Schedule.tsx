@@ -153,9 +153,7 @@ export const Schedule = ({
           rightAddon={
             <button>
               <div className={scheduleCalendarDropDownWrapper}>
-                <div
-                  className={clsx(scheduleCalendarDropDownElipse, calendarElipseColor.birthday)}
-                ></div>
+                <div className={scheduleCalendarDropDownElipse({ type: 'birthday' })}></div>
                 <Txt typography="p1" fontWeight="medium">
                   직장
                 </Txt>

@@ -53,10 +53,10 @@ const TimelineDefault = ({ prevSchedules, upcomingSchedules }: TimelineDefaultPr
   useEffect(() => {
     // prevYear에는 0부터 diffIdx-1까지의 원소 저장
     setPrevYear(concatSchedules.slice(0, diffIdx));
-
     // nextYear에는 diffIdx부터 끝까지의 원소 저장
     setNextYear(concatSchedules.slice(diffIdx));
   }, [diffIdx, hasDifferentYear, concatSchedules]);
+
   useEffect(() => {
     setAtomDate(format(date, 'yyyy-MM-dd'));
   }, [date, router, setAtomDate]);
@@ -65,6 +65,7 @@ const TimelineDefault = ({ prevSchedules, upcomingSchedules }: TimelineDefaultPr
       router.push('/my/timeline/search');
     }
   }, [selectDate, router]);
+
   useEffect(() => {
     let tempData: Array<string | Date> = [];
 
