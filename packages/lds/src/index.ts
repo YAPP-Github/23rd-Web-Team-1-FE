@@ -13,7 +13,6 @@ export * from './Layout';
 export * from './List';
 export * from './Logo';
 export * from './Modal';
-export * from './NewsList';
 export * from './Profile';
 export * from './SearchInput';
 export * from './Skeleton';
