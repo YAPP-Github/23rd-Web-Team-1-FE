@@ -2,7 +2,7 @@
 import { Txt } from '@linker/lds';
 import { Icon } from '@linker/lds';
 import { colors } from '@linker/styles';
-import { useRouter } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 
 import {
   timelineDetailNoteHeader,
@@ -13,8 +13,10 @@ import {
 
 export const NoteDetail = () => {
   const router = useRouter();
+  const params = useParams();
+
   const handleBackClick = () => {
-    router.push('/schedule/1');
+    router.push(`/schedule/${params.id}`);
   };
 
   return (

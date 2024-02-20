@@ -117,9 +117,15 @@ function TimelineItem({
           className={timelineItemHeaderWrapper}
           rightAddon={
             <div>
-              <Dropdown>
+              <Dropdown open={dropdownClick === scheduleId}>
                 <Dropdown.Trigger>
-                  <Icon name="more-gray" size={28} />
+                  <button
+                    onClick={() => {
+                      setDropdownClick(scheduleId);
+                    }}
+                  >
+                    <Icon name="more-gray" size={28} />
+                  </button>
                 </Dropdown.Trigger>
                 <Dropdown.Content className={dropdownContainer}>
                   <Dropdown.Item

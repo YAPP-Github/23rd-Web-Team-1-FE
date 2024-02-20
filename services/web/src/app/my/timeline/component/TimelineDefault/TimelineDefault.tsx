@@ -3,54 +3,75 @@
 import { Calendar, Spacing } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
-import { format } from 'date-fns';
+import { format, startOfMonth, endOfMonth } from 'date-fns';
+import { useSetAtom } from 'jotai';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 import { timelineItemWrapper, timelineMonthWrapper } from './TimelineDefault.css';
-import { TimelineItemProps, GetTimelineRes } from '../../types/schedule';
+import { useGetSearchSchedule } from '../../hooks/useGetSearchSchedule';
+import { selectDateAtom } from '../../stores/store';
+import { TimelineItemProps } from '../../types/schedule';
 import TimelineItem from '../TimelineItem/TimelineItem';
 
-const TimelineDefault = ({ schedules }: GetTimelineRes) => {
+interface TimelineDefaultProps {
+  concatSchedules: TimelineItemProps[];
+}
+
+const TimelineDefault = ({ concatSchedules }: TimelineDefaultProps) => {
   const router = useRouter();
-  const [date, setDate] = useState(new Date());
+  const setAtomDate = useSetAtom(selectDateAtom);
+
   const [selectDate, setSelectDate] = useState(false);
-  const startDateYear = format(schedules[0].startDateTime, 'yyyy');
+  const [date, setDate] = useState(new Date());
   const [prevYear, setPrevYear] = useState<TimelineItemProps[]>();
   const [nextYear, setNextYear] = useState<TimelineItemProps[]>();
   const [dropdownClick, setDropdownClick] = useState(-1);
+  const [calendarDotData, setCalendarDotData] = useState<Array<Date | string>>([]);
 
-  useEffect(() => {
-    if (selectDate === true) {
-      router.push(
-        `/my/timeline/search?from=${`${format(date, 'yyyy-MM-dd')} 00:00:00`}&to=${`${format(date, 'yyyy-MM-dd')} 11:59:59`}&limit=32`,
-      );
-    }
-  }, [selectDate]);
+  const startDateYear = format(concatSchedules[0].startDateTime, 'yyyy');
+  const firstDayOfMonth = format(startOfMonth(date), 'yyyy-MM-dd 00:00:00');
+  const lastDayOfMonth = format(endOfMonth(date), 'yyyy-MM-dd 23:59:59');
+  const { data } = useGetSearchSchedule(firstDayOfMonth, lastDayOfMonth, 32);
 
   // 받아온 데이터들 중 다른 연도가 있는지
   // 연도가 하나라도 다른게 판단이 되면 diffYear가 true가됨
-  const hasDifferentYear = schedules.some((item) => {
+  const hasDifferentYear = concatSchedules.some((item) => {
     const formattedYear = format(item.startDateTime, 'yyyy');
 
     return formattedYear === startDateYear;
   });
   // 연도가 다른 원소의 첫번째 인덱스를 리턴
-  const diffIdx = schedules.findIndex((item, index) => {
+  const diffIdx = concatSchedules.findIndex((item, index) => {
     return format(item.startDateTime, 'yyyy').toString() !== startDateYear.toString();
   });
 
   useEffect(() => {
     // prevYear에는 0부터 diffIdx-1까지의 원소 저장
-    setPrevYear(schedules.slice(0, diffIdx));
+    setPrevYear(concatSchedules.slice(0, diffIdx));
 
     // nextYear에는 diffIdx부터 끝까지의 원소 저장
-    setNextYear(schedules.slice(diffIdx));
-  }, [diffIdx, hasDifferentYear, schedules]);
+    setNextYear(concatSchedules.slice(diffIdx));
+  }, [diffIdx, hasDifferentYear, concatSchedules]);
+  useEffect(() => {
+    setAtomDate(format(date, 'yyyy-MM-dd'));
+  }, [date, router, setAtomDate]);
+  useEffect(() => {
+    if (selectDate) {
+      router.push('/my/timeline/search');
+    }
+  }, [selectDate, router]);
+  useEffect(() => {
+    let tempData: Array<string | Date> = [];
+
+    tempData = [...tempData, ...data.schedules.map((item) => item.startDateTime)];
+    setCalendarDotData(tempData);
+  }, []);
 
   return (
     <>
       <Calendar
+        data={calendarDotData}
         value={date}
         onChange={(value) => {
           setSelectDate(true);
@@ -122,7 +143,7 @@ const TimelineDefault = ({ schedules }: GetTimelineRes) => {
             </Txt>
           </section>
           <section className={timelineItemWrapper}>
-            {schedules.map((item) => (
+            {concatSchedules.map((item) => (
               <button key={item.scheduleId}>
                 <TimelineItem
                   scheduleId={item.scheduleId}

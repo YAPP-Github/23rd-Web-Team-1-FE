@@ -1,21 +1,38 @@
 'use client';
 
 import { SearchInput } from '@linker/lds';
-import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 import { wrapper, searchInputWrapper } from './Contact.css';
 import ContactDefault from './component/ContactDefault/ContactDefault';
-import { ContactDataRes } from './types/contact';
+import { ContactData } from './types/contact';
 
-export default function Contact({ contacts }: ContactDataRes) {
-  const [query, setQuery] = useState('');
+export interface ContactProps {
+  defaultContact: ContactData[];
+  bookmarksContact: ContactData[];
+}
+
+export default function Contact({ defaultContact, bookmarksContact }: ContactProps) {
+  const [isFoucsed, setIsFocused] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isFoucsed) {
+      router.push('/contactSearch');
+    }
+  }, [isFoucsed, router]);
 
   return (
     <section className={wrapper}>
       <article className={searchInputWrapper}>
-        <SearchInput placeholder="연락처 검색하기" setQuery={setQuery} query={query} />
+        <SearchInput
+          placeholder="연락처 검색하기"
+          isFoucsed={isFoucsed}
+          setIsFocused={setIsFocused}
+        />
       </article>
-      <ContactDefault contacts={contacts} />
+      <ContactDefault defaultContact={defaultContact} bookmarksContact={bookmarksContact} />
     </section>
   );
 }

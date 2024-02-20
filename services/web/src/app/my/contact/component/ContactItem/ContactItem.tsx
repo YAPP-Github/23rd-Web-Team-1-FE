@@ -1,31 +1,24 @@
 import { Txt } from '@linker/lds';
+import { Profile } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { clsx } from 'clsx';
-import Image from 'next/image';
 
-import {
-  contactItemWrapper,
-  textWrapper,
-  careerTextWrapper,
-  imageWrapper,
-} from './ContactItem.css';
+import { contactItemWrapper, textWrapper, imageWrapper } from './ContactItem.css';
 import { ContactData } from '../../types/contact';
 
-function ContactItem({ name, profileImgUrl, careers, school, association }: ContactData) {
+function ContactItem({ name, profileImgUrl, careers, school }: ContactData) {
   return (
     <div className={clsx(contactItemWrapper)}>
+      <div className={clsx(imageWrapper)}>
+        <Profile imageUrl={profileImgUrl} size={'regular'} alt="profileImg" />
+      </div>
       <div className={clsx(textWrapper)}>
-        <Txt typography="p1" color={colors.gray700}>
+        <Txt typography="p2" color={colors.black}>
           {name}
         </Txt>
-        <div className={clsx(careerTextWrapper)}>
-          <Txt typography="p4" color={colors.gray700}>
-            {association ?? school}
-          </Txt>
-        </div>
-      </div>
-      <div className={clsx(imageWrapper)}>
-        <Image src={profileImgUrl} width={50} height={50} alt="profileImg" />
+        <Txt typography="p5" color={colors.gray400}>
+          {careers ?? school}
+        </Txt>
       </div>
     </div>
   );
