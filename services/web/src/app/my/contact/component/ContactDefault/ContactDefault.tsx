@@ -12,10 +12,10 @@ import {
   favoritesWrapper,
   favoriteDropDown,
 } from './ContactDefault.css';
-import { ContactDataRes } from '../../types/contact';
+import { ContactProps } from '../../Contact';
 import ContactItem from '../ContactItem/ContactItem';
 
-export default function ContactDefault({ contacts }: ContactDataRes) {
+export default function ContactDefault({ defaultContact, bookmarksContact }: ContactProps) {
   const [isClickFavorites, setIsClickFavorites] = useState(true);
 
   const onFavoriteClick = () => {
@@ -30,21 +30,16 @@ export default function ContactDefault({ contacts }: ContactDataRes) {
             즐겨찾기
           </Txt>
           <Txt typography="p4" color={colors.gray800}>
-            2
+            {bookmarksContact.length}
           </Txt>
         </div>
         <button className={favoriteDropDown} onClick={onFavoriteClick}>
-          {isClickFavorites ? (
-            <Icon name="down" size={24} />
-          ) : (
-            /* @todo 이후 아이콘 나오면 수정 예정 */
-            <Icon name="up" size={24} />
-          )}
+          {isClickFavorites ? <Icon name="down" size={24} /> : <Icon name="up" size={24} />}
         </button>
       </article>
       <article className={profileWrapper}>
         {isClickFavorites &&
-          contacts.map((item) => (
+          bookmarksContact.map((item) => (
             <ContactItem
               key={item.id}
               name={item.name}
@@ -61,19 +56,21 @@ export default function ContactDefault({ contacts }: ContactDataRes) {
           전체
         </Txt>
         <Txt typography="p4" color={colors.gray800}>
-          {/* {contactData.length} */}
+          {defaultContact.length}
         </Txt>
       </article>
       <article className={profileWrapper}>
-        {/* {contactData!.map((item) => (
+        {defaultContact.map((item) => (
           <ContactItem
             key={item.id}
             name={item.name}
-            job={item.job}
-            association={item.association}
+            school={item.school}
+            careers={item.careers}
+            id={item.id}
+            interests={item.interests}
             profileImgUrl={item.profileImgUrl}
           />
-        ))} */}
+        ))}
       </article>
     </section>
   );

@@ -14,6 +14,6 @@ type Story = StoryObj<typeof Calendar>;
 
 export const Template: Story = {
   render: () => {
-    return <Calendar value={new Date()} withModeChange />;
+    return <Calendar data={[]} value={new Date()} withModeChange />;
   },
 };

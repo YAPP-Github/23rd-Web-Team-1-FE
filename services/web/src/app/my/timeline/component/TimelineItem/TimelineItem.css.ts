@@ -79,5 +79,5 @@ export const dropdownContainer = style({
   borderRadius: '1.6rem',
   background: colors.white,
   zIndex: '10',
-  bottom: '-8rem',
+  bottom: '-4rem',
 });

@@ -1,6 +1,6 @@
 'use client';
 import { kyClient } from '@linker/ky';
-import { useQuery } from '@tanstack/react-query';
+import { useSuspenseQuery } from '@tanstack/react-query';
 
 import { GetTimelineRes } from '../types/schedule';
 
@@ -13,10 +13,14 @@ const getSearchSchedule = (from: string, to: string, limit: number) => {
 };
 
 const useGetSearchSchedule = (from: string, to: string, limit: number) => {
-  return useQuery<GetTimelineRes>({
-    queryKey: ['schedule', from, to, limit],
+  return useSuspenseQuery<GetTimelineRes>({
+    queryKey: useGetSearchSchedule.getKey(from, to, limit),
     queryFn: () => getSearchSchedule(from, to, limit),
   });
+};
+
+useGetSearchSchedule.getKey = (from: string, to: string, limit: number) => {
+  return ['schedule', from, to, limit];
 };
 
 export { useGetSearchSchedule, getSearchSchedule };
