@@ -1,7 +1,9 @@
+'use client';
 import { Txt } from '@linker/lds';
 import { Icon } from '@linker/lds';
 import { colors } from '@linker/styles';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 import {
   invitaionProfileWrppaer,
@@ -12,11 +14,17 @@ import {
 } from './InvitationItem.css';
 
 interface InvitationItemProps {
+  id: number;
   profileImg: string;
   name: string;
 }
 
-export const InvitionItem = ({ profileImg, name }: InvitationItemProps) => {
+export const InvitionItem = ({ id, profileImg, name }: InvitationItemProps) => {
+  const router = useRouter();
+  const onClick = () => {
+    router.push('/');
+  };
+
   return (
     <div className={invitationContainer}>
       <div className={invitationWrapper}>
@@ -28,7 +36,7 @@ export const InvitionItem = ({ profileImg, name }: InvitationItemProps) => {
             {name}
           </Txt>
         </div>
-        <button type="button">
+        <button type="button" onClick={onClick}>
           <Icon name="next" size={20} />
         </button>
       </div>

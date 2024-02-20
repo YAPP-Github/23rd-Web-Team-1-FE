@@ -77,7 +77,7 @@ export const Schedule = ({
   const handleEditClick = () => {};
 
   const handleNoteClick = () => {
-    router.push('/schedule/1/note');
+    router.push(`/schedule/${scheduleId}/note`);
   };
   const handleCalendarToggleClick = () => {};
   const handleDeleteClick = () => {
@@ -212,7 +212,11 @@ export const Schedule = ({
         {contacts != null
           ? contacts.map((item) => (
               <div key={item.contactId}>
-                <InvitionItem profileImg={item.profileImgUrl} name={item.name} />
+                <InvitionItem
+                  profileImg={item.profileImgUrl}
+                  name={item.name}
+                  id={item.contactId}
+                />
               </div>
             ))
           : null}
