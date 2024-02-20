@@ -6,6 +6,7 @@ export interface ContactInfo {
   job: string;
   association: string;
   tags: Tag[];
+  email: string;
 }
 
 export interface Tag {
