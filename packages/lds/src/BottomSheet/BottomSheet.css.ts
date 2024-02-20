@@ -1,28 +1,36 @@
 import { colors } from '@linker/styles';
-import { style } from '@vanilla-extract/css';
+import { createThemeContract, style } from '@vanilla-extract/css';
+
+export const styleVar = createThemeContract({
+  backgroundColor: null,
+});
 
 export const content = style({
   cursor: 'pointer',
+  overflowY: 'auto',
   position: 'fixed',
   left: 0,
   right: 0,
-  zIndex: 100,
+  zIndex: 'auto',
   maxWidth: '68rem',
   width: '100%',
   margin: '0 auto',
-  height: 'calc(100vh + 100px)',
+  height: '100vh',
   borderTopLeftRadius: '1.6rem',
   borderTopRightRadius: '1.6rem',
-  backgroundColor: colors.gray000,
+  backgroundColor: styleVar.backgroundColor,
   touchAction: 'none',
 });
 
 export const handler = style({
+  position: 'sticky',
+  top: 0,
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   width: '100%',
   height: '1.6rem',
+  backgroundColor: 'inherit',
 
   selectors: {
     '&:after': {
@@ -31,8 +39,16 @@ export const handler = style({
       width: '4rem',
       height: '0.4rem',
       borderRadius: '1.6rem',
-
       backgroundColor: colors.gray200,
     },
   },
+});
+
+export const buttonGroupWrapper = style({
+  position: 'sticky',
+  top: '1.6rem',
+  display: 'flex',
+  justifyContent: 'space-between',
+  padding: '1.2rem 1.6rem',
+  backgroundColor: 'inherit',
 });

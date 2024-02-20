@@ -6,7 +6,7 @@ import Image, { ImageProps } from 'next/image';
 import { profile } from './Profile.css';
 
 const PROFILE_SIZE = {
-  xxLarge: 90,
+  xxLarge: 80,
   xLarge: 64,
   large: 56,
   medium: 48,
@@ -22,7 +22,7 @@ interface Props extends Omit<ImageProps, 'src' | 'alt'> {
   size?: ProfileSize;
 }
 
-const PROFILE_DEFAULT_IMAGE_URL = 'https://static.im-linker.com/images/profile-default.png';
+const PROFILE_DEFAULT_IMAGE_URL = 'https://static.im-linker.com/icons/profile-default.svg';
 
 const Profile = ({ imageUrl, alt = '', className, size = 'large', ...props }: Props) => {
   return (
