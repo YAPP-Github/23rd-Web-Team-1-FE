@@ -6,7 +6,7 @@ import { colors } from '@linker/styles';
 import { format, startOfMonth, endOfMonth } from 'date-fns';
 import { useSetAtom } from 'jotai';
 import { useRouter } from 'next/navigation';
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 
 import { timelineItemWrapper, timelineMonthWrapper } from './TimelineDefault.css';
 import { useGetSearchSchedule } from '../../hooks/useGetSearchSchedule';
@@ -15,16 +15,12 @@ import { TimelineItemProps } from '../../types/schedule';
 import TimelineItem from '../TimelineItem/TimelineItem';
 
 interface TimelineDefaultProps {
-  prevSchedules: TimelineItemProps[];
-  upcomingSchedules: TimelineItemProps[];
+  concatSchedules: TimelineItemProps[];
 }
 
-const TimelineDefault = ({ prevSchedules, upcomingSchedules }: TimelineDefaultProps) => {
+const TimelineDefault = ({ concatSchedules }: TimelineDefaultProps) => {
   const router = useRouter();
   const setAtomDate = useSetAtom(selectDateAtom);
-  const concatSchedules = useMemo(() => {
-    return [...prevSchedules, ...upcomingSchedules];
-  }, [prevSchedules, upcomingSchedules]);
 
   const [selectDate, setSelectDate] = useState(false);
   const [date, setDate] = useState(new Date());
@@ -33,7 +29,7 @@ const TimelineDefault = ({ prevSchedules, upcomingSchedules }: TimelineDefaultPr
   const [dropdownClick, setDropdownClick] = useState(-1);
   const [calendarDotData, setCalendarDotData] = useState<Array<Date | string>>([]);
 
-  const startDateYear = format(prevSchedules[0].startDateTime, 'yyyy');
+  const startDateYear = format(concatSchedules[0].startDateTime, 'yyyy');
   const firstDayOfMonth = format(startOfMonth(date), 'yyyy-MM-dd 00:00:00');
   const lastDayOfMonth = format(endOfMonth(date), 'yyyy-MM-dd 23:59:59');
   const { data } = useGetSearchSchedule(firstDayOfMonth, lastDayOfMonth, 32);
@@ -53,10 +49,10 @@ const TimelineDefault = ({ prevSchedules, upcomingSchedules }: TimelineDefaultPr
   useEffect(() => {
     // prevYear에는 0부터 diffIdx-1까지의 원소 저장
     setPrevYear(concatSchedules.slice(0, diffIdx));
+
     // nextYear에는 diffIdx부터 끝까지의 원소 저장
     setNextYear(concatSchedules.slice(diffIdx));
   }, [diffIdx, hasDifferentYear, concatSchedules]);
-
   useEffect(() => {
     setAtomDate(format(date, 'yyyy-MM-dd'));
   }, [date, router, setAtomDate]);
@@ -65,7 +61,6 @@ const TimelineDefault = ({ prevSchedules, upcomingSchedules }: TimelineDefaultPr
       router.push('/my/timeline/search');
     }
   }, [selectDate, router]);
-
   useEffect(() => {
     let tempData: Array<string | Date> = [];
 

@@ -7,7 +7,6 @@ import { Icon } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { Dropdown } from '@linker/lds';
 import { colors } from '@linker/styles';
-import clsx from 'clsx';
 import { format, getHours, getMinutes } from 'date-fns';
 import { ko } from 'date-fns/locale';
 import { useRouter } from 'next/navigation';

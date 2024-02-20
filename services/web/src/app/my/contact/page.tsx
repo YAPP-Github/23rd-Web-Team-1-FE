@@ -24,8 +24,3 @@ const getContactBookMarks = () => {
 
   return response;
 };
-// const getContactSearch = (query: string) => {
-//   if (query) {
-//     return ky.get<ContactData[]>(`/v1/contacts/search?query=${query}`);
-//   }
-// };

@@ -6,11 +6,12 @@ import { useGetPrevSchedule, useGetUpComingSchedule } from './hooks/useGetNearSc
 export default function TimelinePage() {
   const { data: prevData } = useGetPrevSchedule();
   const { data: upcomingData } = useGetUpComingSchedule();
+  const concatSchedules = [];
 
-  return (
-    <TimelineDefault
-      prevSchedules={prevData.schedules}
-      upcomingSchedules={upcomingData.schedules}
-    />
-  );
+  concatSchedules.push(prevData.schedules);
+  concatSchedules.push(upcomingData.schedules);
+
+  const uniqueSchedules = [...new Set(concatSchedules)];
+
+  return <TimelineDefault concatSchedules={uniqueSchedules[0]} />;
 }
