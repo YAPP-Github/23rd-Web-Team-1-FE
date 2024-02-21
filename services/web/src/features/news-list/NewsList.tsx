@@ -5,8 +5,8 @@ import { HorizonScroller, Chip, List, InfiniteScroll } from '@linker/lds';
 
 import NewsItem from './NewsItem';
 
-import { News } from '@/types/news';
-import { Tag } from '@/types/tag';
+import { NewsDTO } from '@/types/news';
+import { TagDTO } from '@/types/tag';
 
 import { wrapper, chipWrapper, chip, newsListWrapper } from './NewsList.css';
 
@@ -14,9 +14,9 @@ import { kyClient } from '/Users/yoon/Desktop/23rd-Web-Team-1-FE/packages/ky';
 
 interface NewsListProps {
   recommendations: Array<{
-    tags: Tag[];
+    tags: TagDTO[];
     newsList: {
-      data: News[];
+      data: NewsDTO[];
       nextCursor: number | null;
       hasNext: boolean;
     };
@@ -39,9 +39,9 @@ function getNewsList(tagIds: number[], cursorId: number, limit = 20) {
   params.append('limit', limit.toString());
 
   return kyClient.get<{
-    tags: Tag[];
+    tags: TagDTO[];
     newsList: {
-      data: News[];
+      data: NewsDTO[];
       nextCursor: number | null;
       hasNext: boolean;
     };

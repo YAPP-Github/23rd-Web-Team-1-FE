@@ -1,4 +1,4 @@
-export interface News {
+export interface NewsDTO {
   id: number;
   title: string;
   newsProvider: string;

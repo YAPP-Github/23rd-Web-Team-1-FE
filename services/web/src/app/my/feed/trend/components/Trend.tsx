@@ -1,3 +1,5 @@
+import { NewsDTO } from '@/types/news';
+import { TagDTO } from '@/types/tag';
 import { ky } from '@linker/ky';
 import { List } from '@linker/lds';
 import Image from 'next/image';
@@ -7,19 +9,6 @@ import { getTokens } from '@utils/token/server';
 
 import Issue from './Issue';
 import MoreButton from './MoreButton';
-
-interface TagDTO {
-  id: number;
-  name: string;
-}
-
-export interface NewsDTO {
-  id: number;
-  title: string;
-  newsProvider: string;
-  newsUrl: string;
-  thumbnailUrl: string;
-}
 
 export interface TrendDTO {
   recommendations: Array<{

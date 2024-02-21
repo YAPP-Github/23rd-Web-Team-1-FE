@@ -1,9 +1,9 @@
+import { NewsDTO } from '@/types/news';
 import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import Image from 'next/image';
 
 import { newsWrapper, itemWrapper, newsInfo, newsTitle, newsImage } from './News.css';
-import type { NewsDTO } from './Trend';
 
 interface NewsProps {
   newsList: NewsDTO[];

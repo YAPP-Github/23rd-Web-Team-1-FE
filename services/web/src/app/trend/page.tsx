@@ -1,5 +1,5 @@
-import { News } from '@/types/news';
-import { Tag } from '@/types/tag';
+import { NewsDTO } from '@/types/news';
+import { TagDTO } from '@/types/tag';
 import { NewsList } from '@features/news-list';
 import { ky } from '@linker/ky';
 import { BackHeader } from '@linker/lds';
@@ -13,9 +13,9 @@ function getTrends() {
 
   return ky.get<
     Array<{
-      tags: Tag[];
+      tags: TagDTO[];
       newsList: {
-        data: News[];
+        data: NewsDTO[];
         nextCursor: number | null;
         hasNext: boolean;
       };

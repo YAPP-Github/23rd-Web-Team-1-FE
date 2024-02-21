@@ -17,8 +17,7 @@ async function RecommendationPage() {
     return;
   }
 
-  const { title, startDateTime, endDateTime, /* recommendations */ participantsSummary } =
-    await getRecommendation();
+  const { title, startDateTime, endDateTime /* recommendations */ } = await getRecommendation();
 
   return (
     <>
@@ -35,9 +34,9 @@ async function RecommendationPage() {
           </div>
           <div className={infoItem}>
             <Icon name="user" size={18} />
-            <Txt typography="p3" color={colors.gray700}>
+            {/* <Txt typography="p3" color={colors.gray700}>
               {participantsSummary}
-            </Txt>
+            </Txt> */}
           </div>
         </div>
       </List>

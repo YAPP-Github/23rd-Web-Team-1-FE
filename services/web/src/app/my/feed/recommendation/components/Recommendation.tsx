@@ -1,3 +1,5 @@
+import { NewsDTO } from '@/types/news';
+import { TagDTO } from '@/types/tag';
 import { ky } from '@linker/ky';
 import { List, Carousel, CarouselItem, Icon } from '@linker/lds';
 import Link from 'next/link';
@@ -7,19 +9,6 @@ import { getTokens } from '@utils/token/server';
 import News from './News';
 import { wrapper, header, schedule, newsItem } from './Recommendation.css';
 import Schedule from './Schedule';
-
-export interface TagDTO {
-  id: number;
-  name: string;
-}
-
-export interface NewsDTO {
-  id: number;
-  title: string;
-  newsProvider: string;
-  newsUrl: string;
-  thumbnailUrl: string;
-}
 
 export interface RecommendationDTO {
   id: number;
