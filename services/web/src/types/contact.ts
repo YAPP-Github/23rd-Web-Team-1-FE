@@ -1,4 +1,4 @@
-import { Tag } from '@/types/tag';
+import { TagDTO } from '@/types/tag';
 
 export interface ContactInfo {
   id: number;
@@ -7,5 +7,5 @@ export interface ContactInfo {
   phoneNumber: string;
   job: string;
   association: string;
-  tags: Tag[];
+  tags: TagDTO[];
 }
