@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 import { chipWrapper, chip } from './Issue.css';
 import News from './News';
-import type { TrendDTO, News as NewsDTO } from './Trend';
+import type { TrendDTO, NewsDTO } from './Trend';
 
 interface IssueProps {
   recommendations: TrendDTO['recommendations'];

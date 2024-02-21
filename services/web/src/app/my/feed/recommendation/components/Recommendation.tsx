@@ -8,12 +8,12 @@ import News from './News';
 import { wrapper, header, schedule, newsItem } from './Recommendation.css';
 import Schedule from './Schedule';
 
-interface Tag {
+export interface TagDTO {
   id: number;
   name: string;
 }
 
-export interface News {
+export interface NewsDTO {
   id: number;
   title: string;
   newsProvider: string;
@@ -28,9 +28,9 @@ export interface RecommendationDTO {
   startDateTime: string;
   endDateTime: string;
   recommendations: Array<{
-    tags: Tag[];
+    tags: TagDTO[];
     newsList: {
-      data: News[];
+      data: NewsDTO[];
       nextCursor: number;
       hasNext: boolean;
     };
@@ -83,7 +83,7 @@ async function Recommendation() {
       <Carousel>
         {recommendations.map(({ tags, newsList }, index) => (
           <CarouselItem key={index} className={newsItem}>
-            <News tag={tags[index]} contents={newsList.data} />
+            <News tag={tags[index]} newsList={newsList.data} />
           </CarouselItem>
         ))}
       </Carousel>

@@ -8,12 +8,12 @@ import { getTokens } from '@utils/token/server';
 import Issue from './Issue';
 import MoreButton from './MoreButton';
 
-interface Tag {
+interface TagDTO {
   id: number;
   name: string;
 }
 
-export interface News {
+export interface NewsDTO {
   id: number;
   title: string;
   newsProvider: string;
@@ -23,9 +23,9 @@ export interface News {
 
 export interface TrendDTO {
   recommendations: Array<{
-    tags: Tag[];
+    tags: TagDTO[];
     newsList: {
-      data: News[];
+      data: NewsDTO[];
       nextCursor: number;
       hasNext: boolean;
     };

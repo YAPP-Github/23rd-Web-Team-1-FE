@@ -3,10 +3,10 @@ import { colors } from '@linker/styles';
 import Image from 'next/image';
 
 import { newsWrapper, itemWrapper, newsInfo, newsTitle, newsImage } from './News.css';
-import type { News } from './Trend';
+import type { NewsDTO } from './Trend';
 
 interface NewsProps {
-  newsList: News[];
+  newsList: NewsDTO[];
 }
 
 function News({ newsList }: NewsProps) {
