@@ -21,13 +21,17 @@ async function PreviousSchedule() {
     return;
   }
 
-  const previousSchedules = await getPreviousSchedules({ limit: 5 });
+  const { schedules } = await getPreviousSchedules({ limit: 5 });
+
+  if (!schedules.length) {
+    return null;
+  }
 
   return (
     <List className={wrapper}>
       <List.Header className={header} title="지난 일정을 노트로 기록해보세요!" typograyphy="h7" />
       <HorizonScroller className={scheduleList}>
-        {previousSchedules.schedules.map(({ scheduleId, title, endDateTime }) => (
+        {schedules.map(({ scheduleId, title, endDateTime }) => (
           <ScheduleCard key={scheduleId} title={title} endDateTime={endDateTime} />
         ))}
       </HorizonScroller>

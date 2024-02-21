@@ -6,25 +6,25 @@ import { newsWrapper, itemWrapper, newsInfo, newsTitle, newsImage } from './News
 import type { News } from './Trend';
 
 interface NewsProps {
-  news: News[];
+  newsList: News[];
 }
 
-function News({ news }: NewsProps) {
+function News({ newsList }: NewsProps) {
   return (
     <ul className={newsWrapper}>
-      {news.map((item) => (
-        <li key={item.id} className={itemWrapper}>
+      {newsList.map((news) => (
+        <li key={news.id} className={itemWrapper}>
           <div className={newsInfo}>
             <Txt typography="p3" className={newsTitle}>
-              {item.title}
+              {news.title}
             </Txt>
             <Txt typography="p3" color={colors.gray700}>
-              {item.newsProvider}
+              {news.newsProvider}
             </Txt>
           </div>
           <Image
             className={newsImage}
-            src={item.thumbnailUrl}
+            src={news.thumbnailUrl}
             width={74}
             height={74}
             alt="news-thumbnail"

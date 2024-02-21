@@ -41,6 +41,11 @@ const nextConfig = {
         hostname: 'r.yna.co.kr',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'mimgnews.pstatic.net',
+        pathname: '/**',
+      },
     ],
     formats: ['image/webp'],
     dangerouslyAllowSVG: true,

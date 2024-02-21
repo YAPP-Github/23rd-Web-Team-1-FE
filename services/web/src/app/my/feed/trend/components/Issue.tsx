@@ -1,42 +1,61 @@
 'use client';
 
+import { kyClient } from '@linker/ky';
 import { Chip, HorizonScroller } from '@linker/lds';
+import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 
 import { chipWrapper, chip } from './Issue.css';
 import News from './News';
-import type { TrendDTO } from './Trend';
+import type { TrendDTO, News as NewsDTO } from './Trend';
 
 interface IssueProps {
-  trends: TrendDTO[];
+  recommendations: TrendDTO['recommendations'];
 }
 
-function Issue({ trends }: IssueProps) {
-  const [selectedTag, setSelectedTag] = useState(trends[0].tag.id);
-  const currentNews = trends.find((trend) => trend.tag.id === selectedTag)?.news ?? [];
+function Issue({ recommendations }: IssueProps) {
+  const [selectedTagIndex, setSelectedTagIndex] = useState(0);
 
-  const handleClickTag = (tagId: string) => {
-    setSelectedTag(tagId);
-  };
+  const { data } = useQuery<TrendDTO, Error, NewsDTO[]>({
+    queryKey: ['trend', selectedTagIndex],
+    queryFn: () => {
+      const tagIds = recommendations[selectedTagIndex].tags.map((tag) => tag.id);
+      const size = 3;
+
+      const params = new URLSearchParams();
+
+      tagIds.forEach((tagId) => params.append('tagIds', tagId.toString()));
+      params.append('size', size.toString());
+
+      return kyClient.get<TrendDTO>('/v1/news', {
+        searchParams: params,
+      });
+    },
+    select: (data) => data.recommendations[0].newsList.data,
+    initialData: {
+      recommendations,
+    },
+    staleTime: 0,
+  });
 
   return (
     <>
       <HorizonScroller className={chipWrapper}>
-        {trends.map((trend) => (
+        {recommendations.map((recommendation, index) => (
           <Chip
-            key={trend.tag.id}
+            key={recommendation.tags.length > 1 ? 'all' : recommendation.tags[0].id}
             className={chip}
-            selected={selectedTag === trend.tag.id}
+            selected={selectedTagIndex === index}
             onClick={(event) => {
               event.preventDefault();
-              handleClickTag(trend.tag.id);
+              setSelectedTagIndex(index);
             }}
           >
-            {trend.tag.name}
+            {recommendation.tags.length > 1 ? '전체주제' : recommendation.tags[0].name}
           </Chip>
         ))}
       </HorizonScroller>
-      <News news={currentNews} />
+      <News newsList={data} />
     </>
   );
 }
