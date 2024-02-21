@@ -7,7 +7,6 @@ import { Icon } from '@linker/lds';
 import { Txt } from '@linker/lds';
 import { Dropdown } from '@linker/lds';
 import { colors } from '@linker/styles';
-import clsx from 'clsx';
 import { format, getHours, getMinutes } from 'date-fns';
 import { ko } from 'date-fns/locale';
 import { useRouter } from 'next/navigation';
@@ -27,7 +26,6 @@ import {
   scheduleTitleTimeWrapper,
   scheduleNoteWrapper,
   scheduleCalendarDropDownElipse,
-  calendarElipseColor,
   scheduleTitleTimeColWrapper,
   dropdownContainer,
   dropdownDivider,
@@ -79,7 +77,7 @@ export const Schedule = ({
   const handleEditClick = () => {};
 
   const handleNoteClick = () => {
-    router.push('/schedule/1/note');
+    router.push(`/schedule/${scheduleId}/note`);
   };
   const handleCalendarToggleClick = () => {};
   const handleDeleteClick = () => {
@@ -154,9 +152,7 @@ export const Schedule = ({
           rightAddon={
             <button>
               <div className={scheduleCalendarDropDownWrapper}>
-                <div
-                  className={clsx(scheduleCalendarDropDownElipse, calendarElipseColor.birthday)}
-                ></div>
+                <div className={scheduleCalendarDropDownElipse({ type: 'birthday' })}></div>
                 <Txt typography="p1" fontWeight="medium">
                   직장
                 </Txt>
@@ -170,12 +166,25 @@ export const Schedule = ({
                       text="개인일정"
                       onClick={handleCalendarToggleClick}
                       rightAddon={
+                        <div className={scheduleCalendarDropDownElipse({ type: 'personal' })}></div>
+                      }
+                    ></Dropdown.Item>
+                    <div className={dropdownDivider}></div>
+                    <Dropdown.Item
+                      text="네트워킹"
+                      onClick={handleCalendarToggleClick}
+                      rightAddon={
                         <div
-                          className={clsx(
-                            scheduleCalendarDropDownElipse,
-                            calendarElipseColor.personal,
-                          )}
+                          className={scheduleCalendarDropDownElipse({ type: 'networking' })}
                         ></div>
+                      }
+                    ></Dropdown.Item>
+                    <div className={dropdownDivider}></div>
+                    <Dropdown.Item
+                      text="친구"
+                      onClick={handleCalendarToggleClick}
+                      rightAddon={
+                        <div className={scheduleCalendarDropDownElipse({ type: 'friends' })}></div>
                       }
                     ></Dropdown.Item>
                     <div className={dropdownDivider}></div>
@@ -183,12 +192,7 @@ export const Schedule = ({
                       text="생일"
                       onClick={handleCalendarToggleClick}
                       rightAddon={
-                        <div
-                          className={clsx(
-                            scheduleCalendarDropDownElipse,
-                            calendarElipseColor.birthday,
-                          )}
-                        ></div>
+                        <div className={scheduleCalendarDropDownElipse({ type: 'birthday' })}></div>
                       }
                     ></Dropdown.Item>
                   </Dropdown.Content>
@@ -205,12 +209,17 @@ export const Schedule = ({
           color={`${colors.gray700}`}
           typograyphy="p1"
         />
-        {contacts &&
-          contacts.map((item) => (
-            <div key={item.contactId}>
-              <InvitionItem profileImg={item.profileImgUrl} name={item.name} />
-            </div>
-          ))}
+        {contacts != null
+          ? contacts.map((item) => (
+              <div key={item.contactId}>
+                <InvitionItem
+                  profileImg={item.profileImgUrl}
+                  name={item.name}
+                  id={item.contactId}
+                />
+              </div>
+            ))
+          : null}
       </List>
       <List className={scheduleNoteWrapper}>
         <List.Header

@@ -1,15 +1,15 @@
-'use client';
-import { useGetSchedule } from '@app/my/timeline/hooks/useGetSchedule';
+import { TimelineItemProps } from '@app/my/timeline/types/schedule';
+import { ky } from '@linker/ky';
 
 import { Schedule } from '../component/Schedule/Schedule';
 
-export default function SchedulePage({
+export default async function SchedulePage({
   params,
 }: {
   params: { id: string };
   searchParams?: { [key: string]: string | string[] | undefined };
 }) {
-  const scheduleData = useGetSchedule(parseInt(params.id)).data;
+  const scheduleData = await getScheduleById(parseInt(params.id));
 
   return (
     <>
@@ -28,3 +28,7 @@ export default function SchedulePage({
     </>
   );
 }
+
+const getScheduleById = (scheduleId: number) => {
+  return ky.get<TimelineItemProps>(`/v1/schedules/${scheduleId}`);
+};

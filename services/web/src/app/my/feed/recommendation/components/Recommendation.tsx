@@ -8,27 +8,33 @@ import News from './News';
 import { wrapper, header, schedule, newsItem } from './Recommendation.css';
 import Schedule from './Schedule';
 
-export interface NewsDTO {
-  tag: {
-    id: number;
-    name: string;
-  };
-  contents: Array<{
-    id: number;
-    title: string;
-    newsProvider: string;
-    thumbnailUrl: string;
-  }>;
+export interface TagDTO {
+  id: number;
+  name: string;
 }
 
-interface RecommendationDTO {
+export interface NewsDTO {
+  id: number;
+  title: string;
+  newsProvider: string;
+  newsUrl: string;
+  thumbnailUrl: string;
+}
+
+export interface RecommendationDTO {
   id: number;
   title: string;
   profileImgUrl: string;
   startDateTime: string;
   endDateTime: string;
-  recommendations: NewsDTO[];
-  participantsSummary: string;
+  recommendations: Array<{
+    tags: TagDTO[];
+    newsList: {
+      data: NewsDTO[];
+      nextCursor: number;
+      hasNext: boolean;
+    };
+  }>;
 }
 
 export const getRecommendation = () => {
@@ -42,8 +48,13 @@ async function Recommendation() {
     return;
   }
 
-  const { title, profileImgUrl, startDateTime, endDateTime, recommendations } =
-    await getRecommendation();
+  const result = await getRecommendation();
+
+  if (!result) {
+    return null;
+  }
+
+  const { title, profileImgUrl, startDateTime, endDateTime, recommendations } = result;
 
   return (
     <List className={wrapper}>
@@ -69,9 +80,9 @@ async function Recommendation() {
         />
       </div>
       <Carousel>
-        {recommendations.map(({ tag, contents }, index) => (
+        {recommendations.map(({ tags, newsList }, index) => (
           <CarouselItem key={index} className={newsItem}>
-            <News tag={tag} contents={contents} />
+            <News tag={tags[index]} newsList={newsList.data} />
           </CarouselItem>
         ))}
       </Carousel>

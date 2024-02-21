@@ -2,13 +2,16 @@ import { recipe } from '@vanilla-extract/recipes';
 
 export const profile = recipe({
   base: {
-    objectFit: 'contain',
+    objectFit: 'cover',
   },
 
   variants: {
     size: {
       small: {
         borderRadius: '1.2rem',
+      },
+      regular: {
+        borderRadius: '1.6rem',
       },
       medium: {
         borderRadius: '1.2rem',

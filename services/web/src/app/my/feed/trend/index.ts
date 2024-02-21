@@ -1,1 +1,1 @@
-export { default as Trend } from './Trend';
+export { default as Trend } from './components/Trend';

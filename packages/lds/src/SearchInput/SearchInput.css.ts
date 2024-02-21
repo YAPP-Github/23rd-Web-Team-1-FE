@@ -16,13 +16,22 @@ export const searchInputContainer = style({
 });
 
 export const searchInput = style({
-  zIndex: 1,
   width: '100%',
   border: 'none',
   background: 'none',
   backgroundColor: 'transparent',
   outline: 'none',
+  cursor: 'pointer',
   '::placeholder': {
     color: `${colors.gray500}`,
   },
+});
+
+export const searchInputWrapper = style({
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  padding: '1.6rem',
 });
