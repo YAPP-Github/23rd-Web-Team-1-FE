@@ -6,22 +6,24 @@ import { BackHeader } from '@linker/lds';
 
 import { getTokens } from '@utils/token/server';
 
-import { recommendations } from './__mock__';
+import { recommendationResult } from './__mock__';
 
-function getTrends() {
-  return Promise.resolve(recommendations);
-
-  return ky.get<
-    Array<{
-      tags: TagDTO[];
-      newsList: {
-        data: NewsDTO[];
-        nextCursor: number | null;
-        hasNext: boolean;
-      };
-    }>
-  >('/v1/news/trend');
+export interface TrendDTO {
+  recommendations: Array<{
+    tags: TagDTO[];
+    newsList: {
+      data: NewsDTO[];
+      nextCursor: number | null;
+      hasNext: boolean;
+    };
+  }>;
 }
+
+const getTrend = () => {
+  return Promise.resolve(recommendationResult);
+
+  return ky.get<TrendDTO>('/v1/news/trend');
+};
 
 async function TrendPage() {
   const accessToken = getTokens().accessToken;
@@ -30,7 +32,7 @@ async function TrendPage() {
     return;
   }
 
-  const recommendations = await getTrends();
+  const { recommendations } = await getTrend();
 
   return (
     <>
