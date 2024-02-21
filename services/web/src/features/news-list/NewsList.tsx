@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
+import { useInfiniteQuery } from '@tanstack/react-query';
 import { HorizonScroller, Chip, List, InfiniteScroll } from '@linker/lds';
 
 import NewsItem from './NewsItem';
@@ -23,74 +24,62 @@ interface NewsListProps {
   }>;
 }
 
-/**
- * @todo
- * - 스크롤 없을때 onLoadMore 호출
- * - load중에는 onLoadMore가 다시 호출되지 않도록 막기
- * - 서버에서 더 줄 news 없을때는 더이상 fetching 하지 않기
- * - 최대 100개까지만 fetching 하기
- */
-
-function getNewsList(tagIds: number[], cursorId: number, limit = 20) {
-  const params = new URLSearchParams();
-
-  tagIds.forEach((tagId) => params.append('tagIds', tagId.toString()));
-  params.append('cursorId', cursorId.toString());
-  params.append('limit', limit.toString());
-
-  return kyClient.get<{
+interface GetNewsListDTO {
+  recommendations: Array<{
     tags: TagDTO[];
     newsList: {
       data: NewsDTO[];
       nextCursor: number | null;
       hasNext: boolean;
     };
-  }>('/v1/news', {
-    searchParams: params,
-  });
+  }>;
 }
 
-function NewsList({ recommendations: recommendationsProp }: NewsListProps) {
-  const [recommendations, setRecommendations] = useState(recommendationsProp);
-  const [selectedTagsIndex, setSelectedTagsIndex] = useState(0);
+function NewsList({ recommendations }: NewsListProps) {
+  const [selectedTagIndex, setSelectedTagIndex] = useState(0);
+
+  const { data, fetchNextPage } = useInfiniteQuery<GetNewsListDTO, Error, NewsDTO[]>({
+    queryKey: ['newsList', selectedTagIndex],
+    queryFn: ({ pageParam }) => {
+      const tagIds = recommendations[selectedTagIndex].tags.map((tag) => tag.id);
+      const cursorId = pageParam;
+      const size = 20;
+
+      const params = new URLSearchParams();
+
+      tagIds.forEach((tagId) => params.append('tagIds', tagId.toString()));
+      if (cursorId) {
+        params.append('cursorId', cursorId?.toString() ?? '');
+      }
+      params.append('size', size.toString());
+
+      return kyClient.get<GetNewsListDTO>('/v1/news', {
+        searchParams: params,
+      });
+    },
+    select: (data) => data.pages.flatMap((page) => page.recommendations[0].newsList.data),
+    getNextPageParam: (lastPage) => lastPage.recommendations[0].newsList.nextCursor,
+    initialPageParam: recommendations[0].newsList.nextCursor,
+    initialData: {
+      pages: [
+        {
+          recommendations,
+        },
+      ],
+      pageParams: [recommendations[0].newsList.nextCursor],
+    },
+    staleTime: 0,
+  });
 
   const handleClickTag = (index: number) => {
-    setSelectedTagsIndex(index);
+    setSelectedTagIndex(index);
   };
 
-  const handleLoadMore = useCallback(async () => {
-    const currentRecommendation = recommendations[selectedTagsIndex];
-    const currentNewsList = currentRecommendation.newsList.data;
-    const tagIds = currentRecommendation.tags.map((tag) => tag.id);
-    const cursorId = currentRecommendation.newsList.nextCursor;
-    const limit = Math.min(100 - currentNewsList.length, 20);
-
-    if (!cursorId || currentNewsList.length >= 100) {
-      return;
+  const handleLoadMore = useCallback(() => {
+    if (data.length < 100) {
+      fetchNextPage();
     }
-
-    try {
-      const {
-        newsList: { nextCursor, hasNext, data },
-      } = await getNewsList(tagIds, cursorId, limit);
-      const newRecommendation = {
-        ...currentRecommendation,
-        newsList: {
-          data: [...currentNewsList, ...data],
-          nextCursor,
-          hasNext,
-        },
-      };
-
-      setRecommendations((prevRecommendations) => [
-        ...prevRecommendations.slice(0, selectedTagsIndex),
-        newRecommendation,
-        ...prevRecommendations.slice(selectedTagsIndex + 1),
-      ]);
-    } catch (_) {
-      /** error handling */
-    }
-  }, [recommendations, selectedTagsIndex]);
+  }, [data.length, fetchNextPage]);
 
   return (
     <List className={wrapper}>
@@ -99,7 +88,7 @@ function NewsList({ recommendations: recommendationsProp }: NewsListProps) {
           <Chip
             key={index}
             className={chip}
-            selected={selectedTagsIndex === index}
+            selected={selectedTagIndex === index}
             onClick={(event) => {
               event.preventDefault();
               handleClickTag(index);
@@ -111,7 +100,7 @@ function NewsList({ recommendations: recommendationsProp }: NewsListProps) {
       </HorizonScroller>
       <ul className={newsListWrapper}>
         <InfiniteScroll onLoadMore={handleLoadMore}>
-          {recommendations[selectedTagsIndex].newsList.data.map((news) => (
+          {data.map((news) => (
             <NewsItem key={news.id} news={news} />
           ))}
         </InfiniteScroll>

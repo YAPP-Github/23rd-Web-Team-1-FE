@@ -6,7 +6,7 @@ import { wrapper } from './InfiniteScroll.css';
 
 interface InfiniteScrollProps {
   children: React.ReactNode;
-  onLoadMore?: () => Promise<void>;
+  onLoadMore?: () => void;
 }
 
 function InfiniteScroll({ children, onLoadMore }: InfiniteScrollProps) {

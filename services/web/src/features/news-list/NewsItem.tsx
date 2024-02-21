@@ -1,13 +1,12 @@
+import { NewsDTO } from '@/types/news';
+import { Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import Image from 'next/image';
 
-import { Txt } from '@linker/lds';
-
 import { itemWrapper, newsInfo, newsTitle, newsImage } from './NewsItem.css';
-import type { News } from './NewsList';
 
 interface NewsProps {
-  news: News;
+  news: NewsDTO;
 }
 
 function NewsItem({ news }: NewsProps) {

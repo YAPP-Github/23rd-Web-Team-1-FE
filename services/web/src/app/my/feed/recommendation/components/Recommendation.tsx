@@ -20,14 +20,14 @@ export interface RecommendationDTO {
     tags: TagDTO[];
     newsList: {
       data: NewsDTO[];
-      nextCursor: number;
+      nextCursor: number | null;
       hasNext: boolean;
     };
   }>;
 }
 
-export const getRecommendation = () => {
-  return ky.get<RecommendationDTO>('/v1/schedules/upcoming/recommendation');
+const getRecommendation = (size = 3) => {
+  return ky.get<RecommendationDTO>(`/v1/schedules/upcoming/recommendation?size=${size}`);
 };
 
 async function Recommendation() {

@@ -33,4 +33,5 @@ export const newsTitle = style([
 
 export const newsImage = style({
   minWidth: '7.4rem',
+  borderRadius: '0.4rem',
 });
