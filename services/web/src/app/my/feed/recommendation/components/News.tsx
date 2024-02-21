@@ -1,9 +1,10 @@
+import { NewsDTO } from '@/types/news';
+import { TagDTO } from '@/types/tag';
 import { Icon, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import Image from 'next/image';
 
 import { wrapper, tagWrapper, newsItem, newsContent, newsTitle, newsImage } from './News.css';
-import type { TagDTO, NewsDTO } from './Recommendation';
 
 interface NewsProps {
   tag: TagDTO;

@@ -1,5 +1,6 @@
 'use client';
 
+import { NewsDTO } from '@/types/news';
 import { kyClient } from '@linker/ky';
 import { Chip, HorizonScroller } from '@linker/lds';
 import { useQuery } from '@tanstack/react-query';
@@ -7,7 +8,7 @@ import { useState } from 'react';
 
 import { chipWrapper, chip } from './Issue.css';
 import News from './News';
-import type { TrendDTO, NewsDTO } from './Trend';
+import type { TrendDTO } from './Trend';
 
 interface IssueProps {
   recommendations: TrendDTO['recommendations'];
