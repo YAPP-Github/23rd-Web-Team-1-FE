@@ -24,6 +24,10 @@ async function UpcomingSchedule() {
 
   const { schedules } = await getUpcomingSchedule({ limit: 3 });
 
+  if (!schedules.length) {
+    return null;
+  }
+
   return (
     <List className={listWrapper}>
       <List.Header
