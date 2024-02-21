@@ -1,17 +1,14 @@
 'use client';
 
-import { useState, useCallback } from 'react';
-import { useInfiniteQuery } from '@tanstack/react-query';
-import { HorizonScroller, Chip, List, InfiniteScroll } from '@linker/lds';
-
-import NewsItem from './NewsItem';
-
 import { NewsDTO } from '@/types/news';
 import { TagDTO } from '@/types/tag';
+import { kyClient } from '@linker/ky';
+import { HorizonScroller, Chip, List, InfiniteScroll } from '@linker/lds';
+import { useInfiniteQuery } from '@tanstack/react-query';
+import { useState, useCallback } from 'react';
 
+import NewsItem from './NewsItem';
 import { wrapper, chipWrapper, chip, newsListWrapper } from './NewsList.css';
-
-import { kyClient } from '/Users/yoon/Desktop/23rd-Web-Team-1-FE/packages/ky';
 
 interface NewsListProps {
   recommendations: Array<{
