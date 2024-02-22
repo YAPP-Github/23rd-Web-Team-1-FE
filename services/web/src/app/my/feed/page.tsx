@@ -12,7 +12,7 @@ export default function FeedPage() {
 
   return (
     <article className={wrapper}>
-      {accessToken != null && <ContactBanner />}
+      {accessToken == null && <ContactBanner />}
       <UpcomingSchedule />
       <Recommendation />
       <PreviousSchedule />
