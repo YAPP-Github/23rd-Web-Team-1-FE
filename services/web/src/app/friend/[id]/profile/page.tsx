@@ -3,7 +3,7 @@ import { ky } from '@linker/ky';
 
 import { ContactInfo } from '../../../../types/contact';
 
-export async function ProfilePage({ params }: { params: { id: string } }) {
+async function ProfilePage({ params }: { params: { id: string } }) {
   const profileData = await getContactById(params.id);
 
   return (
