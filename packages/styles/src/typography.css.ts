@@ -86,6 +86,7 @@ export const typography = recipe({
       medium: {
         fontWeight: font.medium,
       },
+
       bold: {
         fontWeight: font.bold,
       },

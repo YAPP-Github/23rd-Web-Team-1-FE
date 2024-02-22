@@ -7,5 +7,12 @@ export interface ContactInfo {
   phoneNumber: string;
   job: string;
   association: string;
+  tags: Tag[];
+  email: string;
+}
+
+export interface Tag {
+  id: number;
+  name: string;
   tags: TagDTO[];
 }

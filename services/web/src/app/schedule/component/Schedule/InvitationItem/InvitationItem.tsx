@@ -22,7 +22,7 @@ interface InvitationItemProps {
 export const InvitionItem = ({ id, profileImg, name }: InvitationItemProps) => {
   const router = useRouter();
   const onClick = () => {
-    router.push('/');
+    router.push(`/friend/${id}/profile`);
   };
 
   return (
