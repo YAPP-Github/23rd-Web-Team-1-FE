@@ -25806,6 +25806,7 @@ const RAW_RUNTIME_STATE =
           ["jest-environment-node", "npm:29.7.0"],\
           ["jotai", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:2.6.3"],\
           ["js-cookie", "npm:3.0.5"],\
+          ["ky", "npm:1.2.0"],\
           ["msw", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:2.1.5"],\
           ["next", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:14.0.3"],\
           ["next-router-mock", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:0.9.11"],\
