@@ -6,7 +6,7 @@ import { BackHeader } from '@linker/lds';
 
 import { getTokens } from '@utils/token/server';
 
-import { recommendationResult } from './__mock__';
+import { pageWrapper, header } from './page.css';
 
 export interface TrendDTO {
   recommendations: Array<{
@@ -20,8 +20,6 @@ export interface TrendDTO {
 }
 
 const getTrend = () => {
-  return Promise.resolve(recommendationResult);
-
   return ky.get<TrendDTO>('/v1/news/trend');
 };
 
@@ -35,10 +33,10 @@ async function TrendPage() {
   const { recommendations } = await getTrend();
 
   return (
-    <>
-      <BackHeader title="트렌드 핫 이슈" />
+    <div className={pageWrapper}>
+      <BackHeader title="트렌드 핫 이슈" className={header} />
       <NewsList recommendations={recommendations} />
-    </>
+    </div>
   );
 }
 
