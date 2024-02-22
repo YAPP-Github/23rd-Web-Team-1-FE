@@ -1,16 +1,18 @@
-import { MyHeader } from '@features/my';
-import { Button, Layout, Icon } from '@linker/lds';
+import { FloatingButton, MyHeader } from '@features/my';
+import { Layout } from '@linker/lds';
+
+import { getTokens } from '@utils/token/server';
 
 function MyLayout({ children }: { children: React.ReactNode }) {
+  const hasToken = getTokens().accessToken;
+
   return (
     <>
       <MyHeader />
       <Layout>
         {children}
 
-        <Button.FAB text="일정을 등록해보세요" type="extand">
-          <Icon name="plus-white" size={42} />
-        </Button.FAB>
+        {hasToken && <FloatingButton />}
       </Layout>
     </>
   );

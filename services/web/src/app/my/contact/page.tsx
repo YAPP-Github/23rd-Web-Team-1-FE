@@ -1,11 +1,10 @@
-import { ky } from '@linker/ky';
+import { getContact, getContactBookMarks } from '@api/contacts';
 
 import Contact from './Contact';
-import { ContactDataRes } from './types/contact';
 
 export default async function ContactPage() {
-  const contactData = (await getContact()).contacts;
-  const bookmarkData = (await getContactBookMarks()).contacts;
+  const contactData = await getContact();
+  const bookmarkData = await getContactBookMarks();
 
   return (
     <div>
@@ -13,14 +12,3 @@ export default async function ContactPage() {
     </div>
   );
 }
-const getContact = () => {
-  const response = ky.get<ContactDataRes>('/v1/contacts');
-
-  return response;
-};
-
-const getContactBookMarks = () => {
-  const response = ky.get<ContactDataRes>('/v1/contacts/bookmarks');
-
-  return response;
-};

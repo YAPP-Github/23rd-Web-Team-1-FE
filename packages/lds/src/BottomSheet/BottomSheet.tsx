@@ -101,7 +101,7 @@ const Content = ({ children, className, bgColor = colors.background }: ContentPr
     <DialogBase open={open} onOpenChange={onOpenChange} onExited={onOpenChange}>
       <a.div
         {...bind?.()}
-        style={{ display, y, bottom: `calc(-100vh + ${height}px)`, backgroundColor: bgColor }}
+        style={{ display, y, bottom: `calc(-135vh + ${height}px)`, backgroundColor: bgColor }}
         className={clsx(content, className)}
       >
         <div className={handler} />

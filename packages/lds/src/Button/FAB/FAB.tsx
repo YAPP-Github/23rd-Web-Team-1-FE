@@ -3,28 +3,22 @@
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import { HTMLAttributes, MouseEvent, ReactNode } from 'react';
+import { HTMLAttributes, MouseEvent, ReactNode, memo } from 'react';
 import { useEffect, useState } from 'react';
 
-import {
-  button,
-  container,
-  buttonText,
-  innerContariner,
-  buttonRotate,
-  linkButton,
-  dialog,
-} from './FAB.css';
+import { button, container, buttonText, innerContariner, buttonRotate, dialog } from './FAB.css';
 import { DialogBase } from '../../Dialog';
 import { Icon } from '../../Icon';
 import { Txt } from '../../Txt';
 import { FAB_Z_INDEX } from '../../constants';
 
-type ButtonType = 'extand' | 'default';
+export type FABType = 'extand' | 'default';
 
 interface BaseProps extends Omit<HTMLAttributes<HTMLButtonElement>, 'type'> {
   children: ReactNode;
   className?: string;
+  open?: boolean;
+  onOpenChange?: () => void;
 }
 
 interface DefaultProps extends BaseProps {
@@ -38,10 +32,19 @@ interface ExtandProps extends BaseProps {
 
 type Props = DefaultProps | ExtandProps;
 
-const FAB = ({ children, className, type = 'extand', onClick, ...props }: Props) => {
+const FAB = ({
+  children,
+  className,
+  type = 'extand',
+  onClick,
+  open,
+  onOpenChange,
+
+  ...props
+}: Props) => {
   const { text } = props as ExtandProps;
 
-  const [fabType, setFabType] = useState<ButtonType>(type);
+  const [fabType, setFabType] = useState<FABType>(type);
   const [isVisible, setIsVisible] = useState(false);
 
   const handleButtonClick = (event: MouseEvent<HTMLButtonElement>) => {
@@ -72,7 +75,7 @@ const FAB = ({ children, className, type = 'extand', onClick, ...props }: Props)
     <>
       <motion.div
         className={container}
-        style={{ zIndex: isVisible ? `${FAB_Z_INDEX + 1}` : '' }}
+        style={{ zIndex: open ?? isVisible ? `${FAB_Z_INDEX + 1}` : '' }}
         initial={{
           width: type === 'default' ? '8.8rem' : '100%',
         }}
@@ -85,6 +88,12 @@ const FAB = ({ children, className, type = 'extand', onClick, ...props }: Props)
             return;
           }
 
+          if (typeof onOpenChange === 'function') {
+            onOpenChange();
+
+            return;
+          }
+
           setIsVisible((prev) => !prev);
         }}
       >
@@ -94,11 +103,11 @@ const FAB = ({ children, className, type = 'extand', onClick, ...props }: Props)
             onClick={handleButtonClick}
             className={clsx(button, className)}
             style={assignInlineVars(buttonRotate, {
-              transform: isVisible ? 'rotate(45deg)' : '',
+              transform: open ?? isVisible ? 'rotate(45deg)' : '',
             })}
             {...props}
           >
-            {children}
+            <Icon name="plus-white" size={42} />
             {fabType === 'extand' && (
               <Txt typography="p3" className={buttonText}>
                 {text}
@@ -109,21 +118,15 @@ const FAB = ({ children, className, type = 'extand', onClick, ...props }: Props)
       </motion.div>
 
       <DialogBase
-        open={isVisible}
-        onOpenChange={() => setIsVisible(false)}
-        onExited={() => setIsVisible(false)}
+        open={open ?? isVisible}
+        onOpenChange={onOpenChange ?? (() => setIsVisible(false))}
+        onExited={onOpenChange ?? (() => setIsVisible(false))}
         className={dialog}
       >
-        <button className={linkButton}>
-          <Icon name="calendar" />
-        </button>
-
-        <button className={linkButton}>
-          <Icon name="user" />
-        </button>
+        {children}
       </DialogBase>
     </>
   );
 };
 
-export default FAB;
+export default memo(FAB);

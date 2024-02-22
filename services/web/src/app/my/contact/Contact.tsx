@@ -6,16 +6,21 @@ import { useEffect, useState } from 'react';
 
 import { wrapper, searchInputWrapper } from './Contact.css';
 import ContactDefault from './component/ContactDefault/ContactDefault';
-import { ContactData } from './types/contact';
+import useBookmarkContact from './hooks/useBookmarkContact';
+import useContact from './hooks/useContact';
+import { ContactDataRes } from './types/contact';
 
-export interface ContactProps {
-  defaultContact: ContactData[];
-  bookmarksContact: ContactData[];
+interface ContactProps {
+  defaultContact: ContactDataRes;
+  bookmarksContact: ContactDataRes;
 }
 
 export default function Contact({ defaultContact, bookmarksContact }: ContactProps) {
   const [isFoucsed, setIsFocused] = useState(false);
   const router = useRouter();
+
+  const { defualtContactData } = useContact(defaultContact);
+  const { bookmarkContactData } = useBookmarkContact(bookmarksContact);
 
   useEffect(() => {
     if (isFoucsed) {
@@ -32,7 +37,10 @@ export default function Contact({ defaultContact, bookmarksContact }: ContactPro
           setIsFocused={setIsFocused}
         />
       </article>
-      <ContactDefault defaultContact={defaultContact} bookmarksContact={bookmarksContact} />
+      <ContactDefault
+        defaultContact={defualtContactData.contacts}
+        bookmarksContact={bookmarkContactData.contacts}
+      />
     </section>
   );
 }
