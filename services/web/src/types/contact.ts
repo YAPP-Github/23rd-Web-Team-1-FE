@@ -12,3 +12,14 @@ export interface Tag {
   id: number;
   name: string;
 }
+
+export interface ContactPayload {
+  name: string;
+  profileImgUrl: string;
+  phoneNumber: string;
+  email?: string;
+  school?: string;
+  careers?: string;
+  description: string;
+  interests: Tag[];
+}
