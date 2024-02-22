@@ -3,7 +3,7 @@
 import { NewsDTO } from '@/types/news';
 import { TagDTO } from '@/types/tag';
 import { kyClient } from '@linker/ky';
-import { HorizonScroller, Chip, List, InfiniteScroll } from '@linker/lds';
+import { HorizonScroller, Chip, InfiniteScroll } from '@linker/lds';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useState, useCallback } from 'react';
 
@@ -79,7 +79,7 @@ function NewsList({ recommendations }: NewsListProps) {
   }, [data.length, fetchNextPage]);
 
   return (
-    <List className={wrapper}>
+    <div className={wrapper}>
       <HorizonScroller className={chipWrapper}>
         {recommendations.map((recommendation, index) => (
           <Chip
@@ -102,7 +102,7 @@ function NewsList({ recommendations }: NewsListProps) {
           ))}
         </InfiniteScroll>
       </ul>
-    </List>
+    </div>
   );
 }
 

@@ -6,10 +6,10 @@ import { List, Icon, BackHeader, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
+import { redirect } from 'next/navigation';
 
 import { getTokens } from '@utils/token/server';
 
-import { recommendationResult } from './__mock__';
 import { scheduleWrapper, sideBar, scheduleInfo, infoItem } from './page.css';
 
 export interface RecommendationDTO {
@@ -30,7 +30,7 @@ export interface RecommendationDTO {
 }
 
 const getRecommendation = () => {
-  return Promise.resolve(recommendationResult);
+  // return Promise.resolve(recommendationResult);
 
   return ky.get<RecommendationDTO>('/v1/schedules/upcoming/recommendation');
 };
@@ -42,8 +42,13 @@ async function RecommendationPage() {
     return;
   }
 
-  const { title, startDateTime, endDateTime, recommendations, participantsSummary } =
-    await getRecommendation();
+  const result = await getRecommendation();
+
+  if (!result) {
+    return redirect('/my/feed');
+  }
+
+  const { title, startDateTime, endDateTime, recommendations, participantsSummary } = result;
 
   return (
     <>
