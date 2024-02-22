@@ -1,7 +1,5 @@
 import { createThemeContract, style } from '@vanilla-extract/css';
 
-import { HEADER_Z_INDEX } from '../constants';
-
 export const styleVar = createThemeContract({
   display: null,
   background: null,
@@ -10,7 +8,7 @@ export const styleVar = createThemeContract({
 export const container = style({
   position: 'fixed',
   top: 0,
-  zIndex: HEADER_Z_INDEX,
+  zIndex: 'auto',
   display: `${styleVar.display}`,
   width: '100%',
   background: `${styleVar.background}`,
