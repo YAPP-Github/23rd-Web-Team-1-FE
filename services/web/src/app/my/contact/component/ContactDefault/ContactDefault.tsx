@@ -12,10 +12,15 @@ import {
   favoritesWrapper,
   favoriteDropDown,
 } from './ContactDefault.css';
-import { ContactProps } from '../../Contact';
+import { ContactData } from '../../types/contact';
 import ContactItem from '../ContactItem/ContactItem';
 
-export default function ContactDefault({ defaultContact, bookmarksContact }: ContactProps) {
+interface Props {
+  defaultContact: ContactData[];
+  bookmarksContact: ContactData[];
+}
+
+export default function ContactDefault({ defaultContact, bookmarksContact }: Props) {
   const [isClickFavorites, setIsClickFavorites] = useState(true);
 
   const onFavoriteClick = () => {
