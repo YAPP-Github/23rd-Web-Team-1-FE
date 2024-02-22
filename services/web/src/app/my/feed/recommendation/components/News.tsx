@@ -1,16 +1,17 @@
+import { NewsDTO } from '@/types/news';
+import { TagDTO } from '@/types/tag';
 import { Icon, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import Image from 'next/image';
 
 import { wrapper, tagWrapper, newsItem, newsContent, newsTitle, newsImage } from './News.css';
-import type { NewsDTO } from './Recommendation';
 
 interface NewsProps {
-  tag: NewsDTO['tag'];
-  contents: NewsDTO['contents'];
+  tag: TagDTO;
+  newsList: NewsDTO[];
 }
 
-function News({ tag, contents }: NewsProps) {
+function News({ tag, newsList }: NewsProps) {
   return (
     <div className={wrapper}>
       <div className={tagWrapper}>
@@ -23,19 +24,19 @@ function News({ tag, contents }: NewsProps) {
         </p>
       </div>
       <ul>
-        {contents.map((content) => (
-          <li key={content.id} className={newsItem}>
+        {newsList.map((news) => (
+          <li key={news.id} className={newsItem}>
             <div className={newsContent}>
               <Txt className={newsTitle} typography="p3">
-                {content.title}
+                {news.title}
               </Txt>
               <Txt typography="p3" color={colors.gray700}>
-                {content.newsProvider}
+                {news.newsProvider}
               </Txt>
             </div>
             <Image
               className={newsImage}
-              src={content.thumbnailUrl}
+              src={news.thumbnailUrl}
               width={74}
               height={74}
               alt="news-thumbnail"

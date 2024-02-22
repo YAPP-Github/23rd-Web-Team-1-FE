@@ -1,3 +1,5 @@
+import { NewsDTO } from '@/types/news';
+import { TagDTO } from '@/types/tag';
 import { ky } from '@linker/ky';
 import { List, Carousel, CarouselItem, Icon } from '@linker/lds';
 import Link from 'next/link';
@@ -8,30 +10,24 @@ import News from './News';
 import { wrapper, header, schedule, newsItem } from './Recommendation.css';
 import Schedule from './Schedule';
 
-export interface NewsDTO {
-  tag: {
-    id: number;
-    name: string;
-  };
-  contents: Array<{
-    id: number;
-    title: string;
-    newsProvider: string;
-    thumbnailUrl: string;
-  }>;
-}
-
-interface RecommendationDTO {
+export interface RecommendationDTO {
   id: number;
   title: string;
   profileImgUrl: string;
   startDateTime: string;
   endDateTime: string;
-  recommendations: NewsDTO[];
+  recommendations: Array<{
+    tags: TagDTO[];
+    newsList: {
+      data: NewsDTO[];
+      nextCursor: number | null;
+      hasNext: boolean;
+    };
+  }>;
 }
 
-const getRecommendation = () => {
-  return ky.get<RecommendationDTO>('/v1/schedules/upcoming/recommendation');
+const getRecommendation = (size = 3) => {
+  return ky.get<RecommendationDTO>(`/v1/schedules/upcoming/recommendation?size=${size}`);
 };
 
 async function Recommendation() {
@@ -41,13 +37,17 @@ async function Recommendation() {
     return;
   }
 
-  const { title, profileImgUrl, startDateTime, endDateTime, recommendations } =
-    await getRecommendation();
+  const result = await getRecommendation();
+
+  if (!result) {
+    return null;
+  }
+
+  const { title, profileImgUrl, startDateTime, endDateTime, recommendations } = result;
 
   return (
     <List className={wrapper}>
-      {/* @todo 일정상세페이지 href 추가필요 */}
-      <Link href="">
+      <Link href={'/recommendation'}>
         <List.Header
           title="대화 주제 추천 받기"
           className={header}
@@ -69,9 +69,9 @@ async function Recommendation() {
         />
       </div>
       <Carousel>
-        {recommendations.map(({ tag, contents }, index) => (
+        {recommendations.map(({ tags, newsList }, index) => (
           <CarouselItem key={index} className={newsItem}>
-            <News tag={tag} contents={contents} />
+            <News tag={tags[index]} newsList={newsList.data} />
           </CarouselItem>
         ))}
       </Carousel>

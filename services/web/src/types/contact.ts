@@ -1,3 +1,5 @@
+import { TagDTO } from '@/types/tag';
+
 export interface ContactInfo {
   id: number;
   name: string;
@@ -12,4 +14,5 @@ export interface ContactInfo {
 export interface Tag {
   id: number;
   name: string;
+  tags: TagDTO[];
 }
