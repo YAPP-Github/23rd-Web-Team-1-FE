@@ -6,7 +6,7 @@ import { ReactNode, useCallback, useState } from 'react';
 import { useSpring, a, config } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
 
-import { buttonGroupWrapper, content, handler } from './BottomSheet.css';
+import { bottomSheetOverlay, buttonGroupWrapper, content, handler } from './BottomSheet.css';
 import { BottomSheetContext, BottomSheetProvider, useBottomSheetContext } from './context';
 import { DialogBase } from '../Dialog';
 
@@ -98,10 +98,15 @@ const Content = ({ children, className, bgColor = colors.background }: ContentPr
   } = useBottomSheetContext('BottomSheetTrigger');
 
   return (
-    <DialogBase open={open} onOpenChange={onOpenChange} onExited={onOpenChange}>
+    <DialogBase
+      open={open}
+      onOpenChange={onOpenChange}
+      onExited={onOpenChange}
+      className={bottomSheetOverlay}
+    >
       <a.div
         {...bind?.()}
-        style={{ display, y, bottom: `calc(-135vh + ${height}px)`, backgroundColor: bgColor }}
+        style={{ display, y, bottom: `calc(-100vh + ${height}px)`, backgroundColor: bgColor }}
         className={clsx(content, className)}
       >
         <div className={handler} />

@@ -1,6 +1,14 @@
 import { colors } from '@linker/styles';
 import { createThemeContract, style } from '@vanilla-extract/css';
 
+export const bottomSheetOverlay = style({
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+});
+
 export const styleVar = createThemeContract({
   backgroundColor: null,
 });
