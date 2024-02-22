@@ -7,7 +7,6 @@ import { getTokens } from '@utils/token/server';
 
 import ScheduleItem from './ScheduleItem';
 import { listWrapper, listItem, listHeader } from './UpcomingSchedule.css';
-import { ContactBanner } from '../../contact-banner';
 
 const getUpcomingSchedule = ({ limit }: { limit: number }) => {
   return ky.get<{
@@ -16,10 +15,10 @@ const getUpcomingSchedule = ({ limit }: { limit: number }) => {
 };
 
 async function UpcomingSchedule() {
-  const accessToken = getTokens().accessToken;
+  const { accessToken } = getTokens();
 
   if (accessToken == null) {
-    return <ContactBanner />;
+    return;
   }
 
   const { schedules } = await getUpcomingSchedule({ limit: 3 });

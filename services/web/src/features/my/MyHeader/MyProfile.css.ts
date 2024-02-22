@@ -36,5 +36,15 @@ export const profileInfo = style({
 });
 
 export const loginModal = style({
-  height: '46rem',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  height: '36rem',
+  whiteSpace: 'pre-line',
+  textAlign: 'center',
+});
+
+export const loginModalDescription = style({
+  marginBottom: '1.2rem',
+  textAlign: 'center',
 });

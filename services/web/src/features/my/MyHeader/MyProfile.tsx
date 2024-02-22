@@ -1,7 +1,7 @@
 'use client';
 
 import { MyInfo } from '@/types/myInfo';
-import { Button, Icon, Modal, Profile, Txt } from '@linker/lds';
+import { Button, Icon, Logo, Modal, Profile, Spacing, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { useRouter } from 'next/navigation';
 
@@ -13,6 +13,7 @@ import {
   loginModal,
   profileWrapper,
   profileInfo,
+  loginModalDescription,
 } from './MyProfile.css';
 
 interface ProfileProps {
@@ -54,9 +55,22 @@ function MyProfile({ myInfo }: ProfileProps) {
           </Modal.Trigger>
 
           <Modal.Content className={loginModal}>
-            <div>로그인 모달</div>
+            <Logo type="fill" width={120} height={40} />
+            <Spacing size={4} />
+            <Txt typography="p2" fontWeight="medium" color={colors.gray800}>
+              {'관심사를 기반으로\n대화 주제를 추천받아 보세요'}
+            </Txt>
 
             <Modal.Bottom>
+              <Txt
+                as="p"
+                typography="p3"
+                fontWeight="regular"
+                color={colors.gray500}
+                className={loginModalDescription}
+              >
+                카카오 계정으로 간편 가입하기
+              </Txt>
               <Button.KakaoLogin onClick={handleLoginClick} />
             </Modal.Bottom>
           </Modal.Content>
