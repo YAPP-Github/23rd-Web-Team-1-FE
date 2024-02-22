@@ -5,7 +5,7 @@ export const container = style({
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
-  height: '100vw',
+  height: '100vh',
   paddingLeft: '2rem',
   paddingRight: '2rem',
   paddingTop: '2rem',
@@ -30,8 +30,8 @@ export const searchWrapper = style({
 });
 
 export const nullSearchItemWrapper = style({
-  width: '100%',
-  height: '100vh',
+  height: 'calc(100vh - 44px)',
+  overflowY: 'auto',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',

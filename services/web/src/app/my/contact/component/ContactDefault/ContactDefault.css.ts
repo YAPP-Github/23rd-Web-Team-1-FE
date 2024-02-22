@@ -9,7 +9,7 @@ export const favoritesWrapper = style({
 export const favoritesTextWrapper = style({
   display: 'flex',
   flexDirection: 'row',
-  gap: '1px',
+  gap: '4px',
 });
 export const favoriteDropDown = style({
   cursor: 'pointer',

@@ -38,9 +38,11 @@ export default function ContactDefault({ defaultContact, bookmarksContact }: Pro
             {bookmarksContact.length}
           </Txt>
         </div>
-        <button className={favoriteDropDown} onClick={onFavoriteClick}>
-          {isClickFavorites ? <Icon name="down" size={24} /> : <Icon name="up" size={24} />}
-        </button>
+        {bookmarksContact.length > 0 ? (
+          <button className={favoriteDropDown} onClick={onFavoriteClick}>
+            {isClickFavorites ? <Icon name="down" size={24} /> : <Icon name="up" size={24} />}
+          </button>
+        ) : null}
       </article>
       <article className={profileWrapper}>
         {isClickFavorites &&

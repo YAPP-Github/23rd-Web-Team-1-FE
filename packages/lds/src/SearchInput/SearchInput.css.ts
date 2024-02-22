@@ -20,6 +20,7 @@ export const searchInput = style({
   border: 'none',
   background: 'none',
   backgroundColor: 'transparent',
+  color: `${colors.gray500}`,
   outline: 'none',
   cursor: 'pointer',
   '::placeholder': {
