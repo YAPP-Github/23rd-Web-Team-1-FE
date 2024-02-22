@@ -2,7 +2,7 @@
 
 import { ErrorPage } from '@features/error';
 import { HTTPError } from 'ky';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 interface Props {
   reset: () => void;
