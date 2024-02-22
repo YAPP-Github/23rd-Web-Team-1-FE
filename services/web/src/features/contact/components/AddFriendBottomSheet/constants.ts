@@ -25,7 +25,7 @@ export const INTEREST_TAGS = [
   },
   {
     id: 7,
-    name: '❤ 사랑',
+    name: '❤ 건강',
   },
   {
     id: 8,
