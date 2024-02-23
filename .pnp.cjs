@@ -25787,7 +25787,6 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.11.20"],\
           ["@types/react", "npm:18.2.58"],\
           ["@types/react-dom", "npm:18.2.19"],\
-          ["@types/testing-library__jest-dom", "npm:6.0.0"],\
           ["@vanilla-extract/css", "npm:1.14.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/jest-transform", "npm:1.1.4"],\
