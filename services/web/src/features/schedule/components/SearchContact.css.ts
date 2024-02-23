@@ -22,6 +22,12 @@ export const contactInput = style({
   height: '4.8rem !important',
 });
 
+export const contactSearchInput = style({
+  width: '25rem',
+  padding: '1.4rem 2rem !important',
+  height: '4.8rem !important',
+});
+
 export const contactWrapper = style({
   display: 'flex',
   flexDirection: 'column',

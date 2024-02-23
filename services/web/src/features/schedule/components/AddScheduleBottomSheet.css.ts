@@ -48,7 +48,6 @@ export const textareaContainer = style({
 
 export const textarea = style({
   height: '23.2rem !important',
-  padding: '0 1.6rem',
 });
 
 export const dropdownTrigger = style({

@@ -8,7 +8,7 @@ import { useForm, useWatch } from 'react-hook-form';
 import {
   contactCard,
   contactCardInfo,
-  contactInput,
+  contactSearchInput,
   contactWrapper,
   container,
   inputWrapper,
@@ -48,7 +48,7 @@ const SearchContact = ({ setIsSearchContact }: Props) => {
           <div className={inputWrapper}>
             <Icon name="search" size={32} />
             <Input
-              className={contactInput}
+              className={contactSearchInput}
               type="text"
               placeholder="초대받은 사람 추가"
               errorMessage={errors.contact?.message}
