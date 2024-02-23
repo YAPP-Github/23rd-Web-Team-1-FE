@@ -1,5 +1,6 @@
 import { getMyInfo } from '@api/myInfo';
 import { Header, HeaderFixed, Icon, Tabs } from '@linker/lds';
+import Link from 'next/link';
 
 import { myHeaderContainer } from './MyHeader.css';
 import MyProfile from './MyProfile';
@@ -19,7 +20,9 @@ async function MyHeader() {
       <Header
         rightAddon={
           <>
-            <Icon name="share-white" />
+            <Link href="/share">
+              <Icon name="share-white" />
+            </Link>
             <Icon name="list-white" />
           </>
         }
@@ -31,7 +34,9 @@ async function MyHeader() {
         leftAddon={<MyProfileCard myInfo={myInfo} />}
         rightAddon={
           <>
-            <Icon name="share-white" />
+            <Link href="/share">
+              <Icon name="share-white" />
+            </Link>
             <Icon name="list-white" />
           </>
         }
