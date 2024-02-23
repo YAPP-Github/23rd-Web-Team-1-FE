@@ -26010,9 +26010,12 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.2.58"],\
           ["@types/react-dom", "npm:18.2.19"],\
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           ["@types/testing-library__jest-dom", "npm:6.0.0"],\
 >>>>>>> 22bcff1 (chore: yarn 종속성 재설치)
+=======
+>>>>>>> 58abf42 (remove testing-library__jest-dom)
           ["@vanilla-extract/css", "npm:1.14.1"],\
           ["@vanilla-extract/dynamic", "npm:2.1.0"],\
           ["@vanilla-extract/jest-transform", "npm:1.1.4"],\
