@@ -1,10 +1,12 @@
 'use client';
 
+import { colors } from '@linker/styles';
 import { clsx } from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { tabs, tapList, tapItem, link, activeLink, bottomLine, activeLine } from './Tabs.css';
+import { tabs, tabList, tabItem, link, activeLink, bottomLine, activeTabItem } from './Tabs.css';
+import { Txt } from '../Txt';
 
 export interface TabInfo {
   href: string;
@@ -20,21 +22,24 @@ function Tabs({ tabInfos }: TabsProps) {
 
   return (
     <nav className={tabs}>
-      <ul className={tapList}>
+      <ul className={tabList}>
         {tabInfos.map((tabInfo) => (
-          <li className={tapItem} key={tabInfo.href}>
+          <li
+            className={clsx(tabItem, pathname === tabInfo.href && activeTabItem)}
+            key={tabInfo.href}
+          >
             <Link
               href={tabInfo.href}
               className={clsx(link, pathname === tabInfo.href && activeLink)}
             >
-              <span>{tabInfo.text}</span>
+              <Txt typography="p1" color={colors.gray000} fontWeight="bold">
+                {tabInfo.text}
+              </Txt>
             </Link>
           </li>
         ))}
       </ul>
-      <div className={bottomLine}>
-        <div className={activeLine} />
-      </div>
+      <div className={bottomLine} />
     </nav>
   );
 }
