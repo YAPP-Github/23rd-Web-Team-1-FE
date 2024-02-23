@@ -1,6 +1,7 @@
 'use client';
 
 import TimelineDefault from './component/TimelineDefault/TimelineDefault';
+import TimelineNull from './component/TimelineNull/TimelineNull';
 import { useGetPrevSchedule, useGetUpComingSchedule } from './hooks/useGetNearSchedule';
 
 export default function TimelinePage() {
@@ -13,5 +14,13 @@ export default function TimelinePage() {
 
   const uniqueSchedules = [...new Set(concatSchedules)];
 
-  return <TimelineDefault concatSchedules={uniqueSchedules[0]} />;
+  return (
+    <>
+      {uniqueSchedules.length === 0 ? (
+        <TimelineNull />
+      ) : (
+        <TimelineDefault concatSchedules={uniqueSchedules[0]} />
+      )}
+    </>
+  );
 }
