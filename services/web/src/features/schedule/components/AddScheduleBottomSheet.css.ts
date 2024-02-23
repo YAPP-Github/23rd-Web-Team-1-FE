@@ -5,6 +5,7 @@ export const container = style({
   position: 'relative',
   backgroundColor: colors.background,
   height: 'calc(100% - 64px)',
+  marginBottom: '8rem',
 });
 
 export const listRow = style({
