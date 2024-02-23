@@ -7,7 +7,15 @@ import { colors } from '@linker/styles';
 import Image from 'next/image';
 import QR from 'qrcode.react';
 
-import { career, container, infoWrapper, layout, logoWrapper, qrWrapper } from './QRCard.css';
+import {
+  career,
+  container,
+  infoWrapper,
+  layout,
+  logoWrapper,
+  myInfoWrapper,
+  qrWrapper,
+} from './QRCard.css';
 
 const QRCard = ({ myInfo }: { myInfo: MyInfo }) => {
   useBodyScrollLock();
@@ -21,10 +29,10 @@ const QRCard = ({ myInfo }: { myInfo: MyInfo }) => {
         </div>
 
         <Spacing size={14} />
-        <Image src={myInfo.profileImgUrl} alt="프로필 이미지" width={132} height={132} />
+        <Image src={myInfo.profileImgUrl} alt="프로필 이미지" width={142} height={142} />
 
         <div className={infoWrapper}>
-          <div>
+          <div className={myInfoWrapper}>
             <Txt as="p" typography="h5" fontWeight="bold" color={colors.white}>
               {myInfo.name}
             </Txt>

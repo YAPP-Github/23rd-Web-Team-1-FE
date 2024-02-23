@@ -14,7 +14,7 @@ export const container = style({
   maxWidth: '66rem',
   width: '100%',
   height: '35rem',
-  padding: '2rem 1.2rem',
+  padding: '2rem 1.5rem',
   background: colors.gradationBlue,
 });
 
@@ -29,12 +29,18 @@ export const infoWrapper = style({
   marginTop: '1.2rem',
 });
 
+export const myInfoWrapper = style({
+  paddingLeft: '0.3rem',
+  wordBreak: 'break-all',
+});
+
 export const career = style({
   display: 'flex',
   alignItems: 'center',
 });
 
 export const qrWrapper = style({
+  marginLeft: '0.8rem',
   padding: '0.5rem',
   backgroundColor: colors.white,
 });
