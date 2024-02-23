@@ -22299,6 +22299,28 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["qrcode.react", [\
+      ["npm:3.1.0", {\
+        "packageLocation": "./.yarn/cache/qrcode.react-npm-3.1.0-068f53fc24-71953241f1.zip/node_modules/qrcode.react/",\
+        "packageDependencies": [\
+          ["qrcode.react", "npm:3.1.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:3.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/qrcode.react-virtual-fb0606d483/0/cache/qrcode.react-npm-3.1.0-068f53fc24-71953241f1.zip/node_modules/qrcode.react/",\
+        "packageDependencies": [\
+          ["qrcode.react", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:3.1.0"],\
+          ["@types/react", "npm:18.2.58"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["qs", [\
       ["npm:6.11.0", {\
         "packageLocation": "./.yarn/cache/qs-npm-6.11.0-caf1bc9dea-5a3bfea3e2.zip/node_modules/qs/",\
@@ -26031,6 +26053,7 @@ const RAW_RUNTIME_STATE =
           ["next", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:14.0.3"],\
           ["next-router-mock", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:0.9.12"],\
           ["next-themes", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:0.2.1"],\
+          ["qrcode.react", "virtual:86a11252c3a83e280d4a43eba68289f27b7ec3ffb28a07d37b4097892f0c6280128fe5b3d807680769185755c4a9e2dc5c359999a9ba43c49b1376102c121f1b#npm:3.1.0"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:d72c6c392885d2d34567eb6bd639c1d1b838b5c3eef4445da1abe8b701ea841ba4cc17cf6c01baea73320d663c6c4a7a21c9e20661c3685c116a5c0a4a6d29ba#npm:18.2.0"],\
           ["react-hook-form", "virtual:04c194a44ee7458e41f60147720d46732f96e84b26cc7f1376c7ff0bacbed626f55744a032f847435727741db57d78fb1dc48b8ff52aa5a67ffcebf21b905c8b#npm:7.50.1"],\
