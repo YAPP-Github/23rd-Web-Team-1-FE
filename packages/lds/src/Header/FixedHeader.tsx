@@ -19,7 +19,7 @@ interface HeaderProps {
   scrollOver?: number;
 }
 
-const MINIMIZE_SCROLL = HEADER_HEIGHT_NUMBER + TAB_HEIGHT_NUMBER + 15;
+const MINIMIZE_SCROLL = HEADER_HEIGHT_NUMBER + TAB_HEIGHT_NUMBER + 25;
 
 const FixedHeader = forwardRef<HTMLDivElement, HeaderProps>(
   ({ children, leftAddon, rightAddon, className, bgColor, scrollOver = 0 }: HeaderProps, ref) => {

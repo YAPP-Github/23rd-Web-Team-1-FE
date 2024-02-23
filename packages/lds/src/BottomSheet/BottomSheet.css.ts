@@ -33,7 +33,7 @@ export const content = style({
 
 export const handler = style({
   position: 'sticky',
-  zIndex: 1,
+  zIndex: 10,
   top: 0,
   display: 'flex',
   justifyContent: 'center',
@@ -56,7 +56,7 @@ export const handler = style({
 
 export const buttonGroupWrapper = style({
   position: 'sticky',
-  zIndex: 1,
+  zIndex: 10,
   top: '1.6rem',
   display: 'flex',
   justifyContent: 'space-between',
