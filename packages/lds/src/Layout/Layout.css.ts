@@ -1,4 +1,8 @@
-import { style } from '@vanilla-extract/css';
+import { createThemeContract, style } from '@vanilla-extract/css';
+
+export const bgColorVar = createThemeContract({
+  backgroundColor: null,
+});
 
 export const container = style({
   maxWidth: '72rem',
@@ -6,4 +10,5 @@ export const container = style({
   width: '100%',
   height: '100%',
   margin: '0 auto',
+  backgroundColor: bgColorVar.backgroundColor,
 });

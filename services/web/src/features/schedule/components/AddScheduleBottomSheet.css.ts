@@ -26,6 +26,10 @@ export const scheduleInput = style({
   backgroundColor: `${colors.gray050} !important`,
 });
 
+export const titleInput = style({
+  borderRadius: '0 !important',
+});
+
 export const contactAddButton = style({
   display: 'inline-flex',
   alignItems: 'center',

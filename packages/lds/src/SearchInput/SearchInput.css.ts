@@ -2,7 +2,7 @@ import { colors } from '@linker/styles';
 import { style } from '@vanilla-extract/css';
 
 export const searchInputContainer = style({
-  background: `${colors.gray100}`,
+  background: `${colors.gray050}`,
   width: '100%',
   borderRadius: '0.4rem',
   height: '4.4rem',

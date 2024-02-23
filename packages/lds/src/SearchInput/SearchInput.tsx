@@ -65,13 +65,15 @@ const SearchInput = ({
               onBlur={() => (setIsFocused ? setIsFocused(false) : () => {})}
               value={watchQuery}
             />
-            <button
-              onClick={() => {
-                reset({ search: '' });
-              }}
-            >
-              <Icon name="close-gray" size={16} />
-            </button>
+            {query != null && (
+              <button
+                onClick={() => {
+                  reset({ search: '' });
+                }}
+              >
+                <Icon name="close-gray" size={16} />
+              </button>
+            )}
           </div>
         )}
       />

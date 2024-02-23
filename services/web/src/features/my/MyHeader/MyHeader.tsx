@@ -6,7 +6,7 @@ import MyProfile from './MyProfile';
 import MyProfileCard from './MyProfileCard';
 
 const TAB_ITEMS = [
-  { href: '/my/feed', text: '피드' },
+  { href: '/my/feed', text: '홈 피드' },
   { href: '/my/contact', text: '연락처' },
   { href: '/my/timeline', text: '타임라인' },
 ];
