@@ -24,12 +24,6 @@
       "@*": ["./src/*"],
     },
   },
-  "include": [
-    "next-env.d.ts",
-    "./src/**/*.tsx",
-    "./src/**/*.ts",
-    "./jest.config.ts",
-    ".next/types/**/*.ts",
-  ],
-  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "./src/**/*.tsx", "./src/**/*.ts", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "./jest.config.ts"],
 }

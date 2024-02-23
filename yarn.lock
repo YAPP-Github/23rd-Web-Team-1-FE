@@ -2255,6 +2255,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@img/sharp-darwin-arm64@npm:0.33.2":
   version: 0.33.2
   resolution: "@img/sharp-darwin-arm64@npm:0.33.2"
@@ -2430,6 +2431,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> 22bcff1 (chore: yarn 종속성 재설치)
 "@inquirer/confirm@npm:^3.0.0":
   version: 3.0.0
   resolution: "@inquirer/confirm@npm:3.0.0"
@@ -18110,6 +18113,7 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
+    "@types/testing-library__jest-dom": "npm:^6.0.0"
     "@vanilla-extract/css": "npm:^1.14.0"
     "@vanilla-extract/dynamic": "npm:^2.1.0"
     "@vanilla-extract/jest-transform": "npm:^1.1.1"
