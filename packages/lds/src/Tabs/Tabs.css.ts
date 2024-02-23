@@ -30,7 +30,6 @@ export const activeTabItem = style({
       width: '80%',
       height: '0.4rem',
       backgroundColor: `${colors.gray000}`,
-      transition: 'left 0.1s ease-out',
     },
   },
 });
@@ -45,7 +44,7 @@ export const link = style({
 
 export const activeLink = style({
   opacity: '1 !important',
-  transition: 'opacity 0.2s ease-out',
+  transition: 'opacity 0.1s ease-out',
 });
 
 export const bottomLine = style({
