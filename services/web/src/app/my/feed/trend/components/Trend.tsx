@@ -1,8 +1,7 @@
 import { NewsDTO } from '@/types/news';
 import { TagDTO } from '@/types/tag';
 import { ky } from '@linker/ky';
-import { List } from '@linker/lds';
-import Image from 'next/image';
+import { List, Icon } from '@linker/lds';
 import Link from 'next/link';
 
 import { getTokens } from '@utils/token/server';
@@ -36,18 +35,13 @@ async function Trend() {
 
   return (
     <List>
-      <Link href="">
+      <Link href="/trend">
         <List.Header
           title="트렌드 핫 이슈"
           typograyphy="h7"
           rightAddon={
             <button type="button">
-              <Image
-                src="https://static.im-linker.com/right-arrow-mono.png"
-                alt=""
-                width={28}
-                height={28}
-              />
+              <Icon name="right-arrow-mono" size={28} />
             </button>
           }
         />
