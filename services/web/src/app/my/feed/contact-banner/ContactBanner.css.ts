@@ -5,6 +5,7 @@ const keyframesExample = keyframes({
   '0%': {
     opacity: 0,
     transform: 'scale(0.95)',
+    background: colors.gradationPurple,
   },
   '50%': {
     opacity: 0.5,
@@ -13,6 +14,7 @@ const keyframesExample = keyframes({
   '100%': {
     opacity: 1,
     transform: 'scale(1)',
+    background: colors.gradationPurple,
   },
 });
 
@@ -20,7 +22,9 @@ export const bannerContainer = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  background: colors.gradationPurple,
+  maxWidth: '72rem',
+  margin: '1.6rem auto',
+  background: `${colors.gradationPurple} !important`,
   animation: `${keyframesExample} 0.4s linear`,
 });
 

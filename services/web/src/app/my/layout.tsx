@@ -4,15 +4,14 @@ import { Layout } from '@linker/lds';
 import { getTokens } from '@utils/token/server';
 
 function MyLayout({ children }: { children: React.ReactNode }) {
-  const hasToken = getTokens().accessToken;
+  const { accessToken } = getTokens();
 
   return (
     <>
       <MyHeader />
       <Layout>
         {children}
-
-        {hasToken && <FloatingButton />}
+        {accessToken != null && <FloatingButton />}
       </Layout>
     </>
   );

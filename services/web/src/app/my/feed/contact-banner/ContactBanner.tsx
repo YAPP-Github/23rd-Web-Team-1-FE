@@ -8,7 +8,11 @@ import { useRouter } from 'next/navigation';
 
 import { bannerContainer, contentWrapper, imageWrapper, text } from './ContactBanner.css';
 
-function ContactBanner() {
+interface Props {
+  isLoggedIn: boolean;
+}
+
+function ContactBanner({ isLoggedIn }: Props) {
   const router = useRouter();
 
   const handleLoginClick = () => {
@@ -18,6 +22,10 @@ function ContactBanner() {
 
     router.replace(`${process.env.NEXT_PUBLIC_KAKAO_LOGIN_URL}`);
   };
+
+  if (isLoggedIn) {
+    return;
+  }
 
   return (
     <motion.div
