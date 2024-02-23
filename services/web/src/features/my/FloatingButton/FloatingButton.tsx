@@ -1,6 +1,7 @@
 'use client';
 
 import { AddFriendBottomSheet } from '@features/contact/components';
+import { AddScheduleBottomSheet } from '@features/schedule/components';
 import { BottomSheet, Button, IconButton } from '@linker/lds';
 import type { FABType } from '@linker/lds/src/Button/FAB';
 import { useEffect, useState } from 'react';
@@ -31,7 +32,7 @@ const FloatingButton = () => {
   }, []);
 
   const BottomSheetContext = {
-    calendar: <AddFriendBottomSheet />,
+    calendar: <AddScheduleBottomSheet />,
     user: <AddFriendBottomSheet />,
   };
 
