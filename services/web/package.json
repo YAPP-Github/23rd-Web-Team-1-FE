@@ -58,6 +58,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/testing-library__jest-dom": "^6.0.0",
     "@vanilla-extract/dynamic": "^2.1.0",
     "@vanilla-extract/jest-transform": "^1.1.1",
     "@vanilla-extract/next-plugin": "^2.3.2",
