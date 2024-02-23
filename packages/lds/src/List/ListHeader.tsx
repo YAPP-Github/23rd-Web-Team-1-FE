@@ -41,15 +41,17 @@ const ListHeader = ({
             {title}
           </Txt>
 
-          <Txt
-            as="p"
-            typography="p3"
-            fontWeight="regular"
-            color={colors.gray700}
-            className={descriptipon}
-          >
-            {description}
-          </Txt>
+          {description != null && (
+            <Txt
+              as="p"
+              typography="p3"
+              fontWeight="regular"
+              color={colors.gray700}
+              className={descriptipon}
+            >
+              {description}
+            </Txt>
+          )}
         </div>
 
         <div>{rightAddon}</div>
