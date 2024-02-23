@@ -30,8 +30,6 @@ export interface RecommendationDTO {
 }
 
 const getRecommendation = () => {
-  // return Promise.resolve(recommendationResult);
-
   return ky.get<RecommendationDTO>('/v1/schedules/upcoming/recommendation');
 };
 
