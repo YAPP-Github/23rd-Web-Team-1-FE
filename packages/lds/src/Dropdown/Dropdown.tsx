@@ -10,21 +10,20 @@ import { DropdownProvider, useDropdownContext } from './context';
 
 interface Props extends HTMLAttributes<HTMLButtonElement> {
   open?: boolean;
+  onOpenChange?: () => void;
   children?: ReactNode;
   className?: string;
 }
 
-const Dropdown = ({ children, className, open }: Props) => {
+const Dropdown = ({ children, className, open, onOpenChange }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <DropdownProvider
       isOpen={open ?? isOpen}
-      onOpenChange={() => {
-        setIsOpen((prev) => !prev);
-      }}
+      onOpenChange={onOpenChange ?? (() => setIsOpen((prev) => !prev))}
     >
-      <button className={className}>{children}</button>
+      <div className={className}>{children}</div>
     </DropdownProvider>
   );
 };
@@ -48,5 +47,5 @@ function DropdownTrigger({ children }: Props) {
 function DropdownContent({ children, className }: Props) {
   const { isOpen } = useDropdownContext('Dropdow-Trigger');
 
-  return <>{isOpen && <button className={className}> {children}</button>}</>;
+  return <>{isOpen && <ul className={className}> {children}</ul>}</>;
 }
