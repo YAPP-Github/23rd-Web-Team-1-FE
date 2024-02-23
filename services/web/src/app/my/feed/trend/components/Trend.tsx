@@ -33,10 +33,10 @@ async function Trend() {
           typograyphy="h7"
           rightAddon={<IconButton name="next-gray" size={24} />}
         />
-        <Spacing size={16} />
-        <Issue recommendations={recommendations} />
-        <MoreButton />
       </Link>
+      <Spacing size={16} />
+      <Issue recommendations={recommendations} />
+      <MoreButton />
     </List>
   );
 }
