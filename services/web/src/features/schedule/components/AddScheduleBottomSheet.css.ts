@@ -5,6 +5,7 @@ export const container = style({
   position: 'relative',
   backgroundColor: colors.background,
   height: 'calc(100% - 64px)',
+  marginBottom: '8rem',
 });
 
 export const listRow = style({
@@ -48,7 +49,6 @@ export const textareaContainer = style({
 
 export const textarea = style({
   height: '23.2rem !important',
-  padding: '0 1.6rem',
 });
 
 export const dropdownTrigger = style({
