@@ -47,11 +47,20 @@ export const textarea = style({
   padding: '0 1.6rem',
 });
 
+export const dropdownTrigger = style({
+  display: 'flex',
+  alignItems: 'center',
+});
+
 export const categoryLegend = style({
   display: 'inline-block',
   width: '1.2rem',
   height: '1.2rem',
   borderRadius: '50%',
+});
+
+export const categoryToggleIcon = style({
+  display: 'inline-block',
 });
 
 export const dropdown = style({

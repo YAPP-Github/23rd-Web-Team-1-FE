@@ -1,5 +1,6 @@
 'use client';
 
+import clsx from 'clsx';
 import { HTMLAttributes } from 'react';
 import { ReactNode } from 'react';
 import { useState } from 'react';
@@ -34,11 +35,11 @@ export default Object.assign(Dropdown, {
   Content: DropdownContent,
 });
 
-function DropdownTrigger({ children }: Props) {
+function DropdownTrigger({ children, className }: Props) {
   const { onOpenChange } = useDropdownContext('Dropdown-Trigger');
 
   return (
-    <button type="button" onClick={onOpenChange} className={dropdownTrigger}>
+    <button type="button" onClick={onOpenChange} className={clsx(dropdownTrigger, className)}>
       {children}
     </button>
   );

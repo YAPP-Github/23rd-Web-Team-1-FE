@@ -27,11 +27,13 @@ import {
   categoryIdentifier,
   categoryItem,
   categoryLegend,
+  categoryToggleIcon,
   categoryWrapper,
   contactAddButton,
   container,
   divider,
   dropdown,
+  dropdownTrigger,
   invitedContactCard,
   listRow,
   scheduleInput,
@@ -200,14 +202,13 @@ const AddScheduleBottomSheet = () => {
                 open={isOpenDropdown}
                 onOpenChange={() => setIsOpenDropdown((prev) => !prev)}
               >
-                <Dropdown.Trigger>
-                  <div>
-                    <span
-                      className={categoryLegend}
-                      style={{ marginRight: '0.8rem', backgroundColor: categoryColor }}
-                    />
-                    <Txt typography="p1">{category}</Txt>
-                  </div>
+                <Dropdown.Trigger className={dropdownTrigger}>
+                  <span
+                    className={categoryLegend}
+                    style={{ marginRight: '0.8rem', backgroundColor: categoryColor }}
+                  />
+                  <Txt typography="p1">{category}</Txt>
+                  <Icon name="down-gray" size={20} className={categoryToggleIcon} />
                 </Dropdown.Trigger>
                 <Dropdown.Content className={categoryWrapper}>
                   {CalendarType.map((item, index) => (
