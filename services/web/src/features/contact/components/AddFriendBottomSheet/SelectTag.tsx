@@ -1,5 +1,5 @@
 import { Tag } from '@/types/contact';
-import { isDisplaySelectTagAtom, selectedTagsAtom } from '@features/contact/store';
+import { selectedTagsAtom } from '@features/contact/store';
 import { BottomSheet, Chip, TextButton, Txt } from '@linker/lds';
 import { colors } from '@linker/styles';
 import { useSetAtom } from 'jotai';
@@ -8,9 +8,12 @@ import { useState } from 'react';
 import { container, interestTagWrapper } from './SelectTag.css';
 import { INTEREST_TAGS } from './constants';
 
-const SelectTagBottomSheet = () => {
+interface Props {
+  setIsDisplay: (value: boolean) => void;
+}
+
+const SelectTagBottomSheet = ({ setIsDisplay }: Props) => {
   const setSelectedTags = useSetAtom(selectedTagsAtom);
-  const setIsDisplay = useSetAtom(isDisplaySelectTagAtom);
 
   const [tags, setTags] = useState<Tag[]>([]);
 

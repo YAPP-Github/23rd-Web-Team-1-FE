@@ -12,7 +12,7 @@ export default function FeedPage() {
 
   return (
     <article className={wrapper}>
-      {accessToken == null && <ContactBanner />}
+      <ContactBanner isLoggedIn={accessToken != null} />
       <UpcomingSchedule />
       <Recommendation />
       <PreviousSchedule />

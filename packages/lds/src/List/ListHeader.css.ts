@@ -1,8 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-export const headerContainer = style({
-  position: 'relative',
-});
+export const headerContainer = style({});
 
 export const headerTitle = style({
   display: 'flex',

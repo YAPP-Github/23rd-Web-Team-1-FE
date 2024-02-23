@@ -1,9 +1,10 @@
+/* eslint-disable max-lines */
 /* eslint-disable max-lines-per-function */
 /* eslint-disable no-console */
 import { Tag } from '@/types/contact';
 import useAddContact from '@features/contact/hooks/useAddContact';
 import useImageUpload from '@features/contact/hooks/useImageUpload';
-import { isDisplaySelectTagAtom, selectedTagsAtom } from '@features/contact/store';
+import { selectedTagsAtom } from '@features/contact/store';
 import {
   BottomSheet,
   Chip,
@@ -46,8 +47,6 @@ export interface InputData {
 
 const AddFriendBottomSheet = () => {
   const imageUploadRef = useRef<HTMLInputElement>(null);
-  const [isDisplaySelectTag, setIsDisplaySelectTag] = useAtom(isDisplaySelectTagAtom);
-  const [selectedTags, setSelectedTags] = useAtom(selectedTagsAtom);
 
   const {
     register,
@@ -66,6 +65,8 @@ const AddFriendBottomSheet = () => {
   const { mutate: addContact } = useAddContact();
 
   const [imageUrl, setImageUrl] = useState<string | null>(null);
+  const [isDisplaySelectTag, setIsDisplaySelectTag] = useState(false);
+  const [selectedTags, setSelectedTags] = useAtom(selectedTagsAtom);
 
   const 모든정보를_입력했는가 =
     formState.every((value) => value !== '') && imageS3Url != null && isValid;
@@ -89,7 +90,7 @@ const AddFriendBottomSheet = () => {
     const payload = {
       name: data.name,
       profileImgUrl: imageS3Url ?? '',
-      phoneNumber: formatPhoneNumber(data.phoneNumber),
+      phoneNumber: data.phoneNumber,
       description: data.description,
       interests: selectedTags,
     };
@@ -101,7 +102,7 @@ const AddFriendBottomSheet = () => {
   return (
     <BottomSheet.Content>
       {isDisplaySelectTag ? (
-        <SelectTag />
+        <SelectTag setIsDisplay={setIsDisplaySelectTag} />
       ) : (
         <>
           <BottomSheet.ButtonGroup>
@@ -170,9 +171,16 @@ const AddFriendBottomSheet = () => {
               <Input
                 label="전화번호"
                 placeholder="전화번호를 입력해주세요"
+                type="text"
                 errorMessage={errors.phoneNumber?.message}
+                onKeyUp={(e) => {
+                  const formatted = formatPhoneNumber(e.currentTarget.value);
+
+                  e.currentTarget.value = formatted;
+                }}
                 {...register('phoneNumber', {
-                  required: '숫자만 입력할 수 있어요.',
+                  required: true,
+                  maxLength: 11,
                   pattern: {
                     value: /^[0-9]+$/,
                     message: '숫자만 입력할 수 있어요.',

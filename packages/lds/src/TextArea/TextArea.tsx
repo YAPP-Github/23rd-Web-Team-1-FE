@@ -8,14 +8,15 @@ import { Txt } from '../Txt';
 interface Props extends InputHTMLAttributes<HTMLTextAreaElement> {
   value?: string;
   label?: string;
+  containerClassName?: string;
   className?: string;
   errorMessage?: string;
 }
 
 const Input = forwardRef<HTMLTextAreaElement, Props>(
-  ({ label, className, errorMessage, value, ...props }, ref) => {
+  ({ label, containerClassName, className, errorMessage, value, ...props }, ref) => {
     return (
-      <div className={formContainer}>
+      <div className={clsx(formContainer, containerClassName)}>
         {label != null && (
           <label htmlFor={label} className={labelContainer}>
             {label}

@@ -29,7 +29,7 @@ export default function ContactSearch({ contacts }: ContactDataRes) {
 
   useEffect(() => {
     setQueryAtom(query);
-  }, [query]);
+  }, [query, setQueryAtom]);
 
   return (
     <section className={container}>
