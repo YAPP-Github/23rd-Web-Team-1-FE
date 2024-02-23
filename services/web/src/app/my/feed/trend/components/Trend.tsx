@@ -27,7 +27,7 @@ async function Trend() {
 
   return (
     <List>
-      <Link href="">
+      <Link href="/trend">
         <List.Header
           title="트렌드 핫 이슈"
           typograyphy="h7"
