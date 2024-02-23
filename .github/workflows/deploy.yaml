@@ -80,4 +80,4 @@ jobs:
           sudo docker container rm -f $(sudo docker container ls -a --quiet)
           sudo docker rmi $(sudo docker images -q) -f
           sudo docker image pull 903755389667.dkr.ecr.ap-northeast-2.amazonaws.com/linker:$IMAGE_TAG &&
-          sudo docker container run --name linker -d -p 3000:3000 903755389667.dkr.ecr.ap-northeast-2.amazonaws.com/linker:$IMAGE_TAG"
+          sudo docker container run --name linker --restart=always -d -p 3000:3000 903755389667.dkr.ecr.ap-northeast-2.amazonaws.com/linker:$IMAGE_TAG"
