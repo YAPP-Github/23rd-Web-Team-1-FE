@@ -11,7 +11,7 @@ export const header = style({
   height: '52px',
   padding: '10px 20px',
   boxSizing: 'border-box',
-  backgroundColor: colors.gray050,
+  backgroundColor: colors.background,
 });
 
 export const backButton = style({
