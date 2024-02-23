@@ -23,7 +23,6 @@ export const bannerContainer = style({
   alignItems: 'center',
   justifyContent: 'space-between',
   maxWidth: '72rem',
-  margin: '1.6rem auto',
   background: `${colors.gradationPurple} !important`,
   animation: `${keyframesExample} 0.4s linear`,
 });

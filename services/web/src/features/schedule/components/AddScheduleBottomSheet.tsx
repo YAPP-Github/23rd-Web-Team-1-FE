@@ -39,6 +39,7 @@ import {
   scheduleInput,
   textarea,
   textareaContainer,
+  titleInput,
 } from './AddScheduleBottomSheet.css';
 import SearchContact from './SearchContact';
 import { contactCard, contactCardInfo, contactWrapper } from './SearchContact.css';
@@ -138,7 +139,7 @@ const AddScheduleBottomSheet = () => {
           <form className={container}>
             <div style={{ backgroundColor: categoryColor }} className={categoryIdentifier} />
             <Input
-              className={typography({ type: 'h5' })}
+              className={clsx(typography({ type: 'h5' }), titleInput)}
               placeholder="어떤 일정인가요?"
               errorMessage={errors.title?.message}
               {...register('title', {

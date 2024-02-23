@@ -28,6 +28,7 @@ export const content = style({
   borderTopRightRadius: '1.6rem',
   backgroundColor: styleVar.backgroundColor,
   touchAction: 'none',
+  overscrollBehavior: 'none',
 });
 
 export const handler = style({
