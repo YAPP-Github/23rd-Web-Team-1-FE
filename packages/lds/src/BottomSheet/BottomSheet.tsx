@@ -14,7 +14,10 @@ interface Props extends Omit<BottomSheetContext, 'open'> {
   children: ReactNode;
 }
 
-const BottomSheet = ({ children, height = window.innerHeight - 56 }: Props) => {
+const isServer = typeof window === 'undefined';
+const HEIGHT = isServer ? 0 : window.innerHeight - 56;
+
+const BottomSheet = ({ children, height = HEIGHT }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [{ y }, x] = useSpring(() => ({ y: height }));
