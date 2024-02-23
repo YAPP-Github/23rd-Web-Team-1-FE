@@ -46,10 +46,11 @@ export const timelineRowWrapper = style({
 
 export const timelineColorDivider = style({
   position: 'absolute',
-  left: '-1.4rem',
+  left: '1.4rem',
+  top: '0.9rem',
   width: '0.4rem',
   borderRadius: '0.8rem',
-  height: '100%',
+  height: '80%',
 });
 export const timelineItemDivider = style({
   marginTop: '1.2rem',

@@ -38,7 +38,7 @@ export default function ContactDefault({ defaultContact, bookmarksContact }: Pro
             {bookmarksContact.length}
           </Txt>
         </div>
-        {bookmarksContact.length > 0 ? (
+        {bookmarksContact.length > 1 ? (
           <button className={favoriteDropDown} onClick={onFavoriteClick}>
             {isClickFavorites ? <Icon name="down" size={24} /> : <Icon name="up" size={24} />}
           </button>
