@@ -19,7 +19,7 @@ import {
 import { colors } from '@linker/styles';
 import { useAtom } from 'jotai';
 import { ChangeEvent, useRef, useState } from 'react';
-import { useForm, SubmitHandler, useWatch } from 'react-hook-form';
+import { useForm, useWatch } from 'react-hook-form';
 
 import formatPhoneNumber from '@utils/formatPhoneNumber';
 
@@ -50,7 +50,6 @@ const AddFriendBottomSheet = () => {
 
   const {
     register,
-    handleSubmit,
     control,
     reset,
     formState: { errors },
@@ -85,12 +84,12 @@ const AddFriendBottomSheet = () => {
     reset();
   };
 
-  const handleContactSubmit: SubmitHandler<InputData> = (data) => {
+  const handleContactSubmit = () => {
     const payload = {
-      name: data.name,
+      name: formState[0],
       profileImgUrl: imageS3Url ?? '',
-      phoneNumber: data.phoneNumber,
-      description: data.description,
+      phoneNumber: formState[1],
+      description: formState[2],
       interests: selectedTags,
     };
 
@@ -122,7 +121,7 @@ const AddFriendBottomSheet = () => {
                 typography="b1"
                 type="submit"
                 disabled={!모든정보를_입력했는가}
-                onClick={handleSubmit(handleContactSubmit)}
+                onClick={handleContactSubmit}
               >
                 저장
               </TextButton>
