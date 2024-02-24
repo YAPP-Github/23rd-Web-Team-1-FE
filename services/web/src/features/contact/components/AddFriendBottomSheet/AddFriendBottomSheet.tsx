@@ -53,7 +53,7 @@ const AddFriendBottomSheet = () => {
     handleSubmit,
     control,
     reset,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm<InputData>();
 
   const formState = useWatch({
@@ -68,8 +68,7 @@ const AddFriendBottomSheet = () => {
   const [isDisplaySelectTag, setIsDisplaySelectTag] = useState(false);
   const [selectedTags, setSelectedTags] = useAtom(selectedTagsAtom);
 
-  const 모든정보를_입력했는가 =
-    formState.every((value) => value !== '') && imageS3Url != null && isValid;
+  const 모든정보를_입력했는가 = formState.every((value) => value !== '') && imageS3Url != null;
 
   const handleImageUpload = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files == null) {
