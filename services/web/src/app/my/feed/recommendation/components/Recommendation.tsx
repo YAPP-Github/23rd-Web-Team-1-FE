@@ -71,7 +71,7 @@ async function Recommendation() {
       <Carousel>
         {recommendations.map(({ tags, newsList }, index) => (
           <CarouselItem key={index} className={newsItem}>
-            <News tag={tags[index]} newsList={newsList.data} />
+            <News tag={tags[0]} newsList={newsList.data} />
           </CarouselItem>
         ))}
       </Carousel>
