@@ -13,7 +13,7 @@ import Schedule from './Schedule';
 export interface RecommendationDTO {
   id: number;
   title: string;
-  profileImgUrl: string;
+  profileImgUrl?: string;
   startDateTime: string;
   endDateTime: string;
   recommendations: Array<{
