@@ -12,6 +12,11 @@ export const profileImage = style({
   borderRadius: '40%',
 });
 
+export const scheduleInfoWrapper = style({
+  flex: '1',
+  overflow: 'hidden',
+});
+
 export const scheduleDateWrapper = style({
   display: 'flex',
   alignItems: 'center',

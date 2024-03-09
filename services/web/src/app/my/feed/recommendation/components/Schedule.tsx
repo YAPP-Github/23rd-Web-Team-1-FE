@@ -4,7 +4,13 @@ import { format, isSameDay } from 'date-fns';
 import { ko } from 'date-fns/locale';
 import Image from 'next/image';
 
-import { wrapper, profileImage, scheduleDateWrapper, scheduleDateInfo } from './Schedule.css';
+import {
+  wrapper,
+  profileImage,
+  scheduleInfoWrapper,
+  scheduleDateWrapper,
+  scheduleDateInfo,
+} from './Schedule.css';
 
 interface ScheduleProps {
   title: string;
@@ -44,7 +50,7 @@ function Schedule({ title, profileImgUrl, startDateTime, endDateTime }: Schedule
         height="56"
         alt="profile_image"
       />
-      <div>
+      <div className={scheduleInfoWrapper}>
         <Txt typography="h7">{title}</Txt>
         <div className={scheduleDateWrapper}>
           <Icon name="time-gray" size={18} />
