@@ -69,7 +69,7 @@ async function RecommendationPage() {
           </div>
         </div>
       </List>
-      <NewsList recommendations={recommendations} />
+      {recommendations.length > 0 && <NewsList recommendations={recommendations} />}
     </>
   );
 }

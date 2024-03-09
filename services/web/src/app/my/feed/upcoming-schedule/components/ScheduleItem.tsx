@@ -28,7 +28,7 @@ function ScheduleItem({ schedule }: ScheduleItemProps) {
       alt="profile-image"
     />
   ) : (
-    <Icon name="calender-gray" size={20} />
+    <Icon name="calender-gray" size={30} />
   );
 
   return (

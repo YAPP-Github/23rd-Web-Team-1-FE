@@ -37,8 +37,7 @@ async function UpcomingSchedule() {
       />
       {schedules.map((schedule) => (
         <Link
-          /** @todo 일정상세페이지 href 추가필요 */
-          href=""
+          href={`/schedule/${schedule.scheduleId}`}
           key={schedule.scheduleId}
           className={listItem}
         >

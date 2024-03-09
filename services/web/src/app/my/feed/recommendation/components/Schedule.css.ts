@@ -8,8 +8,20 @@ export const wrapper = style({
   borderBottom: `1px solid ${colors.gray200}`,
 });
 
-export const profileImage = style({
+export const profileImageWrapper = style({
+  overflow: 'hidden',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '5.6rem',
+  height: '5.6rem',
   borderRadius: '40%',
+  backgroundColor: colors.background,
+});
+
+export const scheduleInfoWrapper = style({
+  flex: '1',
+  overflow: 'hidden',
 });
 
 export const scheduleDateWrapper = style({

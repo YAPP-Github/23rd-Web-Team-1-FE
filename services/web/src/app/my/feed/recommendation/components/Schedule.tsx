@@ -4,11 +4,17 @@ import { format, isSameDay } from 'date-fns';
 import { ko } from 'date-fns/locale';
 import Image from 'next/image';
 
-import { wrapper, profileImage, scheduleDateWrapper, scheduleDateInfo } from './Schedule.css';
+import {
+  wrapper,
+  profileImageWrapper,
+  scheduleInfoWrapper,
+  scheduleDateWrapper,
+  scheduleDateInfo,
+} from './Schedule.css';
 
 interface ScheduleProps {
   title: string;
-  profileImgUrl: string;
+  profileImgUrl?: string;
   startDateTime: string;
   endDateTime: string;
 }
@@ -37,14 +43,14 @@ function formatDateDuration(startDateTime: string, endDateTime: string) {
 function Schedule({ title, profileImgUrl, startDateTime, endDateTime }: ScheduleProps) {
   return (
     <div className={wrapper}>
-      <Image
-        className={profileImage}
-        src={profileImgUrl}
-        width="56"
-        height="56"
-        alt="profile_image"
-      />
-      <div>
+      <div className={profileImageWrapper}>
+        {profileImgUrl ? (
+          <Image src={profileImgUrl} width="56" height="56" alt="profile_image" />
+        ) : (
+          <Icon name="calender-gray" size={30} />
+        )}
+      </div>
+      <div className={scheduleInfoWrapper}>
         <Txt typography="h7">{title}</Txt>
         <div className={scheduleDateWrapper}>
           <Icon name="time-gray" size={18} />
