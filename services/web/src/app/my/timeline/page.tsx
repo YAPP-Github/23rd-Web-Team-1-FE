@@ -1,26 +1,14 @@
-'use client';
+import { getPrevTimeline, getUpcomingTimeline } from '@api/timeline';
 
 import TimelineDefault from './component/TimelineDefault/TimelineDefault';
-import TimelineNull from './component/TimelineNull/TimelineNull';
-import { useGetPrevSchedule, useGetUpComingSchedule } from './hooks/useGetNearSchedule';
 
-export default function TimelinePage() {
-  const { data: prevData } = useGetPrevSchedule();
-  const { data: upcomingData } = useGetUpComingSchedule();
-  const concatSchedules = [];
-
-  concatSchedules.push(prevData.schedules);
-  concatSchedules.push(upcomingData.schedules);
-
-  const uniqueSchedules = [...new Set(concatSchedules)];
+export default async function TimelinePage() {
+  const prevData = await getPrevTimeline();
+  const upcomingData = await getUpcomingTimeline();
 
   return (
     <>
-      {uniqueSchedules.length === 0 ? (
-        <TimelineNull />
-      ) : (
-        <TimelineDefault concatSchedules={uniqueSchedules[0]} />
-      )}
+      <TimelineDefault prevData={prevData} upcomingData={upcomingData} />
     </>
   );
 }
